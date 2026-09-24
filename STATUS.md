@@ -47,14 +47,17 @@ record what is waiting on the CEO.
 3. [x] Approval-gate test is now a script: `scripts/test-approval-gate.sh` (29 cases,
        all pass). Fixed a gap: `open mailto:…` and `open -a "Microsoft Outlook"`
        bypassed the gate.
-4. [ ] Connectors: Microsoft 365 (claude.ai connector, browser OAuth); HubSpot if
-       confirmed. After connecting, list the real tool names and check each one
-       against the gate, and add them to `scripts/test-approval-gate.sh`.
-       Waiting on the CEO to: create M365 user `parthraj.gohil@`; create the Claude
-       Team org as `parthraj@` and invite `parthraj.gohil@` as a member; add M365 in
-       Organization settings → Connectors (write tools off); grant Entra org consent;
-       connect M365 as `parthraj.gohil@`; run `/login` here as `parthraj.gohil@`.
-       Verify afterwards: Gmail/Google Calendar/Google Drive connectors are gone.
+4. [x] Connectors (2026-09-24). This Mac's Claude Code is logged in as
+       `parthraj.gohil@corefragment.com`, a Team member of the CoreFragment org.
+       Microsoft 365 is connected to that mailbox; the Google connectors are gone.
+       Entra admin consent was granted. All 50 M365 tools were checked against the
+       gate: 35 write tools ask, 15 read tools pass. They are now in
+       `scripts/test-approval-gate.sh` (79 cases, all pass).
+       **Open:** M365 **write tools are ON** (granted scopes include Mail.Send,
+       Mail.ReadWrite, ChatMessage.Send, Files.ReadWrite.All), against the decision
+       above. The gate still forces approval on each call. CEO to turn them off in
+       Organization settings → Connectors → Microsoft 365, or decide to keep them.
+       HubSpot is still pending.
 5. [ ] `scripts/cf-bg.sh` (refuses a 4th background session using
        `claude agents --json`); enable Remote Control.
 6. [ ] LaunchAgent `~/Library/LaunchAgents/com.corefragment.claude-respawn.plist`
@@ -71,7 +74,7 @@ record what is waiting on the CEO.
 - Priority table in CLAUDE.md, and confirming the proof points ("10+" vs "12+" countries)
 - 2–3 on-voice emails or posts, saved as `.claude/skills/cf-voice/examples.md`
 - Confirm the standing sessions
-- Claude/M365 account setup for step 4 (see above)
+- M365 write tools: turn off (planned) or keep
 - Which mailbox Saleshandy sends from and where replies land
 - Go-ahead for step 6 (LaunchAgent), which auto mode blocked as persistence
 - Whether to push the repo to a private remote (backup + easier move to a 2nd machine)

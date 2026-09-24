@@ -6,6 +6,9 @@ This repo runs CoreFragment Technologies' sales & marketing agents. The single g
 > Company facts below were drafted from corefragment.com on 2026-09-23.
 > Items marked `TODO(CEO)` need confirmation or input from Parthraj.
 
+**Setup status, decisions and next steps live in `STATUS.md`.** Read it at the start
+of any setup or infrastructure work, and update it when a step or decision changes.
+
 ## Hard rules (never break these)
 
 1. **Nothing leaves this machine without human approval.** Never send an email, reply,
@@ -139,6 +142,7 @@ of expertise in outreach and as seeds for LinkedIn posts. Strong outreach hooks:
 
 ## Repo layout
 
+- `STATUS.md`: setup status, decision log, next steps
 - `accounts/<company-slug>.md`: one research brief per account
 - `drafts/email/`, `drafts/linkedin/`: content awaiting human review
 - `pipeline/leads.csv`: lead list (human-maintained)

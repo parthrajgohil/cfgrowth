@@ -1,8 +1,9 @@
-# Setup handoff: resume here
+# Status: decisions, progress, next steps
 
-Written 2026-09-23 when the setup moved from the admin user to the `cfgrowth`
-standard user. A new Claude session should read this file and CLAUDE.md, then
-continue from "Next steps".
+The living status of the growth system. Started 2026-09-23 as a handoff note when
+setup moved from the admin user to the `cfgrowth` user (formerly HANDOFF.md).
+Sessions should keep it current: tick steps, log decisions with a date, and
+record what is waiting on the CEO.
 
 ## Working agreement with the CEO (Parthraj)
 

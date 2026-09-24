@@ -18,6 +18,9 @@ continue from "Next steps".
 |---|---|
 | Machine user | Dedicated standard (non-admin) user `cfgrowth`, set to log in automatically. The admin account is for maintenance only. |
 | Email / files | Microsoft 365 (Outlook, OneDrive) through Anthropic's official Microsoft 365 connector (claude.ai). Leave the admin setting that lets it send email **off**. |
+| Claude account (2026-09-23) | The M365 connector refuses Claude accounts on a personal email, and a Claude account's email can't be changed. So: new **Claude Team** org owned by `parthraj@corefragment.com` (admin, CEO's own seat). The growth system uses a separate M365 user + Claude **member** seat, `parthraj.gohil@corefragment.com`; this Mac's Claude Code logs in as that account and M365 connects to that mailbox only (agents can't read the CEO inbox). Old gmail.com Pro account to be cancelled. Check with Anthropic that a seat used only by this machine is fine. |
+| Team plan (2026-09-23) | Plan to extend to the team of 6 on Claude Team seats, not a self-built API portal. The API (Console) is for client/AI-ML project work only. Shared context comes from committed `CLAUDE.md`/skills/agents, not from Claude memory. |
+| Hardware (2026-09-23) | Stay on the Mac mini (3-session cap fits 8GB). If more sessions are needed later, add the Lenovo ThinkCentre (i5-7th gen, 16GB) on Ubuntu as a second machine: systemd instead of launchd, add Linux mail/open rules to the gate, per-machine session cap. |
 | CRM | None yet. Recommended **HubSpot Free** (official remote MCP, works on the free tier; Saleshandy has a native HubSpot sync). **CEO has not confirmed yet.** Interim CRM: `pipeline/leads.csv`, edited by a human only. |
 | Cold outreach | Saleshandy stays human-operated. Agents produce prospect lists and email copy; the CEO imports them and launches. Do **not** connect the third-party Saleshandy MCP. |
 | LinkedIn | **Not** connected (User Agreement risk). Sales Navigator workflow is parked in BACKLOG.md. |
@@ -45,7 +48,12 @@ continue from "Next steps".
        bypassed the gate.
 4. [ ] Connectors: Microsoft 365 (claude.ai connector, browser OAuth); HubSpot if
        confirmed. After connecting, list the real tool names and check each one
-       against the gate.
+       against the gate, and add them to `scripts/test-approval-gate.sh`.
+       Waiting on the CEO to: create M365 user `parthraj.gohil@`; create the Claude
+       Team org as `parthraj@` and invite `parthraj.gohil@` as a member; add M365 in
+       Organization settings → Connectors (write tools off); grant Entra org consent;
+       connect M365 as `parthraj.gohil@`; run `/login` here as `parthraj.gohil@`.
+       Verify afterwards: Gmail/Google Calendar/Google Drive connectors are gone.
 5. [ ] `scripts/cf-bg.sh` (refuses a 4th background session using
        `claude agents --json`); enable Remote Control.
 6. [ ] LaunchAgent `~/Library/LaunchAgents/com.corefragment.claude-respawn.plist`
@@ -62,3 +70,7 @@ continue from "Next steps".
 - Priority table in CLAUDE.md, and confirming the proof points ("10+" vs "12+" countries)
 - 2–3 on-voice emails or posts, saved as `.claude/skills/cf-voice/examples.md`
 - Confirm the standing sessions
+- Claude/M365 account setup for step 4 (see above)
+- Which mailbox Saleshandy sends from and where replies land
+- Go-ahead for step 6 (LaunchAgent), which auto mode blocked as persistence
+- Whether to push the repo to a private remote (backup + easier move to a 2nd machine)

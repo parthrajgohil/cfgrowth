@@ -21,6 +21,8 @@ record what is waiting on the CEO.
 | Email / files | Microsoft 365 (Outlook, OneDrive) through Anthropic's official Microsoft 365 connector (claude.ai). Leave the admin setting that lets it send email **off**. |
 | Claude account (2026-09-23) | The M365 connector refuses Claude accounts on a personal email, and a Claude account's email can't be changed. So: new **Claude Team** org owned by `parthraj@corefragment.com` (admin, CEO's own seat). The growth system uses a separate M365 user + Claude **member** seat, `parthraj.gohil@corefragment.com`; this Mac's Claude Code logs in as that account and M365 connects to that mailbox only (agents can't read the CEO inbox). Old gmail.com Pro account to be cancelled. Check with Anthropic that a seat used only by this machine is fine. |
 | Team plan (2026-09-23) | Plan to extend to the team of 6 on Claude Team seats, not a self-built API portal. The API (Console) is for client/AI-ML project work only. Shared context comes from committed `CLAUDE.md`/skills/agents, not from Claude memory. |
+| Daily prospecting (2026-09-24) | CEO wants the system to find leads, not just draft. Headless weekday run (`scripts/daily-prospecting.sh` + prompt `scripts/daily-prospecting.md`): up to 5 new A/B leads per day into `accounts/` + `drafts/email/`, summary in `drafts/leads/<date>.md`. The CEO reviews and runs Saleshandy. Recipient emails are still filled in by a human until an email-data provider is chosen (Saleshandy's lead finder vs Hunter/Apollo: open). |
+| Teams notifications (2026-09-24) | One Teams message per lead to the CEO's 1:1 chat (chat ID in the gate). The gate **allows** only that chat, with no @mentions, and **denies** every other Teams write. Requires M365 write tools to stay ON; the "write tools off" decision above is superseded for Teams, and the gate still asks before every email/file write. |
 | Hardware (2026-09-23) | Stay on the Mac mini (3-session cap fits 8GB). If more sessions are needed later, add the Lenovo ThinkCentre (i5-7th gen, 16GB) on Ubuntu as a second machine: systemd instead of launchd, add Linux mail/open rules to the gate, per-machine session cap. |
 | CRM | None yet. Recommended **HubSpot Free** (official remote MCP, works on the free tier; Saleshandy has a native HubSpot sync). **CEO has not confirmed yet.** Interim CRM: `pipeline/leads.csv`, edited by a human only. |
 | Cold outreach | Saleshandy stays human-operated. Agents produce prospect lists and email copy; the CEO imports them and launches. Do **not** connect the third-party Saleshandy MCP. |
@@ -60,6 +62,9 @@ record what is waiting on the CEO.
        HubSpot is still pending.
 5. [ ] `scripts/cf-bg.sh` (refuses a 4th background session using
        `claude agents --json`); enable Remote Control.
+6a. [ ] Daily prospecting LaunchAgent `com.corefragment.daily-prospecting` (weekdays 09:17 IST, runs
+       `scripts/daily-prospecting.sh`). Script and prompt written; auto mode blocked writing
+       the plist ("Unauthorized Persistence"), so it needs the CEO's explicit go-ahead.
 6. [ ] LaunchAgent `~/Library/LaunchAgents/com.corefragment.claude-respawn.plist`
        that runs `claude respawn --all` at login. Verify whether respawn revives
        sessions after a reboot; if not, have the script start the standing sessions

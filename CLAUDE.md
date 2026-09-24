@@ -14,6 +14,10 @@ of any setup or infrastructure work, and update it when a step or decision chang
 1. **Nothing leaves this machine without human approval.** Never send an email, reply,
    post, comment, message, or enroll anyone in a Saleshandy sequence. Never create,
    update, or delete a CRM record. Prepare a draft instead and ask.
+   **One exception (CEO decision, 2026-09-24):** agents may post Teams messages,
+   without asking, to the 1:1 chat with parthraj@corefragment.com, and only there
+   (lead notifications). The approval gate enforces this by chat ID and blocks every
+   other Teams write.
 2. Drafts go in `drafts/`; account research goes in `accounts/`. Tell the human where
    the file is and what decision you need.
 3. Never invent facts: no made-up clients, metrics, certifications, or case studies.

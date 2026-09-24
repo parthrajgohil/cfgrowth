@@ -6,10 +6,11 @@ cd "$(dirname "$0")/.." || exit 1
 gate=.claude/hooks/approval-gate.sh
 pass=0; fail=0
 
-# expect <ask|pass> <description> <json>
+# expect <ask|deny|allow|pass> <description> <json>
 expect() {
   out=$(printf '%s' "$3" | "$gate")
-  if grep -q '"permissionDecision": *"ask"' <<<"$out"; then got=ask; else got=pass; fi
+  if [[ -z "$out" ]]; then got=pass
+  else got=$(jq -r '.hookSpecificOutput.permissionDecision // "pass"' <<<"$out"); fi
   if [[ "$got" == "$1" ]]; then pass=$((pass+1)); else fail=$((fail+1)); echo "FAIL ($got, wanted $1): $2"; fi
 }
 
@@ -29,12 +30,31 @@ expect ask  "mcp CamelCase send"  '{"tool_name":"mcp__x__Send_Message"}'
 # Real Microsoft 365 connector tools (listed 2026-09-24). If the connector adds
 # tools, list them here; any unknown verb already defaults to ask.
 m365=mcp__claude_ai_Microsoft_365__
-for t in outlook_batch_delete_messages outlook_batch_modify_labels outlook_create_draft outlook_create_event outlook_create_filter outlook_create_label outlook_create_reply_all_draft outlook_create_reply_draft outlook_delete_draft outlook_delete_event outlook_delete_filter outlook_delete_label outlook_forward_mail outlook_modify_labels outlook_modify_thread_labels outlook_respond_to_event outlook_send_draft outlook_send_mail outlook_set_vacation outlook_trash_thread outlook_untrash_thread outlook_update_draft outlook_update_event outlook_update_label sharepoint_copy_item sharepoint_create_folder sharepoint_delete_item sharepoint_move_item sharepoint_rename_item sharepoint_update_file sharepoint_upload_file teams_create_chat teams_reply_channel_message teams_send_channel_message teams_send_chat_message; do
+for t in outlook_batch_delete_messages outlook_batch_modify_labels outlook_create_draft outlook_create_event outlook_create_filter outlook_create_label outlook_create_reply_all_draft outlook_create_reply_draft outlook_delete_draft outlook_delete_event outlook_delete_filter outlook_delete_label outlook_forward_mail outlook_modify_labels outlook_modify_thread_labels outlook_respond_to_event outlook_send_draft outlook_send_mail outlook_set_vacation outlook_trash_thread outlook_untrash_thread outlook_update_draft outlook_update_event outlook_update_label sharepoint_copy_item sharepoint_create_folder sharepoint_delete_item sharepoint_move_item sharepoint_rename_item sharepoint_update_file sharepoint_upload_file; do
   expect ask  "m365 $t" "{\"tool_name\":\"$m365$t\"}"
+done
+for t in teams_create_chat teams_reply_channel_message teams_send_channel_message teams_send_chat_message; do
+  expect deny "m365 $t (no/other chat)" "{\"tool_name\":\"$m365$t\"}"
 done
 for t in chat_message_search find_meeting_availability get_granted_scopes get_me outlook_calendar_search outlook_email_search outlook_find_available_time read_resource search_people sharepoint_folder_search sharepoint_search teams_list_channel_messages teams_list_channels teams_list_chats teams_list_teams; do
   expect pass "m365 $t" "{\"tool_name\":\"$m365$t\"}"
 done
+
+# Teams: only the CEO 1:1 chat, no @mentions, is pre-approved.
+ceo='19:a7e8ebf4-992c-431d-8daa-2ff7f01e0129_d31e5b95-dc3b-45f8-8ff7-0e63e143aaa4@unq.gbl.spaces'
+expect allow "teams to CEO chat"      "{\"tool_name\":\"${m365}teams_send_chat_message\",\"tool_input\":{\"chatId\":\"$ceo\",\"body\":\"hi\"}}"
+expect deny  "teams to other chat"    "{\"tool_name\":\"${m365}teams_send_chat_message\",\"tool_input\":{\"chatId\":\"19:other@thread.v2\",\"body\":\"hi\"}}"
+expect deny  "teams CEO chat+mention" "{\"tool_name\":\"${m365}teams_send_chat_message\",\"tool_input\":{\"chatId\":\"$ceo\",\"body\":\"hi\",\"mentions\":[{\"id\":\"x\",\"displayName\":\"x\"}]}}"
+expect deny  "teams CEO id as prefix" "{\"tool_name\":\"${m365}teams_send_chat_message\",\"tool_input\":{\"chatId\":\"${ceo}x\",\"body\":\"hi\"}}"
+expect deny  "teams channel post"     "{\"tool_name\":\"${m365}teams_send_channel_message\",\"tool_input\":{\"teamId\":\"t\",\"channelId\":\"c\",\"body\":\"hi\"}}"
+expect deny  "teams unknown action"   "{\"tool_name\":\"${m365}teams_add_member\"}"
+
+# Protect the gate and settings from agents.
+expect ask  "edit gate"               '{"tool_name":"Edit","tool_input":{"file_path":"/Users/cfgrowth/cf-growth/.claude/hooks/approval-gate.sh"}}'
+expect ask  "write settings"          '{"tool_name":"Write","tool_input":{"file_path":"/Users/cfgrowth/cf-growth/.claude/settings.json"}}'
+expect ask  "sed -i on gate"          '{"tool_name":"Bash","tool_input":{"command":"sed -i \"\" s/x/y/ .claude/hooks/approval-gate.sh"}}'
+expect ask  "redirect into settings"  '{"tool_name":"Bash","tool_input":{"command":"echo {} > .claude/settings.json"}}'
+expect pass "read gate with cat"      '{"tool_name":"Bash","tool_input":{"command":"cat .claude/hooks/approval-gate.sh"}}'
 
 # Bash: network/mail/AppleScript asks; ordinary commands pass.
 expect ask  "curl"                '{"tool_name":"Bash","tool_input":{"command":"curl https://example.com"}}'

@@ -8,9 +8,7 @@
       "Glob",
       "WebSearch",
       "WebFetch",
-      "Write(accounts/**)",
       "Edit(accounts/**)",
-      "Write(drafts/**)",
       "Edit(drafts/**)",
       "Bash(git status)",
       "Bash(git diff *)",
@@ -18,7 +16,6 @@
       "Bash(ls *)"
     ],
     "ask": [
-      "Write(pipeline/**)",
       "Edit(pipeline/**)",
       "Bash(curl *)",
       "Bash(wget *)",

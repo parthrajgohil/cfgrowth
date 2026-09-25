@@ -178,7 +178,7 @@ of expertise in outreach and as seeds for LinkedIn posts. Strong outreach hooks:
   sequence, Replied (the gate enforces this). The CEO sets On hold, Approved, Needs
   edit, Meeting, Won, Lost, Archived.
 - **Lead flow:** daily run (09:17) → New → CEO reviews in HubSpot and changes the stage
-  → hourly run (09:03–19:03, weekdays) handles Approved (email reveal, HubSpot contact,
+  → hourly run (09:03–23:03 IST, weekdays) handles Approved (email reveal, HubSpot contact,
   Saleshandy CSV → Ready to import / No email found), Needs edit (revise → New), and
   watches Saleshandy for replies → CEO imports the CSV and launches.
 - **LinkedIn touch:** leads with no email get a drafted connection note, InMail and

@@ -1,4 +1,4 @@
-Hourly lead-stage run (weekdays 09:00–19:00 IST). You are running unattended; nobody
+Hourly lead-stage run (weekdays 09:03–23:03 IST). You are running unattended; nobody
 can answer questions or approve prompts. Anything that needs approval will be refused.
 
 HubSpot company property `cf_lead_stage` is the source of truth for every lead. The CEO

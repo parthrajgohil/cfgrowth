@@ -25,10 +25,12 @@ HubSpot with `cf_lead_stage` = `new`, and notify the CEO on Teams about each lea
   production, a certification push, an RTOS migration, an end-of-life chip.
 - You can use web research and Saleshandy's `sage_search` (free: describe the
   companies or people you want). Verify every trigger with a public source.
-- The priority table is not filled in yet, so do not rank service lines or
-  industries. Spread the day's leads across the website industries, and
-  vary them from recent days (check the dates in `accounts/`).
-- Target regions: USA and Europe, unless CLAUDE.md says otherwise.
+- Follow the **Priorities** and **ICP** sections of CLAUDE.md: about 4 in 5 leads in the
+  primary rows (firmware and hardware for healthcare/medical and industrial IoT), the
+  rest exploring the secondary rows. Include **segment 2** (traditional companies
+  adding a connected product) on most days. Vary industries from recent days (check the
+  dates in `accounts/index.md`).
+- Regions: USA and Europe (EU + UK) only. Company size 10–500.
 - Skip defense or export-controlled work, and pure software companies with no device.
 
 For each candidate:

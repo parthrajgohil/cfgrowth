@@ -83,34 +83,53 @@ of any setup or infrastructure work, and update it when a step or decision chang
 
 ## Priorities
 
-TODO(CEO): rank the service lines, industries and regions. Until you do, agents
-should treat all of the ones below as equal and **not** guess a ranking.
+Set by the CEO on 2026-09-25. Agents should put most of each day's leads (about 4 in 5)
+into the **primary** rows, and use the rest to explore the secondary ones.
 
-| Rank | Service line | Target industries | Target regions | Notes |
+| Priority | Service line | Target industries | Target regions | Notes |
 |------|--------------|-------------------|----------------|-------|
-| ?    | Embedded firmware | | | |
-| ?    | IoT full-stack | | | |
-| ?    | Hardware / PCB | | | |
-| ?    | Mobile / cloud apps | | | |
-| ?    | AI/ML | | | |
+| Primary | Embedded firmware | Healthcare / medical; Industrial IoT | USA, Europe (EU + UK) | Lead angle for device makers |
+| Primary | Hardware / PCB | Healthcare / medical; Industrial IoT | USA, Europe (EU + UK) | Incl. BMS, power, re-engineering / cost-down |
+| Secondary | IoT full-stack | Any industry adding a connected product (see ICP, segment 2) | USA, Europe | Natural angle for non-tech companies |
+| Secondary | Mobile / cloud apps | As above | USA, Europe | Usually part of a device project |
+| Secondary | AI/ML | Healthcare, industrial | USA, Europe | Edge AI / CV tied to devices first |
 
-Industries on the website: Healthcare / medical wearables · Automotive & EV
+**IoT isn't limited to one industry** (CEO): any company may need a connected product,
+for example a construction company tracking its tools, or a tyre maker or dealer monitoring
+tyre health. Treat "Industrial IoT" broadly: construction, logistics, automotive
+aftermarket, agriculture, energy, facilities, retail operations.
+
+Website industries for reference: Healthcare / medical wearables · Automotive & EV
 charging · Industrial IoT & automation · Home automation · Smart wearables · Consumer
 electronics.
 
-## Ideal customer profile (draft, pending the priority table)
+## Ideal customer profile
 
-- **Who buys:** CTO, VP/Head of Engineering, Head of Product, or founder at a hardware
-  or connected-product company. At startups this is usually the founder.
-- **Company:** 10–500 employees. Building or scaling a connected physical product.
-  Short on embedded or IoT engineers.
+Company size 10–500 employees in both segments. Regions: USA and Europe (EU + UK).
+
+**Segment 1: device makers.** Hardware or connected-product companies building or
+scaling a device and short on embedded/IoT engineers.
+- **Who buys:** CTO, VP/Head of Engineering, Head of Product, or founder (usually the
+  founder at startups).
 - **Triggers:** recently funded; hiring firmware/embedded engineers (so they need
   capacity); launching a new device; moving from a prototype to production; a
   certification push (medical, OCPP); migrating RTOS (FreeRTOS → Zephyr); nRF/BLE
   issues; an end-of-life chip.
-- **Poor fit:** pure software/SaaS with no device component (unless it's AI/ML
-  work); companies that want only staff augmentation at the lowest rate.
-- TODO(CEO): regions to prioritize (site case studies: USA, Europe).
+
+**Segment 2: traditional companies adding a connected product.** No in-house electronics
+team, so they need the whole stack from one partner (e.g. construction tool tracking,
+tyre-health monitoring, asset or fleet tracking, remote equipment monitoring).
+- **Who buys:** Head of Product / Innovation / Digital, COO, CTO/CIO, or the owner/MD.
+- **Triggers:** an announced digital/IoT or "smart product" initiative; innovation or
+  IoT hires; a pilot or trade-show demo; customer demand for monitoring or tracking;
+  regulation needing data (safety, emissions, compliance); a competitor launching a
+  connected product.
+- **Angle:** IoT full-stack with firmware and hardware underneath; "one accountable
+  partner", and full IP ownership for a company new to electronics.
+
+**Poor fit:** pure software/SaaS with no device component (unless it's AI/ML work);
+companies that want only staff augmentation at the lowest rate; defense or
+export-controlled work.
 
 ## Case studies (anonymized; link these, don't embellish)
 

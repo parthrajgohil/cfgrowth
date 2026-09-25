@@ -60,33 +60,33 @@ record what is waiting on the CEO.
        Entra admin consent was granted. All 50 M365 tools were checked against the
        gate: 35 write tools ask, 15 read tools pass. They are now in
        `scripts/test-approval-gate.sh` (79 cases, all pass).
-       **Open:** M365 **write tools are ON** (granted scopes include Mail.Send,
-       Mail.ReadWrite, ChatMessage.Send, Files.ReadWrite.All), against the decision
-       above. The gate still forces approval on each call. CEO to turn them off in
-       Organization settings → Connectors → Microsoft 365, or decide to keep them.
-       HubSpot is still pending.
-5. [ ] `scripts/cf-bg.sh` (refuses a 4th background session using
-       `claude agents --json`); enable Remote Control.
+       M365 write tools stay ON (needed for Teams lead alerts, decided 2026-09-24);
+       the gate blocks every Teams write except the CEO chat and asks for all others.
+       Saleshandy and HubSpot connected 2026-09-25 (see decisions).
+5. [~] `scripts/cf-bg.sh` committed. Remote Control is optional: the hourly job covers
+       the lead-desk role.
 6b. [x] Hourly LaunchAgent `com.corefragment.hourly-leads` loaded 2026-09-25 (weekdays 09:03–19:03 IST). Remove with `launchctl bootout gui/$(id -u)/com.corefragment.hourly-leads`.
 6a. [x] Daily prospecting LaunchAgent `com.corefragment.daily-prospecting` loaded 2026-09-25
        (weekdays 09:17 IST, runs `scripts/daily-prospecting.sh`, logs in `logs/`). The CEO
        installed it by hand after auto mode refused to. First manual run on 2026-09-24:
        4 A-grade leads, 4 Teams notifications delivered. Remove with
        `launchctl bootout gui/$(id -u)/com.corefragment.daily-prospecting`.
-6. [ ] LaunchAgent `~/Library/LaunchAgents/com.corefragment.claude-respawn.plist`
-       that runs `claude respawn --all` at login. Verify whether respawn revives
-       sessions after a reboot; if not, have the script start the standing sessions
-       through cf-bg.sh. Set automatic login for `cfgrowth` (not possible with
-       FileVault on).
-7. [ ] Dry run: research one account, draft one email, and confirm that sending it
-       triggers an approval prompt.
+6. [ ] Survive reboots and power cuts (admin account): automatic login for `cfgrowth`
+       (requires FileVault off), no automatic sleep, "start up after power failure".
+       Replaces the old respawn LaunchAgent idea: the scheduled jobs are launchd jobs
+       and only need the user logged in.
+7. [x] Dry run done 2026-09-24 (SoundHealth brief + draft; the send was held for approval).
+8. [ ] Saleshandy one-time setup (CEO): sending mailbox/domain, one sequence using the CSV
+       columns as custom fields (`subject`, `email_1`, `followup_1..3`), optional HubSpot
+       sync. The first real CSV import is untested.
+9. [ ] HubSpot: finish the onboarding wizard; save a "Leads to review" view (CF lead stage = New).
+10. [ ] Optional: Teams alert when a scheduled job exits with an error.
 
 ## Waiting on the CEO
 
-- Priority table in CLAUDE.md, and confirming the proof points ("10+" vs "12+" countries)
+- Priority table in CLAUDE.md (service lines, industries, regions)
+- Proof points: 10+ vs 12+ countries, team size, engagement models, typical/minimum deal size
 - 2–3 on-voice emails or posts, saved as `.claude/skills/cf-voice/examples.md`
-- Confirm the standing sessions
-- M365 write tools: turn off (planned) or keep
-- Which mailbox Saleshandy sends from and where replies land
-- Step 6 (respawn at login) and automatic login for `cfgrowth`, needed for scheduled runs after a reboot
-- Email-data provider for recipient addresses (Saleshandy lead finder vs Hunter/Apollo)
+- Extra case studies or reference clients we may mention
+- Saleshandy sending mailbox and sequence (step 8)
+- Reboot resilience settings (step 6)

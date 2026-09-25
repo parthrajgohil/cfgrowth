@@ -84,11 +84,10 @@ record what is waiting on the CEO.
        columns as custom fields (`subject`, `email_1`, `followup_1..3`), optional HubSpot
        sync. The first real CSV import is untested.
 9. [ ] HubSpot: finish the onboarding wizard; save a "Leads to review" view (CF lead stage = New).
-10. [x] Teams alert when a scheduled job fails, or when the daily run is skipped (`notify` in `scripts/cf-headless.sh`, Haiku, tested 2026-09-25).
+10. [x] Teams alert when a scheduled job fails or is skipped (`notify` in `scripts/cf-headless.sh`, Haiku). The alert is checked (the call must answer SENT); if Teams can't be reached, or a run's output mentions a lost connector sign-in, the job falls back to a macOS notification and `logs/ALERTS.log` (tested 2026-09-25).
 
 ## Waiting on the CEO
 
-- Re-authenticate Microsoft 365 in `/mcp` (Teams sends failing 2026-09-25); then resend Legato LinkedIn touch
 - Install the LinkedIn content LaunchAgent (`launchd/com.corefragment.linkedin-content.plist`)
 
 - Priority table in CLAUDE.md (service lines, industries, regions)

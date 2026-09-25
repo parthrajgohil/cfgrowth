@@ -5,6 +5,7 @@
 cd "$(dirname "$0")/.." || exit 1
 gate=${GATE:-.claude/hooks/approval-gate.sh}   # GATE=<file> tests a candidate
 pass=0; fail=0
+export CF_CREDIT_DIR=$(mktemp -d)   # keep test reveals out of the real daily counter
 
 # expect <ask|deny|allow|pass> <description> <json>
 expect() {
@@ -65,7 +66,7 @@ done
 for t in add_dnc_items add_leads_to_sequence add_sequence_step add_step_variant create_dnc_list create_sequence delete_sequence delete_step import_prospects_to_sequence_step import_prospects_with_field_name skip_task snooze_task unsupported_operation update_sequence_priority_distribution update_sequence_settings update_step_variant update_task_note upload_attachment; do
   expect ask "sh $t" "{\"tool_name\":\"$sh$t\"}"
 done
-for t in check_prospect_import_status enrich_companies enrich_contacts get_bulk_task_status get_consolidated_stats get_dnc_items_by_id get_domain_order get_email_account_stats get_email_content get_email_list get_email_thread get_enrichment_result get_enrichment_status get_outcomes get_sequence_settings get_sequence_stats get_task_assignee_list get_task_by_id get_task_counts get_unread_email_threads_count list_clients list_dnc_lists list_domain_orders list_domain_plans list_domains list_email_accounts list_fields list_schedules list_sequence_email_accounts list_sequence_steps list_sequences list_tasks sage_search search_dnc_item search_domain; do
+for t in check_prospect_import_status get_bulk_task_status get_consolidated_stats get_dnc_items_by_id get_domain_order get_email_account_stats get_email_content get_email_list get_email_thread get_enrichment_result get_enrichment_status get_outcomes get_sequence_settings get_sequence_stats get_task_assignee_list get_task_by_id get_task_counts get_unread_email_threads_count list_clients list_dnc_lists list_domain_orders list_domain_plans list_domains list_email_accounts list_fields list_schedules list_sequence_email_accounts list_sequence_steps list_sequences list_tasks sage_search search_dnc_item search_domain; do
   expect pass "sh $t" "{\"tool_name\":\"$sh$t\"}"
 done
 
@@ -75,12 +76,29 @@ hs=mcp__claude_ai_HubSpot__
 for t in manage_marketing_email manage_blog_post manage_landing_page manage_website_page import-claude-design-from-url; do
   expect deny "hs $t" "{\"tool_name\":\"$hs$t\"}"
 done
-for t in manage_aeo_prompts manage_aeo_recommendations manage_campaign_objects manage_crm_objects manage_custom_pipelines manage_custom_properties manage_onboarding manage_saved_reports manage_segment render_asset show_feedback_form; do
+for t in manage_aeo_prompts manage_aeo_recommendations manage_campaign_objects manage_custom_pipelines manage_custom_properties manage_onboarding manage_saved_reports manage_segment render_asset show_feedback_form; do
   expect ask "hs $t" "{\"tool_name\":\"$hs$t\"}"
 done
 for t in discover_hubspot_schema tool_guidance get_aeo_metrics get_campaign_attribution_reports get_content_analytics_report get_conversation_channel_metadata get_crm_objects get_marketing_email_analytics get_organization_details get_properties get_user_details query_crm_data read_campaign_data search_conversations search_crm_objects search_intent_signals search_owners search_properties; do
   expect pass "hs $t" "{\"tool_name\":\"$hs$t\"}"
 done
+
+# Saleshandy credits: email only, <=10 per call, <=10 per day.
+expect deny  "sh reveal phone"        '{"tool_name":"mcp__claude_ai_Saleshandy__enrich_contacts","tool_input":{"lead_id":[1],"reveal_phone":true}}'
+expect deny  "sh reveal 11 at once"   '{"tool_name":"mcp__claude_ai_Saleshandy__enrich_contacts","tool_input":{"lead_id":[1,2,3,4,5,6,7,8,9,10,11]}}'
+expect pass  "sh reveal 6"            '{"tool_name":"mcp__claude_ai_Saleshandy__enrich_contacts","tool_input":{"lead_id":[1,2,3,4,5,6]}}'
+expect pass  "sh reveal 4 more (=10)" '{"tool_name":"mcp__claude_ai_Saleshandy__enrich_contacts","tool_input":{"linkedin_url":["a","b"],"full_name_with_company":[{"first_name":"a","last_name":"b","company_domain":"c.com"},{"first_name":"d","last_name":"e","company_domain":"f.com"}]}}'
+expect deny  "sh reveal 11th today"   '{"tool_name":"mcp__claude_ai_Saleshandy__enrich_contacts","tool_input":{"lead_id":[7]}}'
+expect ask   "sh enrich companies"    '{"tool_name":"mcp__claude_ai_Saleshandy__enrich_companies"}'
+
+# HubSpot: creating <=10 companies/contacts/notes is pre-approved; anything else asks.
+expect allow "hs create company+note" '{"tool_name":"mcp__claude_ai_HubSpot__manage_crm_objects","tool_input":{"createRequest":{"objects":[{"objectType":"companies","properties":{"name":"X"}},{"objectType":"NOTE","properties":{"hs_note_body":"n"},"associations":[{"targetObjectId":1,"targetObjectType":"COMPANY"}]}]}}}'
+expect ask   "hs update contact"      '{"tool_name":"mcp__claude_ai_HubSpot__manage_crm_objects","tool_input":{"updateRequest":{"objects":[{"objectType":"contacts","objectId":1,"properties":{"email":"x"}}]}}}'
+expect ask   "hs create + update"     '{"tool_name":"mcp__claude_ai_HubSpot__manage_crm_objects","tool_input":{"createRequest":{"objects":[{"objectType":"companies"}]},"updateRequest":{"objects":[{"objectType":"companies","objectId":1}]}}}'
+expect ask   "hs create deal"         '{"tool_name":"mcp__claude_ai_HubSpot__manage_crm_objects","tool_input":{"createRequest":{"objects":[{"objectType":"deals","properties":{"dealname":"x"}}]}}}'
+expect ask   "hs note on a deal"      '{"tool_name":"mcp__claude_ai_HubSpot__manage_crm_objects","tool_input":{"createRequest":{"objects":[{"objectType":"notes","associations":[{"targetObjectId":1,"targetObjectType":"DEAL"}]}]}}}'
+expect ask   "hs create 11"           '{"tool_name":"mcp__claude_ai_HubSpot__manage_crm_objects","tool_input":{"createRequest":{"objects":[{"objectType":"contacts"},{"objectType":"contacts"},{"objectType":"contacts"},{"objectType":"contacts"},{"objectType":"contacts"},{"objectType":"contacts"},{"objectType":"contacts"},{"objectType":"contacts"},{"objectType":"contacts"},{"objectType":"contacts"},{"objectType":"contacts"}]}}}'
+expect ask   "hs empty request"       '{"tool_name":"mcp__claude_ai_HubSpot__manage_crm_objects","tool_input":{}}'
 
 # Bash: network/mail/AppleScript asks; ordinary commands pass.
 expect ask  "curl"                '{"tool_name":"Bash","tool_input":{"command":"curl https://example.com"}}'

@@ -36,9 +36,13 @@
 |---|---|---|---|
 | Vivek Mohan | VP, Product Development & Engineering | https://soundhealth.life/pages/leadership-team | Former head of IoT at Ruckus Networks and of the wireless business at Semtech; MSEE (USC). **Primary target.** [5] |
 | Paramesh Gopi, PhD | Founder & CEO | https://soundhealth.life/pages/leadership-team | Grew Marvell's consumer Wi-Fi business; ex-CEO of AppliedMicro. Deeply technical. [4][5] |
-| Venkatesh Perungulam | VP, Technology & Operations | https://soundhealth.life/pages/leadership-team | No background on the page. Possibly owns the India site. [5] |
+| Venkatesh Perungulam | VP, Infrastructure & Technology (Saleshandy title) | https://www.linkedin.com/in/venkateshperungulam | Background is IT/infrastructure (bank IT; factory information systems at MACOM/AppliedMicro, where he overlapped with the CEO), not firmware. Better as a referral contact than a buyer. [5][7] |
 
-Emails: not researched. The human fills these in from a legitimate business source.
+**Emails (Saleshandy Lead Finder, 2026-09-25):**
+- Venkatesh Perungulam: `venkatesh@soundhealth.life` (verified "valid"). [7]
+- Vivek Mohan: not in Saleshandy's database. Still needed for the firmware pitch.
+
+[7] Saleshandy Lead Finder reveal, request 6ab628a7f5ae266cc001cdfd (1 credit).
 
 ## Best angle
 **Service line:** Embedded firmware (BLE, OTA, low power) plus a mobile BLE companion app ·

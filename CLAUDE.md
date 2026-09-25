@@ -18,6 +18,12 @@ of any setup or infrastructure work, and update it when a step or decision chang
    without asking, to the 1:1 chat with parthraj@corefragment.com, and only there
    (lead notifications). The approval gate enforces this by chat ID and blocks every
    other Teams write.
+   **Second exception (CEO decision, 2026-09-25):** agents may *create* HubSpot
+   companies, contacts and notes without asking (max 10 per call, after checking for
+   duplicates). Updating existing records, and anything involving deals, still needs
+   approval. Saleshandy email reveals are allowed only for drafts the CEO has marked
+   `status: approved` (email only, max 10 a day, capped by the gate). Agents never
+   add prospects to sequences or start them.
 2. Drafts go in `drafts/`; account research goes in `accounts/`. Tell the human where
    the file is and what decision you need.
 3. Never invent facts: no made-up clients, metrics, certifications, or case studies.
@@ -137,10 +143,15 @@ of expertise in outreach and as seeds for LinkedIn posts. Strong outreach hooks:
 ## Tools & workflow
 
 - **Outreach sending:** Saleshandy (cold email sequences). Agents prepare
-  prospects and copy; a human loads and launches campaigns.
-- **Email & files:** Microsoft 365 (Outlook, OneDrive).
-- **CRM:** none yet. Until one is connected, `pipeline/leads.csv` is the pipeline,
-  and only the human edits it (agents propose changes in their output).
+  prospects and copy plus an import CSV (`drafts/saleshandy/`); a human loads and
+  launches campaigns. Saleshandy Lead Finder (`sage_search`, free) is also a lead
+  source; email reveals (`enrich_contacts`, ~1 credit) only for approved drafts.
+- **Email & files:** Microsoft 365 (Outlook, OneDrive). Teams: lead alerts to the CEO.
+- **CRM:** HubSpot. Every A/B lead gets a Company + research Note; a Contact is
+  created once its email is revealed. `pipeline/leads.csv` is legacy (human-only).
+- **Lead review flow:** daily run → CEO reviews `drafts/email/` and sets
+  `status: approved` → next run reveals the email, creates the HubSpot contact and
+  adds the row to the Saleshandy CSV → CEO imports and launches.
 - **Writing style:** always use the `cf-voice` skill; use `cold-email` and
   `linkedin-post` for those formats.
 

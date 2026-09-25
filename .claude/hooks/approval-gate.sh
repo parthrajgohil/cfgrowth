@@ -79,6 +79,28 @@ case "$tool" in
       check_*_status)
         exit 0
         ;;
+      enrich_contacts)
+        # Email reveals cost ~1 credit each (phone ~7). Cap: email only, at most 10
+        # contacts per call and 10 per day (counted per contact requested).
+        if [[ $(jq -r '.tool_input.reveal_phone // false' <<<"$input") == true ]]; then
+          deny "CF approval gate: phone reveals cost ~7 credits each; agents reveal email only."
+        fi
+        n=$(jq '[(.tool_input.lead_id // []), (.tool_input.linkedin_url // []), (.tool_input.full_name_with_company // [])] | map(length) | add' <<<"$input")
+        if (( n > 10 )); then
+          deny "CF approval gate: at most 10 Saleshandy email reveals per call ($n requested)."
+        fi
+        dir=${CF_CREDIT_DIR:-"$(cd "$(dirname "$0")/../.." && pwd)/logs"}
+        f="$dir/saleshandy-credits-$(date +%F).count"
+        used=$(cat "$f" 2>/dev/null || echo 0)
+        if (( used + n > 10 )); then
+          deny "CF approval gate: daily cap of 10 Saleshandy email reveals reached ($used used today, $n requested)."
+        fi
+        mkdir -p "$dir" && echo $((used + n)) >"$f"
+        exit 0
+        ;;
+      enrich_companies)
+        ask "CF approval gate: company enrichment may consume Saleshandy credits."
+        ;;
     esac
     if [[ "$words" =~ ' '(send|launch|resume|start|activate|unpause|play|schedule|run|trigger|reply|forward|purchase|buy)' ' ]]; then
       deny "CF approval gate: '$tool' could send email or start a sequence. Only the CEO does that, in Saleshandy."
@@ -100,6 +122,21 @@ case "$tool" in
         ;;
       discover_hubspot_schema|tool_guidance)
         exit 0
+        ;;
+      manage_crm_objects)
+        # Auto-create (CEO decision 2026-09-25): creating up to 10 companies,
+        # contacts or notes (associated only with each other) is pre-approved.
+        # Any update to an existing record, or any other object type, asks.
+        if jq -e 'def okt: ascii_upcase | IN("COMPANY","COMPANIES","CONTACT","CONTACTS","NOTE","NOTES");
+              ((.tool_input.updateRequest.objects // []) | length) == 0
+              and (((.tool_input.createRequest.objects // []) | length) as $c | $c > 0 and $c <= 10)
+              and all(.tool_input.createRequest.objects[];
+                      ((.objectType // "") | okt)
+                      and all((.associations // [])[]; ((.targetObjectType // "") | okt)))' \
+            <<<"$input" >/dev/null 2>&1; then
+          allow "CF approval gate: creating HubSpot companies/contacts/notes (pre-approved)."
+        fi
+        ask "CF approval gate: this HubSpot change updates existing records or touches other object types. Review before approving."
         ;;
       manage_*)
         ask "CF approval gate: '$action' changes HubSpot data. Approve only if you have reviewed exactly what it will do."

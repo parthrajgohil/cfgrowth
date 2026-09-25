@@ -29,7 +29,12 @@ fi
   --disallowedTools Bash Agent Workflow \
   --allowedTools Read Glob Grep WebSearch WebFetch ToolSearch \
     "Edit(accounts/**)" "Edit(drafts/**)" \
-    mcp__claude_ai_Microsoft_365__teams_send_chat_message
+    mcp__claude_ai_Microsoft_365__teams_send_chat_message \
+    mcp__claude_ai_Saleshandy__sage_search mcp__claude_ai_Saleshandy__enrich_contacts \
+    mcp__claude_ai_Saleshandy__get_enrichment_status mcp__claude_ai_Saleshandy__get_enrichment_result \
+    mcp__claude_ai_HubSpot__get_user_details mcp__claude_ai_HubSpot__tool_guidance \
+    mcp__claude_ai_HubSpot__search_crm_objects mcp__claude_ai_HubSpot__search_properties \
+    mcp__claude_ai_HubSpot__manage_crm_objects
 status=$?
 
 echo "=== $(date '+%F %T') daily prospecting end (exit $status)"

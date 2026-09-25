@@ -1,6 +1,6 @@
 ---
 type: cold-email
-stage: ready_to_import
+stage: in_sequence
 account: heycharge
 recipient: Chris Cardé, Founder & CEO (email: chris.carde@heycharge.com)
 sources: [accounts/heycharge.md, https://corefragment.com/blog/ocpp-compliance-importance, https://corefragment.com/case-study/smart-glucometer]

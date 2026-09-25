@@ -1,6 +1,6 @@
 ---
 type: cold-email
-stage: ready_to_import
+stage: in_sequence
 account: soundhealth
 recipient: Vivek Mohan, VP Product Development & Engineering (email: vivek@soundhealth.life)
 sources: [accounts/soundhealth.md, https://corefragment.com/blog/medical-wearable-device-development-challenges-and-fix, https://corefragment.com/case-study/smart-glucometer]

@@ -88,6 +88,8 @@ record what is waiting on the CEO.
 
 ## Waiting on the CEO
 
+- **Reconnect Microsoft 365 in claude.ai web** (Customize → Connectors, as parthraj.gohil@): since ~12:30 on 2026-09-25, unattended runs can't use Teams even though `/mcp` in an interactive session works. Then rerun the headless Teams test.
+
 
 - Priority table in CLAUDE.md (service lines, industries, regions)
 - Typical project size / minimum deal size (optional)

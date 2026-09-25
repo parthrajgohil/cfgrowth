@@ -77,7 +77,7 @@ before=$(wc -l <"$log")
 status=$?
 if (( status != 0 )); then
   notify "$job run failed (exit $status)."
-elif tail -n +"$((before + 1))" "$log" | grep -qiE 'sign in again|re-?authenticate|needs authentication'; then
+elif tail -n +"$((before + 1))" "$log" | grep -qiE 'sign in again|re-?authenticat|re-?authoris|re-?authoriz|needs authentication|oauth|connector settings|not available in this session|was not sent to Teams|not sent to teams'; then
   # The run finished but a connector had lost its sign-in, so Teams may be down too.
   local_alert "$job: a connector needs you to sign in again (run /mcp in Claude Code). Log: $log"
 fi

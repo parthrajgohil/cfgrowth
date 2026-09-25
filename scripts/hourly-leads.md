@@ -47,7 +47,8 @@ For all approved companies together (at most 10 per run):
      is in the brief). If it exists and has no email, update ONLY its `email`. If it
      doesn't exist (older leads), create it (firstname, lastname, email, jobtitle,
      hs_linkedin_url) associated with the company.
-   - Append a row to `drafts/saleshandy/<YYYY-MM-DD>.csv` (create it with the header if
+   - Append a row to `drafts/saleshandy/<YYYY-MM-DD>.csv` (the CEO imports it into sequence
+     "CF agent leads (6-week test)", `bZwp7qe9zQ`, step 1) (create it with the header if
      needed). The header uses the **exact Saleshandy field labels**:
      `First Name,Last Name,Email,Company,Job Title,LinkedIn,Company Domain,Custom Subject Line,Custom First Line,Custom Second Line,Custom Third Line,Custom CTA,P.S. line,Custom Follow Up 1 First Line,Custom Follow Up 1 Second Line,Custom Follow Up 1 Third Line,Custom Follow Up 2,Custom Follow Up 3,Draft File`
      Fill it from the approved draft, word for word:
@@ -56,12 +57,12 @@ For all approved companies together (at most 10 per run):
        Custom Second Line = problem paragraph; Custom Third Line = "I'm the CEO of
        CoreFragment…" paragraph; Custom CTA = the two-option closing paragraph (a single-line text
        field: keep it one paragraph, under ~250 characters)
-     - P.S. line = the "Not relevant? Reply 'no'…" line if present (EU/UK), else empty
+     - P.S. line = always empty (Saleshandy adds its own "Reply 'Stop'" opt-out to every email)
      - Follow-up 1: everything after the greeting, split by paragraph into Custom Follow
        Up 1 First / Second / Third Line (the sign-off counts as a paragraph; if there are
        more than three, merge the extra ones into the Third Line)
      - Custom Follow Up 2 / Custom Follow Up 3 = everything after the greeting in
-       follow-ups 2 and 3, sign-off and opt-out line included
+       follow-ups 2 and 3, sign-off included, but WITHOUT any "Not relevant? Reply 'no'…" line
      - Don't include the greeting ("Hi {{First Name}},") or email 1's signature; the
        sequence template adds them.
      Quote every field (RFC 4180); keep line breaks inside quoted fields.

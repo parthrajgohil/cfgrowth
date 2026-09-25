@@ -144,10 +144,12 @@ case "$tool" in
               and all(.tool_input.updateRequest.objects[];
                       ((.associations // []) | length) == 0
                       and (
-                        # agent-owned stage on a company
+                        # agent-owned stage and/or LinkedIn "to send" on a company
                         (((.objectType // "") | ascii_upcase | IN("COMPANY","COMPANIES"))
-                         and ((.properties // {}) | keys) == ["cf_lead_stage"]
-                         and (.properties.cf_lead_stage | IN("new","ready_to_import","no_email","in_sequence","replied")))
+                         and ((.properties // {}) | keys | length) > 0
+                         and (((.properties // {}) | keys) - ["cf_lead_stage","cf_linkedin_touch"] | length) == 0
+                         and ((.properties.cf_lead_stage // "new") | IN("new","ready_to_import","no_email","in_sequence","replied"))
+                         and ((.properties.cf_linkedin_touch // "to_send") == "to_send"))
                         or
                         # a revealed email on a contact (2026-09-25), nothing else
                         (((.objectType // "") | ascii_upcase | IN("CONTACT","CONTACTS"))

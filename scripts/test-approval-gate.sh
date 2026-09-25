@@ -119,6 +119,15 @@ expect ask   "hs contact other field"       '{"tool_name":"mcp__claude_ai_HubSpo
 expect ask   "hs company email field"       '{"tool_name":"mcp__claude_ai_HubSpot__manage_crm_objects","tool_input":{"updateRequest":{"objects":[{"objectType":"companies","objectId":1,"properties":{"email":"jane@acme.com"}}]}}}'
 expect allow "hs mixed stage + email"       '{"tool_name":"mcp__claude_ai_HubSpot__manage_crm_objects","tool_input":{"updateRequest":{"objects":[{"objectType":"companies","objectId":1,"properties":{"cf_lead_stage":"ready_to_import"}},{"objectType":"contacts","objectId":2,"properties":{"email":"a@b.com"}}]}}}'
 
+# HubSpot LinkedIn touch: agents may set only 'to_send'.
+expect allow "hs linkedin to_send"        '{"tool_name":"mcp__claude_ai_HubSpot__manage_crm_objects","tool_input":{"updateRequest":{"objects":[{"objectType":"companies","objectId":1,"properties":{"cf_linkedin_touch":"to_send"}}]}}}'
+expect allow "hs no_email + to_send"      '{"tool_name":"mcp__claude_ai_HubSpot__manage_crm_objects","tool_input":{"updateRequest":{"objects":[{"objectType":"companies","objectId":1,"properties":{"cf_lead_stage":"no_email","cf_linkedin_touch":"to_send"}}]}}}'
+expect ask   "hs agent sets li sent"      '{"tool_name":"mcp__claude_ai_HubSpot__manage_crm_objects","tool_input":{"updateRequest":{"objects":[{"objectType":"companies","objectId":1,"properties":{"cf_linkedin_touch":"sent"}}]}}}'
+expect ask   "hs agent sets li replied"   '{"tool_name":"mcp__claude_ai_HubSpot__manage_crm_objects","tool_input":{"updateRequest":{"objects":[{"objectType":"companies","objectId":1,"properties":{"cf_linkedin_touch":"replied"}}]}}}'
+expect ask   "hs approved + to_send"      '{"tool_name":"mcp__claude_ai_HubSpot__manage_crm_objects","tool_input":{"updateRequest":{"objects":[{"objectType":"companies","objectId":1,"properties":{"cf_lead_stage":"approved","cf_linkedin_touch":"to_send"}}]}}}'
+expect ask   "hs to_send + other"         '{"tool_name":"mcp__claude_ai_HubSpot__manage_crm_objects","tool_input":{"updateRequest":{"objects":[{"objectType":"companies","objectId":1,"properties":{"cf_linkedin_touch":"to_send","name":"X"}}]}}}'
+expect ask   "hs empty properties"        '{"tool_name":"mcp__claude_ai_HubSpot__manage_crm_objects","tool_input":{"updateRequest":{"objects":[{"objectType":"companies","objectId":1,"properties":{}}]}}}'
+
 # Bash: network/mail/AppleScript asks; ordinary commands pass.
 expect ask  "curl"                '{"tool_name":"Bash","tool_input":{"command":"curl https://example.com"}}'
 expect ask  "piped wget"          '{"tool_name":"Bash","tool_input":{"command":"echo x | wget -qO- x"}}'

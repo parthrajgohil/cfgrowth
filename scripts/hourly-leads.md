@@ -52,9 +52,42 @@ For all approved companies together (at most 10 per run):
        sequence template adds them.
      Quote every field (RFC 4180); keep line breaks inside quoted fields.
    - Set `cf_lead_stage` = `ready_to_import`.
-4. For each lead with no valid email: set `cf_lead_stage` = `no_email`, and add a HubSpot
-   NOTE on the company saying who was tried and which alternative people Saleshandy has
-   at the company (from `sage_search`, free).
+4. For each lead with no valid email: set `cf_lead_stage` = `no_email` and
+   `cf_linkedin_touch` = `to_send` (one update), then prepare the **LinkedIn touch**:
+   a. Find the buyer's public LinkedIn profile URL (brief, HubSpot contact, or a web
+      search for "<name> <company> LinkedIn"). Never log in to or scrape LinkedIn. If you
+      can't find it, say "search in Sales Navigator" instead of a URL.
+   b. Write, in Parthraj's voice (`cf-voice` + `examples.md`; never open with funding):
+      - **Connection note**, at most 280 characters (LinkedIn's limit is 300): one
+        specific, warm line about their product plus a light reason to connect. No pitch,
+        no link.
+      - **InMail** (for Sales Navigator), subject up to 8 words, body 60–100 words:
+        email 1's idea, shortened, with the two-option close.
+      - **Message after they accept**, 40–70 words: thanks, one useful insight or blog link
+        from the brief, and the same two-option close.
+   c. Save these under a `## LinkedIn touch` section at the end of the draft file, with the
+      profile URL and the date.
+   d. Add a HubSpot NOTE on the company, "LINKEDIN TOUCH · to <Name> (<Title>)", with the
+      profile URL and all three texts.
+   e. Send ONE Teams message per lead (same chat as below) that you can copy from directly:
+      ```
+      LinkedIn touch: <Company> · <Name>, <Title>
+      Profile: <URL or "search in Sales Navigator">
+
+      Connection note:
+      <text>
+
+      InMail subject: <subject>
+      InMail:
+      <text>
+
+      After they accept:
+      <text>
+
+      When sent, set "CF LinkedIn touch" = Sent in HubSpot.
+      ```
+   Also add a HubSpot NOTE listing which other people Saleshandy has at the company
+   (from `sage_search`, free), in case a different contact is better.
 
 ## Needs edit → revised draft → New
 1. Read the company's notes (`search_crm_objects` for NOTE associated with the company,
@@ -102,8 +135,9 @@ change, credits charged, and any tool call that failed or was refused.
 ## Never
 - Send email, reply to prospects, add prospects to Saleshandy sequences, or change
   anything in Saleshandy.
-- Set a CEO-owned stage, update any HubSpot field other than a company's `cf_lead_stage`
-  or a contact's empty `email`, or touch deals.
+- Set a CEO-owned stage, set `cf_linkedin_touch` to anything but `to_send`, update any
+  other HubSpot field (except a contact's empty `email`), or touch deals.
+- Send LinkedIn messages or visit LinkedIn yourself; the CEO sends them.
 - Reveal phone numbers, or reveal emails for leads that aren't `approved`.
 - Edit `pipeline/`, `.claude/`, `CLAUDE.md` or `STATUS.md`. Run shell commands.
 - Invent facts, name CoreFragment clients, or put numbers on case-study results.

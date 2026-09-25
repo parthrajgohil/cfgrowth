@@ -34,14 +34,14 @@ For all approved companies together (at most 10 per run):
      doesn't exist (older leads), create it (firstname, lastname, email, jobtitle,
      hs_linkedin_url) associated with the company.
    - Append a row to `drafts/saleshandy/<YYYY-MM-DD>.csv` (create it with the header if
-     needed). The header uses the **exact Saleshandy field labels**, including the
-     trailing space in `Custom CTA `:
-     `First Name,Last Name,Email,Company,Job Title,LinkedIn,Company Domain,Custom Subject Line,Custom First Line,Custom Second Line,Custom Third Line,Custom CTA ,P.S. line,Custom Follow Up 1 First Line,Custom Follow Up 1 Second Line,Custom Follow Up 1 Third Line,Custom Follow Up 2,Custom Follow Up 3,Draft File`
+     needed). The header uses the **exact Saleshandy field labels**:
+     `First Name,Last Name,Email,Company,Job Title,LinkedIn,Company Domain,Custom Subject Line,Custom First Line,Custom Second Line,Custom Third Line,Custom CTA,P.S. line,Custom Follow Up 1 First Line,Custom Follow Up 1 Second Line,Custom Follow Up 1 Third Line,Custom Follow Up 2,Custom Follow Up 3,Draft File`
      Fill it from the approved draft, word for word:
      - Custom Subject Line = subject option 1
      - Email 1, split by paragraph: Custom First Line = appreciation/trigger paragraph;
        Custom Second Line = problem paragraph; Custom Third Line = "I'm the CEO of
-       CoreFragment…" paragraph; Custom CTA  = the two-option closing paragraph
+       CoreFragment…" paragraph; Custom CTA = the two-option closing paragraph (a single-line text
+       field: keep it one paragraph, under ~250 characters)
      - P.S. line = the "Not relevant? Reply 'no'…" line if present (EU/UK), else empty
      - Follow-up 1: everything after the greeting, split by paragraph into Custom Follow
        Up 1 First / Second / Third Line (the sign-off counts as a paragraph; if there are

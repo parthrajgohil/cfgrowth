@@ -22,7 +22,7 @@ Hi {{First Name}},
 
 {{Custom Third Line}}
 
-{{Custom CTA }}
+{{Custom CTA}}
 
 {{P.S. line}}
 
@@ -31,9 +31,6 @@ Parthraj Gohil
 CEO, CoreFragment Technologies
 corefragment.com
 ```
-(`{{Custom CTA }}` has a trailing space because the field's name does. If you rename
-the field to `Custom CTA`, tell Claude so the CSV header and this template change too.)
-
 **Step 2 (day 3)**, reply in thread
 ```
 Hi {{First Name}},

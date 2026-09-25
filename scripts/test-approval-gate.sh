@@ -110,6 +110,15 @@ expect ask   "hs stage + other prop"            '{"tool_name":"mcp__claude_ai_Hu
 expect ask   "hs stage on contact"              '{"tool_name":"mcp__claude_ai_HubSpot__manage_crm_objects","tool_input":{"updateRequest":{"objects":[{"objectType":"contacts","objectId":1,"properties":{"cf_lead_stage":"new"}}]}}}'
 expect ask   "hs stage + association"           '{"tool_name":"mcp__claude_ai_HubSpot__manage_crm_objects","tool_input":{"updateRequest":{"objects":[{"objectType":"companies","objectId":1,"properties":{"cf_lead_stage":"new"},"associations":[{"targetObjectId":2,"targetObjectType":"CONTACT"}]}]}}}'
 
+# HubSpot contact email fill: agents may set only the email on contacts.
+expect allow "hs contact email fill"        '{"tool_name":"mcp__claude_ai_HubSpot__manage_crm_objects","tool_input":{"updateRequest":{"objects":[{"objectType":"contacts","objectId":1,"properties":{"email":"jane@acme.com"}}]}}}'
+expect allow "hs CONTACT email fill"        '{"tool_name":"mcp__claude_ai_HubSpot__manage_crm_objects","tool_input":{"updateRequest":{"objects":[{"objectType":"CONTACT","objectId":1,"properties":{"email":"j.doe@acme.co.uk"}}]}}}'
+expect ask   "hs contact email + title"     '{"tool_name":"mcp__claude_ai_HubSpot__manage_crm_objects","tool_input":{"updateRequest":{"objects":[{"objectType":"contacts","objectId":1,"properties":{"email":"jane@acme.com","jobtitle":"CTO"}}]}}}'
+expect ask   "hs contact bad email"         '{"tool_name":"mcp__claude_ai_HubSpot__manage_crm_objects","tool_input":{"updateRequest":{"objects":[{"objectType":"contacts","objectId":1,"properties":{"email":"not-an-email"}}]}}}'
+expect ask   "hs contact other field"       '{"tool_name":"mcp__claude_ai_HubSpot__manage_crm_objects","tool_input":{"updateRequest":{"objects":[{"objectType":"contacts","objectId":1,"properties":{"jobtitle":"CTO"}}]}}}'
+expect ask   "hs company email field"       '{"tool_name":"mcp__claude_ai_HubSpot__manage_crm_objects","tool_input":{"updateRequest":{"objects":[{"objectType":"companies","objectId":1,"properties":{"email":"jane@acme.com"}}]}}}'
+expect allow "hs mixed stage + email"       '{"tool_name":"mcp__claude_ai_HubSpot__manage_crm_objects","tool_input":{"updateRequest":{"objects":[{"objectType":"companies","objectId":1,"properties":{"cf_lead_stage":"ready_to_import"}},{"objectType":"contacts","objectId":2,"properties":{"email":"a@b.com"}}]}}}'
+
 # Bash: network/mail/AppleScript asks; ordinary commands pass.
 expect ask  "curl"                '{"tool_name":"Bash","tool_input":{"command":"curl https://example.com"}}'
 expect ask  "piped wget"          '{"tool_name":"Bash","tool_input":{"command":"echo x | wget -qO- x"}}'

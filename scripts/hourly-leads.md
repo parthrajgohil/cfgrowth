@@ -7,9 +7,10 @@ only set: `new`, `ready_to_import`, `no_email`, `in_sequence`, `replied` (the ga
 refuses anything else, and you must never try to set a CEO stage).
 
 ## Step 0: is there anything to do? (keep this cheap)
-Call `search_crm_objects` on COMPANY with filter `cf_lead_stage IN [approved, needs_edit,
-ready_to_import, in_sequence]`, properties `name, domain, cf_lead_stage`. If there are no
-results, write nothing and stop immediately with the one line "Nothing to do."
+Call `search_crm_objects` on COMPANY with filter `cf_lead_stage HAS_PROPERTY`, properties
+`name, domain, cf_lead_stage`. Compare with the Stage column of `accounts/index.md`. If
+no company is `approved`, `needs_edit`, `ready_to_import` or `in_sequence`, and every stage
+already matches the index, write nothing and stop immediately with "Nothing to do."
 Otherwise read CLAUDE.md, then handle each stage below. Find each company's brief
 (`accounts/<slug>.md`, where the HubSpot company ID is recorded) and its draft
 (`drafts/email/*-<slug>.md`).
@@ -28,8 +29,10 @@ For all approved companies together (at most 10 per run):
 3. For each lead with a valid email:
    - Put the email in the draft's `recipient:` line and set the draft's `status:` to `approved`.
    - Record the email and the reveal request ID in the brief's Buyers section.
-   - Search HubSpot for the contact by email. If it doesn't exist, create the CONTACT
-     (firstname, lastname, email, jobtitle, company) associated with the company.
+   - In HubSpot, find the buyer's CONTACT (associated with the company; the contact ID
+     is in the brief). If it exists and has no email, update ONLY its `email`. If it
+     doesn't exist (older leads), create it (firstname, lastname, email, jobtitle,
+     hs_linkedin_url) associated with the company.
    - Append a row to `drafts/saleshandy/<YYYY-MM-DD>.csv` (create it with the header if needed):
      `first_name,last_name,email,company,job_title,linkedin_url,subject,email_1,followup_1,followup_2,followup_3,draft_file`
      using the draft's first subject and texts exactly as written, merge tags kept, and
@@ -70,6 +73,14 @@ Revised for review: Boldr
 Replied: Legato. See HubSpot
 ```
 
+## Keep the local copy in sync
+For every lead whose stage you changed, and for every lead whose stage the CEO changed
+since the last run (compare HubSpot with `accounts/index.md`):
+- set the draft's front-matter `stage:` line to the HubSpot value, and
+- update that company's row in `accounts/index.md` (Stage, Email, and the date).
+Do this in Step 0 as well: if no lead needs action but HubSpot stages differ from
+`accounts/index.md`, sync the index and drafts, then stop.
+
 ## Log
 Append a short section "Hourly <HH:MM>" to `drafts/leads/<YYYY-MM-DD>.md` listing each
 change, credits charged, and any tool call that failed or was refused.
@@ -77,7 +88,8 @@ change, credits charged, and any tool call that failed or was refused.
 ## Never
 - Send email, reply to prospects, add prospects to Saleshandy sequences, or change
   anything in Saleshandy.
-- Set a CEO-owned stage, update any HubSpot field other than `cf_lead_stage`, or touch deals.
+- Set a CEO-owned stage, update any HubSpot field other than a company's `cf_lead_stage`
+  or a contact's empty `email`, or touch deals.
 - Reveal phone numbers, or reveal emails for leads that aren't `approved`.
 - Edit `pipeline/`, `.claude/`, `CLAUDE.md` or `STATUS.md`. Run shell commands.
 - Invent facts, name CoreFragment clients, or put numbers on case-study results.

@@ -142,12 +142,20 @@ case "$tool" in
         if jq -e '((.tool_input.createRequest.objects // []) | length) == 0
               and (((.tool_input.updateRequest.objects // []) | length) as $u | $u > 0 and $u <= 10)
               and all(.tool_input.updateRequest.objects[];
-                      ((.objectType // "") | ascii_upcase | IN("COMPANY","COMPANIES"))
-                      and ((.associations // []) | length) == 0
-                      and ((.properties // {}) | keys) == ["cf_lead_stage"]
-                      and (.properties.cf_lead_stage | IN("new","ready_to_import","no_email","in_sequence","replied")))' \
+                      ((.associations // []) | length) == 0
+                      and (
+                        # agent-owned stage on a company
+                        (((.objectType // "") | ascii_upcase | IN("COMPANY","COMPANIES"))
+                         and ((.properties // {}) | keys) == ["cf_lead_stage"]
+                         and (.properties.cf_lead_stage | IN("new","ready_to_import","no_email","in_sequence","replied")))
+                        or
+                        # a revealed email on a contact (2026-09-25), nothing else
+                        (((.objectType // "") | ascii_upcase | IN("CONTACT","CONTACTS"))
+                         and ((.properties // {}) | keys) == ["email"]
+                         and ((.properties.email // "") | test("^[^@[:space:]]+@[^@[:space:]]+\\.[^@[:space:]]+$")))
+                      ))' \
             <<<"$input" >/dev/null 2>&1; then
-          allow "CF approval gate: agent-owned CF lead stage change (pre-approved)."
+          allow "CF approval gate: agent-owned CF lead stage change or contact email fill (pre-approved)."
         fi
         ask "CF approval gate: this HubSpot change updates existing records or touches other object types. Review before approving."
         ;;

@@ -1,4 +1,4 @@
-# Saleshandy test sequence: agent leads (set up ≈ 2026-10-06)
+# Saleshandy test sequence: agent leads (built 2026-09-25, id `bZwp7qe9zQ`)
 
 Sender: `parthraj.gohil@corefragment.com` (warm-up started 2026-09-25). Import file:
 `drafts/saleshandy/<date>.csv`, written by the hourly run with the exact field labels
@@ -10,6 +10,9 @@ below. Map each CSV column to the Saleshandy field of the same name when importi
 - **Open tracking OFF, click tracking OFF**, plain text, no images, at most one link
 - Daily limit ≤ 20; send window 09:00–17:00 in the **prospect's** time zone, Mon–Fri
 - Stop on reply; follow-ups go as replies in the same thread
+
+Opt-out: Saleshandy's unsubscribe text ("Reply 'Stop'…") is on for every email, so leave `P.S. line`
+empty on import and don't add our own opt-out line to the follow-ups.
 
 ## Steps
 **Step 1 (day 0)**, subject `{{Custom Subject Line}}`
@@ -24,12 +27,12 @@ Hi {{First Name}},
 
 {{Custom CTA}}
 
-{{P.S. line}}
-
 Have a nice day!
 Parthraj Gohil
 CEO, CoreFragment Technologies
 corefragment.com
+
+{{P.S. line}}
 ```
 **Step 2 (day 3)**, reply in thread
 ```

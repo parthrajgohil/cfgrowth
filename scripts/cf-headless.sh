@@ -59,6 +59,11 @@ if (( running >= max )); then
   exit 1
 fi
 
+# Claude Code caches "connector needs sign-in" flags; a stale flag makes unattended runs
+# silently skip Microsoft 365 (and so Teams) even after re-authentication (seen
+# 2026-09-25). Clear it so a genuinely expired sign-in fails visibly and alerts instead.
+rm -f "$HOME/.claude/mcp-needs-auth-cache.json"
+
 before=$(wc -l <"$log")
 "$claude" -p "$(cat "$prompt")" \
   --name "$job-$today-$(date +%H%M)" \

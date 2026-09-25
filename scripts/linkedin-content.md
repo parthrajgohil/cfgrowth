@@ -1,4 +1,4 @@
-LinkedIn content run (Tue / Wed / Thu, 11:47 IST). You are running unattended; nobody
+LinkedIn content run (Mon / Wed / Fri, 11:47 IST). You are running unattended; nobody
 can answer questions or approve prompts. Anything that needs approval will be refused.
 
 ## Goal
@@ -17,21 +17,21 @@ They should bring enquiries, not just likes.
    a topic, hook or blog post used in the last 8 weeks.
 
 ## Today's slot (by weekday)
-- **Tuesday: Engineering insight.** One concrete firmware/hardware trade-off or pitfall
+- **Monday: Engineering insight.** One concrete firmware/hardware trade-off or pitfall
   (chip, RTOS, BLE, OTA, power, BMS, certification, cost-down). Seed it from a blog post in
   CLAUDE.md's content library (fetch the post). Format: text + one **diagram/visual**.
 - **Wednesday: Proof or playbook.** An anonymised project lesson from a CLAUDE.md case study,
   or a practical checklist ("7 things to lock before your first 1,000 units").
   Format: **carousel (LinkedIn document post)**, 6–8 slides.
-- **Thursday: Industry POV or people.** Alternate weeks:
+- **Friday: Industry POV or people.** Alternate weeks:
   (a) a timely take on news from the last 7 days in embedded/IoT/medtech/industrial IoT
       (search the web: e.g. Matter, Zephyr, EU Cyber Resilience Act, FDA cybersecurity,
       chip launches or end-of-life notices); or
   (b) a human, behind-the-scenes post about the team or building a product engineering firm
       from Ahmedabad for global clients (in the spirit of Parthraj's team-lunch post).
-  On the **first Thursday of the month**, make it a **short video**: a 45–60 second
+  On the **first Friday of the month**, make it a **short video**: a 45–60 second
   talking-head script for Parthraj instead.
-Use the weekday of today's date. If it's not Tue/Wed/Thu, use the Tuesday slot.
+Use the weekday of today's date. If it's not Mon/Wed/Fri, use the Monday slot.
 
 ## Writing rules
 - Company-page voice: "we" for CoreFragment, "you" for the reader. Warm, specific, humble,

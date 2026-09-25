@@ -8,12 +8,12 @@
   <array>
     <string>/Users/cfgrowth/cf-growth/scripts/linkedin-content.sh</string>
   </array>
-  <!-- Tue, Wed, Thu at 11:47 IST: post arrives in Teams before the EU lunchtime window. -->
+  <!-- Mon, Wed, Fri at 11:47 IST: post arrives in Teams before the EU lunchtime window. -->
   <key>StartCalendarInterval</key>
   <array>
-    <dict><key>Weekday</key><integer>2</integer><key>Hour</key><integer>11</integer><key>Minute</key><integer>47</integer></dict>
+    <dict><key>Weekday</key><integer>1</integer><key>Hour</key><integer>11</integer><key>Minute</key><integer>47</integer></dict>
     <dict><key>Weekday</key><integer>3</integer><key>Hour</key><integer>11</integer><key>Minute</key><integer>47</integer></dict>
-    <dict><key>Weekday</key><integer>4</integer><key>Hour</key><integer>11</integer><key>Minute</key><integer>47</integer></dict>
+    <dict><key>Weekday</key><integer>5</integer><key>Hour</key><integer>11</integer><key>Minute</key><integer>47</integer></dict>
   </array>
   <key>EnvironmentVariables</key>
   <dict>

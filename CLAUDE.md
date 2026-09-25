@@ -177,6 +177,12 @@ of expertise in outreach and as seeds for LinkedIn posts. Strong outreach hooks:
   → hourly run (09:03–19:03, weekdays) handles Approved (email reveal, HubSpot contact,
   Saleshandy CSV → Ready to import / No email found), Needs edit (revise → New), and
   watches Saleshandy for replies → CEO imports the CSV and launches.
+- **LinkedIn touch:** leads with no email get a drafted connection note, InMail and
+  after-accept message (hourly run → Teams). The CEO sends them himself; HubSpot field
+  **CF LinkedIn touch** tracks it (agents set only "To send"). Never automate LinkedIn.
+- **LinkedIn content engine:** Tue/Wed/Thu 11:47 IST, one company-page post (text +
+  visual/carousel/video brief + first comment + reshare line) is sent to the CEO on Teams
+  to copy and post (`scripts/linkedin-content.md`, log in `drafts/linkedin/index.md`).
 - **Writing style:** always use the `cf-voice` skill; use `cold-email` and
   `linkedin-post` for those formats.
 

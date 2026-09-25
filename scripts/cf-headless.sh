@@ -34,7 +34,7 @@ if ! mkdir "$lock" 2>/dev/null; then
     echo "removing stale lock"; rmdir "$lock" && mkdir "$lock" || exit 3
   else
     echo "another job is running ($(cat "$lock/job" 2>/dev/null)); skipping"
-    [[ $job == prospecting ]] && notify "daily prospecting skipped: another job was running."
+    [[ $job != hourly ]] && notify "$job run skipped: another job was running."
     exit 0
   fi
 fi
@@ -45,7 +45,7 @@ running=$("$claude" agents --json 2>/dev/null | /usr/bin/jq 'length' 2>/dev/null
 if [[ -z "$running" ]]; then echo "could not count sessions; skipping"; notify "$job skipped: could not count Claude sessions."; exit 2; fi
 if (( running >= max )); then
   echo "$running sessions active (cap $max); skipping"
-  [[ $job == prospecting ]] && notify "daily prospecting skipped: $running Claude sessions already running (cap $max)."
+  [[ $job != hourly ]] && notify "$job run skipped: $running Claude sessions already running (cap $max)."
   exit 1
 fi
 

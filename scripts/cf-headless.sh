@@ -1,0 +1,54 @@
+#!/bin/bash
+# Run one unattended Claude job for the growth system.
+# Usage: scripts/cf-headless.sh <job-name> <prompt-file>
+#
+# - Respects the session cap (CLAUDE.md rule 6): skips if 3 Claude sessions are
+#   already active. Env: CF_MAX_SESSIONS (default 3).
+# - Only one job at a time (lock in logs/.cf-job.lock), so the daily and hourly
+#   runs never work on the same leads at once. A lock older than 2 hours is stale.
+# - No shell, no subagents. The approval gate still applies to every tool call.
+
+job=$1; prompt=$2
+cd "$(dirname "$0")/.." || exit 1
+[[ -n "$job" && -f "$prompt" ]] || { echo "usage: $0 <job> <prompt-file>" >&2; exit 64; }
+claude="$HOME/.local/bin/claude"
+max=${CF_MAX_SESSIONS:-3}
+today=$(date +%F)
+mkdir -p logs drafts/leads drafts/saleshandy
+log="logs/$job-$today.log"
+exec >>"$log" 2>&1
+echo "=== $(date '+%F %T') $job start"
+
+lock=logs/.cf-job.lock
+if ! mkdir "$lock" 2>/dev/null; then
+  if [[ -n $(find "$lock" -maxdepth 0 -mmin +120 2>/dev/null) ]]; then
+    echo "removing stale lock"; rmdir "$lock" && mkdir "$lock" || exit 3
+  else
+    echo "another job is running ($(cat "$lock/job" 2>/dev/null)); skipping"; exit 0
+  fi
+fi
+echo "$job" >"$lock/job"
+trap 'rm -f "$lock/job"; rmdir "$lock"' EXIT
+
+running=$("$claude" agents --json 2>/dev/null | /usr/bin/jq 'length' 2>/dev/null)
+if [[ -z "$running" ]]; then echo "could not count sessions; skipping"; exit 2; fi
+if (( running >= max )); then echo "$running sessions active (cap $max); skipping"; exit 1; fi
+
+"$claude" -p "$(cat "$prompt")" \
+  --name "$job-$today-$(date +%H%M)" \
+  --disallowedTools Bash Agent Workflow \
+  --allowedTools Read Glob Grep WebSearch WebFetch ToolSearch \
+    "Edit(accounts/**)" "Edit(drafts/**)" \
+    mcp__claude_ai_Microsoft_365__teams_send_chat_message \
+    mcp__claude_ai_Saleshandy__sage_search mcp__claude_ai_Saleshandy__enrich_contacts \
+    mcp__claude_ai_Saleshandy__get_enrichment_status mcp__claude_ai_Saleshandy__get_enrichment_result \
+    mcp__claude_ai_Saleshandy__list_sequences mcp__claude_ai_Saleshandy__get_email_list \
+    mcp__claude_ai_Saleshandy__get_email_thread mcp__claude_ai_Saleshandy__get_outcomes \
+    mcp__claude_ai_Saleshandy__get_unread_email_threads_count \
+    mcp__claude_ai_HubSpot__get_user_details mcp__claude_ai_HubSpot__tool_guidance \
+    mcp__claude_ai_HubSpot__search_crm_objects mcp__claude_ai_HubSpot__get_crm_objects \
+    mcp__claude_ai_HubSpot__search_properties mcp__claude_ai_HubSpot__manage_crm_objects
+status=$?
+
+echo "=== $(date '+%F %T') $job end (exit $status)"
+exit $status

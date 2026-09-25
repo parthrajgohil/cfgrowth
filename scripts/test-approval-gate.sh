@@ -100,6 +100,16 @@ expect ask   "hs note on a deal"      '{"tool_name":"mcp__claude_ai_HubSpot__man
 expect ask   "hs create 11"           '{"tool_name":"mcp__claude_ai_HubSpot__manage_crm_objects","tool_input":{"createRequest":{"objects":[{"objectType":"contacts"},{"objectType":"contacts"},{"objectType":"contacts"},{"objectType":"contacts"},{"objectType":"contacts"},{"objectType":"contacts"},{"objectType":"contacts"},{"objectType":"contacts"},{"objectType":"contacts"},{"objectType":"contacts"},{"objectType":"contacts"}]}}}'
 expect ask   "hs empty request"       '{"tool_name":"mcp__claude_ai_HubSpot__manage_crm_objects","tool_input":{}}'
 
+# HubSpot stage moves: agents may set only agent-owned cf_lead_stage values.
+expect allow "hs stage -> ready_to_import"      '{"tool_name":"mcp__claude_ai_HubSpot__manage_crm_objects","tool_input":{"updateRequest":{"objects":[{"objectType":"companies","objectId":1,"properties":{"cf_lead_stage":"ready_to_import"}}]}}}'
+expect allow "hs stage -> new"                  '{"tool_name":"mcp__claude_ai_HubSpot__manage_crm_objects","tool_input":{"updateRequest":{"objects":[{"objectType":"companies","objectId":1,"properties":{"cf_lead_stage":"new"}}]}}}'
+expect allow "hs stage -> replied (COMPANY)"    '{"tool_name":"mcp__claude_ai_HubSpot__manage_crm_objects","tool_input":{"updateRequest":{"objects":[{"objectType":"COMPANY","objectId":1,"properties":{"cf_lead_stage":"replied"}}]}}}'
+expect ask   "hs agent sets approved"           '{"tool_name":"mcp__claude_ai_HubSpot__manage_crm_objects","tool_input":{"updateRequest":{"objects":[{"objectType":"companies","objectId":1,"properties":{"cf_lead_stage":"approved"}}]}}}'
+expect ask   "hs agent sets won"                '{"tool_name":"mcp__claude_ai_HubSpot__manage_crm_objects","tool_input":{"updateRequest":{"objects":[{"objectType":"companies","objectId":1,"properties":{"cf_lead_stage":"won"}}]}}}'
+expect ask   "hs stage + other prop"            '{"tool_name":"mcp__claude_ai_HubSpot__manage_crm_objects","tool_input":{"updateRequest":{"objects":[{"objectType":"companies","objectId":1,"properties":{"cf_lead_stage":"new","name":"X"}}]}}}'
+expect ask   "hs stage on contact"              '{"tool_name":"mcp__claude_ai_HubSpot__manage_crm_objects","tool_input":{"updateRequest":{"objects":[{"objectType":"contacts","objectId":1,"properties":{"cf_lead_stage":"new"}}]}}}'
+expect ask   "hs stage + association"           '{"tool_name":"mcp__claude_ai_HubSpot__manage_crm_objects","tool_input":{"updateRequest":{"objects":[{"objectType":"companies","objectId":1,"properties":{"cf_lead_stage":"new"},"associations":[{"targetObjectId":2,"targetObjectType":"CONTACT"}]}]}}}'
+
 # Bash: network/mail/AppleScript asks; ordinary commands pass.
 expect ask  "curl"                '{"tool_name":"Bash","tool_input":{"command":"curl https://example.com"}}'
 expect ask  "piped wget"          '{"tool_name":"Bash","tool_input":{"command":"echo x | wget -qO- x"}}'

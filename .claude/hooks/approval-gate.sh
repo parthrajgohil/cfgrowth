@@ -136,6 +136,19 @@ case "$tool" in
             <<<"$input" >/dev/null 2>&1; then
           allow "CF approval gate: creating HubSpot companies/contacts/notes (pre-approved)."
         fi
+        # Stage moves (CEO decision 2026-09-25): agents may set ONLY the agent-owned
+        # values of the company property cf_lead_stage, and nothing else. Approved,
+        # On hold, Needs edit, Meeting, Won, Lost, Archived are the CEO's.
+        if jq -e '((.tool_input.createRequest.objects // []) | length) == 0
+              and (((.tool_input.updateRequest.objects // []) | length) as $u | $u > 0 and $u <= 10)
+              and all(.tool_input.updateRequest.objects[];
+                      ((.objectType // "") | ascii_upcase | IN("COMPANY","COMPANIES"))
+                      and ((.associations // []) | length) == 0
+                      and ((.properties // {}) | keys) == ["cf_lead_stage"]
+                      and (.properties.cf_lead_stage | IN("new","ready_to_import","no_email","in_sequence","replied")))' \
+            <<<"$input" >/dev/null 2>&1; then
+          allow "CF approval gate: agent-owned CF lead stage change (pre-approved)."
+        fi
         ask "CF approval gate: this HubSpot change updates existing records or touches other object types. Review before approving."
         ;;
       manage_*)

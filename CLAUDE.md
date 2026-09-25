@@ -147,11 +147,17 @@ of expertise in outreach and as seeds for LinkedIn posts. Strong outreach hooks:
   launches campaigns. Saleshandy Lead Finder (`sage_search`, free) is also a lead
   source; email reveals (`enrich_contacts`, ~1 credit) only for approved drafts.
 - **Email & files:** Microsoft 365 (Outlook, OneDrive). Teams: lead alerts to the CEO.
-- **CRM:** HubSpot. Every A/B lead gets a Company + research Note; a Contact is
-  created once its email is revealed. `pipeline/leads.csv` is legacy (human-only).
-- **Lead review flow:** daily run → CEO reviews `drafts/email/` and sets
-  `status: approved` → next run reveals the email, creates the HubSpot contact and
-  adds the row to the Saleshandy CSV → CEO imports and launches.
+- **CRM:** HubSpot. Every A/B lead gets a Company + research Note + "DRAFT FOR REVIEW"
+  Note; a Contact is created once its email is revealed. `pipeline/leads.csv` is
+  legacy (human-only).
+- **Lead stages:** the HubSpot company property **CF lead stage** (`cf_lead_stage`) is
+  the source of truth. Agents set only New, Ready to import, No email found, In
+  sequence, Replied (the gate enforces this). The CEO sets On hold, Approved, Needs
+  edit, Meeting, Won, Lost, Archived.
+- **Lead flow:** daily run (09:17) → New → CEO reviews in HubSpot and changes the stage
+  → hourly run (09:03–19:03, weekdays) handles Approved (email reveal, HubSpot contact,
+  Saleshandy CSV → Ready to import / No email found), Needs edit (revise → New), and
+  watches Saleshandy for replies → CEO imports the CSV and launches.
 - **Writing style:** always use the `cf-voice` skill; use `cold-email` and
   `linkedin-post` for those formats.
 
@@ -162,4 +168,5 @@ of expertise in outreach and as seeds for LinkedIn posts. Strong outreach hooks:
 - `drafts/email/`, `drafts/linkedin/`: content awaiting human review
 - `pipeline/leads.csv`: lead list (human-maintained)
 - `.claude/agents/`: subagents · `.claude/skills/`: writing style
-- `scripts/`: session helpers · `launchd/`: LaunchAgent
+- `scripts/`: session helpers, headless job prompts (`daily-prospecting.md`, `hourly-leads.md`) · `launchd/`: LaunchAgents
+- `drafts/saleshandy/<date>.csv`: import files · `drafts/leads/<date>.md`: daily + hourly run logs

@@ -1,13 +1,13 @@
 ---
 type: cold-email
-stage: new
+stage: ready_to_import
 account: heycharge
 recipient: Chris Cardé, Founder & CEO (email: chris.carde@heycharge.com)
 sources: [accounts/heycharge.md, https://corefragment.com/blog/ocpp-compliance-importance, https://corefragment.com/case-study/smart-glucometer]
 ---
 
 ## Lead info
-- **Stage:** new (source of truth: HubSpot "CF lead stage")
+- **Stage:** ready_to_import (source of truth: HubSpot "CF lead stage")
 - **Company:** HeyCharge · [HubSpot](https://app.hubspot.com/contacts/247517534/record/0-2/348484334304) · brief: `accounts/heycharge.md`
 - **Website:** https://www.heycharge.com · **LinkedIn:** https://www.linkedin.com/company/heycharge · **X:** @heychargehq
 - **HQ:** Munich, Bavaria, Germany · **Founded:** 2021 · **Size:** 17 (Y Combinator profile)

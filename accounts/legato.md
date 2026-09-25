@@ -36,7 +36,7 @@ Emails: not researched. The human fills these in from a legitimate business sour
 
 **Email reveal 2026-09-25 (hourly run):** Mehul Trivedi by name + legatohearing.com, Saleshandy
 request `6ab63ff8f5ae26563d01eacf`: no valid email, 0 credits. Saleshandy Lead Finder has no
-people at Legato (Steve Romine included). No Saleshandy lead ID. No HubSpot contact yet.
+people at Legato (Steve Romine included). No Saleshandy lead ID. (HubSpot contact 558514567915 has since been created with the Apollo email.)
 
 **Emails:**
 - Mehul Trivedi: `mehul@legatohearing.com` (verified), Apollo reveal 2026-09-25 (request 5041182343864640138, 1 credit).

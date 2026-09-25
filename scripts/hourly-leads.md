@@ -41,7 +41,7 @@ For all approved companies together (at most 10 per run):
    - Report the credits used and the balance (`apollo_users_api_profile` with
      `include_credit_usage`) in the log.
 3. For each lead with a valid email:
-   - Put the email in the draft's `recipient:` line and set the draft's `status:` to `approved`.
+   - Put the email in the draft's `recipient:` line (if it isn't there already).
    - Record the email and the reveal request ID in the brief's Buyers section.
    - In HubSpot, find the buyer's CONTACT (associated with the company; the contact ID
      is in the brief). If it exists and has no email, update ONLY its `email`. If it
@@ -135,6 +135,7 @@ Replied: Legato. See HubSpot
 ```
 
 ## Keep the local copy in sync
+Drafts track their stage only in the front-matter `stage:` line. Never add a `status:` line.
 For every lead whose stage you changed, and for every lead whose stage the CEO changed
 since the last run (compare HubSpot with `accounts/index.md`):
 - set the draft's front-matter `stage:` line to the HubSpot value, and

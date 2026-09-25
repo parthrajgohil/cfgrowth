@@ -1,0 +1,47 @@
+"First Name","Last Name","Email","Company","Job Title","LinkedIn","Company Domain","Custom Subject Line","Custom First Line","Custom Second Line","Custom Third Line","Custom CTA","P.S. line","Custom Follow Up 1 First Line","Custom Follow Up 1 Second Line","Custom Follow Up 1 Third Line","Custom Follow Up 2","Custom Follow Up 3","Draft File"
+"Chris","Cardé","chris.carde@heycharge.com","HeyCharge","Founder & CEO","https://www.linkedin.com/in/pilotchris/","heycharge.com","magicbox firmware","I read your post on engineering the internet out of EV charging. Charging with no connectivity at all is a genuinely useful idea, and MagicBox brings it to any OCPP wallbox.","With MagicBox and the HUMAX charger both landing this year, and a Head of Engineering search open, I imagine firmware bandwidth is tight.","I'm the CEO of CoreFragment. We build embedded firmware and hardware on Silicon Labs EFR32 and ESP32 (BLE, Zigbee, Modbus), under NDA with full IP transfer.","If extra firmware hands would help, I'd be happy to talk. Or if you'd just enjoy a casual chat about offline-first charging, I'm up for that too.","Not relevant? Reply 'no' and I won't follow up.","One thought on MagicBox: every wallbox vendor implements OCPP a little differently, so interop testing across brands often decides how smooth a rollout feels. We wrote about why this matters here: corefragment.com/blog/ocpp-compliance-importance","Happy to share how we'd approach the testing, if that's useful.","Parthraj","Another angle: since the phone is the gateway in your design, BLE reconnects on Android and iOS are part of the product itself. We built the BLE firmware and the iOS/Android apps for a US glucometer maker, so we've worked both ends of that link.
+
+Would help on the SDK side be useful, or is it in good shape?
+
+Parthraj","I don't want to crowd your inbox. If capacity is covered once the new hire starts, just let me know and I'll close this out. And if a casual tech chat ever sounds good, the offer stands.
+
+Wishing you a great MagicBox launch!
+Parthraj
+
+Not relevant? Reply 'no' and I won't follow up.","drafts/email/2026-09-24-heycharge.md"
+"Vivek","Mohan","vivek@soundhealth.life","SoundHealth","VP, Product Development & Engineering","","soundhealth.life","sonu firmware hiring","Treating congestion with personalized sound instead of steroid sprays is a thoughtful idea, and Sonu is already past 500,000 sessions.","Your senior firmware role lists BLE Audio and OTA. With two audio wearables on one small team, OTA hardening and BLE stability often lose out to feature dates.","I'm the CEO of CoreFragment. We built the BLE firmware and iOS/Android apps for a US glucometer maker, under NDA with full IP transfer.","If extra firmware capacity would help while you hire, I'd be happy to talk. Or if you'd just enjoy a casual chat about BLE audio, I'm up for that too.","","One failure point we see in medical wearables: OTA works in the lab, then units brick in the field because the rollback path was never tested. I wrote up this and 11 others here: corefragment.com/blog/medical-wearable-device-development-challenges-and-fix","Hope it's useful for Sonu and Spatial Sleep.","Parthraj","A different angle: you're also hiring for iOS. On connected devices, many ""firmware bugs"" users report are really BLE reconnect and pairing issues between the app and the band. We build both sides, firmware and the companion app, so those get fixed in one place.
+
+Would that be useful for Spatial Sleep?
+
+Parthraj","I don't want to crowd your inbox. If firmware capacity isn't an issue this quarter, just let me know and I'll close this out. And if a casual chat about BLE audio ever sounds good, the offer stands.
+
+Good luck with Spatial Sleep!
+Parthraj","drafts/email/2026-09-24-soundhealth.md"
+"Matheus","Marotzke","matheus@teamboldr.com","Boldr","Co-founder, CTO & CPO","https://www.linkedin.com/in/matheus-marotzke","shopboldr.com","boldr central hvac","I've been reading about Klima: making existing mini-splits smart over IR, with Matter on top, is a clever approach. And I read you're taking it into central HVAC next.","A new device class, while your firmware team keeps Klima running in 20,000 homes, is a lot to carry at once.","I'm the CEO of CoreFragment. We build connected devices end to end, from PCB and firmware to the cloud, under NDA with full IP transfer.","If extra hardware or firmware capacity would help, I'd be happy to talk. Or if you'd just like a casual chat about the tech, I'm up for that too.","Not relevant? Reply 'no' and I won't follow up.","A common pattern with connected thermostats: the device drops off Wi-Fi, reconnects, and the app shows stale state for a while. Across 20,000 homes, reconnect and backoff logic quietly matters a lot. We shared how we handle it here: corefragment.com/blog/handle-mqtt-connection-loss","Hope it's useful for Klima.","Parthraj","A different angle: I read you're also building a software platform for contractors. We build IoT dashboards and full-stack web apps on top of device data, including real-time monitoring for a connected access-control system.
+
+Would help on the contractor side be more useful than device work?
+
+Parthraj","I don't want to crowd your inbox. If the central-HVAC work is covered in-house, just let me know and I'll close this out. And if a casual tech chat ever sounds good, the offer stands.
+
+Good luck with the new product!
+Parthraj
+
+Not relevant? Reply 'no' and I won't follow up.","drafts/email/2026-09-24-boldr.md"
+"Mehul","Trivedi","mehul@legatohearing.com","Legato","Co-founder & CEO","","legatohearing.com","legato frames launch","Hearing help built into glasses people already want to wear is a genuinely thoughtful idea, and a natural next step after Bose Frames.","The acoustics are clearly your IP. What often slips before launch is the rest: pairing if Frames works with a phone, OTA that recovers from a failed update, and real-world battery life.","I'm the CEO of CoreFragment. We built the BLE firmware and iOS/Android apps for a US glucometer maker, under NDA with full IP transfer.","If extra hands would help, I'd be happy to talk. Or if you'd just enjoy a casual chat about hearing wearables, I'm up for that too.","","Hearing products get worn all day, so the problems people notice first are battery drop-off and updates that go wrong. We wrote up the common failure points in medical wearables here: corefragment.com/blog/medical-wearable-device-development-challenges-and-fix","Hope it's useful for the launch.","Parthraj","A thought for after launch: the first build of a wearable is rarely the cheapest to make. We re-engineer existing devices, hardware and firmware together, to cut BOM cost and extend battery life.
+
+Would that be worth a conversation when you start planning v2?
+
+Parthraj","I don't want to crowd your inbox before a launch. If you're covered, just let me know and I'll close this out. And if a casual chat about hearing wearables ever sounds good, the offer stands.
+
+Wishing the team a great launch!
+Parthraj","drafts/email/2026-09-24-legato.md"
+"Miguel","Morgado","miguel@pollen.energy","Pollen","Co-founder & CTO","https://www.linkedin.com/in/miguelmorgado1991","pollen.energy","pollen pack bms","A universal battery across moped brands is a smart way to make swapping practical. And going from three Lisbon stations to 30–40 by year-end is an exciting stage.","At that volume, BMS robustness across different vehicle protocols and the pack's BOM cost start to matter as much as the cell-switching design.","I'm the CEO of CoreFragment. We design custom BMS and power electronics, under NDA with full IP transfer.","If a second opinion on the pack or station electronics would help before you scale, I'd be happy to talk. Or if you'd just like a casual chat about the tech, I'm up for that too.","Not relevant? Reply 'no' and I won't follow up.","A universal pack has to talk to many vehicle controllers, so most BMS edge cases show up at the protocol layer, not the cells. We wrote up how we approach custom BMS design here: corefragment.com/blog/design-custom-battery-management-system","Curious whether multi-protocol comms is the hard part for you too.","Parthraj","Another thought: stations at fuel sites and on streets will lose connectivity now and then, and a swap that stalls when the backhaul drops leaves a rider waiting. We build station firmware and cloud that keep working offline and reconcile later. We also built a connected OBD device and app for an automotive client.
+
+Is station connectivity on your list before Spain?
+
+Parthraj","I don't want to crowd your inbox while you're rolling out stations. If you're covered, just let me know and I'll close this out. And if a casual tech chat ever sounds good, the offer stands.
+
+Good luck with the Lisbon rollout!
+Parthraj
+
+Not relevant? Reply 'no' and I won't follow up.","drafts/email/2026-09-24-pollen.md"

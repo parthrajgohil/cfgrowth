@@ -1,15 +1,13 @@
 ---
 type: cold-email
-stage: new
+stage: ready_to_import
 account: soundhealth
 recipient: Vivek Mohan, VP Product Development & Engineering (email: vivek@soundhealth.life)
 sources: [accounts/soundhealth.md, https://corefragment.com/blog/medical-wearable-device-development-challenges-and-fix, https://corefragment.com/case-study/smart-glucometer]
 ---
 
-> Dry run for setup step 7. Not loaded into Saleshandy.
-
 ## Lead info
-- **Stage:** new (source of truth: HubSpot "CF lead stage")
+- **Stage:** ready_to_import (source of truth: HubSpot "CF lead stage")
 - **Company:** SoundHealth · [HubSpot](https://app.hubspot.com/contacts/247517534/record/0-2/348569601776) · brief: `accounts/soundhealth.md`
 - **Website:** https://www.soundhealth.life · **LinkedIn:** https://www.linkedin.com/company/sound-health-systems · **X:** @soundhealthhq
 - **HQ:** San Francisco / Los Altos, CA, USA · **Founded:** unverified · **Size:** unverified

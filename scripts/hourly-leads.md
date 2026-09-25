@@ -19,7 +19,10 @@ For all approved companies together (at most 10 per run):
 1. Take the buyer's `Saleshandy lead ID` from the brief, or find it with `sage_search`
    (free). If the brief names an alternative buyer and the CEO's latest note says to use
    them, use that person.
-2. ONE `enrich_contacts` call for all of them: email only, never phone. Poll
+   If there's no lead ID, still try the buyer via `full_name_with_company` (first
+   name, last name, company domain). A miss costs no credits.
+2. ONE `enrich_contacts` call for all of them (lead IDs and name+domain entries
+   together): email only, never phone. Poll
    `get_enrichment_status`, then read `get_enrichment_result`. Accept only emails marked
    `valid`. Never guess an email.
 3. For each lead with a valid email:

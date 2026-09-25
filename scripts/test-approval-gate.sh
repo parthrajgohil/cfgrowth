@@ -3,7 +3,7 @@
 # Usage: scripts/test-approval-gate.sh   (exit 0 = all pass)
 
 cd "$(dirname "$0")/.." || exit 1
-gate=.claude/hooks/approval-gate.sh
+gate=${GATE:-.claude/hooks/approval-gate.sh}   # GATE=<file> tests a candidate
 pass=0; fail=0
 
 # expect <ask|deny|allow|pass> <description> <json>
@@ -56,26 +56,31 @@ expect ask  "sed -i on gate"          '{"tool_name":"Bash","tool_input":{"comman
 expect ask  "redirect into settings"  '{"tool_name":"Bash","tool_input":{"command":"echo {} > .claude/settings.json"}}'
 expect pass "read gate with cat"      '{"tool_name":"Bash","tool_input":{"command":"cat .claude/hooks/approval-gate.sh"}}'
 
-# Saleshandy: read/lookup pass, prospect changes ask, send/launch blocked.
-# Hypothetical names until the real tool list is known; replace after sign-in.
+# Real Saleshandy connector tools (listed 2026-09-25): read/lookup pass, prospect and
+# sequence changes ask; sending, activation, mailboxes, domains, purchases denied.
 sh=mcp__claude_ai_Saleshandy__
-expect pass  "sh list sequences"      "{\"tool_name\":\"${sh}list_sequences\"}"
-expect pass  "sh find email"          "{\"tool_name\":\"${sh}find_email\"}"
-expect pass  "sh get sequence stats"  "{\"tool_name\":\"${sh}get_sequence_stats\"}"
-expect ask   "sh add prospects"       "{\"tool_name\":\"${sh}add_prospects_to_sequence\"}"
-expect ask   "sh update prospect"     "{\"tool_name\":\"${sh}update_prospect\"}"
-expect ask   "sh unknown action"      "{\"tool_name\":\"${sh}frobnicate\"}"
-expect deny  "sh activate sequence"   "{\"tool_name\":\"${sh}activate_sequence\"}"
-expect deny  "sh resume sequence"     "{\"tool_name\":\"${sh}resume_sequence\"}"
-expect deny  "sh send email"          "{\"tool_name\":\"${sh}send_email\"}"
-expect deny  "sh add+start"           "{\"tool_name\":\"${sh}add_prospect_and_start\"}"
+for t in update_sequence_status complete_task bulk_skip_tasks bulk_snooze_tasks add_email_accounts_to_sequence remove_email_accounts_from_sequence purchase_domain delete_domain revoke_domain upload_domain_profile_picture generate_mailbox_names reply_to_email create_schedule update_sequence_schedule; do
+  expect deny "sh $t" "{\"tool_name\":\"$sh$t\"}"
+done
+for t in add_dnc_items add_leads_to_sequence add_sequence_step add_step_variant create_dnc_list create_sequence delete_sequence delete_step import_prospects_to_sequence_step import_prospects_with_field_name skip_task snooze_task unsupported_operation update_sequence_priority_distribution update_sequence_settings update_step_variant update_task_note upload_attachment; do
+  expect ask "sh $t" "{\"tool_name\":\"$sh$t\"}"
+done
+for t in check_prospect_import_status enrich_companies enrich_contacts get_bulk_task_status get_consolidated_stats get_dnc_items_by_id get_domain_order get_email_account_stats get_email_content get_email_list get_email_thread get_enrichment_result get_enrichment_status get_outcomes get_sequence_settings get_sequence_stats get_task_assignee_list get_task_by_id get_task_counts get_unread_email_threads_count list_clients list_dnc_lists list_domain_orders list_domain_plans list_domains list_email_accounts list_fields list_schedules list_sequence_email_accounts list_sequence_steps list_sequences list_tasks sage_search search_dnc_item search_domain; do
+  expect pass "sh $t" "{\"tool_name\":\"$sh$t\"}"
+done
 
-# HubSpot: reads pass, every write asks (default MCP policy).
+# Real HubSpot connector tools (listed 2026-09-25): reads pass, CRM writes ask,
+# marketing email and web publishing denied.
 hs=mcp__claude_ai_HubSpot__
-expect pass  "hs search contacts"     "{\"tool_name\":\"${hs}search_crm_objects\"}"
-expect ask   "hs create contact"      "{\"tool_name\":\"${hs}create_contact\"}"
-expect ask   "hs update deal"         "{\"tool_name\":\"${hs}update_deal\"}"
-expect ask   "hs delete company"      "{\"tool_name\":\"${hs}delete_company\"}"
+for t in manage_marketing_email manage_blog_post manage_landing_page manage_website_page import-claude-design-from-url; do
+  expect deny "hs $t" "{\"tool_name\":\"$hs$t\"}"
+done
+for t in manage_aeo_prompts manage_aeo_recommendations manage_campaign_objects manage_crm_objects manage_custom_pipelines manage_custom_properties manage_onboarding manage_saved_reports manage_segment render_asset show_feedback_form; do
+  expect ask "hs $t" "{\"tool_name\":\"$hs$t\"}"
+done
+for t in discover_hubspot_schema tool_guidance get_aeo_metrics get_campaign_attribution_reports get_content_analytics_report get_conversation_channel_metadata get_crm_objects get_marketing_email_analytics get_organization_details get_properties get_user_details query_crm_data read_campaign_data search_conversations search_crm_objects search_intent_signals search_owners search_properties; do
+  expect pass "hs $t" "{\"tool_name\":\"$hs$t\"}"
+done
 
 # Bash: network/mail/AppleScript asks; ordinary commands pass.
 expect ask  "curl"                '{"tool_name":"Bash","tool_input":{"command":"curl https://example.com"}}'

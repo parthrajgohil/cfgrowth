@@ -24,8 +24,9 @@ record what is waiting on the CEO.
 | Daily prospecting (2026-09-24) | CEO wants the system to find leads, not just draft. Headless weekday run (`scripts/daily-prospecting.sh` + prompt `scripts/daily-prospecting.md`): up to 5 new A/B leads per day into `accounts/` + `drafts/email/`, summary in `drafts/leads/<date>.md`. The CEO reviews and runs Saleshandy. Recipient emails are still filled in by a human until an email-data provider is chosen (Saleshandy's lead finder vs Hunter/Apollo: open). |
 | Teams notifications (2026-09-24) | One Teams message per lead to the CEO's 1:1 chat (chat ID in the gate). The gate **allows** only that chat, with no @mentions, and **denies** every other Teams write. Requires M365 write tools to stay ON; the "write tools off" decision above is superseded for Teams, and the gate still asks before every email/file write. |
 | Hardware (2026-09-23) | Stay on the Mac mini (3-session cap fits 8GB). If more sessions are needed later, add the Lenovo ThinkCentre (i5-7th gen, 16GB) on Ubuntu as a second machine: systemd instead of launchd, add Linux mail/open rules to the gate, per-machine session cap. |
-| CRM | None yet. Recommended **HubSpot Free** (official remote MCP, works on the free tier; Saleshandy has a native HubSpot sync). **CEO has not confirmed yet.** Interim CRM: `pipeline/leads.csv`, edited by a human only. |
-| Cold outreach | Saleshandy stays human-operated. Agents produce prospect lists and email copy; the CEO imports them and launches. Do **not** connect the third-party Saleshandy MCP. |
+| Cold outreach | Saleshandy stays human-operated for sending: the CEO launches every sequence. |
+| Saleshandy connector (2026-09-25) | The CEO added Saleshandy's own connector (`mcp.saleshandy.com`) in org settings (not the third-party MCP ruled out earlier). Gate: reads and email lookups pass; adding/changing prospects **asks**; send/launch/resume/activate is **denied**. Tool names to verify after sign-in. |
+| CRM (2026-09-25) | CEO signed up for **HubSpot**; connector not yet added. Gate: reads pass, every create/update/delete **asks**. The unattended daily run can't write to HubSpot, so it proposes records in its summary. `pipeline/leads.csv` stays until HubSpot is connected. |
 | LinkedIn | **Not** connected (User Agreement risk). Sales Navigator workflow is parked in BACKLOG.md. |
 | Company context | Drafted from corefragment.com into CLAUDE.md. CEO will correct it and fill in the priority table. |
 | Standing sessions | Proposed: "lead-desk" (always on, Remote Control) plus a daily prospecting run, leaving 1 slot free. Not yet confirmed. |
@@ -77,7 +78,6 @@ record what is waiting on the CEO.
 
 ## Waiting on the CEO
 
-- HubSpot yes or no
 - Priority table in CLAUDE.md, and confirming the proof points ("10+" vs "12+" countries)
 - 2–3 on-voice emails or posts, saved as `.claude/skills/cf-voice/examples.md`
 - Confirm the standing sessions

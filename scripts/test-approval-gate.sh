@@ -56,6 +56,27 @@ expect ask  "sed -i on gate"          '{"tool_name":"Bash","tool_input":{"comman
 expect ask  "redirect into settings"  '{"tool_name":"Bash","tool_input":{"command":"echo {} > .claude/settings.json"}}'
 expect pass "read gate with cat"      '{"tool_name":"Bash","tool_input":{"command":"cat .claude/hooks/approval-gate.sh"}}'
 
+# Saleshandy: read/lookup pass, prospect changes ask, send/launch blocked.
+# Hypothetical names until the real tool list is known; replace after sign-in.
+sh=mcp__claude_ai_Saleshandy__
+expect pass  "sh list sequences"      "{\"tool_name\":\"${sh}list_sequences\"}"
+expect pass  "sh find email"          "{\"tool_name\":\"${sh}find_email\"}"
+expect pass  "sh get sequence stats"  "{\"tool_name\":\"${sh}get_sequence_stats\"}"
+expect ask   "sh add prospects"       "{\"tool_name\":\"${sh}add_prospects_to_sequence\"}"
+expect ask   "sh update prospect"     "{\"tool_name\":\"${sh}update_prospect\"}"
+expect ask   "sh unknown action"      "{\"tool_name\":\"${sh}frobnicate\"}"
+expect deny  "sh activate sequence"   "{\"tool_name\":\"${sh}activate_sequence\"}"
+expect deny  "sh resume sequence"     "{\"tool_name\":\"${sh}resume_sequence\"}"
+expect deny  "sh send email"          "{\"tool_name\":\"${sh}send_email\"}"
+expect deny  "sh add+start"           "{\"tool_name\":\"${sh}add_prospect_and_start\"}"
+
+# HubSpot: reads pass, every write asks (default MCP policy).
+hs=mcp__claude_ai_HubSpot__
+expect pass  "hs search contacts"     "{\"tool_name\":\"${hs}search_crm_objects\"}"
+expect ask   "hs create contact"      "{\"tool_name\":\"${hs}create_contact\"}"
+expect ask   "hs update deal"         "{\"tool_name\":\"${hs}update_deal\"}"
+expect ask   "hs delete company"      "{\"tool_name\":\"${hs}delete_company\"}"
+
 # Bash: network/mail/AppleScript asks; ordinary commands pass.
 expect ask  "curl"                '{"tool_name":"Bash","tool_input":{"command":"curl https://example.com"}}'
 expect ask  "piped wget"          '{"tool_name":"Bash","tool_input":{"command":"echo x | wget -qO- x"}}'

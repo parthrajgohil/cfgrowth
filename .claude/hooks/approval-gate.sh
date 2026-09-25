@@ -52,6 +52,22 @@ case "$tool" in
         ;;
     esac
     ;;
+  mcp__*[Ss]aleshandy__*)
+    # Saleshandy (CEO decision 2026-09-24): agents may read and look up emails;
+    # adding or changing prospects asks; anything that sends or starts a
+    # sequence is blocked. The CEO presses "go" in Saleshandy.
+    words=" $(tr '[:upper:]' '[:lower:]' <<<"${tool##*__}" | tr '_-' '  ') "
+    if [[ "$words" =~ ' '(send|launch|resume|start|activate|unpause|play|schedule|run|trigger|reply|forward)' ' ]]; then
+      deny "CF approval gate: '$tool' could send email or start a sequence. Only the CEO does that, in Saleshandy."
+    fi
+    if [[ "$words" =~ ' '(add|create|update|upsert|import|enroll|assign|move|edit|modify|set|delete|remove|pause|stop|archive|mark|tag|upload|write)' ' ]]; then
+      ask "CF approval gate: '$tool' changes Saleshandy data (prospects or sequences). Approve only if you have reviewed exactly what it will do."
+    fi
+    if [[ "$words" =~ ' '(search|get|list|read|fetch|find|query|lookup|describe|retrieve|view|count|verify|enrich|reveal)' ' ]]; then
+      exit 0
+    fi
+    ask "CF approval gate: '$tool' is an unrecognised Saleshandy action."
+    ;;
   mcp__*)
     # Split the tool's action name (e.g. outlook_email_search) into words.
     # Any write word -> ask. Otherwise, a read word -> pass. Unknown -> ask.

@@ -1,12 +1,26 @@
 ---
-status: draft            # human changes to approved / rejected
 type: cold-email
+stage: new
 account: soundhealth
 recipient: Vivek Mohan, VP Product Development & Engineering (email: TO BE FILLED BY HUMAN)
 sources: [accounts/soundhealth.md, https://corefragment.com/blog/medical-wearable-device-development-challenges-and-fix, https://corefragment.com/case-study/smart-glucometer]
 ---
 
 > Dry run for setup step 7. Not loaded into Saleshandy.
+
+## Lead info
+- **Stage:** new (source of truth: HubSpot "CF lead stage")
+- **Company:** SoundHealth · [HubSpot](https://app.hubspot.com/contacts/247517534/record/0-2/348569601776) · brief: `accounts/soundhealth.md`
+- **Website:** https://www.soundhealth.life · **LinkedIn:** https://www.linkedin.com/company/sound-health-systems · **X:** @soundhealthhq
+- **HQ:** San Francisco / Los Altos, CA, USA · **Founded:** unverified · **Size:** unverified
+- **Funding:** $12.25M total; Series A led by Shangbay Capital (2026-07-30)
+- **Recent news:** https://hitconsultant.net/2026/07/29/soundhealth-raises-series-a-shangbay-capital-sonu-wearable/ (2026-07-29) · https://soundhealth.life/pages/careers (open firmware/iOS roles)
+
+| Buyer | Title | LinkedIn | Saleshandy | HubSpot contact |
+|---|---|---|---|---|
+| Vivek Mohan (**primary**) | VP, Product Development & Engineering | — | not in Saleshandy | [558508553962](https://app.hubspot.com/contacts/247517534/record/0-1/558508553962) |
+| Venkatesh Perungulam (**referral contact**) | VP, Infrastructure & Technology | https://www.linkedin.com/in/venkateshperungulam | revealed: venkatesh@soundhealth.life (valid) | [558514468546](https://app.hubspot.com/contacts/247517534/record/0-1/558514468546) |
+| Paramesh Gopi | Founder & CEO | — | not checked | [558515833542](https://app.hubspot.com/contacts/247517534/record/0-1/558515833542) |
 
 ## Subject options
 1. sonu firmware hiring

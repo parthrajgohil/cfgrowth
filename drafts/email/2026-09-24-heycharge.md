@@ -1,10 +1,23 @@
 ---
-status: draft            # human changes to approved / rejected
 type: cold-email
+stage: new
 account: heycharge
 recipient: Chris Cardé, Founder & CEO (email: TO BE FILLED BY HUMAN)
 sources: [accounts/heycharge.md, https://corefragment.com/blog/ocpp-compliance-importance, https://corefragment.com/case-study/smart-glucometer]
 ---
+
+## Lead info
+- **Stage:** new (source of truth: HubSpot "CF lead stage")
+- **Company:** HeyCharge · [HubSpot](https://app.hubspot.com/contacts/247517534/record/0-2/348484334304) · brief: `accounts/heycharge.md`
+- **Website:** https://www.heycharge.com · **LinkedIn:** https://www.linkedin.com/company/heycharge · **X:** @heychargehq
+- **HQ:** Munich, Bavaria, Germany · **Founded:** 2021 · **Size:** 17 (Y Combinator profile)
+- **Funding:** BMW i Ventures, Statkraft Ventures, Y Combinator; €2.5M EIC Accelerator grant (Feb 2026)
+- **Recent news:** MagicBox with Easee (2026-03-25) · 22 kW AC charger with HUMAX (2026-03-26) · see accounts/heycharge.md sources
+
+| Buyer | Title | LinkedIn | Saleshandy | HubSpot contact |
+|---|---|---|---|---|
+| Chris Cardé (**primary**) | Founder & CEO | https://www.linkedin.com/in/pilotchris/ | not checked | [558510428902](https://app.hubspot.com/contacts/247517534/record/0-1/558510428902) |
+| Robert Lasowski | Co-founder & CBDO | — | not checked | [558510910154](https://app.hubspot.com/contacts/247517534/record/0-1/558510910154) |
 
 ## Subject options
 1. magicbox firmware

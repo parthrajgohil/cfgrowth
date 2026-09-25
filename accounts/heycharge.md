@@ -14,6 +14,9 @@
 - **Website:** https://www.heycharge.com
 - **HubSpot company ID:** 348484334304 (https://app.hubspot.com/contacts/247517534/record/0-2/348484334304)
 
+- **HubSpot contact IDs:** Chris Cardé 558510428902, Robert Lasowski 558510910154
+- **Website / LinkedIn:** https://www.heycharge.com · https://www.linkedin.com/company/heycharge
+
 ## Why now (triggers)
 - **New device launch:** CONNECT MagicBox with Easee, announced 2026-03-25, available
   Q2–Q3 2026. It's a retrofit adapter that makes any OCPP wallbox offline-capable and

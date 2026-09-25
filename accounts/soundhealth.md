@@ -16,6 +16,9 @@
 - **Website:** https://soundhealth.life
 - **HubSpot company ID:** 348569601776 (https://app.hubspot.com/contacts/247517534/record/0-2/348569601776)
 
+- **HubSpot contact IDs:** Vivek Mohan 558508553962, Venkatesh Perungulam 558514468546, Paramesh Gopi 558515833542
+- **Website / LinkedIn:** https://www.soundhealth.life · https://www.linkedin.com/company/sound-health-systems
+
 ## Why now (triggers)
 - Series A closed, announced 2026-07-30; capital is for growing the portfolio of
   breathing and sleep devices. [1][2]

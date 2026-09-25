@@ -14,6 +14,9 @@
 - **Website:** https://shopboldr.com
 - **HubSpot company ID:** 348671431414 (https://app.hubspot.com/contacts/247517534/record/0-2/348671431414)
 
+- **HubSpot contact IDs:** Matheus Marotzke 558515833543, Madi Ablyazov 558508370662, Toma Paro 558510508734
+- **Website / LinkedIn:** https://shopboldr.com · unverified
+
 ## Why now (triggers)
 - $5M pre-Series A, announced 2026-08-24 ([3], 2026-08-24).
 - Use of funds: extend the technology **beyond ductless HVAC controls into central HVAC

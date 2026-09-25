@@ -24,7 +24,7 @@ Every draft file starts with this front matter:
 
 ```
 ---
-status: draft            # human changes to approved / rejected
+stage: new               # mirrors HubSpot "CF lead stage"; the CEO changes it in HubSpot
 type: cold-email | follow-up | linkedin-post | blog-outline
 account: <slug or n/a>
 recipient: <name, title> (email: TO BE FILLED BY HUMAN)

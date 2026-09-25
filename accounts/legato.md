@@ -12,6 +12,9 @@
 - **Website:** https://legatohearing.com
 - **HubSpot company ID:** 348356561614 (https://app.hubspot.com/contacts/247517534/record/0-2/348356561614)
 
+- **HubSpot contact IDs:** Mehul Trivedi 558514567915, Steve Romine 558479471343
+- **Website / LinkedIn:** https://legatohearing.com · https://www.linkedin.com/company/legato-hearing
+
 ## Why now (triggers)
 - $12M raised and out of stealth, 2026-08-26. The money goes "largely" to product development and
   marketing ([1], 2026-08-26).
@@ -30,6 +33,10 @@
 | Steve Romine | Co-founder | (profile not found; see [1]) | Ran Bose's hearing aids division, ex-COO Audicus; helped create the OTC hearing aid category [1][4] |
 
 Emails: not researched. The human fills these in from a legitimate business source.
+
+**Email reveal 2026-09-25 (hourly run):** Mehul Trivedi by name + legatohearing.com, Saleshandy
+request `6ab63ff8f5ae26563d01eacf`: no valid email, 0 credits. Saleshandy Lead Finder has no
+people at Legato (Steve Romine included). No Saleshandy lead ID. No HubSpot contact yet.
 
 ## Best angle
 **Service line:** Mobile apps (BLE companion app) + embedded firmware (low-power, OTA) ·

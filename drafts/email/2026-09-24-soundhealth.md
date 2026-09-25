@@ -29,11 +29,11 @@ sources: [accounts/soundhealth.md, https://corefragment.com/blog/medical-wearabl
 
 ---
 
-## Email 1 (day 0), 110 words, rewritten in Parthraj's voice 2026-09-25
+## Email 1 (day 0), 107 words, rewritten in Parthraj's voice 2026-09-25
 
 Hi {{First Name}},
 
-Congratulations on the Series A. A drug-free congestion treatment past 500,000 sessions is a real achievement, and I saw Spatial Sleep is next.
+Treating congestion with personalized sound instead of steroid sprays is a thoughtful idea, and Sonu is already past 500,000 sessions.
 
 Your senior firmware role lists BLE Audio and OTA. With two audio wearables on one small team, OTA hardening and BLE stability often lose out to feature dates.
 
@@ -84,8 +84,9 @@ Parthraj
 ---
 
 ## Self-check
+- [x] Opens with their product, not their funding (rule added 2026-09-25).
 - [x] Rewritten in Parthraj's voice (cf-voice/examples.md): appreciation of their specific work, one line on who we are, two-option CTA (collaborate or casual chat), courteous close.
-- [x] Specific to SoundHealth: Series A, 500,000+ sessions, Spatial Sleep, the firmware role's BLE Audio/OTA, the iOS hire.
+- [x] Specific to SoundHealth: Sonu's approach, 500,000+ sessions, Spatial Sleep, the firmware role's BLE Audio/OTA, the iOS hire.
 - [x] US recipient: no opt-out line needed.
 - [x] Claims trace to the brief or CLAUDE.md; no client named; no numbers on our results; email 1 ≤ 110 words; at most one link per email.
 - [ ] Human: confirm the firmware role is still open (the careers page is undated). Vivek has no email in Saleshandy.

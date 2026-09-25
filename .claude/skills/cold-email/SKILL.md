@@ -7,9 +7,14 @@ description: Structure and rules for CoreFragment cold outreach emails and follo
 
 ## First email (50–110 words, plain text)
 
-1. **Trigger line**, specific to them: their launch, hiring post, funding, or a
-   technical choice visible in their product. It must come from the account brief,
-   with a source.
+1. **Trigger line**, specific to them: their product, a launch, a public post or
+   interview, a hiring post, or a technical choice visible in their product. It must
+   come from the account brief, with a source.
+   **Never open with funding** (CEO rule, 2026-09-25). "Congrats on the raise" reads
+   as a vendor chasing their new money. Funding is a reason for *us* to pick the
+   company, not something to say to them. If the funding news states a relevant plan
+   (e.g. "moving into central HVAC"), mention the plan, never the amount, round or
+   investors, and not in the first sentence.
 2. **Problem hypothesis**, stated as a question or observation. Keep it short. Show you
    understand the engineering reality (e.g. "Hiring three firmware engineers usually
    means the nRF roadmap is slipping.").
@@ -45,5 +50,7 @@ Follow-ups are 30–70 words each.
 ## Self-check before saving
 
 - [ ] Could this email be sent to a different company unchanged? If yes, rewrite it.
+- [ ] No funding amount, round or investor anywhere in the emails, and the first line
+      is about their product or work, not their money.
 - [ ] Every claim is traceable to CLAUDE.md or the account brief.
 - [ ] Under 110 words; one CTA; no banned words from cf-voice.

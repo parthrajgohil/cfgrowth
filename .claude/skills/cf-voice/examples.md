@@ -20,6 +20,8 @@ typos). Imitate the **tone**, not the structure. Structure rules still come from
 - Vague praise ("a real idea that would help the industry"). Name the specific thing.
 - Apologetic filler ("Thank you for your time reading this").
 - Long first emails. Cold-email limits still apply (50–110 words).
+- Opening with their funding ("Congrats on the Series A"). Parthraj's rule: it reads
+  as chasing their money. Appreciate the **product** instead.
 
 ## Blend: how an agent email should sound
 Specific trigger and technical insight (from the research) **plus** Parthraj's warmth and

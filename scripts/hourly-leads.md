@@ -33,10 +33,24 @@ For all approved companies together (at most 10 per run):
      is in the brief). If it exists and has no email, update ONLY its `email`. If it
      doesn't exist (older leads), create it (firstname, lastname, email, jobtitle,
      hs_linkedin_url) associated with the company.
-   - Append a row to `drafts/saleshandy/<YYYY-MM-DD>.csv` (create it with the header if needed):
-     `first_name,last_name,email,company,job_title,linkedin_url,subject,email_1,followup_1,followup_2,followup_3,draft_file`
-     using the draft's first subject and texts exactly as written, merge tags kept, and
-     every field quoted (RFC 4180).
+   - Append a row to `drafts/saleshandy/<YYYY-MM-DD>.csv` (create it with the header if
+     needed). The header uses the **exact Saleshandy field labels**, including the
+     trailing space in `Custom CTA `:
+     `First Name,Last Name,Email,Company,Job Title,LinkedIn,Company Domain,Custom Subject Line,Custom First Line,Custom Second Line,Custom Third Line,Custom CTA ,P.S. line,Custom Follow Up 1 First Line,Custom Follow Up 1 Second Line,Custom Follow Up 1 Third Line,Custom Follow Up 2,Custom Follow Up 3,Draft File`
+     Fill it from the approved draft, word for word:
+     - Custom Subject Line = subject option 1
+     - Email 1, split by paragraph: Custom First Line = appreciation/trigger paragraph;
+       Custom Second Line = problem paragraph; Custom Third Line = "I'm the CEO of
+       CoreFragment…" paragraph; Custom CTA  = the two-option closing paragraph
+     - P.S. line = the "Not relevant? Reply 'no'…" line if present (EU/UK), else empty
+     - Follow-up 1: everything after the greeting, split by paragraph into Custom Follow
+       Up 1 First / Second / Third Line (the sign-off counts as a paragraph; if there are
+       more than three, merge the extra ones into the Third Line)
+     - Custom Follow Up 2 / Custom Follow Up 3 = everything after the greeting in
+       follow-ups 2 and 3, sign-off and opt-out line included
+     - Don't include the greeting ("Hi {{First Name}},") or email 1's signature; the
+       sequence template adds them.
+     Quote every field (RFC 4180); keep line breaks inside quoted fields.
    - Set `cf_lead_stage` = `ready_to_import`.
 4. For each lead with no valid email: set `cf_lead_stage` = `no_email`, and add a HubSpot
    NOTE on the company saying who was tried and which alternative people Saleshandy has

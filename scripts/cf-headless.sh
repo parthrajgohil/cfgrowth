@@ -19,20 +19,35 @@ log="logs/$job-$today.log"
 exec >>"$log" 2>&1
 echo "=== $(date '+%F %T') $job start"
 
+# Tell the CEO on Teams when a job fails or the daily run is skipped. Uses a tiny
+# Claude call whose only tool is the (gate-restricted) Teams message.
+notify() {
+  "$claude" -p "Send exactly this one Teams message with teams_send_chat_message to chat 19:a7e8ebf4-992c-431d-8daa-2ff7f01e0129_d31e5b95-dc3b-45f8-8ff7-0e63e143aaa4@unq.gbl.spaces (plain text, no mentions), then stop: CF growth alert: $1 See ~/cf-growth/$log" \
+    --model haiku --disallowedTools Bash Agent Workflow Write Edit \
+    --allowedTools ToolSearch mcp__claude_ai_Microsoft_365__teams_send_chat_message >/dev/null 2>&1 \
+    || echo "notify failed"
+}
+
 lock=logs/.cf-job.lock
 if ! mkdir "$lock" 2>/dev/null; then
   if [[ -n $(find "$lock" -maxdepth 0 -mmin +120 2>/dev/null) ]]; then
     echo "removing stale lock"; rmdir "$lock" && mkdir "$lock" || exit 3
   else
-    echo "another job is running ($(cat "$lock/job" 2>/dev/null)); skipping"; exit 0
+    echo "another job is running ($(cat "$lock/job" 2>/dev/null)); skipping"
+    [[ $job == prospecting ]] && notify "daily prospecting skipped: another job was running."
+    exit 0
   fi
 fi
 echo "$job" >"$lock/job"
 trap 'rm -f "$lock/job"; rmdir "$lock"' EXIT
 
 running=$("$claude" agents --json 2>/dev/null | /usr/bin/jq 'length' 2>/dev/null)
-if [[ -z "$running" ]]; then echo "could not count sessions; skipping"; exit 2; fi
-if (( running >= max )); then echo "$running sessions active (cap $max); skipping"; exit 1; fi
+if [[ -z "$running" ]]; then echo "could not count sessions; skipping"; notify "$job skipped: could not count Claude sessions."; exit 2; fi
+if (( running >= max )); then
+  echo "$running sessions active (cap $max); skipping"
+  [[ $job == prospecting ]] && notify "daily prospecting skipped: $running Claude sessions already running (cap $max)."
+  exit 1
+fi
 
 "$claude" -p "$(cat "$prompt")" \
   --name "$job-$today-$(date +%H%M)" \
@@ -49,6 +64,7 @@ if (( running >= max )); then echo "$running sessions active (cap $max); skippin
     mcp__claude_ai_HubSpot__search_crm_objects mcp__claude_ai_HubSpot__get_crm_objects \
     mcp__claude_ai_HubSpot__search_properties mcp__claude_ai_HubSpot__manage_crm_objects
 status=$?
+if (( status != 0 )); then notify "$job run failed (exit $status)."; fi
 
 echo "=== $(date '+%F %T') $job end (exit $status)"
 exit $status

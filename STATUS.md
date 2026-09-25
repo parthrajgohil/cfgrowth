@@ -72,7 +72,7 @@ record what is waiting on the CEO.
        installed it by hand after auto mode refused to. First manual run on 2026-09-24:
        4 A-grade leads, 4 Teams notifications delivered. Remove with
        `launchctl bootout gui/$(id -u)/com.corefragment.daily-prospecting`.
-6. [ ] Survive reboots and power cuts (admin account): automatic login for `cfgrowth`
+6. [x] Survive reboots and power cuts (verified 2026-09-25): automatic login for `cfgrowth`
        (requires FileVault off), no automatic sleep, "start up after power failure".
        Replaces the old respawn LaunchAgent idea: the scheduled jobs are launchd jobs
        and only need the user logged in.
@@ -81,7 +81,7 @@ record what is waiting on the CEO.
        columns as custom fields (`subject`, `email_1`, `followup_1..3`), optional HubSpot
        sync. The first real CSV import is untested.
 9. [ ] HubSpot: finish the onboarding wizard; save a "Leads to review" view (CF lead stage = New).
-10. [ ] Optional: Teams alert when a scheduled job exits with an error.
+10. [x] Teams alert when a scheduled job fails, or when the daily run is skipped (`notify` in `scripts/cf-headless.sh`, Haiku, tested 2026-09-25).
 
 ## Waiting on the CEO
 

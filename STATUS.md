@@ -62,9 +62,11 @@ record what is waiting on the CEO.
        HubSpot is still pending.
 5. [ ] `scripts/cf-bg.sh` (refuses a 4th background session using
        `claude agents --json`); enable Remote Control.
-6a. [ ] Daily prospecting LaunchAgent `com.corefragment.daily-prospecting` (weekdays 09:17 IST, runs
-       `scripts/daily-prospecting.sh`). Script and prompt written; auto mode blocked writing
-       the plist ("Unauthorized Persistence"), so it needs the CEO's explicit go-ahead.
+6a. [x] Daily prospecting LaunchAgent `com.corefragment.daily-prospecting` loaded 2026-09-25
+       (weekdays 09:17 IST, runs `scripts/daily-prospecting.sh`, logs in `logs/`). The CEO
+       installed it by hand after auto mode refused to. First manual run on 2026-09-24:
+       4 A-grade leads, 4 Teams notifications delivered. Remove with
+       `launchctl bootout gui/$(id -u)/com.corefragment.daily-prospecting`.
 6. [ ] LaunchAgent `~/Library/LaunchAgents/com.corefragment.claude-respawn.plist`
        that runs `claude respawn --all` at login. Verify whether respawn revives
        sessions after a reboot; if not, have the script start the standing sessions
@@ -81,5 +83,6 @@ record what is waiting on the CEO.
 - Confirm the standing sessions
 - M365 write tools: turn off (planned) or keep
 - Which mailbox Saleshandy sends from and where replies land
-- Go-ahead for step 6 (LaunchAgent), which auto mode blocked as persistence
+- Step 6 (respawn at login) and automatic login for `cfgrowth`, needed for scheduled runs after a reboot
+- Email-data provider for recipient addresses (Saleshandy lead finder vs Hunter/Apollo)
 - Whether to push the repo to a private remote (backup + easier move to a 2nd machine)

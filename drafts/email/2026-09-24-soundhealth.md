@@ -24,7 +24,7 @@ sources: [accounts/soundhealth.md, https://corefragment.com/blog/medical-wearabl
 
 ## Subject options
 1. sonu firmware hiring
-2. ble audio + ota at soundhealth
+2. ble audio + ota
 3. second device, same firmware team
 
 ---
@@ -78,7 +78,7 @@ Hi {{First Name}},
 
 I don't want to crowd your inbox. If firmware capacity isn't an issue this quarter, just let me know and I'll close this out. And if a casual chat about BLE audio ever sounds good, the offer stands.
 
-Wishing the team a great launch!
+Good luck with Spatial Sleep!
 Parthraj
 
 ---

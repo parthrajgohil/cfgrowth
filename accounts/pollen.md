@@ -37,6 +37,8 @@ Emails: not researched. The human fills these in from a legitimate business sour
 
 **Reachability (2026-09-25, free Apollo search):** Miguel Morgado: `Apollo ID 60faccba9e8eab0001fdca60`, has email. Also in Apollo: Rui Bento (CEO), Diogo (Hardware Engineer), Tiago (Product Engineer).
 
+**Email:** Miguel Morgado: `miguel@pollen.energy` (verified), Apollo reveal 2026-09-25 (request 5424813322482938087, 1 credit). LinkedIn: https://www.linkedin.com/in/miguelmorgado1991
+
 ## Best angle
 **Service line:** Embedded hardware (BMS, power design, BOM optimization), with IoT
 full-stack for the stations as a second angle · **Case study:** BLE OBD device + connected app

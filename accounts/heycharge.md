@@ -45,6 +45,8 @@ Emails: not researched. The human fills these in from a legitimate business sour
 
 **Reachability (2026-09-25, free Apollo search):** Chris Cardé: `Apollo ID 66ed5087992a840001fe4608`, has email. Also in Apollo: Robert Lasowski (co-founder), Olena (Product Manager), Sergey (Senior Embedded Software Engineer).
 
+**Email:** Chris Cardé: `chris.carde@heycharge.com` (verified, catch-all domain), Apollo reveal 2026-09-25 (request 5424813322482938087, 1 credit). LinkedIn: https://www.linkedin.com/in/pilotchris
+
 ## Best angle
 **Service line:** Embedded firmware (BLE, Zigbee, Silicon Labs, ESP32, Modbus, OCPP), with
 IoT full-stack as a second angle (Flutter app, cloud) · **Case study:** Access control with real-time

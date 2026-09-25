@@ -43,6 +43,8 @@ Emails: not researched. The human fills these in from a legitimate business sour
 
 **Reachability (2026-09-25, free Apollo search):** Matheus Marotzke: `Apollo ID 6817cd039c082d0001b4e41d`, has email. Also in Apollo: Madi Ablyazov (CEO), Toma Paro (COO), Paulo (Tech Lead).
 
+**Email:** Matheus Marotzke: `matheus@teamboldr.com` (verified; email domain is teamboldr.com), Apollo reveal 2026-09-25 (request 5424813322482938087, 1 credit). LinkedIn: https://www.linkedin.com/in/matheus-marotzke
+
 ## Best angle
 **Service line:** IoT full-stack / embedded hardware + firmware (new central-HVAC product
 line), with cloud/web for the contractor platform as a second angle ·

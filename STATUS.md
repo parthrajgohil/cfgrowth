@@ -23,6 +23,7 @@ record what is waiting on the CEO.
 | Team plan (2026-09-23) | Plan to extend to the team of 6 on Claude Team seats, not a self-built API portal. The API (Console) is for client/AI-ML project work only. Shared context comes from committed `CLAUDE.md`/skills/agents, not from Claude memory. |
 | Daily prospecting (2026-09-24) | CEO wants the system to find leads, not just draft. Headless weekday run (`scripts/daily-prospecting.sh` + prompt `scripts/daily-prospecting.md`): up to 5 new A/B leads per day into `accounts/` + `drafts/email/`, summary in `drafts/leads/<date>.md`. The CEO reviews and runs Saleshandy. Recipient emails are still filled in by a human until an email-data provider is chosen (Saleshandy's lead finder vs Hunter/Apollo: open). |
 | Teams notifications (2026-09-24) | One Teams message per lead to the CEO's 1:1 chat (chat ID in the gate). The gate **allows** only that chat, with no @mentions, and **denies** every other Teams write. Requires M365 write tools to stay ON; the "write tools off" decision above is superseded for Teams, and the gate still asks before every email/file write. |
+| GitHub backup (2026-09-25) | Private repo `git@github.com:parthrajgohil/cfgrowth.git` (origin/main). Auth: `~/.ssh/id_ed25519`, passphrase in the macOS Keychain (`~/.ssh/config`: UseKeychain). GitHub greets it as the account `parthrajgohil`, so it's an account-wide key, not a repo deploy key; consider replacing it with a deploy key. `git push` always asks (settings.json). |
 | Hardware (2026-09-23) | Stay on the Mac mini (3-session cap fits 8GB). If more sessions are needed later, add the Lenovo ThinkCentre (i5-7th gen, 16GB) on Ubuntu as a second machine: systemd instead of launchd, add Linux mail/open rules to the gate, per-machine session cap. |
 | Cold outreach | Saleshandy stays human-operated for sending: the CEO launches every sequence. |
 | Saleshandy connector (2026-09-25) | The CEO added Saleshandy's own connector (`mcp.saleshandy.com`) in org settings (not the third-party MCP ruled out earlier). Gate (verified against all 67 real tools, 2026-09-25): reads and email lookups (`enrich_contacts`, `enrich_companies`) pass; adding/changing prospects or sequences **asks**; `update_sequence_status`, `reply_to_email`, schedules, tasks, mailbox/domain changes and `purchase_domain` are **denied**. |
@@ -88,4 +89,5 @@ record what is waiting on the CEO.
 - Which mailbox Saleshandy sends from and where replies land
 - Step 6 (respawn at login) and automatic login for `cfgrowth`, needed for scheduled runs after a reboot
 - Email-data provider for recipient addresses (Saleshandy lead finder vs Hunter/Apollo)
-- Whether to push the repo to a private remote (backup + easier move to a 2nd machine)
+- Auto commit + push after each scheduled run (yes/no)
+- Move the SSH key from the GitHub account to a repo deploy key

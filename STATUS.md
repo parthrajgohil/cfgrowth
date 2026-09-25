@@ -86,9 +86,8 @@ record what is waiting on the CEO.
 ## Waiting on the CEO
 
 - Priority table in CLAUDE.md (service lines, industries, regions)
-- Proof points: 10+ vs 12+ countries, team size, engagement models, typical/minimum deal size
+- Typical project size / minimum deal size (optional)
 - 2–3 on-voice emails or posts, saved as `.claude/skills/cf-voice/examples.md`
-- Extra case studies or reference clients we may mention
 - Sender + platform decision (see Outreach review); fix corefragment.com DMARC
 - Saleshandy sending mailbox and sequence (step 8)
 - Reboot resilience settings (step 6)

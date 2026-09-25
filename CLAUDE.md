@@ -46,13 +46,13 @@ of any setup or infrastructure work, and update it when a step or decision chang
 - **Positioning:** End-to-end product development, from hardware and firmware
   to cloud and apps. One partner owns the whole IoT stack, so the client has a single
   point of accountability.
-- **Proof points:** 10+ years · 110+ projects · clients in 12+ countries (site
-  also says "10+"; use 12+). TODO(CEO): confirm numbers and team size.
+- **Proof points:** 10+ years · 110+ projects · clients in 10+ countries (confirmed by
+  the CEO, 2026-09-25). **Never state team size** in outreach.
 - **Commercial promises:** full IP ownership transferred to the client, NDA by default,
   complete source code and design files delivered. "Product thinking before development":
   we start with feasibility and architecture.
-- TODO(CEO): engagement models (fixed-price / T&M / dedicated team), typical
-  project size, rate bands, minimum deal size.
+- **Engagement models:** fixed-price, time & materials, and dedicated team (all three).
+  TODO(CEO): typical project size, rate bands, minimum deal size. Don't quote prices.
 
 ## Services
 
@@ -145,8 +145,8 @@ export-controlled work.
 | PCB defect detection with computer vision | AI/ML | CV, ML | /case-study/object-detection-of-pcb-faults-using-ml |
 | RAG chatbot (500 docs) | European enterprise | LangChain, LlamaIndex, Ollama, AWS | /case-study/rag-chatbot-development |
 
-All URLs are on https://corefragment.com. TODO(CEO): any case studies not on the site
-that we may reference, and any clients willing to act as references.
+All URLs are on https://corefragment.com. Only these case studies may be referenced,
+and no client references are available (CEO, 2026-09-25).
 
 ## Content library
 

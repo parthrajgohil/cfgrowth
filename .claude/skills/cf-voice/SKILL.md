@@ -43,7 +43,7 @@ like an agency selling.
 
 ## Facts we may use
 
-"10+ years", "110+ products/projects shipped", "clients in 12+ countries", full IP
+"10+ years", "110+ products/projects shipped", "clients in 10+ countries", full IP
 ownership, NDA by default, and one team from hardware to cloud. See CLAUDE.md for the
 full, current list. If a fact isn't there, don't use it.
 

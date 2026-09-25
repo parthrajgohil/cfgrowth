@@ -5,10 +5,10 @@ and hourly runs keep this table and each draft's `stage:` line in sync with it.
 
 | Researched | Company | Website | Fit | Stage | Buyer (title) | Email | HubSpot | Brief | Draft |
 |---|---|---|---|---|---|---|---|---|---|
-| 2026-09-24 | SoundHealth | https://www.soundhealth.life | A | new | Vivek Mohan (VP, Product Development & Engineering) | venkatesh@soundhealth.life (referral, not primary buyer) | [348569601776](https://app.hubspot.com/contacts/247517534/record/0-2/348569601776) | `accounts/soundhealth.md` | `drafts/email/2026-09-24-soundhealth.md` |
+| 2026-09-24 | SoundHealth | https://www.soundhealth.life | A | new | Vivek Mohan (VP, Product Development & Engineering) | vivek@soundhealth.life (catch-all) | [348569601776](https://app.hubspot.com/contacts/247517534/record/0-2/348569601776) | `accounts/soundhealth.md` | `drafts/email/2026-09-24-soundhealth.md` |
 | 2026-09-24 | HeyCharge | https://www.heycharge.com | A | new | Chris Cardé (Founder & CEO) |  | [348484334304](https://app.hubspot.com/contacts/247517534/record/0-2/348484334304) | `accounts/heycharge.md` | `drafts/email/2026-09-24-heycharge.md` |
 | 2026-09-24 | Boldr | https://shopboldr.com | A | new | Matheus Marotzke (Co-founder, CTO & CPO) |  | [348671431414](https://app.hubspot.com/contacts/247517534/record/0-2/348671431414) | `accounts/boldr.md` | `drafts/email/2026-09-24-boldr.md` |
-| 2026-09-24 | Legato | https://legatohearing.com | A | no_email | Mehul Trivedi (Co-founder & CEO) |  | [348356561614](https://app.hubspot.com/contacts/247517534/record/0-2/348356561614) | `accounts/legato.md` | `drafts/email/2026-09-24-legato.md` |
+| 2026-09-24 | Legato | https://legatohearing.com | A | new | Mehul Trivedi (Co-founder & CEO) | mehul@legatohearing.com | [348356561614](https://app.hubspot.com/contacts/247517534/record/0-2/348356561614) | `accounts/legato.md` | `drafts/email/2026-09-24-legato.md` |
 | 2026-09-24 | Pollen | https://www.pollen.energy | A | new | Miguel Morgado (Co-founder & CTO) |  | [348565999330](https://app.hubspot.com/contacts/247517534/record/0-2/348565999330) | `accounts/pollen.md` | `drafts/email/2026-09-24-pollen.md` |
 | 2026-09-24 | AVIAN | — | C | not pursued | — | | — | `accounts/avian.md` | — |
 | 2026-09-24 | Aquacheq | — | C | not pursued | — | | — | `accounts/aquacheq.md` | — |

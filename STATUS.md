@@ -65,7 +65,7 @@ record what is waiting on the CEO.
        HubSpot is still pending.
 5. [ ] `scripts/cf-bg.sh` (refuses a 4th background session using
        `claude agents --json`); enable Remote Control.
-6b. [ ] Hourly LaunchAgent `com.corefragment.hourly-leads`: plist written, the CEO installs it (same 3 commands as 6a).
+6b. [x] Hourly LaunchAgent `com.corefragment.hourly-leads` loaded 2026-09-25 (weekdays 09:03–19:03 IST). Remove with `launchctl bootout gui/$(id -u)/com.corefragment.hourly-leads`.
 6a. [x] Daily prospecting LaunchAgent `com.corefragment.daily-prospecting` loaded 2026-09-25
        (weekdays 09:17 IST, runs `scripts/daily-prospecting.sh`, logs in `logs/`). The CEO
        installed it by hand after auto mode refused to. First manual run on 2026-09-24:

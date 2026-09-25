@@ -16,7 +16,7 @@ sources: [accounts/heycharge.md, https://corefragment.com/blog/ocpp-compliance-i
 
 | Buyer | Title | LinkedIn | Saleshandy | HubSpot contact |
 |---|---|---|---|---|
-| Chris Cardé (**primary**) | Founder & CEO | https://www.linkedin.com/in/pilotchris/ | not checked | [558510428902](https://app.hubspot.com/contacts/247517534/record/0-1/558510428902) |
+| Chris Cardé (**primary**) | Founder & CEO | https://www.linkedin.com/in/pilotchris/ | Apollo: yes (has email) | [558510428902](https://app.hubspot.com/contacts/247517534/record/0-1/558510428902) |
 | Robert Lasowski | Co-founder & CBDO | — | not checked | [558510910154](https://app.hubspot.com/contacts/247517534/record/0-1/558510910154) |
 
 ## Subject options

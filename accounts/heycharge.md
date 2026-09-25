@@ -43,6 +43,8 @@
 
 Emails: not researched. The human fills these in from a legitimate business source.
 
+**Reachability (2026-09-25, free Apollo search):** Chris Cardé: `Apollo ID 66ed5087992a840001fe4608`, has email. Also in Apollo: Robert Lasowski (co-founder), Olena (Product Manager), Sergey (Senior Embedded Software Engineer).
+
 ## Best angle
 **Service line:** Embedded firmware (BLE, Zigbee, Silicon Labs, ESP32, Modbus, OCPP), with
 IoT full-stack as a second angle (Flutter app, cloud) · **Case study:** Access control with real-time

@@ -10,6 +10,7 @@
 - **Stage / funding:** €3.2M seed, first reported 2026-05-17, co-led by Pale Blue Dot and
   Mustard Seed Maze, with Kfund, Bynd, 4P Capital, Masia and angels [1][3].
 - **Website:** unverified (not captured in sources).
+- **HubSpot company ID:** 348565999330 (https://app.hubspot.com/contacts/247517534/record/0-2/348565999330)
 
 ## Why now (triggers)
 - €3.2M seed ([1], 2026-05-17).

@@ -12,6 +12,7 @@
 - **Stage / funding:** $5M (€4.2M) pre-Series A announced 2026-08-24, led by Unconventional
   Ventures with Ada Ventures, Techstars and others [2][3]. $3.2M seed in 2025 [4].
 - **Website:** https://shopboldr.com
+- **HubSpot company ID:** 348671431414 (https://app.hubspot.com/contacts/247517534/record/0-2/348671431414)
 
 ## Why now (triggers)
 - $5M pre-Series A, announced 2026-08-24 ([3], 2026-08-24).

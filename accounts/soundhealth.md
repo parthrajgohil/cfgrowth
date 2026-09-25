@@ -14,6 +14,7 @@
 - **Stage / funding:** Series A led by Shangbay Capital, announced 2026-07-30; total
   venture funding $12.25M. [1][2]
 - **Website:** https://soundhealth.life
+- **HubSpot company ID:** 348569601776 (https://app.hubspot.com/contacts/247517534/record/0-2/348569601776)
 
 ## Why now (triggers)
 - Series A closed, announced 2026-07-30; capital is for growing the portfolio of

@@ -12,6 +12,7 @@
   EIC Accelerator grant announced February 2026 [2]; €6.3M private funding to date (per
   EU-Startups search summary, unverified).
 - **Website:** https://www.heycharge.com
+- **HubSpot company ID:** 348484334304 (https://app.hubspot.com/contacts/247517534/record/0-2/348484334304)
 
 ## Why now (triggers)
 - **New device launch:** CONNECT MagicBox with Easee, announced 2026-03-25, available

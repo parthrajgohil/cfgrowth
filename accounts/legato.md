@@ -10,6 +10,7 @@
 - **Stage / funding:** $12M, announced 2026-08-26 as it came out of stealth; investors
   Neotribe Ventures, Listen and Village Global [1][2]. Four granted patents, 20+ pending [3].
 - **Website:** https://legatohearing.com
+- **HubSpot company ID:** 348356561614 (https://app.hubspot.com/contacts/247517534/record/0-2/348356561614)
 
 ## Why now (triggers)
 - $12M raised and out of stealth, 2026-08-26. The money goes "largely" to product development and

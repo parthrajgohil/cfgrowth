@@ -29,70 +29,63 @@ sources: [accounts/soundhealth.md, https://corefragment.com/blog/medical-wearabl
 
 ---
 
-## Email 1 (day 0), 88 words
+## Email 1 (day 0), 110 words, rewritten in Parthraj's voice 2026-09-25
 
 Hi {{First Name}},
 
-Congrats on the Series A. I saw SoundHealth is hiring a senior firmware engineer with
-BLE Audio and OTA on the wish list, just as Spatial Sleep joins Sonu.
+Congratulations on the Series A. A drug-free congestion treatment past 500,000 sessions is a real achievement, and I saw Spatial Sleep is next.
 
-Two audio wearables on one small firmware team usually means OTA hardening and BLE
-stability lose out to feature dates.
+Your senior firmware role lists BLE Audio and OTA. With two audio wearables on one small team, OTA hardening and BLE stability often lose out to feature dates.
 
-We built the BLE firmware and iOS/Android apps for a US glucometer maker, under NDA
-with full IP transfer.
+I'm the CEO of CoreFragment. We built the BLE firmware and iOS/Android apps for a US glucometer maker, under NDA with full IP transfer.
 
-Would extra firmware capacity help while you hire, or is the team covered?
+If extra firmware capacity would help while you hire, I'd be happy to talk. Or if you'd just enjoy a casual chat about BLE audio, I'm up for that too.
 
+Have a nice day!
 Parthraj Gohil
-Founder & CEO, CoreFragment Technologies
+CEO, CoreFragment Technologies
 corefragment.com
 
 ---
 
-## Follow-up 1 (day 3), 56 words
+## Follow-up 1 (day 3), 49 words
 
 Hi {{First Name}},
 
-One failure point in medical wearables: OTA works in the lab, then units brick in the
-field because the rollback path was never tested. I wrote up this and 11 others here:
-corefragment.com/blog/medical-wearable-device-development-challenges-and-fix
+One failure point we see in medical wearables: OTA works in the lab, then units brick in the field because the rollback path was never tested. I wrote up this and 11 others here: corefragment.com/blog/medical-wearable-device-development-challenges-and-fix
 
-Is OTA rollback already covered for Sonu?
+Hope it's useful for Sonu and Spatial Sleep.
 
 Parthraj
 
 ---
 
-## Follow-up 2 (day 8), 51 words
+## Follow-up 2 (day 8), 55 words
 
 Hi {{First Name}},
 
-A different angle: you're also hiring for iOS. On connected devices, most "firmware bugs"
-users report are really BLE reconnect and pairing issues between the app and the band.
-We build both sides, firmware and the BLE companion app, so those get fixed in one place.
+A different angle: you're also hiring for iOS. On connected devices, many "firmware bugs" users report are really BLE reconnect and pairing issues between the app and the band. We build both sides, firmware and the companion app, so those get fixed in one place.
 
-Useful for Spatial Sleep?
+Would that be useful for Spatial Sleep?
 
 Parthraj
 
 ---
 
-## Follow-up 3 (day 15), 32 words
+## Follow-up 3 (day 15), 47 words
 
 Hi {{First Name}},
 
-I don't want to crowd your inbox. If firmware capacity isn't an issue this quarter,
-should I close this out? A one-word reply is fine either way.
+I don't want to crowd your inbox. If firmware capacity isn't an issue this quarter, just let me know and I'll close this out. And if a casual chat about BLE audio ever sounds good, the offer stands.
 
+Wishing the team a great launch!
 Parthraj
 
 ---
 
 ## Self-check
-- [x] Specific to SoundHealth: Series A, the firmware job's BLE Audio/OTA requirements,
-      Spatial Sleep, the iOS hire. It couldn't go to another company unchanged.
-- [x] Claims trace to accounts/soundhealth.md or CLAUDE.md; the client isn't named;
-      no invented numbers.
-- [x] Email 1 under 110 words, one CTA, no banned words, at most one link per email.
-- [ ] Human: confirm the firmware role is still open before sending (the careers page is undated).
+- [x] Rewritten in Parthraj's voice (cf-voice/examples.md): appreciation of their specific work, one line on who we are, two-option CTA (collaborate or casual chat), courteous close.
+- [x] Specific to SoundHealth: Series A, 500,000+ sessions, Spatial Sleep, the firmware role's BLE Audio/OTA, the iOS hire.
+- [x] US recipient: no opt-out line needed.
+- [x] Claims trace to the brief or CLAUDE.md; no client named; no numbers on our results; email 1 ≤ 110 words; at most one link per email.
+- [ ] Human: confirm the firmware role is still open (the careers page is undated). Vivek has no email in Saleshandy.

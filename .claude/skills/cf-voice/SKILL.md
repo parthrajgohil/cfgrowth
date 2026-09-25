@@ -47,5 +47,10 @@ like an agency selling.
 ownership, NDA by default, and one team from hardware to cloud. See CLAUDE.md for the
 full, current list. If a fact isn't there, don't use it.
 
-<!-- TODO(CEO): paste 2–3 emails or posts you've written that you consider "on voice"
-     into examples.md in this folder; the writer will imitate them. -->
+## Parthraj's own voice (read `examples.md` in this folder)
+
+The CEO's real emails and posts are in `examples.md`. On top of the principles above:
+be **warm and respectful** (genuine appreciation of their specific work), **humble**, and
+end with his **two-option CTA**: a real collaboration *or* a casual technical chat. Close
+courteously ("Have a nice day!"). Keep the specificity rules: lead with their product
+and trigger, not with who we are.

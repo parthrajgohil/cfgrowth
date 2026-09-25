@@ -78,7 +78,9 @@ before=$(wc -l <"$log")
     mcp__claude_ai_Saleshandy__get_unread_email_threads_count \
     mcp__claude_ai_HubSpot__get_user_details mcp__claude_ai_HubSpot__tool_guidance \
     mcp__claude_ai_HubSpot__search_crm_objects mcp__claude_ai_HubSpot__get_crm_objects \
-    mcp__claude_ai_HubSpot__search_properties mcp__claude_ai_HubSpot__manage_crm_objects
+    mcp__claude_ai_HubSpot__search_properties mcp__claude_ai_HubSpot__manage_crm_objects \
+    mcp__claude_ai_Apollo_io__apollo_mixed_people_api_search mcp__claude_ai_Apollo_io__apollo_people_bulk_match \
+    mcp__claude_ai_Apollo_io__apollo_people_match mcp__claude_ai_Apollo_io__apollo_users_api_profile
 status=$?
 if (( status != 0 )); then
   notify "$job run failed (exit $status)."

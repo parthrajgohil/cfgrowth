@@ -44,7 +44,7 @@
 
 **Emails (Saleshandy Lead Finder, 2026-09-25):**
 - Venkatesh Perungulam: `venkatesh@soundhealth.life` (verified "valid"). [7]
-- Vivek Mohan: not in Saleshandy's database. Still needed for the firmware pitch.
+- Vivek Mohan: `vivek@soundhealth.life` (verified (catch-all domain)), Apollo reveal 2026-09-25 (request 5041182343864640138, 1 credit).
 
 [7] Saleshandy Lead Finder reveal, request 6ab628a7f5ae266cc001cdfd (1 credit).
 

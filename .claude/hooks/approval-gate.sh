@@ -11,6 +11,8 @@
 #     denied outright. Decided by the CEO on 2026-09-24.
 #   - Saleshandy: reads and email lookups pass; prospect/sequence changes ask;
 #     sending, activating, mailbox/domain changes and purchases are denied.
+#   - Apollo: search/reads pass; work-email reveal only, in the shared 10/day cap;
+#     send/sequence/purchase/tracking denied; credit lookups and other writes ask.
 #   - HubSpot: reads pass; CRM writes ask; marketing email and web publishing
 #     are denied.
 #   - Other MCP tools: read-only verbs pass through to normal permissions; every
@@ -37,6 +39,22 @@ decide() {
 ask()   { decide ask "$1"; }
 deny()  { decide deny "$1"; }
 allow() { decide allow "$1"; }
+
+# Shared daily cap on paid email reveals (Saleshandy + Apollo): at most 10 per call and
+# 10 per day, counted per person requested. Exits with deny, or returns if within cap.
+credit_cap() {
+  local n=$1 src=$2
+  if (( n > 10 )); then
+    deny "CF approval gate: at most 10 email reveals per call ($n requested via $src)."
+  fi
+  local dir=${CF_CREDIT_DIR:-"$(cd "$(dirname "$0")/../.." && pwd)/logs"}
+  local f="$dir/saleshandy-credits-$(date +%F).count"
+  local used; used=$(cat "$f" 2>/dev/null || echo 0)
+  if (( used + n > 10 )); then
+    deny "CF approval gate: daily cap of 10 email reveals reached ($used used today, $n requested via $src)."
+  fi
+  mkdir -p "$dir" && echo $((used + n)) >"$f"
+}
 
 # Default MCP policy: any write word -> ask; otherwise a read word -> pass;
 # unknown -> ask.
@@ -86,16 +104,7 @@ case "$tool" in
           deny "CF approval gate: phone reveals cost ~7 credits each; agents reveal email only."
         fi
         n=$(jq '[(.tool_input.lead_id // []), (.tool_input.linkedin_url // []), (.tool_input.full_name_with_company // [])] | map(length) | add' <<<"$input")
-        if (( n > 10 )); then
-          deny "CF approval gate: at most 10 Saleshandy email reveals per call ($n requested)."
-        fi
-        dir=${CF_CREDIT_DIR:-"$(cd "$(dirname "$0")/../.." && pwd)/logs"}
-        f="$dir/saleshandy-credits-$(date +%F).count"
-        used=$(cat "$f" 2>/dev/null || echo 0)
-        if (( used + n > 10 )); then
-          deny "CF approval gate: daily cap of 10 Saleshandy email reveals reached ($used used today, $n requested)."
-        fi
-        mkdir -p "$dir" && echo $((used + n)) >"$f"
+        credit_cap "$n" Saleshandy
         exit 0
         ;;
       enrich_companies)
@@ -112,6 +121,31 @@ case "$tool" in
       exit 0
     fi
     ask "CF approval gate: '$tool' is an unrecognised Saleshandy action."
+    ;;
+  mcp__*[Aa]pollo*__*)
+    # Apollo (CEO decision 2026-09-25): second email source after Saleshandy. Search and
+    # reads pass; work-email reveal only, inside the shared cap; everything that sends,
+    # sequences, buys or tracks is denied; other writes and credit-using lookups ask.
+    case "$action" in
+      apollo_emailer_messages_create|apollo_emailer_messages_send_now|apollo_emailer_campaigns_add_contact_ids|apollo_emailer_campaigns_approve|apollo_emailer_campaigns_remove_or_stop_contact_ids|apollo_sequences_*|apollo_email_account_purchase_create|apollo_website_visitor_domain_tracker_install_script|apollo_website_visitor_domain_tracker_send_install_email|apollo_website_visitor_domain_tracker_update|apollo_phone_calls_create|apollo_phone_calls_update|apollo_tasks_complete|apollo_tasks_skip|apollo_data_source*|apollo_survey_submit)
+        deny "CF approval gate: '$action' could send email, run a sequence, spend money or change tracking; blocked for agents."
+        ;;
+      apollo_people_match|apollo_people_bulk_match)
+        if jq -e '(.tool_input.reveal_phone_number // false) or (.tool_input.reveal_personal_emails // false) or (.tool_input.run_waterfall_email // false) or (.tool_input.run_waterfall_phone // false)' <<<"$input" >/dev/null; then
+          deny "CF approval gate: Apollo reveals are work email only (no phone, personal email or waterfall)."
+        fi
+        n=$(jq 'if .tool_input.details then (.tool_input.details | length) else 1 end' <<<"$input")
+        credit_cap "$n" Apollo
+        exit 0
+        ;;
+      apollo_mixed_companies_search|apollo_organizations_enrich|apollo_organizations_bulk_enrich|apollo_organizations_job_postings|apollo_dynamic_field_enrichment_enrich|apollo_csv_exports_export_view)
+        ask "CF approval gate: '$action' uses Apollo credits or exports data."
+        ;;
+      apollo_*_show|apollo_*_index|apollo_webhook_result_show|apollo_usage_stats_*|apollo_users_api_profile|apollo_organizations_lookup|apollo_analytics_sync_report|apollo_conversations_get_*|apollo_emailer_messages_get_content|apollo_emailer_messages_email_send_status|apollo_emailer_campaigns_activity_feed|apollo_context_center_show*|apollo_website_visitors_domain_aggregates|apollo_dynamic_field_enrichment_ongoing_enrichment_requests)
+        exit 0
+        ;;
+    esac
+    mcp_default
     ;;
   mcp__*[Hh]ub[Ss]pot__*)
     # HubSpot (CEO decision 2026-09-25): reads pass; CRM writes ask; anything that

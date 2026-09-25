@@ -21,8 +21,9 @@ of any setup or infrastructure work, and update it when a step or decision chang
    **Second exception (CEO decision, 2026-09-25):** agents may *create* HubSpot
    companies, contacts and notes without asking (max 10 per call, after checking for
    duplicates). Updating existing records, and anything involving deals, still needs
-   approval. Saleshandy email reveals are allowed only for drafts the CEO has marked
-   `status: approved` (email only, max 10 a day, capped by the gate). Agents never
+   approval. Email reveals (Saleshandy, then Apollo as fallback) are allowed only for
+   leads the CEO has approved (work email only, max 10 a day across both, capped by
+   the gate). Agents never
    add prospects to sequences or start them.
 2. Drafts go in `drafts/`; account research goes in `accounts/`. Tell the human where
    the file is and what decision you need.
@@ -165,6 +166,9 @@ of expertise in outreach and as seeds for LinkedIn posts. Strong outreach hooks:
   prospects and copy plus an import CSV (`drafts/saleshandy/`); a human loads and
   launches campaigns. Saleshandy Lead Finder (`sage_search`, free) is also a lead
   source; email reveals (`enrich_contacts`, ~1 credit) only for approved drafts.
+- **Apollo (second email source):** free people search for reachability; work-email
+  reveal (`apollo_people_bulk_match`, ~1 credit) only when Saleshandy has no email for an
+  approved lead. Apollo's sending, sequences and purchases are blocked by the gate.
 - **Email & files:** Microsoft 365 (Outlook, OneDrive). Teams: lead alerts to the CEO.
 - **CRM:** HubSpot. Every A/B lead gets a Company + research Note + "DRAFT FOR REVIEW"
   Note; a Contact is created once its email is revealed. `pipeline/leads.csv` is

@@ -128,6 +128,29 @@ expect ask   "hs approved + to_send"      '{"tool_name":"mcp__claude_ai_HubSpot_
 expect ask   "hs to_send + other"         '{"tool_name":"mcp__claude_ai_HubSpot__manage_crm_objects","tool_input":{"updateRequest":{"objects":[{"objectType":"companies","objectId":1,"properties":{"cf_linkedin_touch":"to_send","name":"X"}}]}}}'
 expect ask   "hs empty properties"        '{"tool_name":"mcp__claude_ai_HubSpot__manage_crm_objects","tool_input":{"updateRequest":{"objects":[{"objectType":"companies","objectId":1,"properties":{}}]}}}'
 
+# Apollo (87 real tools, 2026-09-25): send/sequence/purchase/tracking denied; credit
+# lookups and writes ask; reads pass; people_match is work-email only within the cap.
+ap=mcp__claude_ai_Apollo_io__
+for t in emailer_messages_create emailer_messages_send_now emailer_campaigns_add_contact_ids emailer_campaigns_approve emailer_campaigns_remove_or_stop_contact_ids sequences_create sequences_update email_account_purchase_create website_visitor_domain_tracker_install_script website_visitor_domain_tracker_send_install_email website_visitor_domain_tracker_update phone_calls_create phone_calls_update tasks_complete tasks_skip data_source_imports_create data_sources_create survey_submit; do
+  expect deny "ap $t" "{\"tool_name\":\"${ap}apollo_$t\"}"
+done
+for t in mixed_companies_search organizations_enrich organizations_bulk_enrich organizations_job_postings dynamic_field_enrichment_enrich csv_exports_export_view accounts_bulk_create accounts_create accounts_update contacts_bulk_create contacts_create contacts_update context_center_create_product context_center_create_profile context_center_update_product context_center_update_profile custom_objects_create deals_create fields_create fields_update labels_add_entity_ids_to_label_names labels_create labels_remove_entity_ids_from_label_names labels_update tasks_bulk_create tasks_create tasks_update feedback_log; do
+  expect ask "ap $t" "{\"tool_name\":\"${ap}apollo_$t\"}"
+done
+for t in analytics_sync_report contacts_search context_center_show context_center_show_product conversations_get_insights conversations_get_recording_links conversations_get_transcript conversations_search csv_exports_show custom_object_records_search custom_objects_show deals_search deals_show domain_purchase_index dynamic_field_enrichment_ongoing_enrichment_requests email_account_purchase_index email_accounts_index emailer_campaigns_activity_feed emailer_campaigns_search emailer_campaigns_show emailer_messages_email_send_status emailer_messages_get_content emailer_messages_search emailer_schedules_index fields_index labels_index mixed_people_api_search organizations_lookup phone_calls_search tasks_search tasks_show usage_stats_credit_usage_stats users_api_profile users_search webhook_result_show website_visitor_domain_tracker_index website_visitors_domain_aggregates; do
+  expect pass "ap $t" "{\"tool_name\":\"${ap}apollo_$t\"}"
+done
+pm=${ap}apollo_people_match; pbm=${ap}apollo_people_bulk_match
+# The cap is shared: the Saleshandy tests above already used today's 10 reveals.
+expect deny  "ap match after SH cap"   "{\"tool_name\":\"$pm\",\"tool_input\":{\"name\":\"A B\",\"domain\":\"x.com\"}}"
+export CF_CREDIT_DIR=$(mktemp -d)   # fresh day for the Apollo cases below
+expect deny  "ap match + phone"        "{\"tool_name\":\"$pm\",\"tool_input\":{\"name\":\"A B\",\"domain\":\"x.com\",\"reveal_phone_number\":true}}"
+expect deny  "ap match + personal"     "{\"tool_name\":\"$pm\",\"tool_input\":{\"name\":\"A B\",\"reveal_personal_emails\":true}}"
+expect deny  "ap match + waterfall"    "{\"tool_name\":\"$pm\",\"tool_input\":{\"name\":\"A B\",\"run_waterfall_email\":true}}"
+expect pass  "ap match work email"     "{\"tool_name\":\"$pm\",\"tool_input\":{\"name\":\"A B\",\"domain\":\"x.com\"}}"
+expect deny  "ap bulk 11"              "{\"tool_name\":\"$pbm\",\"tool_input\":{\"details\":[{},{},{},{},{},{},{},{},{},{},{}]}}"
+expect pass  "ap bulk 3"               "{\"tool_name\":\"$pbm\",\"tool_input\":{\"details\":[{},{},{}]}}"
+
 # Bash: network/mail/AppleScript asks; ordinary commands pass.
 expect ask  "curl"                '{"tool_name":"Bash","tool_input":{"command":"curl https://example.com"}}'
 expect ask  "piped wget"          '{"tool_name":"Bash","tool_input":{"command":"echo x | wget -qO- x"}}'

@@ -2,7 +2,7 @@
 type: cold-email
 stage: new
 account: soundhealth
-recipient: Vivek Mohan, VP Product Development & Engineering (email: TO BE FILLED BY HUMAN)
+recipient: Vivek Mohan, VP Product Development & Engineering (email: vivek@soundhealth.life)
 sources: [accounts/soundhealth.md, https://corefragment.com/blog/medical-wearable-device-development-challenges-and-fix, https://corefragment.com/case-study/smart-glucometer]
 ---
 
@@ -18,7 +18,7 @@ sources: [accounts/soundhealth.md, https://corefragment.com/blog/medical-wearabl
 
 | Buyer | Title | LinkedIn | Saleshandy | HubSpot contact |
 |---|---|---|---|---|
-| Vivek Mohan (**primary**) | VP, Product Development & Engineering | — | not in Saleshandy | [558508553962](https://app.hubspot.com/contacts/247517534/record/0-1/558508553962) |
+| Vivek Mohan (**primary**) · vivek@soundhealth.life | VP, Product Development & Engineering | — | not in Saleshandy | [558508553962](https://app.hubspot.com/contacts/247517534/record/0-1/558508553962) |
 | Venkatesh Perungulam (**referral contact**) | VP, Infrastructure & Technology | https://www.linkedin.com/in/venkateshperungulam | revealed: venkatesh@soundhealth.life (valid) | [558514468546](https://app.hubspot.com/contacts/247517534/record/0-1/558514468546) |
 | Paramesh Gopi | Founder & CEO | — | not checked | [558515833542](https://app.hubspot.com/contacts/247517534/record/0-1/558515833542) |
 

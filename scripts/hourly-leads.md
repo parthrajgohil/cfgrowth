@@ -26,6 +26,20 @@ For all approved companies together (at most 10 per run):
    together): email only, never phone. Poll
    `get_enrichment_status`, then read `get_enrichment_result`. Accept only emails marked
    `valid`. Never guess an email.
+2b. **Apollo fallback** for every lead still without a valid email after step 2:
+   - Free search first: `apollo_mixed_people_api_search` with `q_organization_domains_list`
+     = the company domain and `q_keywords` = the buyer's name (or no keywords to see who
+     Apollo has there). Use the result's `id`.
+   - Then ONE `apollo_people_bulk_match` call for all of them (`details: [{id: …}]`, max 10),
+     **work email only**: never set `reveal_phone_number`, `reveal_personal_emails` or
+     `run_waterfall_*` (the gate refuses them). About 1 credit each.
+   - Accept an email only if `email_status` is `verified`. If `email_domain_catchall` is
+     true, still accept it but note "(catch-all domain)" in the brief.
+   - If the buyer isn't in Apollo but a suitable alternative is (engineering/product/
+     hardware leadership or founder), record that person as the alternative in a HubSpot
+     note; don't reveal them unless the CEO's latest note says to.
+   - Report the credits used and the balance (`apollo_users_api_profile` with
+     `include_credit_usage`) in the log.
 3. For each lead with a valid email:
    - Put the email in the draft's `recipient:` line and set the draft's `status:` to `approved`.
    - Record the email and the reveal request ID in the brief's Buyers section.
@@ -52,7 +66,7 @@ For all approved companies together (at most 10 per run):
        sequence template adds them.
      Quote every field (RFC 4180); keep line breaks inside quoted fields.
    - Set `cf_lead_stage` = `ready_to_import`.
-4. For each lead with no valid email: set `cf_lead_stage` = `no_email` and
+4. For each lead with no valid email from **both** Saleshandy and Apollo: set `cf_lead_stage` = `no_email` and
    `cf_linkedin_touch` = `to_send` (one update), then prepare the **LinkedIn touch**:
    a. Find the buyer's public LinkedIn profile URL (brief, HubSpot contact, or a web
       search for "<name> <company> LinkedIn"). Never log in to or scrape LinkedIn. If you

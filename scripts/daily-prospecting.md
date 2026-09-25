@@ -45,13 +45,16 @@ For each candidate:
    - 1–3 potential buyers: name, title, LinkedIn URL (public), one line on background,
      plus the Saleshandy result for each (step 2)
    Business information only (CLAUDE.md rule 5): no personal emails, phones or addresses.
-2. **Reachability check (free):** `sage_search` for each potential buyer.
+2. **Reachability check (free):** `sage_search` (Saleshandy) for each potential buyer,
+   and `apollo_mixed_people_api_search` (Apollo, free: company domain + name). Record
+   which sources have them (`Saleshandy lead ID`, `Apollo ID`); "has_email" in Apollo is a
+   good sign.
    - If found, record the `Saleshandy lead ID` next to that buyer in the brief.
    - If none is found, look at who Saleshandy does have at the company. If someone
      suitable exists (engineering/product leadership or founder), record them as an
      alternative buyer with their lead ID, and note whether the draft's angle fits them.
-   - Never call `enrich_contacts` here. Emails are revealed by the hourly run, only
-     for leads the CEO approved.
+   - Never call `enrich_contacts` or `apollo_people_*match` here. Emails are revealed by
+     the hourly run, only for leads the CEO approved.
 3. Only for fit **A** or **B**:
    a. Write `drafts/email/<YYYY-MM-DD>-<slug>.md` in the writer's format. Right after the
       front matter, add `stage: new` to the front matter and a **Lead info** section
@@ -87,7 +90,7 @@ For each candidate:
       New lead: <Company> (Fit <A/B>)  ·  <website>
       What: <one line on what they make>
       Why now: <trigger, with date>
-      Buyer: <Name>, <Title>  ·  Email: <in Saleshandy | alternative: Name | not in Saleshandy>
+      Buyer: <Name>, <Title>  ·  Email: <in Saleshandy | in Apollo | alternative: Name | not found>
       Angle: <service line> / <case study>
       Review in HubSpot, then set "CF lead stage" (Approved / Needs edit / On hold / Archived)
       ```

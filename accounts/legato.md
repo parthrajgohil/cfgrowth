@@ -38,6 +38,9 @@ Emails: not researched. The human fills these in from a legitimate business sour
 request `6ab63ff8f5ae26563d01eacf`: no valid email, 0 credits. Saleshandy Lead Finder has no
 people at Legato (Steve Romine included). No Saleshandy lead ID. No HubSpot contact yet.
 
+**Emails:**
+- Mehul Trivedi: `mehul@legatohearing.com` (verified), Apollo reveal 2026-09-25 (request 5041182343864640138, 1 credit).
+
 ## Best angle
 **Service line:** Mobile apps (BLE companion app) + embedded firmware (low-power, OTA) ·
 **Case study:** BLE smart glucometer, firmware + Android/iOS apps for a US healthcare org

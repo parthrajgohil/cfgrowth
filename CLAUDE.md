@@ -192,6 +192,9 @@ of expertise in outreach and as seeds for LinkedIn posts. Strong outreach hooks:
 - **LinkedIn content engine:** Mon/Wed/Fri 11:47 IST, one company-page post (text +
   visual/carousel/video brief + first comment + reshare line) is sent to the CEO on Teams
   to copy and post (`scripts/linkedin-content.md`, log in `drafts/linkedin/index.md`).
+  Images and carousel slides are designed as SVG (brand design system in the prompt),
+  rendered on the Mac to PNG/PDF with the logo (`scripts/render-linkedin-images.sh`), and
+  synced to the CEO via the OneDrive folder "CF LinkedIn images".
 - **Writing style:** always use the `cf-voice` skill; use `cold-email` and
   `linkedin-post` for those formats.
 

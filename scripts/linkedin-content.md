@@ -45,22 +45,43 @@ Use the weekday of today's date. If it's not Mon/Wed/Fri, use the Monday slot.
 - Suggest 1–2 company pages to @mention only when genuinely relevant (e.g. Nordic
   Semiconductor in a post about nRF52), never people.
 
-## Visuals (describe them exactly; a human or Canva makes them)
-- **Diagram/visual:** give a precise brief: format 1200×1200 (or 1200×1500), headline text
-  on the image (max 8 words), the diagram content (boxes/arrows/labels), style (clean,
-  white background, one accent colour, CoreFragment logo bottom-right), and alt text.
-- **Carousel:** slide-by-slide text (slide 1 = hook; last slide = takeaway + "Follow
-  CoreFragment for more"). Max 25 words per slide. 1080×1350 portrait. Also a one-line
-  design note.
-- **Video:** script with timings (hook 0–5 s, point, example, takeaway, close), on-screen
-  captions, and a filming note (phone, eye level, natural light, subtitles on).
-- **People post:** a photo brief (what to shoot, e.g. the team at lunch, a bench with a
-  prototype board, no client hardware or screens visible).
+## Visuals: design them as SVG files (the Mac renders them to PNG/PDF)
+Write the visual yourself as SVG in `drafts/linkedin/images/`. After this run, the Mac
+renders it (`scripts/render-linkedin-images.sh`), embeds the logo, and puts it in the
+CEO's OneDrive folder "CF LinkedIn images".
+- **Monday image:** `drafts/linkedin/images/<YYYY-MM-DD>-<slug>.svg`,
+  `width="1200" height="1500"`: diagram, timeline, comparison or checklist that makes the
+  post's one idea visible at a glance.
+- **Wednesday carousel:** 6–8 slides, `…/<YYYY-MM-DD>-<slug>-slide-1.svg` … `-slide-8.svg`,
+  each `width="1080" height="1350"`. Slide 1 = hook (big), last slide = takeaway +
+  "Follow CoreFragment for more". They're combined into `<YYYY-MM-DD>-<slug>-carousel.pdf`.
+- **Friday:** for a news post, an image as on Monday. For a people post, no graphic: give a
+  photo brief (what to shoot: the team at lunch, a bench with a prototype board; no client
+  hardware or screens). For the monthly video, a script with timings and captions.
+
+**Design system (follow exactly):**
+- Plain SVG only: `rect`, `circle`, `line`, `polygon`, `path`, `text`, `g`. No external
+  fonts, images or CSS files. `font-family="Helvetica Neue, Helvetica, Arial"`.
+- White background (`<rect width="100%" height="100%" fill="#FFFFFF"/>` first).
+- Colours: brand blue `#1F5FAE` (headline accent, lines, icons), brand orange `#F26522`
+  (one highlight per image), highlight tint `#FDEBD7`, text dark `#1F2933`, secondary text
+  `#52606D`, dividers `#E4E7EB`. Nothing else.
+- Margins 100 px. Headline 72–84 px bold (max 8 words, 2 lines), body text 34–40 px,
+  labels ≥ 24 px, so everything reads on a phone.
+- Make text fit: estimate width ≈ 0.55 × font-size per character (0.6 for bold); break
+  long lines with separate `<text>` elements. Nothing may touch or cross the margins.
+- Footer on every image and slide: a divider line at y = height − 120, `corefragment.com`
+  bottom-left (26 px, `#52606D`), and bottom-right the logo plus the name:
+  `<image href="{{LOGO}}" x="{width-416}" y="{height-98}" width="100" height="60"/>` and
+  `<text x="{width-100}" y="{height-54}" text-anchor="end" font-size="34" font-weight="700" fill="#1F2933">CoreFragment</text>`
+  (substitute the numbers). Leave `{{LOGO}}` literally; the renderer inserts the logo.
+- No stock photos, clip-art, padlocks or emojis. Diagrams beat decoration.
+- Also write the **alt text** (one or two plain sentences describing the image).
 
 ## Save
 Write `drafts/linkedin/<YYYY-MM-DD>-<slug>.md` with: slot, pillar, 2 hooks, the post (hook
 variant A in place), first comment, hashtags, visual/carousel/video brief, best time to
-post, and a 1–2 line **reshare comment for Parthraj's personal profile** (company pages
+post, the SVG file names, alt text, and a 1–2 line **reshare comment for Parthraj's personal profile** (company pages
 get far less reach than people, so his reshare matters). Add a row to
 `drafts/linkedin/index.md`: `| date | slot | topic | hook | blog/source | file |`.
 
@@ -82,7 +103,9 @@ First comment: <text with link>
 Hashtags: <already at the end of the post>
 Mention: <@Company or "none">
 
-Visual: <brief, carousel slides, or video script>
+Image: <"CF LinkedIn images" folder in OneDrive: <file name>.png (or -carousel.pdf)>, ready in ~2 minutes
+Alt text: <text>
+(For a people post or video: the photo brief or the script instead.)
 
 Reshare from your profile with: <1–2 lines>
 
@@ -94,4 +117,4 @@ message and the visual brief in a second.
 ## Never
 - Post to LinkedIn or anywhere else; the CEO posts.
 - Invent facts, name clients, put numbers on our results, or disclose team size.
-- Edit anything outside `drafts/linkedin/`. Use HubSpot, Saleshandy or shell commands.
+- Edit anything outside `drafts/linkedin/` (including `drafts/linkedin/images/`). Use HubSpot, Saleshandy or shell commands.

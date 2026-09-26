@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1500" viewBox="0 0 1200 1500">
+  <rect width="1200" height="1500" fill="#FFFFFF"/>
+  <text x="100" y="190" font-family="Helvetica Neue, Helvetica, Arial" font-size="78" font-weight="700" fill="#1F2933">The CRA clock:</text>
+  <text x="100" y="285" font-family="Helvetica Neue, Helvetica, Arial" font-size="78" font-weight="700" fill="#0B6E99">are you ready?</text>
+  <text x="100" y="355" font-family="Helvetica Neue, Helvetica, Arial" font-size="32" fill="#52606D">EU Cyber Resilience Act · reporting rules apply since 11 Sept 2026</text>
+  <!-- timeline -->
+  <line x1="130" y1="560" x2="1030" y2="560" stroke="#0B6E99" stroke-width="10" stroke-linecap="round"/>
+  <polygon points="1030,535 1080,560 1030,585" fill="#0B6E99"/>
+  <circle cx="130" cy="560" r="26" fill="#D64545"/>
+  <text x="130" y="630" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial" font-size="26" fill="#1F2933">Exploited</text>
+  <text x="130" y="662" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial" font-size="26" fill="#1F2933">vulnerability</text>
+  <g font-family="Helvetica Neue, Helvetica, Arial" text-anchor="middle">
+    <circle cx="380" cy="560" r="18" fill="#FFFFFF" stroke="#0B6E99" stroke-width="8"/>
+    <text x="380" y="490" font-size="44" font-weight="700" fill="#0B6E99">24 h</text>
+    <text x="380" y="630" font-size="26" fill="#1F2933">early warning</text>
+    <circle cx="630" cy="560" r="18" fill="#FFFFFF" stroke="#0B6E99" stroke-width="8"/>
+    <text x="630" y="490" font-size="44" font-weight="700" fill="#0B6E99">72 h</text>
+    <text x="630" y="630" font-size="26" fill="#1F2933">notification</text>
+    <circle cx="880" cy="560" r="18" fill="#FFFFFF" stroke="#0B6E99" stroke-width="8"/>
+    <text x="880" y="490" font-size="44" font-weight="700" fill="#0B6E99">14 days</text>
+    <text x="880" y="630" font-size="26" fill="#1F2933">after fix:</text>
+    <text x="880" y="662" font-size="26" fill="#1F2933">final report</text>
+  </g>
+  <rect x="860" y="700" width="240" height="50" rx="25" fill="#E6F2F7"/>
+  <text x="980" y="734" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial" font-size="24" fill="#0B6E99">Full CRA: Dec 2027</text>
+  <!-- checklist -->
+  <text x="100" y="870" font-family="Helvetica Neue, Helvetica, Arial" font-size="40" font-weight="700" fill="#1F2933">Before your next field update:</text>
+  <g font-family="Helvetica Neue, Helvetica, Arial" font-size="38" fill="#1F2933">
+    <rect x="100" y="930" width="56" height="56" rx="10" fill="none" stroke="#0B6E99" stroke-width="6"/>
+    <text x="190" y="972">SBOM per shipped firmware version</text>
+    <rect x="100" y="1040" width="56" height="56" rx="10" fill="none" stroke="#0B6E99" stroke-width="6"/>
+    <text x="190" y="1082">Signed OTA with rollback</text>
+    <rect x="100" y="1150" width="56" height="56" rx="10" fill="none" stroke="#0B6E99" stroke-width="6"/>
+    <text x="190" y="1192">Secure boot enforced in production</text>
+    <rect x="100" y="1260" width="56" height="56" rx="10" fill="none" stroke="#0B6E99" stroke-width="6"/>
+    <text x="190" y="1302">Fleet update visibility</text>
+  </g>
+  <line x1="100" y1="1380" x2="1100" y2="1380" stroke="#E4E7EB" stroke-width="3"/>
+  <text x="1100" y="1440" text-anchor="end" font-family="Helvetica Neue, Helvetica, Arial" font-size="34" font-weight="700" fill="#1F2933">CoreFragment</text>
+  <text x="100" y="1440" font-family="Helvetica Neue, Helvetica, Arial" font-size="26" fill="#52606D">corefragment.com</text>
+</svg>

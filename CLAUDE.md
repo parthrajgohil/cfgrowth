@@ -181,6 +181,11 @@ of expertise in outreach and as seeds for LinkedIn posts. Strong outreach hooks:
   → hourly run (09:03–23:03 IST, weekdays) handles Approved (email reveal, HubSpot contact,
   Saleshandy CSV → Ready to import / No email found), Needs edit (revise → New), and
   watches Saleshandy for replies → CEO imports the CSV and launches.
+- **Sales Navigator hand-off:** the CEO sends prospects from Sales Navigator as a Teams
+  message starting `#salesnav` or a `pipeline/sales-nav-<date>.md` file (one line each:
+  `Company | website | person, title | note`). The daily run researches them first (max 5
+  a day, queue in `drafts/leads/sales-nav-queue.md`). Playbook: `docs/sales-navigator-playbook.md`.
+  Agents never touch LinkedIn or Sales Navigator.
 - **LinkedIn touch:** leads with no email get a drafted connection note, InMail and
   after-accept message (hourly run → Teams). The CEO sends them himself; HubSpot field
   **CF LinkedIn touch** tracks it (agents set only "To send"). Never automate LinkedIn.

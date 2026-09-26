@@ -71,6 +71,7 @@ before=$(wc -l <"$log")
   --allowedTools Read Glob Grep WebSearch WebFetch ToolSearch \
     "Edit(accounts/**)" "Edit(drafts/**)" \
     mcp__claude_ai_Microsoft_365__teams_send_chat_message \
+    mcp__claude_ai_Microsoft_365__chat_message_search mcp__claude_ai_Microsoft_365__read_resource \
     mcp__claude_ai_Saleshandy__sage_search mcp__claude_ai_Saleshandy__enrich_contacts \
     mcp__claude_ai_Saleshandy__get_enrichment_status mcp__claude_ai_Saleshandy__get_enrichment_result \
     mcp__claude_ai_Saleshandy__list_sequences mcp__claude_ai_Saleshandy__get_email_list \

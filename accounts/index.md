@@ -2,10 +2,13 @@
 
 Local copy of every lead. HubSpot's **CF lead stage** is the source of truth; the daily
 and hourly runs keep this table and each draft's `stage:` line in sync with it.
-Last synced: 2026-09-25 (hourly 20:25 IST).
+Last synced: 2026-09-28 (daily run).
 
 | Researched | Company | Website | Fit | Stage | Buyer (title) | Email | HubSpot | Brief | Draft |
 |---|---|---|---|---|---|---|---|---|---|
+| 2026-09-28 | Epitel | https://www.epitel.com | A | new | Matt Parrott (VP of R&D and Manufacturing) | not revealed (Saleshandy 152219163; Apollo has email) | [348778821357](https://app.hubspot.com/contacts/247517534/record/0-2/348778821357) | `accounts/epitel.md` | `drafts/email/2026-09-28-epitel.md` |
+| 2026-09-28 | Wellinks | https://www.wellinks.com | A | new | Andrew Brimer (VP of Technology) | not revealed (Saleshandy 120569591; Apollo has email) | [348743815889](https://app.hubspot.com/contacts/247517534/record/0-2/348743815889) | `accounts/wellinks.md` | `drafts/email/2026-09-28-wellinks.md` |
+| 2026-09-28 | Urologic Health | https://www.urologic.health | C | not pursued | Adam Yaacov (Co-founder & CEO) | | — | `accounts/urologic-health.md` | — |
 | 2026-09-24 | SoundHealth | https://www.soundhealth.life | A | in_sequence | Vivek Mohan (VP, Product Development & Engineering) | vivek@soundhealth.life (catch-all) | [348569601776](https://app.hubspot.com/contacts/247517534/record/0-2/348569601776) | `accounts/soundhealth.md` | `drafts/email/2026-09-24-soundhealth.md` |
 | 2026-09-24 | HeyCharge | https://www.heycharge.com | A | in_sequence | Chris Cardé (Founder & CEO) | chris.carde@heycharge.com | [348484334304](https://app.hubspot.com/contacts/247517534/record/0-2/348484334304) | `accounts/heycharge.md` | `drafts/email/2026-09-24-heycharge.md` |
 | 2026-09-24 | Boldr | https://shopboldr.com | A | in_sequence | Matheus Marotzke (Co-founder, CTO & CPO) | matheus@teamboldr.com | [348671431414](https://app.hubspot.com/contacts/247517534/record/0-2/348671431414) | `accounts/boldr.md` | `drafts/email/2026-09-24-boldr.md` |

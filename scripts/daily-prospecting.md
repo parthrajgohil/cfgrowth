@@ -49,19 +49,69 @@ the same process as below. Differences:
 - Not a fit? Still write a short brief with the reason, set its queue Status, and list it in
   the day's summary so the CEO learns which of his searches work.
 
-## Find new leads
-- Look for companies that match the ICP in CLAUDE.md and have a trigger from the last
-  6 months: funding, firmware/embedded/IoT hiring, a new device launch, prototype to
-  production, a certification push, an RTOS migration, an end-of-life chip.
-- You can use web research and Saleshandy's `sage_search` (free: describe the
-  companies or people you want). Verify every trigger with a public source.
+## Find new leads: build a long list first, then research the best
+Research is the expensive part, so don't research candidates one at a time as you find them.
+Work as a funnel:
+
+**1. Long list (aim for 30–40 names, cheap).** Start with the carry-over in
+`drafts/leads/candidate-pool.md` (create it if missing), then add from these sources, in
+this order:
+- **Apollo people search (free, best source).** `apollo_mixed_people_api_search` with
+  `organization_num_employees_ranges` `["11,50","51,200","201,500"]`,
+  `organization_locations` (US + EU/UK countries), `q_organization_keyword_tags` (one
+  industry per call: e.g. "medical devices", "wearables", "industrial automation",
+  "industrial iot", "sensors", "telematics", "ev charging", "agtech", "construction
+  technology") and `person_titles` for embedded leads (e.g. "Head of Firmware", "Firmware
+  Manager", "Head of Embedded", "Director of Hardware Engineering", "Head of Electronics").
+  `per_page` 25–50, and use `page` 2–3 on later days so you don't see the same names. A
+  company with only one or two embedded leads is a device maker with a thin team: that's
+  our ICP. Hiring filters (`q_organization_job_titles`, `organization_job_posted_at_range`)
+  and department counts are **not available** on our free plan; don't use them.
+- **Hiring (strongest trigger for us):** web searches for open firmware / embedded /
+  electronics roles, e.g. `"firmware engineer" medical device site:boards.greenhouse.io`,
+  also `jobs.lever.co`, `jobs.ashbyhq.com`, `apply.workable.com`, `join.com`,
+  `*.jobs.personio.de`, `*.recruitee.com`. Also check the careers pages of long-list
+  companies.
+- **Product and regulatory news:** recent FDA 510(k) clearances or CE marks for connected
+  devices; product launches; trade-show exhibitors (MEDICA, embedded world, Hannover Messe,
+  SPS, Sensors Converge, bauma, Agritechnica, IAA Transportation).
+- **Segment 2:** press releases or trade media about a traditional manufacturer or operator
+  (construction, tyres, trailers, pumps, HVAC, agriculture, logistics, facilities)
+  launching a "smart", "connected" or monitoring product, or hiring an IoT / digital
+  product lead.
+- **Funding news, last.** Funding coverage skews to very small, defence or pre-product
+  companies. Use it as a trigger for companies already on the list, not as the main source.
+
+**2. Quick screen (no deep research).** For each name, check only: device or connected
+product? 10–500 people? HQ in USA/EU/UK? Not defence? Not an engineering-services firm
+(design houses and contract developers such as Promwad, Hatch or Austin Circuit Design are
+competitors, not buyers)? No brief in `accounts/`? Drop the misses with a few words each.
+
+**3. Trigger check on the survivors,** then research the best 8–10 in depth (below).
+Grading:
+- **A:** good ICP fit and a verified trigger from the last 6 months.
+- **B:** good ICP fit and a weaker or older trigger: open embedded/firmware/hardware roles
+  (any date, if the post is still open), a product launch or clearance 6–12 months ago, a
+  new engineering leader in the last 12 months, or clear product-roadmap signals on their
+  site. B leads are real leads: draft them and count them toward the 5. The email then
+  opens on the product, not a news event.
+- **C:** fit is weak (too small, wrong region, no device). Don't research deeply.
+
+**4. Carry over.** Write every good name you screened but didn't research today to
+`drafts/leads/candidate-pool.md`
+(`| Added | Company | Website | Source | Why it looked good | Check next |`), and remove
+the ones you researched. Tomorrow's run starts there, so no search is wasted.
+
+Rules that still apply:
+- Verify every trigger with a public source.
 - Follow the **Priorities** and **ICP** sections of CLAUDE.md: about 4 in 5 leads in the
   primary rows (firmware and hardware for healthcare/medical and industrial IoT), the
-  rest exploring the secondary rows. Include **segment 2** (traditional companies
-  adding a connected product) on most days. Vary industries from recent days (check the
-  dates in `accounts/index.md`).
+  rest exploring the secondary rows. Try for **at least one segment-2 lead** a day. Vary
+  industries from recent days (check the dates in `accounts/index.md`).
 - Regions: USA and Europe (EU + UK) only. Company size 10–500.
 - Skip defense or export-controlled work, and pure software companies with no device.
+- Saleshandy `sage_search`: use **people-style** queries (a title at a company, or a
+  person's name at a company). Company-style queries fail with an API 400 error.
 
 For each candidate:
 1. **Research it thoroughly** and write `accounts/<slug>.md` in the researcher's format,
@@ -125,8 +175,10 @@ For each candidate:
       Review in HubSpot, then set "CF lead stage" (Approved / Needs edit / On hold / Archived)
       ```
 
-Stop when you have 5 A/B leads (Sales Nav leads included) or have spent a reasonable
-effort (about 15 candidates). Fewer good leads beat more weak ones.
+Stop when you have 5 A/B leads (Sales Nav leads included). Don't stop early because
+the first candidates were weak: go back to the long list (and add to it) until you have
+screened at least 30 names and researched at least 8 in depth. Fewer good leads beat more
+weak ones, but a thin day should come from a thin market, not from stopping early.
 
 ## Finish
 1. Update `accounts/index.md`, the local list of every lead. Keep one row per
@@ -138,7 +190,9 @@ effort (about 15 candidates). Fewer good leads beat more weak ones.
    companies go in the table too, with Stage "not pursued".
 2. Write `drafts/leads/<YYYY-MM-DD>.md`: a table of every company you looked at (lead or
    not), with fit grade, one-line reason, Saleshandy reachability, HubSpot company ID,
-   and file paths. Add any tool call that failed or was refused. (The hourly run
+   and file paths. Add any tool call that failed or was refused.
+   Start it with the funnel: names on the long list (by source), passed the quick screen,
+   researched in depth, A / B / C, and how many went to `candidate-pool.md`. (The hourly run
    appends its own sections to this file later.)
 
 ## Never

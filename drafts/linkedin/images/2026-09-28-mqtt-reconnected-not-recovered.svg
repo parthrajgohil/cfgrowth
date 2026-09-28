@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1500" viewBox="0 0 1200 1500">
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+  <text x="100" y="190" font-family="Helvetica Neue, Helvetica, Arial" font-size="78" font-weight="700" fill="#1F2933">Reconnected is not</text>
+  <text x="100" y="285" font-family="Helvetica Neue, Helvetica, Arial" font-size="78" font-weight="700" fill="#1F5FAE">recovered.</text>
+  <text x="100" y="355" font-family="Helvetica Neue, Helvetica, Arial" font-size="34" fill="#52606D">MQTT connection loss: three decisions</text>
+  <!-- card 1 -->
+  <g font-family="Helvetica Neue, Helvetica, Arial">
+    <rect x="100" y="420" width="1000" height="240" rx="20" fill="none" stroke="#E4E7EB" stroke-width="3"/>
+    <circle cx="170" cy="490" r="38" fill="#1F5FAE"/>
+    <text x="170" y="504" text-anchor="middle" font-size="40" font-weight="700" fill="#FFFFFF">1</text>
+    <text x="240" y="504" font-size="40" font-weight="700" fill="#1F2933">How fast you notice</text>
+    <text x="240" y="560" font-size="34" fill="#52606D">Broker waits 1.5 × keep-alive.</text>
+    <text x="240" y="608" font-size="34" fill="#52606D">300 s keep-alive = 7.5 min blind.</text>
+  </g>
+  <!-- card 2 -->
+  <g font-family="Helvetica Neue, Helvetica, Arial">
+    <rect x="100" y="685" width="1000" height="240" rx="20" fill="none" stroke="#E4E7EB" stroke-width="3"/>
+    <circle cx="170" cy="755" r="38" fill="#1F5FAE"/>
+    <text x="170" y="769" text-anchor="middle" font-size="40" font-weight="700" fill="#FFFFFF">2</text>
+    <text x="240" y="769" font-size="40" font-weight="700" fill="#1F2933">How the fleet reconnects</text>
+    <text x="240" y="825" font-size="34" fill="#52606D">Exponential backoff + random jitter,</text>
+    <text x="240" y="873" font-size="34" fill="#52606D">so 500 devices don't retry at once.</text>
+  </g>
+  <!-- card 3 (highlight) -->
+  <g font-family="Helvetica Neue, Helvetica, Arial">
+    <rect x="100" y="950" width="1000" height="240" rx="20" fill="#FDEBD7" stroke="#F26522" stroke-width="4"/>
+    <circle cx="170" cy="1020" r="38" fill="#F26522"/>
+    <text x="170" y="1034" text-anchor="middle" font-size="40" font-weight="700" fill="#FFFFFF">3</text>
+    <text x="240" y="1034" font-size="40" font-weight="700" fill="#1F2933">What happens to offline data</text>
+    <text x="240" y="1090" font-size="34" fill="#1F2933">Drop, buffer in RAM, or store in flash.</text>
+    <text x="240" y="1138" font-size="34" fill="#1F2933">Decide before the pilot, not after.</text>
+  </g>
+  <line x1="100" y1="1245" x2="160" y2="1245" stroke="#1F5FAE" stroke-width="6" stroke-linecap="round"/>
+  <text x="100" y="1300" font-family="Helvetica Neue, Helvetica, Arial" font-size="36" fill="#1F2933">Then test it: pull the antenna, not the plug.</text>
+  <!-- footer -->
+  <line x1="100" y1="1380" x2="1100" y2="1380" stroke="#E4E7EB" stroke-width="3"/>
+  <text x="100" y="1440" font-family="Helvetica Neue, Helvetica, Arial" font-size="26" fill="#52606D">corefragment.com</text>
+  <image href="{{LOGO}}" x="784" y="1402" width="100" height="60" preserveAspectRatio="xMidYMid meet"/>
+  <text x="1100" y="1446" text-anchor="end" font-family="Helvetica Neue, Helvetica, Arial" font-size="34" font-weight="700" fill="#1F2933">CoreFragment</text>
+</svg>

@@ -2,8 +2,8 @@
 # Render LinkedIn post images: drafts/linkedin/images/*.svg -> *.png (same name).
 # Runs after each LinkedIn content job (called by cf-headless.sh); safe to run by hand.
 # - Replaces {{LOGO}} in the SVG with the CoreFragment logo (logo/CoreFragment-Logo.png).
-# - Renders with macOS Quick Look at 1:1 inside a square canvas, then crops to the SVG's
-#   own width x height (Quick Look always produces a square thumbnail).
+# - Renders with macOS Quick Look at 2x (CF_IMAGE_SCALE) inside a square canvas, then crops
+#   to 2x the SVG's own width x height (Quick Look always produces a square thumbnail).
 # - Copies each new PNG into the OneDrive sync folder "CF LinkedIn images" if it exists,
 #   so the CEO can open it from the link in the Teams message.
 # - Carousels: slides named <base>-slide-<N>.svg are also combined, in order, into
@@ -15,6 +15,7 @@ cd "$(dirname "$0")/.." || exit 1
 dir=drafts/linkedin/images
 logo=logo/CoreFragment-Logo.png
 onedrive=$(ls -d "$HOME"/Library/CloudStorage/OneDrive-*/"CF LinkedIn images" 2>/dev/null | head -1)
+scale=${CF_IMAGE_SCALE:-2}   # render at 2x (e.g. 2400x3000) so text stays sharp on phone screens
 tmp=$(mktemp -d)
 trap 'rm -rf "$tmp"' EXIT
 shopt -s nullglob
@@ -47,9 +48,10 @@ print(side, w, h)
 EOF
 )
   read -r side w h <<<"$size"
-  qlmanage -t -s "$side" -o "$tmp" "$tmp/$base.svg" >/dev/null 2>&1
+  qlmanage -t -s $((side * scale)) -o "$tmp" "$tmp/$base.svg" >/dev/null 2>&1
   if [[ ! -f "$tmp/$base.svg.png" ]]; then echo "render failed: $svg"; continue; fi
-  sips -c "$h" "$w" "$tmp/$base.svg.png" --out "$png" >/dev/null && echo "rendered $png (${w}x${h})"
+  sips -c $((h * scale)) $((w * scale)) "$tmp/$base.svg.png" --out "$png" >/dev/null &&
+    echo "rendered $png ($((w * scale))x$((h * scale)))"
   if [[ -n "$onedrive" ]]; then cp "$png" "$onedrive/" && echo "copied to OneDrive: $onedrive/$(basename "$png")"; fi
 done
 

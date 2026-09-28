@@ -175,7 +175,8 @@ For each candidate:
       Review in HubSpot, then set "CF lead stage" (Approved / Needs edit / On hold / Archived)
       ```
 
-Stop when you have 5 A/B leads (Sales Nav leads included). Don't stop early because
+Stop when you have 5 A/B leads today (Sales Nav leads included; if this is a second run
+today, A/B leads already in `accounts/index.md` with today's date count toward the 5). Don't stop early because
 the first candidates were weak: go back to the long list (and add to it) until you have
 screened at least 30 names and researched at least 8 in depth. Fewer good leads beat more
 weak ones, but a thin day should come from a thin market, not from stopping early.
@@ -188,7 +189,8 @@ weak ones, but a thin day should come from a thin market, not from stopping earl
    (`search_crm_objects`, COMPANY, `cf_lead_stage` HAS_PROPERTY) so the Stage column
    and each draft's `stage:` front-matter line match HubSpot. C-grade and no-fit
    companies go in the table too, with Stage "not pursued".
-2. Write `drafts/leads/<YYYY-MM-DD>.md`: a table of every company you looked at (lead or
+2. Write `drafts/leads/<YYYY-MM-DD>.md` (if it already exists, keep everything in it and
+   add a new section "Daily prospecting (run 2)" or the next number): a table of every company you looked at (lead or
    not), with fit grade, one-line reason, Saleshandy reachability, HubSpot company ID,
    and file paths. Add any tool call that failed or was refused.
    Start it with the funnel: names on the long list (by source), passed the quick screen,

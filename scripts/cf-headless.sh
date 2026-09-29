@@ -65,7 +65,9 @@ fi
 rm -f "$HOME/.claude/mcp-needs-auth-cache.json"
 
 before=$(wc -l <"$log")
-"$claude" -p "$(cat "$prompt")" \
+# The job has no shell, so it can't read the clock: give it the time up front.
+now="Current time on this Mac: $(date '+%Y-%m-%d %H:%M %Z') (use it for dates and log headings)."
+"$claude" -p "$now"$'\n\n'"$(cat "$prompt")" \
   --name "$job-$today-$(date +%H%M)" \
   --disallowedTools Bash Agent Workflow \
   --allowedTools Read Glob Grep WebSearch WebFetch ToolSearch \

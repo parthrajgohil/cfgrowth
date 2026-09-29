@@ -10,7 +10,8 @@ refuses anything else, and you must never try to set a CEO stage).
 Call `search_crm_objects` on COMPANY with filter `cf_lead_stage HAS_PROPERTY`, properties
 `name, domain, cf_lead_stage`. Compare with the Stage column of `accounts/index.md`. If
 no company is `approved`, `needs_edit`, `ready_to_import` or `in_sequence`, and every stage
-already matches the index, write nothing and stop immediately with "Nothing to do."
+already matches the index, write nothing (no log section either; the runner already
+records every run in `logs/`) and stop immediately with "Nothing to do."
 Otherwise read CLAUDE.md, then handle each stage below. Find each company's brief
 (`accounts/<slug>.md`, where the HubSpot company ID is recorded) and its draft
 (`drafts/email/*-<slug>.md`).
@@ -145,8 +146,11 @@ Do this in Step 0 as well: if no lead needs action but HubSpot stages differ fro
 `accounts/index.md`, sync the index and drafts, then stop.
 
 ## Log
-Append a short section "Hourly <HH:MM>" to `drafts/leads/<YYYY-MM-DD>.md` listing each
-change, credits charged, and any tool call that failed or was refused.
+Only if this run changed something (a stage, a file, a HubSpot record, a Teams message) or a
+tool call failed: append a short section "Hourly <HH:MM>" to `drafts/leads/<YYYY-MM-DD>.md`,
+using the time given at the top of this prompt, listing each change, credits charged, and
+any tool call that failed or was refused. A run that only checked and found nothing new
+writes no section.
 
 ## Never
 - Send email, reply to prospects, add prospects to Saleshandy sequences, or change

@@ -49,7 +49,7 @@
 ## Buyers
 | Name | Title | Profile | Notes |
 |---|---|---|---|
-| Richard Tøpholm | CTO | https://www.linkedin.com/in/richard-topholm | **Primary.** Saleshandy 51213474. **Email: rt@cebreomedical.com** (Saleshandy, valid; reveal request 6ac328a3f706341a889dc76b, 2026-10-05) |
+| Richard Tøpholm | CTO | https://www.linkedin.com/in/richard-topholm | **Primary.** Saleshandy 51213474. **Email: rt@cebreomedical.com** (Saleshandy, valid; reveal request 6ac328a3f706341a889dc76b, 2026-10-05). **Saleshandy sequence:** "CF · Cebreo Medical · Richard Tøpholm (2026-10-07)", `eMPkq6vYzQ`, built inactive 2026-10-07 |
 | Philip Weng | Director of Hardware & PM | unverified | Alternative. Saleshandy 242040475 |
 | Rasmus Madsen | CEO | unverified | Apollo only |
 

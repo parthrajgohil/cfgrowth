@@ -45,7 +45,7 @@
 ## Buyers
 | Name | Title | Profile | Notes |
 |---|---|---|---|
-| Kyle Pina | Co-Founder, VP of Engineering | https://www.linkedin.com/in/kyle-pina | **Primary.** Saleshandy 159596823. **Email: kyle@encoratherapeutics.com** (Saleshandy, valid; reveal request 6ac328a3f706341a889dc76b, 2026-10-05) |
+| Kyle Pina | Co-Founder, VP of Engineering | https://www.linkedin.com/in/kyle-pina | **Primary.** Saleshandy 159596823. **Email: kyle@encoratherapeutics.com** (Saleshandy, valid; reveal request 6ac328a3f706341a889dc76b, 2026-10-05). **Saleshandy sequence:** "CF · Encora Therapeutics · Kyle Pina (2026-10-07)", `6vaK5xlxwW`, built inactive 2026-10-07 |
 | Daniel Carballo | Co-Founder, VP Strategy | unverified | Alternative. Saleshandy 66626255 |
 
 ## Best angle

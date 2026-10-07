@@ -3,6 +3,7 @@ stage: ready_to_import   # mirrors HubSpot "CF lead stage"; the CEO changes it i
 type: cold-email
 account: sibel-health
 recipient: Jong Yoon Lee, Co-founder & CTO <jongyoon.lee@sibelhealth.com>
+saleshandy_sequence: 1qPB3l94aD   # "CF · Sibel Health · Jong Yoon Lee (2026-10-07)", inactive until the CEO activates
 sources: [accounts/sibel-health.md, https://corefragment.com/case-study/smart-glucometer, https://corefragment.com/blog/medical-wearable-device-development-challenges-and-fix]
 ---
 

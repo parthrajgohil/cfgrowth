@@ -59,7 +59,7 @@
 ## Buyers
 | Name | Title | Profile | Notes |
 |---|---|---|---|
-| Andrew Brimer | VP of Technology | https://www.linkedin.com/in/abrimer/ | Hardware + software background (Wing spirometer). Newly promoted, so likely setting the tech plan for CHF and rural rollout. **Primary.** Saleshandy 120569591. **Email: andrew.brimer@wellinks.com** (Saleshandy, valid; reveal request 6ac328a3f706341a889dc76b, 2026-10-05) |
+| Andrew Brimer | VP of Technology | https://www.linkedin.com/in/abrimer/ | Hardware + software background (Wing spirometer). Newly promoted, so likely setting the tech plan for CHF and rural rollout. **Primary.** Saleshandy 120569591. **Email: andrew.brimer@wellinks.com** (Saleshandy, valid; reveal request 6ac328a3f706341a889dc76b, 2026-10-05). **Saleshandy sequence:** "CF · Wellinks · Andrew Brimer (2026-10-07)", `Mgw4yGobPA`, built inactive 2026-10-07 |
 | Jennifer Barretta | COO & Interim CEO | unverified | Business decision-maker. Saleshandy 163762089 |
 
 ## Best angle

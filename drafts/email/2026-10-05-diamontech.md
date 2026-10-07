@@ -3,6 +3,7 @@ stage: ready_to_import   # mirrors HubSpot "CF lead stage"; the CEO changes it i
 type: cold-email
 account: diamontech
 recipient: Michael Kaluza, Chief Technology Officer <michael.kaluza@diamontech.de>
+saleshandy_sequence: dlPyoYbLzL   # "CF · DiaMonTech · Michael Kaluza (2026-10-07)", inactive until the CEO activates
 sources: [accounts/diamontech.md, https://corefragment.com/case-study/smart-glucometer, https://corefragment.com/blog/medical-wearable-device-development-challenges-and-fix]
 ---
 

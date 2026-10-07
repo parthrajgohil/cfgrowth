@@ -3,6 +3,7 @@ stage: ready_to_import   # mirrors HubSpot "CF lead stage"; the CEO changes it i
 type: cold-email
 account: encora-therapeutics
 recipient: Kyle Pina, Co-Founder, VP of Engineering <kyle@encoratherapeutics.com>
+saleshandy_sequence: 6vaK5xlxwW   # "CF · Encora Therapeutics · Kyle Pina (2026-10-07)", inactive until the CEO activates
 sources: [accounts/encora-therapeutics.md, https://corefragment.com/case-study/smart-glucometer, https://corefragment.com/blog/medical-wearable-device-development-challenges-and-fix]
 ---
 

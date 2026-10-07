@@ -59,7 +59,7 @@
 ## Buyers
 | Name | Title | Profile | Notes |
 |---|---|---|---|
-| Jong Yoon Lee | Co-founder & CTO | https://www.linkedin.com/in/jong-yoon-lee-33104613b/ | Owns the technical roadmap. **Primary.** Saleshandy 471948325. **Email: jongyoon.lee@sibelhealth.com** (Saleshandy, valid; reveal request 6ac328a3f706341a889dc76b, 2026-10-05) |
+| Jong Yoon Lee | Co-founder & CTO | https://www.linkedin.com/in/jong-yoon-lee-33104613b/ | Owns the technical roadmap. **Primary.** Saleshandy 471948325. **Email: jongyoon.lee@sibelhealth.com** (Saleshandy, valid; reveal request 6ac328a3f706341a889dc76b, 2026-10-05). **Saleshandy sequence:** "CF · Sibel Health · Jong Yoon Lee (2026-10-07)", `1qPB3l94aD`, built inactive 2026-10-07 |
 | Andrew Senycia | Manager of Firmware Development | unverified | Closer to firmware workload. Saleshandy 235665189 (alternative) |
 | Steve Xu | CEO | unverified | Business decision-maker; Apollo only |
 

@@ -3,6 +3,7 @@ stage: ready_to_import   # mirrors HubSpot "CF lead stage"; the CEO changes it i
 type: cold-email
 account: bioliberty
 recipient: Ross O'Hanlon, Co-founder & CTO <ross@bioliberty.com>
+saleshandy_sequence: 9KwO59lQa6   # "CF · Bioliberty · Ross O'Hanlon (2026-10-07)", inactive until the CEO activates
 sources: [accounts/bioliberty.md, https://corefragment.com/case-study/health-monitoring-hub, https://corefragment.com/blog/medical-wearable-device-development-challenges-and-fix]
 ---
 

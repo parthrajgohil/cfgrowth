@@ -47,7 +47,7 @@
 ## Buyers
 | Name | Title | Profile | Notes |
 |---|---|---|---|
-| John Dyer | Co-founder & CTO | https://www.linkedin.com/in/john-dyer-661996105 | **Primary.** Saleshandy 429171922 · **Email: john.dyer@farmblox.com** (Saleshandy, valid; reveal request 6abe532bf76fa24385505179, 2026-10-01). HubSpot contact 562030971596 email set. Saleshandy profile: before Farmblox he built a cloud-based system for firmware updates of field IoT devices at Embue (software/full-stack background) |
+| John Dyer | Co-founder & CTO | https://www.linkedin.com/in/john-dyer-661996105 | **Primary.** Saleshandy 429171922 · **Email: john.dyer@farmblox.com** (Saleshandy, valid; reveal request 6abe532bf76fa24385505179, 2026-10-01). HubSpot contact 562030971596 email set. Saleshandy profile: before Farmblox he built a cloud-based system for firmware updates of field IoT devices at Embue (software/full-stack background). **Saleshandy sequence:** "CF · Farmblox · John Dyer (2026-10-07)", `XdPd5026aV`, built inactive 2026-10-07 |
 | Nathan Rosenberg | Co-founder & CEO | unverified | Alternative (Apollo has email) |
 
 ## Best angle

@@ -9,7 +9,8 @@ refuses anything else, and you must never try to set a CEO stage).
 ## Step 0: is there anything to do? (keep this cheap)
 Call `search_crm_objects` on COMPANY with filter `cf_lead_stage HAS_PROPERTY`, properties
 `name, domain, cf_lead_stage`. Compare with the Stage column of `accounts/index.md`. If
-no company is `approved`, `needs_edit`, `ready_to_import` or `in_sequence`, and every stage
+no company is `approved` (counts only in a 17:xx or 19:xx batch run), `needs_edit`,
+`ready_to_import` or `in_sequence`, and every stage
 already matches the index, write nothing (no log section either; the runner already
 records every run in `logs/`) and stop immediately with "Nothing to do."
 Otherwise read CLAUDE.md, then handle each stage below. Find each company's brief
@@ -17,7 +18,10 @@ Otherwise read CLAUDE.md, then handle each stage below. Find each company's brie
 (`drafts/email/*-<slug>.md`).
 
 ## Approved → email → Ready to import / No email found
-For all approved companies together (at most 10 per run):
+**Only in the batch runs at 17:xx and 19:xx IST** (see the time at the top of this
+prompt). In any other run, leave `approved` leads untouched for the next batch run (CEO
+decision 2026-10-07: fewer sequences, two batches a day). In a batch run, handle all
+approved companies together (at most 10 per run):
 0. If the brief (or the HubSpot contact) already has a revealed, valid email for the buyer
    (e.g. a lead the CEO re-approved), skip steps 1–2b for that lead: no new reveal, no
    credits. Go straight to step 3 with that email.
@@ -51,26 +55,30 @@ For all approved companies together (at most 10 per run):
      is in the brief). If it exists and has no email, update ONLY its `email`. If it
      doesn't exist (older leads), create it (firstname, lastname, email, jobtitle,
      hs_linkedin_url) associated with the company.
-   - **Build the lead's own Saleshandy sequence, INACTIVE** (CEO decision 2026-10-07). The
-     CEO reviews and activates it himself; you never activate, start or resume a sequence
-     (`update_sequence_status` is blocked). Take the text word for word from the approved
-     draft. Calls, in this order (the gate only lets you change a sequence you created in
-     the last 3 hours, and only these ways):
-     1. `create_sequence`: `title` = `CF · <Company> · <First> <Last> (<YYYY-MM-DD>)`,
-        `scheduleId` = `1qPBAZkMwD` (Europe/UK lead) or `Mgw4R6YeaA` (USA lead). Do NOT pass
-        `emailAccountId` (the API rejects it). Note the returned `sequenceId`.
+   - Then build the **batch sequences** (below) for all of this run's leads with a valid
+     email together, and set each one's `cf_lead_stage` = `ready_to_import` (meaning
+     "sequence ready to activate") once its batch is built.
+
+   **Batch sequences, INACTIVE** (CEO decisions 2026-10-07). One sequence per region per
+   batch run: Europe/UK leads in one, USA leads in another (skip a region with no leads).
+   The CEO reviews and activates each batch himself; you never activate, start or resume a
+   sequence (`update_sequence_status` is blocked). The gate only lets you change a sequence
+   you created in the last 3 hours, and only in these ways. Calls, in this order:
+     1. `create_sequence`: `title` = `CF · batch <YYYY-MM-DD> <HH:MM> · <Europe|USA> · <n> leads`
+        (time from the top of this prompt), `scheduleId` = `1qPBAZkMwD` (Europe) or
+        `Mgw4R6YeaA` (USA). Do NOT pass `emailAccountId` (the API rejects it). Note the
+        returned `sequenceId`.
      2. `add_sequence_step` four times, `type` = `Email`, by `sequenceId`, each with ONE
-        variant `{"payload": {"subject": …, "content": …, "preheader": ""}}`:
-        - `absoluteDays` 1: subject = subject option 1; content = `Hi {{First Name}},` then
-          email 1's paragraphs (everything after the greeting, up to and including the
-          two-option close), then the signature
-          `Have a nice day!\nParthraj Gohil\nCEO, CoreFragment Technologies\ncorefragment.com`.
-        - `absoluteDays` 4, 9, 16: follow-ups 1, 2, 3; subject `""` (they go as replies in
-          the same thread); content = `Hi {{First Name}},` then everything after the
-          greeting, sign-off included, WITHOUT any "Not relevant? Reply 'no'…" line.
-        Separate paragraphs with a blank line (`\n\n\n` after the greeting and between
-        email 1's paragraphs, as in sequence `bZwp7qe9zQ`). No P.S. line. Note step 1's ID
-        (`variants[0].stepId` in the response).
+        variant `{"payload": {"subject": …, "content": …, "preheader": ""}}`, using the
+        merge-field template of sequence `bZwp7qe9zQ` exactly (no P.S. line):
+        - `absoluteDays` 1: subject `{{Custom Subject Line}}`; content
+          `Hi {{First Name}},\n\n\n{{Custom First Line}}\n\n\n{{Custom Second Line}}\n\n\n{{Custom Third Line}}\n\n\n{{Custom CTA}}\n\n\nHave a nice day!\nParthraj Gohil\nCEO, CoreFragment Technologies\ncorefragment.com`
+        - `absoluteDays` 4: subject `""`; content
+          `Hi {{First Name}},\n\n\n{{Custom Follow Up 1 First Line}}\n\n\n{{Custom Follow Up 1 Second Line}}\n\n\n{{Custom Follow Up 1 Third Line}}`
+        - `absoluteDays` 9: subject `""`; content `Hi {{First Name}},\n\n\n{{Custom Follow Up 2}}`
+        - `absoluteDays` 16: subject `""`; content `Hi {{First Name}},\n\n\n{{Custom Follow Up 3}}`
+        Follow-ups have an empty subject so they go as replies in the same thread. Note
+        step 1's ID (`variants[0].stepId` in the response).
      3. `update_sequence_settings` (`sequenceId`) with exactly these settings: code 9 = "2"
         (plain text), 4 = "0", 5 = "0" (no click/open tracking), 3 = "1", 6 = "0", 10 = "1",
         11 = "0", 12 = "0", 13 = "1", and 2 = "Reply 'Stop' if you'd prefer not to receive
@@ -78,17 +86,36 @@ For all approved companies together (at most 10 per run):
      4. `add_email_accounts_to_sequence` (`sequenceId`, `emailAccountIds` = `["Y8aL7kk3PN"]`,
         the CEO's mailbox parthraj.gohil@corefragment.com).
      5. `import_prospects_to_sequence_step` (step 1's `stepId`, `conflictAction` =
-        `addMissingFields`, `verifyProspects` = false) with ONE prospect: `First Name`,
-        `Last Name`, `Email`, `Company`, `Job Title`, `LinkedIn`, `Company Domain`. Then
-        `check_prospect_import_status` until complete; report any failure.
+        `upsert`, `verifyProspects` = false) with all of the batch's prospects (max 10), one
+        object per lead using the **exact Saleshandy field labels**: `First Name`,
+        `Last Name`, `Email`, `Company`, `Job Title`, `LinkedIn`, `Company Domain`,
+        `Custom Subject Line`, `Custom First Line`, `Custom Second Line`,
+        `Custom Third Line`, `Custom CTA`, `Custom Follow Up 1 First Line`,
+        `Custom Follow Up 1 Second Line`, `Custom Follow Up 1 Third Line`,
+        `Custom Follow Up 2`, `Custom Follow Up 3`. Fill them from the approved draft, word
+        for word:
+        - Custom Subject Line = subject option 1
+        - Email 1, split by paragraph: Custom First Line = appreciation/trigger paragraph;
+          Custom Second Line = problem paragraph; Custom Third Line = "I'm the CEO of
+          CoreFragment…" paragraph; Custom CTA = the two-option closing paragraph (one
+          paragraph, under ~250 characters)
+        - Follow-up 1: everything after the greeting, split by paragraph into Custom Follow
+          Up 1 First / Second / Third Line (the sign-off counts as a paragraph; if there are
+          more than three, merge the extra ones into the Third Line)
+        - Custom Follow Up 2 / Custom Follow Up 3 = everything after the greeting in
+          follow-ups 2 and 3, sign-off included (keep line breaks), but WITHOUT any "Not
+          relevant? Reply 'no'…" line
+        - Never include the greeting or email 1's signature; the template adds them.
+        Then `check_prospect_import_status` until complete; report any failure.
      6. `list_sequences` (`sequenceName` = the title): confirm it shows 4 steps and
         `active: false`.
-     If any call fails or is refused, stop building that sequence, leave the lead at
-     `approved`, and report what failed (the CEO can finish or delete it in Saleshandy).
-   - Record the sequence title and `sequenceId` in the brief's Buyers section, the draft's
-     front matter (`saleshandy_sequence: <sequenceId>`), and a HubSpot NOTE on the company
-     "AGENT: Saleshandy sequence ready to activate · <title>".
-   - Set `cf_lead_stage` = `ready_to_import`.
+     If any call fails or is refused, stop building that batch, leave its leads at
+     `approved` (the next batch run retries; their emails are already recorded, so no
+     credits are spent again), and report what failed. The CEO can delete a half-built
+     sequence in Saleshandy.
+   - For each lead in a batch, record the batch title and `sequenceId` in the brief's
+     Buyers section, the draft's front matter (`saleshandy_sequence: <sequenceId>`), and a
+     HubSpot NOTE on the company "AGENT: in Saleshandy batch, ready to activate · <title>".
 4. For each lead with no valid email from **both** Saleshandy and Apollo: set `cf_lead_stage` = `no_email` and
    `cf_linkedin_touch` = `to_send` (one update), then prepare the **LinkedIn touch**:
    a. Find the buyer's public LinkedIn profile URL (brief, HubSpot contact, or a web
@@ -137,8 +164,8 @@ For all approved companies together (at most 10 per run):
 4. Set `cf_lead_stage` = `new`.
 
 ## Ready to import → In sequence; In sequence → Replied (Saleshandy, read-only)
-- For `ready_to_import` (sequence built, waiting for the CEO): look the lead's sequence up
-  with `list_sequences` (by its title or ID from the brief). If it shows `active: true`, the
+- For `ready_to_import` (sequence built, waiting for the CEO): look the lead's sequence
+  (per-lead or batch) up with `list_sequences` (by its title or ID from the brief). If it shows `active: true`, the
   CEO has activated it: set `in_sequence`. If it's still inactive, leave it and change
   nothing in it. Never edit a sequence after the run that created it.
 - Older leads (before 2026-10-07) were imported by CSV into `bZwp7qe9zQ`: for those, set
@@ -156,8 +183,9 @@ activates it: say so plainly and give each sequence title, for example:
 ```
 Lead updates (<HH:MM>)
 READY TO ACTIVATE in Saleshandy → Sequences (review, then activate):
-- CF · HeyCharge · Chris Cardé (2026-10-07)  (chris@…)
-- CF · Pollen · Miguel Morgado (2026-10-07)  (miguel@…)
+- CF · batch 2026-10-08 17:03 · Europe · 2 leads: HeyCharge (Chris Cardé), Pollen (Miguel Morgado)
+- CF · batch 2026-10-08 17:03 · USA · 1 lead: Legato (Mehul Trivedi)
+To drop a lead, remove that prospect from the batch before activating.
 No email found: SoundHealth (alternatives noted in HubSpot)
 Revised for review: Boldr
 Replied: Legato. See HubSpot
@@ -181,7 +209,7 @@ writes no section.
 
 ## Never
 - Send email, reply to prospects, or activate, start or resume any Saleshandy sequence.
-  In Saleshandy, only build the new inactive per-lead sequence described above; never
+  In Saleshandy, only build this run's new inactive batch sequences described above; never
   touch any other sequence (including `bZwp7qe9zQ`) or any existing prospect.
 - Set a CEO-owned stage, set `cf_linkedin_touch` to anything but `to_send`, update any
   other HubSpot field (except a contact's empty `email`), or touch deals.

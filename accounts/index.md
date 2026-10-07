@@ -2,7 +2,7 @@
 
 Local copy of every lead. HubSpot's **CF lead stage** is the source of truth; the daily
 and hourly runs keep this table and each draft's `stage:` line in sync with it.
-Last synced: 2026-10-07 09:17 (daily run).
+Last synced: 2026-10-07 13:03 (hourly run; 8 re-approved leads got per-lead Saleshandy sequences, back to ready_to_import).
 
 | Researched | Company | Website | Fit | Stage | Buyer (title) | Email | HubSpot | Brief | Draft |
 |---|---|---|---|---|---|---|---|---|---|

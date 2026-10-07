@@ -53,7 +53,7 @@
 ## Buyers
 | Name | Title | Profile | Notes |
 |---|---|---|---|
-| Ross O'Hanlon | Co-founder & CTO | https://www.linkedin.com/in/ross-o-hanlon-951109175 | **Primary.** Saleshandy 449297968. **Email: ross@bioliberty.com** (valid; Saleshandy reveal request 6abe6127f0adab6b3e6536ed, 2026-10-01) |
+| Ross O'Hanlon | Co-founder & CTO | https://www.linkedin.com/in/ross-o-hanlon-951109175 | **Primary.** Saleshandy 449297968. **Email: ross@bioliberty.com** (valid; Saleshandy reveal request 6abe6127f0adab6b3e6536ed, 2026-10-01). **Saleshandy sequence:** "CF · Bioliberty · Ross O'Hanlon (2026-10-07)", `9KwO59lQa6`, built inactive 2026-10-07 |
 | Michael Maclean | Head of Firmware | unverified | Alternative for a firmware-only angle. Saleshandy 396433114 |
 
 ## Best angle

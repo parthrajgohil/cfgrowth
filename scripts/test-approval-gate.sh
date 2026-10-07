@@ -78,7 +78,7 @@ reg=${REGISTRY_HOOK:-.claude/hooks/saleshandy-registry.sh}
 now=$(date +%s)
 echo "$((now - 20000)) seq OLDSEQ1234" >>"$CF_SEQ_REGISTRY"
 echo "$((now - 20000)) step1 OLDSTEP123 OLDSEQ1234" >>"$CF_SEQ_REGISTRY"
-expect allow "seq create CF EU"       '{"tool_name":"'$sh'create_sequence","tool_input":{"title":"CF · Acme · Jane Doe (2026-10-07)","scheduleId":"1qPBAZkMwD"}}'
+expect allow "seq create CF EU"       '{"tool_name":"'$sh'create_sequence","tool_input":{"title":"CF · batch 2026-10-08 17:03 · Europe · 3 leads","scheduleId":"1qPBAZkMwD"}}'
 expect allow "seq create CF US"       '{"tool_name":"'$sh'create_sequence","tool_input":{"title":"CF · Acme · Jane Doe","scheduleId":"Mgw4R6YeaA"}}'
 expect ask   "seq create other title" '{"tool_name":"'$sh'create_sequence","tool_input":{"title":"Big blast","scheduleId":"1qPBAZkMwD"}}'
 expect ask   "seq create no schedule" '{"tool_name":"'$sh'create_sequence","tool_input":{"title":"CF · Acme"}}'
@@ -104,7 +104,8 @@ expect deny  "seq attach other box"   '{"tool_name":"'$sh'add_email_accounts_to_
 expect deny  "seq attach 2 boxes"     '{"tool_name":"'$sh'add_email_accounts_to_sequence","tool_input":{"sequenceId":"NEWSEQ1234","emailAccountIds":["Y8aL7kk3PN","Zzzzzzzzzz"]}}'
 expect deny  "seq attach to old seq"  '{"tool_name":"'$sh'add_email_accounts_to_sequence","tool_input":{"sequenceId":"OLDSEQ1234","emailAccountIds":["Y8aL7kk3PN"]}}'
 expect allow "seq import buyer"       '{"tool_name":"'$sh'import_prospects_to_sequence_step","tool_input":{"stepId":"NEWSTEP123","prospectList":[{"First Name":"Jane","Last Name":"Doe","Email":"jane@acme.com"}],"conflictAction":"addMissingFields"}}'
-expect ask   "seq import 3"           '{"tool_name":"'$sh'import_prospects_to_sequence_step","tool_input":{"stepId":"NEWSTEP123","prospectList":[{},{},{}],"conflictAction":"addMissingFields"}}'
+expect allow "seq import batch of 10"  '{"tool_name":"'$sh'import_prospects_to_sequence_step","tool_input":{"stepId":"NEWSTEP123","prospectList":[{},{},{},{},{},{},{},{},{},{}],"conflictAction":"upsert"}}'
+expect ask   "seq import 11"          '{"tool_name":"'$sh'import_prospects_to_sequence_step","tool_input":{"stepId":"NEWSTEP123","prospectList":[{},{},{},{},{},{},{},{},{},{},{}],"conflictAction":"upsert"}}'
 expect ask   "seq import step 2"      '{"tool_name":"'$sh'import_prospects_to_sequence_step","tool_input":{"stepId":"STEP2ABCDE","prospectList":[{}],"conflictAction":"addMissingFields"}}'
 expect ask   "seq import other step"  '{"tool_name":"'$sh'import_prospects_to_sequence_step","tool_input":{"stepId":"glwGW00Yw6","prospectList":[{}],"conflictAction":"addMissingFields"}}'
 expect ask   "seq import old step"    '{"tool_name":"'$sh'import_prospects_to_sequence_step","tool_input":{"stepId":"OLDSTEP123","prospectList":[{}],"conflictAction":"addMissingFields"}}'

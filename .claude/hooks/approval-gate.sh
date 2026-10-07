@@ -104,9 +104,9 @@ case "$tool" in
     ;;
   mcp__*[Ss]aleshandy__*)
     # Saleshandy (CEO decisions 2026-09-24/25). The CEO presses "go" in Saleshandy.
-    # CEO decision 2026-10-07: for each approved lead, agents build one INACTIVE sequence
-    # ("CF · <Company> · ..."): create it, add email steps, copy settings, attach the
-    # CEO's mailbox, and import the buyer into step 1. They may only touch sequences they
+    # CEO decisions 2026-10-07: approved leads go into INACTIVE batch sequences ("CF · ...",
+    # one per region, built at 17:xx and 19:xx): create, add email steps, copy settings,
+    # attach the CEO's mailbox, and import the buyers (max 10) into step 1. They may only touch sequences they
     # created in the last 3 hours (recorded by saleshandy-registry.sh after each call).
     # Activating (update_sequence_status) stays blocked: only the CEO starts a sequence.
     case "$action" in
@@ -142,10 +142,10 @@ case "$tool" in
         ;;
       import_prospects_to_sequence_step)
         if agent_step1 "$(jq -r '.tool_input.stepId // ""' <<<"$input")" &&
-           (( $(jq '.tool_input.prospectList | length' <<<"$input") <= 2 )); then
-          allow "CF approval gate: the approved buyer into step 1 of the agent's new, inactive sequence."
+           (( $(jq '.tool_input.prospectList | length' <<<"$input") <= 10 )); then
+          allow "CF approval gate: approved buyers (max 10) into step 1 of the agent's new, inactive batch sequence."
         fi
-        ask "CF approval gate: prospects may only go (max 2) into step 1 of a sequence the agent created in the last 3 hours."
+        ask "CF approval gate: prospects may only go (max 10) into step 1 of a sequence the agent created in the last 3 hours."
         ;;
       # Status changes can activate a sequence; tasks can be manual emails;
       # mailboxes and domains are sending infrastructure (purchases cost money).

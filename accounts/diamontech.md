@@ -48,7 +48,7 @@
 ## Buyers
 | Name | Title | Profile | Notes |
 |---|---|---|---|
-| Michael Kaluza | CTO | https://www.linkedin.com/in/michael-kaluza-a4428b114 (from Saleshandy reveal) | **Primary** by title; may lean scientific/regulatory. **Email:** michael.kaluza@diamontech.de (Saleshandy `valid`, reveal request 6ac336acf706343f289dfaa4, 2026-10-05) |
+| Michael Kaluza | CTO | https://www.linkedin.com/in/michael-kaluza-a4428b114 (from Saleshandy reveal) | **Primary** by title; may lean scientific/regulatory. **Email:** michael.kaluza@diamontech.de (Saleshandy `valid`, reveal request 6ac336acf706343f289dfaa4, 2026-10-05). **Saleshandy sequence:** "CF · DiaMonTech · Michael Kaluza (2026-10-07)", `dlPyoYbLzL`, built inactive 2026-10-07 |
 | Thorsten Lubinski | Co-founder & CEO | unverified | Alternative; author of the trigger piece. Saleshandy 200518223 |
 
 ## Best angle

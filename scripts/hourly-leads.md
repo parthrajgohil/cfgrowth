@@ -18,6 +18,9 @@ Otherwise read CLAUDE.md, then handle each stage below. Find each company's brie
 
 ## Approved → email → Ready to import / No email found
 For all approved companies together (at most 10 per run):
+0. If the brief (or the HubSpot contact) already has a revealed, valid email for the buyer
+   (e.g. a lead the CEO re-approved), skip steps 1–2b for that lead: no new reveal, no
+   credits. Go straight to step 3 with that email.
 1. Take the buyer's `Saleshandy lead ID` from the brief, or find it with `sage_search`
    (free). If the brief names an alternative buyer and the CEO's latest note says to use
    them, use that person.
@@ -48,25 +51,43 @@ For all approved companies together (at most 10 per run):
      is in the brief). If it exists and has no email, update ONLY its `email`. If it
      doesn't exist (older leads), create it (firstname, lastname, email, jobtitle,
      hs_linkedin_url) associated with the company.
-   - Append a row to `drafts/saleshandy/<YYYY-MM-DD>.csv` (the CEO imports it into sequence
-     "CF agent leads (6-week test)", `bZwp7qe9zQ`, step 1) (create it with the header if
-     needed). The header uses the **exact Saleshandy field labels**:
-     `First Name,Last Name,Email,Company,Job Title,LinkedIn,Company Domain,Custom Subject Line,Custom First Line,Custom Second Line,Custom Third Line,Custom CTA,P.S. line,Custom Follow Up 1 First Line,Custom Follow Up 1 Second Line,Custom Follow Up 1 Third Line,Custom Follow Up 2,Custom Follow Up 3,Draft File`
-     Fill it from the approved draft, word for word:
-     - Custom Subject Line = subject option 1
-     - Email 1, split by paragraph: Custom First Line = appreciation/trigger paragraph;
-       Custom Second Line = problem paragraph; Custom Third Line = "I'm the CEO of
-       CoreFragment…" paragraph; Custom CTA = the two-option closing paragraph (a single-line text
-       field: keep it one paragraph, under ~250 characters)
-     - P.S. line = always empty (Saleshandy adds its own "Reply 'Stop'" opt-out to every email)
-     - Follow-up 1: everything after the greeting, split by paragraph into Custom Follow
-       Up 1 First / Second / Third Line (the sign-off counts as a paragraph; if there are
-       more than three, merge the extra ones into the Third Line)
-     - Custom Follow Up 2 / Custom Follow Up 3 = everything after the greeting in
-       follow-ups 2 and 3, sign-off included, but WITHOUT any "Not relevant? Reply 'no'…" line
-     - Don't include the greeting ("Hi {{First Name}},") or email 1's signature; the
-       sequence template adds them.
-     Quote every field (RFC 4180); keep line breaks inside quoted fields.
+   - **Build the lead's own Saleshandy sequence, INACTIVE** (CEO decision 2026-10-07). The
+     CEO reviews and activates it himself; you never activate, start or resume a sequence
+     (`update_sequence_status` is blocked). Take the text word for word from the approved
+     draft. Calls, in this order (the gate only lets you change a sequence you created in
+     the last 3 hours, and only these ways):
+     1. `create_sequence`: `title` = `CF · <Company> · <First> <Last> (<YYYY-MM-DD>)`,
+        `scheduleId` = `1qPBAZkMwD` (Europe/UK lead) or `Mgw4R6YeaA` (USA lead). Do NOT pass
+        `emailAccountId` (the API rejects it). Note the returned `sequenceId`.
+     2. `add_sequence_step` four times, `type` = `Email`, by `sequenceId`, each with ONE
+        variant `{"payload": {"subject": …, "content": …, "preheader": ""}}`:
+        - `absoluteDays` 1: subject = subject option 1; content = `Hi {{First Name}},` then
+          email 1's paragraphs (everything after the greeting, up to and including the
+          two-option close), then the signature
+          `Have a nice day!\nParthraj Gohil\nCEO, CoreFragment Technologies\ncorefragment.com`.
+        - `absoluteDays` 4, 9, 16: follow-ups 1, 2, 3; subject `""` (they go as replies in
+          the same thread); content = `Hi {{First Name}},` then everything after the
+          greeting, sign-off included, WITHOUT any "Not relevant? Reply 'no'…" line.
+        Separate paragraphs with a blank line (`\n\n\n` after the greeting and between
+        email 1's paragraphs, as in sequence `bZwp7qe9zQ`). No P.S. line. Note step 1's ID
+        (`variants[0].stepId` in the response).
+     3. `update_sequence_settings` (`sequenceId`) with exactly these settings: code 9 = "2"
+        (plain text), 4 = "0", 5 = "0" (no click/open tracking), 3 = "1", 6 = "0", 10 = "1",
+        11 = "0", 12 = "0", 13 = "1", and 2 = "Reply 'Stop' if you'd prefer not to receive
+        messages at this time." Never set BCC/CC (codes 7, 8).
+     4. `add_email_accounts_to_sequence` (`sequenceId`, `emailAccountIds` = `["Y8aL7kk3PN"]`,
+        the CEO's mailbox parthraj.gohil@corefragment.com).
+     5. `import_prospects_to_sequence_step` (step 1's `stepId`, `conflictAction` =
+        `addMissingFields`, `verifyProspects` = false) with ONE prospect: `First Name`,
+        `Last Name`, `Email`, `Company`, `Job Title`, `LinkedIn`, `Company Domain`. Then
+        `check_prospect_import_status` until complete; report any failure.
+     6. `list_sequences` (`sequenceName` = the title): confirm it shows 4 steps and
+        `active: false`.
+     If any call fails or is refused, stop building that sequence, leave the lead at
+     `approved`, and report what failed (the CEO can finish or delete it in Saleshandy).
+   - Record the sequence title and `sequenceId` in the brief's Buyers section, the draft's
+     front matter (`saleshandy_sequence: <sequenceId>`), and a HubSpot NOTE on the company
+     "AGENT: Saleshandy sequence ready to activate · <title>".
    - Set `cf_lead_stage` = `ready_to_import`.
 4. For each lead with no valid email from **both** Saleshandy and Apollo: set `cf_lead_stage` = `no_email` and
    `cf_linkedin_touch` = `to_send` (one update), then prepare the **LinkedIn touch**:
@@ -116,9 +137,12 @@ For all approved companies together (at most 10 per run):
 4. Set `cf_lead_stage` = `new`.
 
 ## Ready to import → In sequence; In sequence → Replied (Saleshandy, read-only)
-- For `ready_to_import`: if Saleshandy read tools (`list_sequences`, `get_email_list`,
-  `get_outcomes`) clearly show the contact is in a sequence, set `in_sequence`.
-  If you can't tell, leave it. The CEO can set it.
+- For `ready_to_import` (sequence built, waiting for the CEO): look the lead's sequence up
+  with `list_sequences` (by its title or ID from the brief). If it shows `active: true`, the
+  CEO has activated it: set `in_sequence`. If it's still inactive, leave it and change
+  nothing in it. Never edit a sequence after the run that created it.
+- Older leads (before 2026-10-07) were imported by CSV into `bZwp7qe9zQ`: for those, set
+  `in_sequence` if `get_email_list` / `get_outcomes` clearly show the contact in it.
 - For `in_sequence`: check Saleshandy for replies from the contact's email
   (`get_unread_email_threads_count`, `get_email_list`, `get_email_thread`). If they
   replied, set `replied`, add a NOTE "AGENT: reply received <date>" with a two-line
@@ -127,12 +151,13 @@ For all approved companies together (at most 10 per run):
 ## Teams (one message per run, only if something changed)
 Use `teams_send_chat_message` to chat
 `19:a7e8ebf4-992c-431d-8daa-2ff7f01e0129_d31e5b95-dc3b-45f8-8ff7-0e63e143aaa4@unq.gbl.spaces`
-and no other. Plain text, no mentions. Leads that became Ready to import are NOT in Saleshandy
-yet: the CEO must import the CSV (from the OneDrive folder "CF Saleshandy imports") into
-sequence "CF agent leads (6-week test)". Say so plainly, for example:
+and no other. Plain text, no mentions. A sequence you built is NOT sending until the CEO
+activates it: say so plainly and give each sequence title, for example:
 ```
 Lead updates (<HH:MM>)
-IMPORT NEEDED in Saleshandy: HeyCharge (chris@…), Pollen → OneDrive "CF Saleshandy imports" / <date>.csv
+READY TO ACTIVATE in Saleshandy → Sequences (review, then activate):
+- CF · HeyCharge · Chris Cardé (2026-10-07)  (chris@…)
+- CF · Pollen · Miguel Morgado (2026-10-07)  (miguel@…)
 No email found: SoundHealth (alternatives noted in HubSpot)
 Revised for review: Boldr
 Replied: Legato. See HubSpot
@@ -155,8 +180,9 @@ any tool call that failed or was refused. A run that only checked and found noth
 writes no section.
 
 ## Never
-- Send email, reply to prospects, add prospects to Saleshandy sequences, or change
-  anything in Saleshandy.
+- Send email, reply to prospects, or activate, start or resume any Saleshandy sequence.
+  In Saleshandy, only build the new inactive per-lead sequence described above; never
+  touch any other sequence (including `bZwp7qe9zQ`) or any existing prospect.
 - Set a CEO-owned stage, set `cf_linkedin_touch` to anything but `to_send`, update any
   other HubSpot field (except a contact's empty `email`), or touch deals.
 - Send LinkedIn messages or visit LinkedIn yourself; the CEO sends them.

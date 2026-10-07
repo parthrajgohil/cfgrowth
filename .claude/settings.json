@@ -40,6 +40,17 @@
           }
         ]
       }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "mcp__.*[Ss]aleshandy__(create_sequence|add_sequence_step)",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/saleshandy-registry.sh"
+          }
+        ]
+      }
     ]
   }
 }

@@ -9,8 +9,9 @@
 #     growth account (parthraj.gohil@) and the CEO (parthraj@corefragment.com).
 #     Every other Teams write (other chats, channels, new chats, @mentions) is
 #     denied outright. Decided by the CEO on 2026-09-24.
-#   - Saleshandy: reads and email lookups pass; prospect/sequence changes ask;
-#     sending, activating, mailbox/domain changes and purchases are denied.
+#   - Saleshandy: reads and email lookups pass; agents may build an INACTIVE per-lead
+#     sequence they created themselves (see below); other prospect/sequence changes ask;
+#     sending, activating, other mailbox/domain changes and purchases are denied.
 #   - Apollo: search/reads pass; work-email reveal only, in the shared 10/day cap;
 #     send/sequence/purchase/tracking denied; credit lookups and other writes ask.
 #   - HubSpot: reads pass; CRM writes ask; marketing email and web publishing
@@ -56,6 +57,21 @@ credit_cap() {
   mkdir -p "$dir" && echo $((used + n)) >"$f"
 }
 
+# Saleshandy per-lead sequences (CEO decision 2026-10-07). The registry is written by
+# saleshandy-registry.sh (PostToolUse) with lines "<epoch> seq <sequenceId>" and
+# "<epoch> step1 <stepId> <sequenceId>"; entries count for 3 hours.
+CF_MAILBOX=Y8aL7kk3PN                  # parthraj.gohil@corefragment.com in Saleshandy
+CF_SCHEDULES="1qPBAZkMwD Mgw4R6YeaA"   # "Europian Schedule" (Berlin), "USA Schedule" (Denver)
+registry() { echo "${CF_SEQ_REGISTRY:-"$(cd "$(dirname "$0")/../.." && pwd)/logs/saleshandy-agent-sequences.log"}"; }
+agent_seq() {
+  [[ -n "$1" ]] || return 1
+  awk -v id="$1" -v min=$(( $(date +%s) - 10800 )) '$2=="seq" && $3==id && $1>=min {f=1} END {exit !f}' "$(registry)" 2>/dev/null
+}
+agent_step1() {
+  [[ -n "$1" ]] || return 1
+  awk -v id="$1" -v min=$(( $(date +%s) - 10800 )) '$2=="step1" && $3==id && $1>=min {f=1} END {exit !f}' "$(registry)" 2>/dev/null
+}
+
 # Default MCP policy: any write word -> ask; otherwise a read word -> pass;
 # unknown -> ask.
 mcp_default() {
@@ -88,7 +104,49 @@ case "$tool" in
     ;;
   mcp__*[Ss]aleshandy__*)
     # Saleshandy (CEO decisions 2026-09-24/25). The CEO presses "go" in Saleshandy.
+    # CEO decision 2026-10-07: for each approved lead, agents build one INACTIVE sequence
+    # ("CF · <Company> · ..."): create it, add email steps, copy settings, attach the
+    # CEO's mailbox, and import the buyer into step 1. They may only touch sequences they
+    # created in the last 3 hours (recorded by saleshandy-registry.sh after each call).
+    # Activating (update_sequence_status) stays blocked: only the CEO starts a sequence.
     case "$action" in
+      create_sequence)
+        title=$(jq -r '.tool_input.title // ""' <<<"$input")
+        sched=$(jq -r '.tool_input.scheduleId // ""' <<<"$input")
+        if [[ "$title" == "CF · "* && -n "$sched" && " $CF_SCHEDULES " == *" $sched "* ]] &&
+           [[ $(jq -r '.tool_input.emailAccountId // ""' <<<"$input") == "" ]]; then
+          allow "CF approval gate: new inactive per-lead sequence (CEO decision 2026-10-07)."
+        fi
+        ask "CF approval gate: sequences must be titled 'CF · ...' and use the Europe or USA schedule."
+        ;;
+      add_sequence_step|update_step_variant)
+        if agent_seq "$(jq -r '.tool_input.sequenceId // ""' <<<"$input")" &&
+           [[ $(jq -r '.tool_input.type // "Email"' <<<"$input") == Email || $action == update_step_variant ]]; then
+          allow "CF approval gate: email step in a sequence the agent just created."
+        fi
+        ask "CF approval gate: steps may only be added (by ID, email only) to a sequence the agent created in the last 3 hours."
+        ;;
+      update_sequence_settings|update_sequence_schedule)
+        if agent_seq "$(jq -r '.tool_input.sequenceId // ""' <<<"$input")" &&
+           ! jq -e '(.tool_input.settings // [])[] | select((.code == 7 or .code == 8) and .value != "[]")' <<<"$input" >/dev/null; then
+          allow "CF approval gate: settings of a sequence the agent just created (no BCC/CC)."
+        fi
+        ask "CF approval gate: settings may only change on a sequence the agent just created, and never BCC/CC."
+        ;;
+      add_email_accounts_to_sequence)
+        if agent_seq "$(jq -r '.tool_input.sequenceId // ""' <<<"$input")" &&
+           [[ $(jq -c '.tool_input.emailAccountIds // []' <<<"$input") == "[\"$CF_MAILBOX\"]" ]]; then
+          allow "CF approval gate: attach the CEO's mailbox to a sequence the agent just created."
+        fi
+        deny "CF approval gate: agents may only attach the CEO's mailbox ($CF_MAILBOX) to a sequence they just created."
+        ;;
+      import_prospects_to_sequence_step)
+        if agent_step1 "$(jq -r '.tool_input.stepId // ""' <<<"$input")" &&
+           (( $(jq '.tool_input.prospectList | length' <<<"$input") <= 2 )); then
+          allow "CF approval gate: the approved buyer into step 1 of the agent's new, inactive sequence."
+        fi
+        ask "CF approval gate: prospects may only go (max 2) into step 1 of a sequence the agent created in the last 3 hours."
+        ;;
       # Status changes can activate a sequence; tasks can be manual emails;
       # mailboxes and domains are sending infrastructure (purchases cost money).
       update_sequence_status|complete_task|bulk_*|add_email_accounts_*|remove_email_accounts_*|purchase_domain|delete_domain|revoke_domain|upload_domain_*|generate_mailbox_names)

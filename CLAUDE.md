@@ -23,8 +23,13 @@ of any setup or infrastructure work, and update it when a step or decision chang
    duplicates). Updating existing records, and anything involving deals, still needs
    approval. Email reveals (Saleshandy, then Apollo as fallback) are allowed only for
    leads the CEO has approved (work email only, max 10 a day across both, capped by
-   the gate). Agents never
-   add prospects to sequences or start them.
+   the gate).
+   **Third exception (CEO decision, 2026-10-07):** for each lead the CEO approves, agents
+   build that lead's own Saleshandy sequence (`CF · <Company> · <Name>`), **inactive**:
+   steps from the approved draft, the CEO's mailbox, the buyer as the only prospect. The
+   gate allows this only on sequences the agent created in the last 3 hours. **Only the
+   CEO activates a sequence**; agents never activate, start or resume one, and never touch
+   other sequences or prospects.
 2. Drafts go in `drafts/`; account research goes in `accounts/`. Tell the human where
    the file is and what decision you need.
 3. Never invent facts: no made-up clients, metrics, certifications, or case studies.
@@ -162,9 +167,9 @@ of expertise in outreach and as seeds for LinkedIn posts. Strong outreach hooks:
 
 ## Tools & workflow
 
-- **Outreach sending:** Saleshandy (cold email sequences). Agents prepare
-  prospects and copy plus an import CSV (`drafts/saleshandy/`); a human loads and
-  launches campaigns. Saleshandy Lead Finder (`sage_search`, free) is also a lead
+- **Outreach sending:** Saleshandy (cold email sequences). For each approved lead the
+  hourly run builds an inactive per-lead sequence and alerts the CEO on Teams ("ready to
+  activate"); the CEO reviews and activates it in Saleshandy. Saleshandy Lead Finder (`sage_search`, free) is also a lead
   source; email reveals (`enrich_contacts`, ~1 credit) only for approved drafts.
 - **Apollo (second email source):** free people search for reachability; work-email
   reveal (`apollo_people_bulk_match`, ~1 credit) only when Saleshandy has no email for an
@@ -179,9 +184,9 @@ of expertise in outreach and as seeds for LinkedIn posts. Strong outreach hooks:
   edit, Meeting, Won, Lost, Archived.
 - **Lead flow:** daily run (09:17) → New → CEO reviews in HubSpot and changes the stage
   → hourly run (09:03–23:03 IST, weekdays) handles Approved (email reveal, HubSpot contact,
-  Saleshandy CSV → Ready to import / No email found), Needs edit (revise → New), and
-  watches Saleshandy for replies → CEO imports the CSV (synced to the OneDrive folder
-  "CF Saleshandy imports" after each hourly run) and launches.
+  inactive Saleshandy sequence → Ready to import, meaning "ready to activate" / No email
+  found), Needs edit (revise → New), and watches Saleshandy for replies → CEO activates the
+  sequence → the hourly run sees it active and sets In sequence.
 - **Sales Navigator hand-off:** the CEO sends prospects from Sales Navigator as a Teams
   message starting `#salesnav` or a `pipeline/sales-nav-<date>.md` file (one line each:
   `Company | website | person, title | note`). The daily run researches them first (max 5

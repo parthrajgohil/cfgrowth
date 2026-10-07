@@ -79,6 +79,10 @@ now="Current time on this Mac: $(date '+%Y-%m-%d %H:%M %Z') (use it for dates an
     mcp__claude_ai_Saleshandy__list_sequences mcp__claude_ai_Saleshandy__get_email_list \
     mcp__claude_ai_Saleshandy__get_email_thread mcp__claude_ai_Saleshandy__get_outcomes \
     mcp__claude_ai_Saleshandy__get_unread_email_threads_count \
+    mcp__claude_ai_Saleshandy__create_sequence mcp__claude_ai_Saleshandy__add_sequence_step \
+    mcp__claude_ai_Saleshandy__update_sequence_settings mcp__claude_ai_Saleshandy__add_email_accounts_to_sequence \
+    mcp__claude_ai_Saleshandy__import_prospects_to_sequence_step mcp__claude_ai_Saleshandy__check_prospect_import_status \
+    mcp__claude_ai_Saleshandy__list_sequence_steps \
     mcp__claude_ai_HubSpot__get_user_details mcp__claude_ai_HubSpot__tool_guidance \
     mcp__claude_ai_HubSpot__search_crm_objects mcp__claude_ai_HubSpot__get_crm_objects \
     mcp__claude_ai_HubSpot__search_properties mcp__claude_ai_HubSpot__manage_crm_objects \

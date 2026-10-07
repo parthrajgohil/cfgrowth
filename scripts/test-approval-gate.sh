@@ -6,6 +6,7 @@ cd "$(dirname "$0")/.." || exit 1
 gate=${GATE:-.claude/hooks/approval-gate.sh}   # GATE=<file> tests a candidate
 pass=0; fail=0
 export CF_CREDIT_DIR=$(mktemp -d)   # keep test reveals out of the real daily counter
+export CF_SEQ_REGISTRY=$CF_CREDIT_DIR/sequences.log   # and test sequences out of the real registry
 
 # expect <ask|deny|allow|pass> <description> <json>
 expect() {
@@ -60,15 +61,56 @@ expect pass "read gate with cat"      '{"tool_name":"Bash","tool_input":{"comman
 # Real Saleshandy connector tools (listed 2026-09-25): read/lookup pass, prospect and
 # sequence changes ask; sending, activation, mailboxes, domains, purchases denied.
 sh=mcp__claude_ai_Saleshandy__
-for t in update_sequence_status complete_task bulk_skip_tasks bulk_snooze_tasks add_email_accounts_to_sequence remove_email_accounts_from_sequence purchase_domain delete_domain revoke_domain upload_domain_profile_picture generate_mailbox_names reply_to_email create_schedule update_sequence_schedule; do
+for t in update_sequence_status complete_task bulk_skip_tasks bulk_snooze_tasks add_email_accounts_to_sequence remove_email_accounts_from_sequence purchase_domain delete_domain revoke_domain upload_domain_profile_picture generate_mailbox_names reply_to_email create_schedule; do
   expect deny "sh $t" "{\"tool_name\":\"$sh$t\"}"
 done
-for t in add_dnc_items add_leads_to_sequence add_sequence_step add_step_variant create_dnc_list create_sequence delete_sequence delete_step import_prospects_to_sequence_step import_prospects_with_field_name skip_task snooze_task unsupported_operation update_sequence_priority_distribution update_sequence_settings update_step_variant update_task_note upload_attachment; do
+for t in add_dnc_items add_leads_to_sequence add_sequence_step add_step_variant create_dnc_list create_sequence delete_sequence delete_step import_prospects_to_sequence_step import_prospects_with_field_name skip_task snooze_task unsupported_operation update_sequence_priority_distribution update_sequence_schedule update_sequence_settings update_step_variant update_task_note upload_attachment; do
   expect ask "sh $t" "{\"tool_name\":\"$sh$t\"}"
 done
 for t in check_prospect_import_status get_bulk_task_status get_consolidated_stats get_dnc_items_by_id get_domain_order get_email_account_stats get_email_content get_email_list get_email_thread get_enrichment_result get_enrichment_status get_outcomes get_sequence_settings get_sequence_stats get_task_assignee_list get_task_by_id get_task_counts get_unread_email_threads_count list_clients list_dnc_lists list_domain_orders list_domain_plans list_domains list_email_accounts list_fields list_schedules list_sequence_email_accounts list_sequence_steps list_sequences list_tasks sage_search search_dnc_item search_domain; do
   expect pass "sh $t" "{\"tool_name\":\"$sh$t\"}"
 done
+
+# Per-lead sequences (CEO decision 2026-10-07): agents build INACTIVE sequences they
+# created in the last 3 hours; activation stays denied. The registry is written by
+# .claude/hooks/saleshandy-registry.sh after each call.
+reg=${REGISTRY_HOOK:-.claude/hooks/saleshandy-registry.sh}
+now=$(date +%s)
+echo "$((now - 20000)) seq OLDSEQ1234" >>"$CF_SEQ_REGISTRY"
+echo "$((now - 20000)) step1 OLDSTEP123 OLDSEQ1234" >>"$CF_SEQ_REGISTRY"
+expect allow "seq create CF EU"       '{"tool_name":"'$sh'create_sequence","tool_input":{"title":"CF · Acme · Jane Doe (2026-10-07)","scheduleId":"1qPBAZkMwD"}}'
+expect allow "seq create CF US"       '{"tool_name":"'$sh'create_sequence","tool_input":{"title":"CF · Acme · Jane Doe","scheduleId":"Mgw4R6YeaA"}}'
+expect ask   "seq create other title" '{"tool_name":"'$sh'create_sequence","tool_input":{"title":"Big blast","scheduleId":"1qPBAZkMwD"}}'
+expect ask   "seq create no schedule" '{"tool_name":"'$sh'create_sequence","tool_input":{"title":"CF · Acme"}}'
+expect ask   "seq create other sched" '{"tool_name":"'$sh'create_sequence","tool_input":{"title":"CF · Acme","scheduleId":"2dP2rxeBPZ"}}'
+# Registry hook: both response shapes (MCP text block, plain object).
+printf '%s' '{"tool_name":"'$sh'create_sequence","tool_input":{"title":"CF · Acme"},"tool_response":[{"type":"text","text":"{\n  \"message\": \"Sequence created successfully\",\n  \"payload\": {\n    \"sequenceId\": \"NEWSEQ1234\",\n    \"title\": \"CF · Acme\"\n  }\n}"}]}' | "$reg"
+printf '%s' '{"tool_name":"'$sh'add_sequence_step","tool_input":{"sequenceId":"NEWSEQ1234","type":"Email","absoluteDays":1},"tool_response":{"message":"Sequence step created successfully","payload":{"number":1,"sequence":{"id":"NEWSEQ1234","steps":[]},"variants":[{"stepId":"NEWSTEP123","id":"VARIANT123"}],"sequenceId":"NEWSEQ1234","id":"NEWSTEP123"}}}' | "$reg"
+printf '%s' '{"tool_name":"'$sh'add_sequence_step","tool_input":{"sequenceId":"NEWSEQ1234","type":"Email","absoluteDays":4},"tool_response":{"payload":{"variants":[{"stepId":"STEP2ABCDE"}]}}}' | "$reg"
+expect pass  "registry recorded seq"  "$(grep -q ' seq NEWSEQ1234$' "$CF_SEQ_REGISTRY" && echo '{"tool_name":"Read"}' || echo '{"tool_name":"mcp__x__send"}')"
+expect pass  "registry recorded step1" "$(grep -q ' step1 NEWSTEP123 NEWSEQ1234$' "$CF_SEQ_REGISTRY" && ! grep -q STEP2ABCDE "$CF_SEQ_REGISTRY" && echo '{"tool_name":"Read"}' || echo '{"tool_name":"mcp__x__send"}')"
+expect allow "seq add email step"     '{"tool_name":"'$sh'add_sequence_step","tool_input":{"sequenceId":"NEWSEQ1234","type":"Email","absoluteDays":4,"variants":[{"payload":{}}]}}'
+expect ask   "seq add linkedin step"  '{"tool_name":"'$sh'add_sequence_step","tool_input":{"sequenceId":"NEWSEQ1234","type":"LinkedInMessage","absoluteDays":4}}'
+expect ask   "seq add step by name"   '{"tool_name":"'$sh'add_sequence_step","tool_input":{"sequenceName":"CF · Acme","type":"Email","absoluteDays":4}}'
+expect ask   "seq add step other seq" '{"tool_name":"'$sh'add_sequence_step","tool_input":{"sequenceId":"bZwp7qe9zQ","type":"Email","absoluteDays":4}}'
+expect ask   "seq add step >3h old"   '{"tool_name":"'$sh'add_sequence_step","tool_input":{"sequenceId":"OLDSEQ1234","type":"Email","absoluteDays":4}}'
+expect allow "seq edit variant"       '{"tool_name":"'$sh'update_step_variant","tool_input":{"sequenceId":"NEWSEQ1234","stepId":"NEWSTEP123","variantId":"VARIANT123"}}'
+expect ask   "seq edit variant other" '{"tool_name":"'$sh'update_step_variant","tool_input":{"sequenceId":"bZwp7qe9zQ","stepId":"x","variantId":"y"}}'
+expect allow "seq settings"           '{"tool_name":"'$sh'update_sequence_settings","tool_input":{"sequenceId":"NEWSEQ1234","settings":[{"code":9,"value":"2"},{"code":7,"value":"[]"}]}}'
+expect ask   "seq settings bcc"       '{"tool_name":"'$sh'update_sequence_settings","tool_input":{"sequenceId":"NEWSEQ1234","settings":[{"code":7,"value":"[\"x@y.com\"]"}]}}'
+expect ask   "seq settings other seq" '{"tool_name":"'$sh'update_sequence_settings","tool_input":{"sequenceId":"bZwp7qe9zQ","settings":[{"code":9,"value":"2"}]}}'
+expect allow "seq attach CEO mailbox" '{"tool_name":"'$sh'add_email_accounts_to_sequence","tool_input":{"sequenceId":"NEWSEQ1234","emailAccountIds":["Y8aL7kk3PN"]}}'
+expect deny  "seq attach other box"   '{"tool_name":"'$sh'add_email_accounts_to_sequence","tool_input":{"sequenceId":"NEWSEQ1234","emailAccountIds":["Zzzzzzzzzz"]}}'
+expect deny  "seq attach 2 boxes"     '{"tool_name":"'$sh'add_email_accounts_to_sequence","tool_input":{"sequenceId":"NEWSEQ1234","emailAccountIds":["Y8aL7kk3PN","Zzzzzzzzzz"]}}'
+expect deny  "seq attach to old seq"  '{"tool_name":"'$sh'add_email_accounts_to_sequence","tool_input":{"sequenceId":"OLDSEQ1234","emailAccountIds":["Y8aL7kk3PN"]}}'
+expect allow "seq import buyer"       '{"tool_name":"'$sh'import_prospects_to_sequence_step","tool_input":{"stepId":"NEWSTEP123","prospectList":[{"First Name":"Jane","Last Name":"Doe","Email":"jane@acme.com"}],"conflictAction":"addMissingFields"}}'
+expect ask   "seq import 3"           '{"tool_name":"'$sh'import_prospects_to_sequence_step","tool_input":{"stepId":"NEWSTEP123","prospectList":[{},{},{}],"conflictAction":"addMissingFields"}}'
+expect ask   "seq import step 2"      '{"tool_name":"'$sh'import_prospects_to_sequence_step","tool_input":{"stepId":"STEP2ABCDE","prospectList":[{}],"conflictAction":"addMissingFields"}}'
+expect ask   "seq import other step"  '{"tool_name":"'$sh'import_prospects_to_sequence_step","tool_input":{"stepId":"glwGW00Yw6","prospectList":[{}],"conflictAction":"addMissingFields"}}'
+expect ask   "seq import old step"    '{"tool_name":"'$sh'import_prospects_to_sequence_step","tool_input":{"stepId":"OLDSTEP123","prospectList":[{}],"conflictAction":"addMissingFields"}}'
+expect deny  "seq ACTIVATE own seq"   '{"tool_name":"'$sh'update_sequence_status","tool_input":{"sequenceId":"NEWSEQ1234","status":"active"}}'
+expect ask   "seq add leads (sage)"   '{"tool_name":"'$sh'add_leads_to_sequence","tool_input":{"sequenceId":"NEWSEQ1234","stepId":"NEWSTEP123","leadIds":[1]}}'
+expect ask   "seq delete own"         '{"tool_name":"'$sh'delete_sequence","tool_input":{"sequenceId":"NEWSEQ1234"}}'
 
 # Real HubSpot connector tools (listed 2026-09-25): reads pass, CRM writes ask,
 # marketing email and web publishing denied.

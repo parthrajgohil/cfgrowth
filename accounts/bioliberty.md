@@ -30,7 +30,7 @@
   - US partners: Lifepoint Rehabilitation, Sheltering Arms Institute, Mt. Sinai Abilities
     Research Center, VA Central Virginia [1]
 - **HubSpot company ID:** 349230459604 (https://app.hubspot.com/contacts/247517534/record/0-2/349230459604)
-- **HubSpot contact IDs:** Ross O'Hanlon 560649925316, Michael Maclean 560622696146 (no emails)
+- **HubSpot contact IDs:** Ross O'Hanlon 560649925316 (email set 2026-10-01), Michael Maclean 560622696146 (no email)
 
 | Buyer | Title | LinkedIn | Background | Saleshandy | Apollo |
 |---|---|---|---|---|---|
@@ -53,7 +53,7 @@
 ## Buyers
 | Name | Title | Profile | Notes |
 |---|---|---|---|
-| Ross O'Hanlon | Co-founder & CTO | unverified | **Primary.** Saleshandy 449297968 |
+| Ross O'Hanlon | Co-founder & CTO | https://www.linkedin.com/in/ross-o-hanlon-951109175 | **Primary.** Saleshandy 449297968. **Email: ross@bioliberty.com** (valid; Saleshandy reveal request 6abe6127f0adab6b3e6536ed, 2026-10-01) |
 | Michael Maclean | Head of Firmware | unverified | Alternative for a firmware-only angle. Saleshandy 396433114 |
 
 ## Best angle

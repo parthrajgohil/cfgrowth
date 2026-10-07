@@ -1,13 +1,13 @@
 ---
-stage: new               # mirrors HubSpot "CF lead stage"; the CEO changes it in HubSpot
+stage: ready_to_import   # mirrors HubSpot "CF lead stage"; the CEO changes it in HubSpot
 type: cold-email
 account: bioliberty
-recipient: Ross O'Hanlon, Co-founder & CTO (email: TO BE FILLED BY HUMAN)
+recipient: Ross O'Hanlon, Co-founder & CTO <ross@bioliberty.com>
 sources: [accounts/bioliberty.md, https://corefragment.com/case-study/health-monitoring-hub, https://corefragment.com/blog/medical-wearable-device-development-challenges-and-fix]
 ---
 
 ## Lead info
-- **Stage:** new (source of truth: HubSpot "CF lead stage")
+- **Stage:** ready_to_import (source of truth: HubSpot "CF lead stage")
 - **Company:** Bioliberty · [HubSpot](https://app.hubspot.com/contacts/247517534/record/0-2/349230459604) · brief: `accounts/bioliberty.md`
 - **Website:** https://www.bioliberty.com · **News:** unverified · **LinkedIn:** unverified
 - **HQ:** Edinburgh, UK (US office Boston) · **Founded:** unverified · **Size:** unverified (25 in Apollo)

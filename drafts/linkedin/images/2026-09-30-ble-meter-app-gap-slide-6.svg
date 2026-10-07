@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+  <g font-family="Helvetica Neue, Helvetica, Arial">
+    <circle cx="150" cy="190" r="50" fill="#1F5FAE"/>
+    <text x="150" y="208" text-anchor="middle" font-size="52" font-weight="700" fill="#FFFFFF">4</text>
+    <text x="230" y="200" font-size="28" font-weight="700" fill="#1F5FAE">THE PHONE</text>
+    <text x="100" y="360" font-size="72" font-weight="700" fill="#1F2933">Design for what</text>
+    <text x="100" y="450" font-size="72" font-weight="700" fill="#1F5FAE">the phone allows.</text>
+    <text x="100" y="560" font-size="36" fill="#1F2933">iOS suspends apps in the background.</text>
+    <text x="100" y="614" font-size="36" fill="#1F2933">Android 12+ asks for new Bluetooth</text>
+    <text x="100" y="668" font-size="36" fill="#1F2933">scan and connect permissions.</text>
+    <text x="100" y="744" font-size="36" fill="#52606D">A patient who never opens the app</text>
+    <text x="100" y="798" font-size="36" fill="#52606D">still expects the reading to arrive.</text>
+    <text x="100" y="852" font-size="36" fill="#52606D">So does their new phone.</text>
+    <!-- agree on (highlight) -->
+    <rect x="100" y="920" width="880" height="210" rx="20" fill="#FDEBD7" stroke="#F26522" stroke-width="4"/>
+    <text x="140" y="978" font-size="26" font-weight="700" fill="#F26522">AGREE ON</text>
+    <text x="140" y="1034" font-size="34" fill="#1F2933">What syncs in the background, and how</text>
+    <text x="140" y="1084" font-size="34" fill="#1F2933">a meter re-pairs with a new phone.</text>
+    <!-- footer -->
+    <line x1="100" y1="1230" x2="980" y2="1230" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="1290" font-size="26" fill="#52606D">corefragment.com</text>
+    <image href="{{LOGO}}" x="664" y="1252" width="100" height="60" preserveAspectRatio="xMidYMid meet"/>
+    <text x="980" y="1296" text-anchor="end" font-size="34" font-weight="700" fill="#1F2933">CoreFragment</text>
+  </g>
+</svg>

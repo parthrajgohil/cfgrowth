@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+  <g font-family="Helvetica Neue, Helvetica, Arial">
+    <text x="100" y="200" font-size="28" font-weight="700" fill="#1F5FAE">PROTOTYPE TO PRODUCTION</text>
+    <text x="100" y="330" font-size="72" font-weight="700" fill="#1F2933">Works on the bench.</text>
+    <text x="100" y="420" font-size="72" font-weight="700" fill="#1F5FAE">Ready for 1,000?</text>
+    <text x="100" y="520" font-size="36" fill="#1F2933">Six things to lock before your</text>
+    <text x="100" y="574" font-size="36" fill="#1F2933">first production run.</text>
+    <!-- one prototype board -->
+    <rect x="100" y="690" width="260" height="220" rx="16" fill="#FFFFFF" stroke="#1F5FAE" stroke-width="4"/>
+    <rect x="190" y="760" width="80" height="80" rx="6" fill="#1F5FAE"/>
+    <circle cx="130" cy="720" r="8" fill="#1F5FAE"/>
+    <circle cx="330" cy="720" r="8" fill="#1F5FAE"/>
+    <circle cx="130" cy="880" r="8" fill="#1F5FAE"/>
+    <circle cx="330" cy="880" r="8" fill="#1F5FAE"/>
+    <text x="230" y="960" text-anchor="middle" font-size="28" fill="#52606D">1 prototype</text>
+    <!-- arrow with gap -->
+    <line x1="380" y1="800" x2="560" y2="800" stroke="#1F5FAE" stroke-width="4"/>
+    <polygon points="560,786 584,800 560,814" fill="#1F5FAE"/>
+    <circle cx="475" cy="800" r="34" fill="#FDEBD7" stroke="#F26522" stroke-width="4"/>
+    <text x="475" y="815" text-anchor="middle" font-size="40" font-weight="700" fill="#F26522">?</text>
+    <!-- 1,000 units grid (5 x 4) -->
+    <g fill="#FFFFFF" stroke="#1F5FAE" stroke-width="3">
+      <rect x="600" y="690" width="60" height="40" rx="6"/><rect x="680" y="690" width="60" height="40" rx="6"/><rect x="760" y="690" width="60" height="40" rx="6"/><rect x="840" y="690" width="60" height="40" rx="6"/><rect x="920" y="690" width="60" height="40" rx="6"/>
+      <rect x="600" y="750" width="60" height="40" rx="6"/><rect x="680" y="750" width="60" height="40" rx="6"/><rect x="760" y="750" width="60" height="40" rx="6"/><rect x="840" y="750" width="60" height="40" rx="6"/><rect x="920" y="750" width="60" height="40" rx="6"/>
+      <rect x="600" y="810" width="60" height="40" rx="6"/><rect x="680" y="810" width="60" height="40" rx="6"/><rect x="760" y="810" width="60" height="40" rx="6"/><rect x="840" y="810" width="60" height="40" rx="6"/><rect x="920" y="810" width="60" height="40" rx="6"/>
+      <rect x="600" y="870" width="60" height="40" rx="6"/><rect x="680" y="870" width="60" height="40" rx="6"/><rect x="760" y="870" width="60" height="40" rx="6"/><rect x="840" y="870" width="60" height="40" rx="6"/><rect x="920" y="870" width="60" height="40" rx="6"/>
+    </g>
+    <text x="790" y="960" text-anchor="middle" font-size="28" fill="#52606D">1,000 units</text>
+    <text x="100" y="1110" font-size="28" fill="#52606D">Swipe for the checklist -&gt;</text>
+    <!-- footer -->
+    <line x1="100" y1="1230" x2="980" y2="1230" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="1290" font-size="26" fill="#52606D">corefragment.com</text>
+    <image href="{{LOGO}}" x="664" y="1252" width="100" height="60" preserveAspectRatio="xMidYMid meet"/>
+    <text x="980" y="1296" text-anchor="end" font-size="34" font-weight="700" fill="#1F2933">CoreFragment</text>
+  </g>
+</svg>

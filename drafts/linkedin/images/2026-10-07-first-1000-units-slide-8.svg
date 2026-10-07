@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+  <g font-family="Helvetica Neue, Helvetica, Arial">
+    <text x="100" y="200" font-size="28" font-weight="700" fill="#1F5FAE">TAKEAWAY</text>
+    <text x="100" y="320" font-size="72" font-weight="700" fill="#1F2933">Lock it while</text>
+    <text x="100" y="410" font-size="72" font-weight="700" fill="#1F5FAE">it's on the bench.</text>
+    <!-- recap -->
+    <circle cx="124" cy="508" r="24" fill="#1F5FAE"/>
+    <text x="124" y="518" text-anchor="middle" font-size="28" font-weight="700" fill="#FFFFFF">1</text>
+    <text x="172" y="520" font-size="34" fill="#1F2933">Test pads and a production fixture</text>
+    <circle cx="124" cy="580" r="24" fill="#1F5FAE"/>
+    <text x="124" y="590" text-anchor="middle" font-size="28" font-weight="700" fill="#FFFFFF">2</text>
+    <text x="172" y="592" font-size="34" fill="#1F2933">Programming, keys, locked debug</text>
+    <circle cx="124" cy="652" r="24" fill="#1F5FAE"/>
+    <text x="124" y="662" text-anchor="middle" font-size="28" font-weight="700" fill="#FFFFFF">3</text>
+    <text x="172" y="664" font-size="34" fill="#1F2933">BOM lifecycle and second sources</text>
+    <circle cx="124" cy="724" r="24" fill="#1F5FAE"/>
+    <text x="124" y="734" text-anchor="middle" font-size="28" font-weight="700" fill="#FFFFFF">4</text>
+    <text x="172" y="736" font-size="34" fill="#1F2933">Bootloader, partitions and OTA</text>
+    <circle cx="124" cy="796" r="24" fill="#1F5FAE"/>
+    <text x="124" y="806" text-anchor="middle" font-size="28" font-weight="700" fill="#FFFFFF">5</text>
+    <text x="172" y="808" font-size="34" fill="#1F2933">EMC pre-scan before the lab</text>
+    <circle cx="124" cy="868" r="24" fill="#1F5FAE"/>
+    <text x="124" y="878" text-anchor="middle" font-size="28" font-weight="700" fill="#FFFFFF">6</text>
+    <text x="172" y="880" font-size="34" fill="#1F2933">Serial-number traceability</text>
+    <line x1="100" y1="930" x2="980" y2="930" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="990" font-size="34" fill="#52606D">None of these show up in a demo.</text>
+    <text x="100" y="1040" font-size="34" fill="#52606D">All of them show up in production.</text>
+    <!-- CTA pill (highlight) -->
+    <rect x="100" y="1086" width="640" height="84" rx="42" fill="#FDEBD7" stroke="#F26522" stroke-width="4"/>
+    <text x="420" y="1140" text-anchor="middle" font-size="34" font-weight="700" fill="#F26522">Follow CoreFragment for more</text>
+    <!-- footer -->
+    <line x1="100" y1="1230" x2="980" y2="1230" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="1290" font-size="26" fill="#52606D">corefragment.com</text>
+    <image href="{{LOGO}}" x="664" y="1252" width="100" height="60" preserveAspectRatio="xMidYMid meet"/>
+    <text x="980" y="1296" text-anchor="end" font-size="34" font-weight="700" fill="#1F2933">CoreFragment</text>
+  </g>
+</svg>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+  <g font-family="Helvetica Neue, Helvetica, Arial">
+    <circle cx="150" cy="190" r="50" fill="#1F5FAE"/>
+    <text x="150" y="208" text-anchor="middle" font-size="52" font-weight="700" fill="#FFFFFF">2</text>
+    <text x="230" y="200" font-size="28" font-weight="700" fill="#1F5FAE">TIME</text>
+    <text x="100" y="360" font-size="72" font-weight="700" fill="#1F2933">Decide whose</text>
+    <text x="100" y="450" font-size="72" font-weight="700" fill="#1F5FAE">clock is right.</text>
+    <text x="100" y="560" font-size="36" fill="#1F2933">A reading with the wrong time misleads</text>
+    <text x="100" y="614" font-size="36" fill="#1F2933">anyone reviewing the trend.</text>
+    <text x="100" y="690" font-size="36" fill="#1F2933">The meter stamps each reading. The</text>
+    <text x="100" y="744" font-size="36" fill="#1F2933">phone corrects the clock on connect.</text>
+    <text x="100" y="820" font-size="36" fill="#52606D">Battery swaps and time-zone travel are</text>
+    <text x="100" y="874" font-size="36" fill="#52606D">the normal case, not the edge case.</text>
+    <!-- agree on (highlight) -->
+    <rect x="100" y="920" width="880" height="210" rx="20" fill="#FDEBD7" stroke="#F26522" stroke-width="4"/>
+    <text x="140" y="978" font-size="26" font-weight="700" fill="#F26522">AGREE ON</text>
+    <text x="140" y="1034" font-size="34" fill="#1F2933">Which clock wins, and how a correction</text>
+    <text x="140" y="1084" font-size="34" fill="#1F2933">shows up in the history.</text>
+    <!-- footer -->
+    <line x1="100" y1="1230" x2="980" y2="1230" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="1290" font-size="26" fill="#52606D">corefragment.com</text>
+    <image href="{{LOGO}}" x="664" y="1252" width="100" height="60" preserveAspectRatio="xMidYMid meet"/>
+    <text x="980" y="1296" text-anchor="end" font-size="34" font-weight="700" fill="#1F2933">CoreFragment</text>
+  </g>
+</svg>

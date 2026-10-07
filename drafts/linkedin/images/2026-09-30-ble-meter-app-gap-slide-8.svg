@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+  <g font-family="Helvetica Neue, Helvetica, Arial">
+    <text x="100" y="250" font-size="80" font-weight="700" fill="#1F2933">Give the gap</text>
+    <text x="100" y="340" font-size="80" font-weight="700" fill="#1F5FAE">one owner.</text>
+    <text x="100" y="440" font-size="36" fill="#1F2933">Write the five down as one shared spec,</text>
+    <text x="100" y="494" font-size="36" fill="#1F2933">not two team documents.</text>
+    <!-- recap -->
+    <g font-size="32" fill="#1F2933">
+      <circle cx="125" cy="579" r="22" fill="#1F5FAE"/>
+      <text x="125" y="590" text-anchor="middle" font-size="26" font-weight="700" fill="#FFFFFF">1</text>
+      <text x="170" y="590">Where a reading lives until confirmed</text>
+      <circle cx="125" cy="649" r="22" fill="#1F5FAE"/>
+      <text x="125" y="660" text-anchor="middle" font-size="26" font-weight="700" fill="#FFFFFF">2</text>
+      <text x="170" y="660">Whose clock is right</text>
+      <circle cx="125" cy="719" r="22" fill="#1F5FAE"/>
+      <text x="125" y="730" text-anchor="middle" font-size="26" font-weight="700" fill="#FFFFFF">3</text>
+      <text x="170" y="730">How the meter sleeps</text>
+      <circle cx="125" cy="789" r="22" fill="#1F5FAE"/>
+      <text x="125" y="800" text-anchor="middle" font-size="26" font-weight="700" fill="#FFFFFF">4</text>
+      <text x="170" y="800">What the phone allows</text>
+      <circle cx="125" cy="859" r="22" fill="#1F5FAE"/>
+      <text x="125" y="870" text-anchor="middle" font-size="26" font-weight="700" fill="#FFFFFF">5</text>
+      <text x="170" y="870">Which versions must talk</text>
+    </g>
+    <text x="100" y="960" font-size="36" fill="#52606D">When one team owns meter, app and link,</text>
+    <text x="100" y="1010" font-size="36" fill="#52606D">the gap has an owner too.</text>
+    <!-- follow (highlight) -->
+    <rect x="100" y="1065" width="880" height="110" rx="55" fill="#FDEBD7" stroke="#F26522" stroke-width="4"/>
+    <text x="540" y="1134" text-anchor="middle" font-size="40" font-weight="700" fill="#1F2933">Follow CoreFragment for more</text>
+    <!-- footer -->
+    <line x1="100" y1="1230" x2="980" y2="1230" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="1290" font-size="26" fill="#52606D">corefragment.com</text>
+    <image href="{{LOGO}}" x="664" y="1252" width="100" height="60" preserveAspectRatio="xMidYMid meet"/>
+    <text x="980" y="1296" text-anchor="end" font-size="34" font-weight="700" fill="#1F2933">CoreFragment</text>
+  </g>
+</svg>

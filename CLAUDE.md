@@ -180,7 +180,8 @@ of expertise in outreach and as seeds for LinkedIn posts. Strong outreach hooks:
 - **Lead flow:** daily run (09:17) → New → CEO reviews in HubSpot and changes the stage
   → hourly run (09:03–23:03 IST, weekdays) handles Approved (email reveal, HubSpot contact,
   Saleshandy CSV → Ready to import / No email found), Needs edit (revise → New), and
-  watches Saleshandy for replies → CEO imports the CSV and launches.
+  watches Saleshandy for replies → CEO imports the CSV (synced to the OneDrive folder
+  "CF Saleshandy imports" after each hourly run) and launches.
 - **Sales Navigator hand-off:** the CEO sends prospects from Sales Navigator as a Teams
   message starting `#salesnav` or a `pipeline/sales-nav-<date>.md` file (one line each:
   `Company | website | person, title | note`). The daily run researches them first (max 5

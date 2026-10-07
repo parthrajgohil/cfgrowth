@@ -56,7 +56,7 @@
 ## Buyers
 | Name | Title | Profile | Notes |
 |---|---|---|---|
-| Jens Meichsner | CTO & MD | unverified | Technical decision-maker. **Primary.** Saleshandy 411073639 |
+| Jens Meichsner | CTO & MD | https://www.linkedin.com/in/jens-meichsner | Technical decision-maker. **Primary.** Saleshandy 411073639. **Email: jens.meichsner@stenon.io** (Saleshandy, valid; reveal request 6ac328a3f706341a889dc76b, 2026-10-05) |
 | Swadhin G. | VP Hardware Engineering & Production | unverified | Direct owner of the machine-integrated hardware (alternative). Saleshandy 58449085 |
 | Niels Grabbert | Founder & CEO | unverified | Apollo only |
 

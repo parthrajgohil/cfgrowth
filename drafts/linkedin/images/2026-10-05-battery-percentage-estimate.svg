@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="1500" viewBox="0 0 1200 1500" font-family="Helvetica Neue, Helvetica, Arial">
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+
+  <!-- Headline -->
+  <text x="100" y="210" font-size="80" font-weight="700" fill="#1F2933">Your battery % is</text>
+  <text x="100" y="300" font-size="80" font-weight="700" fill="#1F5FAE">an estimate.</text>
+  <text x="100" y="370" font-size="36" fill="#52606D">Three ways to estimate state of charge (SoC)</text>
+
+  <!-- Card 1: voltage lookup -->
+  <g>
+    <rect x="100" y="430" width="1000" height="200" fill="#FFFFFF" stroke="#E4E7EB" stroke-width="2"/>
+    <rect x="100" y="430" width="10" height="200" fill="#1F5FAE"/>
+    <text x="148" y="495" font-size="40" font-weight="700" fill="#1F5FAE">1</text>
+    <text x="190" y="495" font-size="40" font-weight="700" fill="#1F2933">Voltage lookup</text>
+    <text x="148" y="552" font-size="34" fill="#1F2933">Cheap. Blind on flat curves and under load.</text>
+    <text x="148" y="602" font-size="34" fill="#52606D">LiFePO4 sits near 3.3 V for most of its charge.</text>
+  </g>
+
+  <!-- Card 2: coulomb counting -->
+  <g>
+    <rect x="100" y="650" width="1000" height="200" fill="#FFFFFF" stroke="#E4E7EB" stroke-width="2"/>
+    <rect x="100" y="650" width="10" height="200" fill="#1F5FAE"/>
+    <text x="148" y="715" font-size="40" font-weight="700" fill="#1F5FAE">2</text>
+    <text x="190" y="715" font-size="40" font-weight="700" fill="#1F2933">Coulomb counting</text>
+    <text x="148" y="772" font-size="34" fill="#1F2933">Accurate on day one, then it drifts.</text>
+    <text x="148" y="822" font-size="34" fill="#52606D">A 1 mA sensing offset adds 24 mAh of error a day.</text>
+  </g>
+
+  <!-- Card 3: Kalman filter -->
+  <g>
+    <rect x="100" y="870" width="1000" height="200" fill="#FFFFFF" stroke="#E4E7EB" stroke-width="2"/>
+    <rect x="100" y="870" width="10" height="200" fill="#1F5FAE"/>
+    <text x="148" y="935" font-size="40" font-weight="700" fill="#1F5FAE">3</text>
+    <text x="190" y="935" font-size="40" font-weight="700" fill="#1F2933">Kalman filter</text>
+    <text x="148" y="992" font-size="34" fill="#1F2933">Most accurate.</text>
+    <text x="148" y="1042" font-size="34" fill="#52606D">Needs a cell model, test data and tuning.</text>
+  </g>
+
+  <!-- Highlight: what we start with -->
+  <g>
+    <rect x="100" y="1100" width="1000" height="220" fill="#FDEBD7" stroke="#F26522" stroke-width="3"/>
+    <text x="148" y="1158" font-size="26" font-weight="700" fill="#F26522" letter-spacing="2">WHAT WE USUALLY START WITH</text>
+    <text x="148" y="1220" font-size="40" font-weight="700" fill="#1F2933">Coulomb counting, corrected</text>
+    <text x="148" y="1275" font-size="40" font-weight="700" fill="#1F2933">at full charge or on a rested cell.</text>
+  </g>
+
+  <!-- Footer -->
+  <line x1="100" y1="1380" x2="1100" y2="1380" stroke="#E4E7EB" stroke-width="2"/>
+  <text x="100" y="1446" font-size="26" fill="#52606D">corefragment.com</text>
+  <image href="{{LOGO}}" x="784" y="1402" width="100" height="60"/>
+  <text x="1100" y="1446" text-anchor="end" font-size="34" font-weight="700" fill="#1F2933">CoreFragment</text>
+</svg>

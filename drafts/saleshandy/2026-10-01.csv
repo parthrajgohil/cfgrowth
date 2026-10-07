@@ -1,0 +1,17 @@
+"First Name","Last Name","Email","Company","Job Title","LinkedIn","Company Domain","Custom Subject Line","Custom First Line","Custom Second Line","Custom Third Line","Custom CTA","P.S. line","Custom Follow Up 1 First Line","Custom Follow Up 1 Second Line","Custom Follow Up 1 Third Line","Custom Follow Up 2","Custom Follow Up 3","Draft File"
+"John","Dyer","john.dyer@farmblox.com","Farmblox","Co-founder & CTO","https://www.linkedin.com/in/john-dyer-661996105","farmblox.com","cop-r-lock hardware","COP-R-LOCK is a smart use of the Farmblox sensor network: from soil and tank readings to catching copper thieves on farm solar arrays, with an alarm on site.","Security raises the bar on uptime, tamper detection and power reserve, and deployments are growing fast for a small team.","I'm the CEO of CoreFragment. We build low-power hardware and firmware for connected field devices, from power design to the cloud link, under NDA with full IP transfer.","If extra hardware or firmware hands would help as you scale, I'd be happy to talk. Or if you'd enjoy a casual chat about off-grid sensing, I'm up for that too.","","Rural links drop, and an alarm event still has to reach the grower. We wrote about buffering, reconnect and backlog handling for exactly this: corefragment.com/blog/handle-mqtt-connection-loss","The same ideas apply whether the Farmblox monitor talks over cellular or something longer-range.","Parthraj","A different angle: each new sensor type you support means another driver, another power profile and another field test. We can take a defined sensor integration or a solar and battery sizing review off your plate, and hand back the design files and code.
+
+Would that be useful?
+
+Parthraj","I don't want to crowd your inbox. If you're covered, just let me know and I'll close this out. The offer of a casual technical chat stands.
+
+Have a nice day!
+Parthraj","drafts/email/2026-10-01-farmblox.md"
+"Ross","O'Hanlon","ross@bioliberty.com","Bioliberty","Co-founder & CTO","https://www.linkedin.com/in/ross-o-hanlon-951109175","bioliberty.com","lifehub home firmware","A soft robotic glove that assists both opening and closing the hand is a thoughtful design for stroke rehab.","Taking it into patients' homes with Lifehub Home, I imagine the hard parts shift: pairing without a therapist in the room, OTA updates, and data that syncs over patchy home networks.","I'm the CEO of CoreFragment. We build firmware, hardware and companion apps for connected health devices, including a health monitoring hub and its app, under NDA with full IP transfer.","If extra hands would help, I'd be happy to talk. Or if you'd just enjoy a casual chat about home rehab devices, I'm up for that too.","","Home use is where wearables usually surprise their makers: batteries charged irregularly, phones left in another room, firmware updates interrupted halfway. We collected the common fixes here: corefragment.com/blog/medical-wearable-device-development-challenges-and-fix","Hope it's useful for the Lifehub Home rollout.","Parthraj","A different angle: the computer vision planned for Lifehub Clinic. We've built vision models for defect detection and can help choose a model that runs on your clinic hardware, or prototype the pipeline alongside your team.
+
+Would a second opinion there be useful?
+
+Parthraj","I don't want to crowd your inbox. If you're covered, just let me know and I'll close this out. And if a casual chat about rehab devices ever sounds good, the offer stands.
+
+Have a nice day!
+Parthraj","drafts/email/2026-09-29-bioliberty.md"

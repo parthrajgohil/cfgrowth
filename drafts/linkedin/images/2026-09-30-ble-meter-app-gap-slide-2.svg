@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+  <g font-family="Helvetica Neue, Helvetica, Arial">
+    <text x="100" y="260" font-size="80" font-weight="700" fill="#1F2933">One product.</text>
+    <text x="100" y="350" font-size="80" font-weight="700" fill="#1F5FAE">Two teams.</text>
+    <text x="100" y="470" font-size="36" fill="#1F2933">Firmware passes its tests.</text>
+    <text x="100" y="524" font-size="36" fill="#1F2933">The app passes its tests.</text>
+    <text x="100" y="608" font-size="36" fill="#52606D">The failures live in the gap between them:</text>
+    <text x="100" y="662" font-size="36" fill="#52606D">the BLE link, the data and the timing.</text>
+    <!-- proof card (highlight) -->
+    <rect x="100" y="760" width="880" height="330" rx="20" fill="#FDEBD7" stroke="#F26522" stroke-width="4"/>
+    <text x="140" y="825" font-size="26" font-weight="700" fill="#F26522">FROM OUR WORK</text>
+    <text x="140" y="885" font-size="34" fill="#1F2933">We built BLE glucometer firmware</text>
+    <text x="140" y="935" font-size="34" fill="#1F2933">and Android + iOS apps for a US</text>
+    <text x="140" y="985" font-size="34" fill="#1F2933">healthcare organisation.</text>
+    <text x="140" y="1045" font-size="34" font-weight="700" fill="#1F2933">These are the 5 things we settle first.</text>
+    <!-- footer -->
+    <line x1="100" y1="1230" x2="980" y2="1230" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="1290" font-size="26" fill="#52606D">corefragment.com</text>
+    <image href="{{LOGO}}" x="664" y="1252" width="100" height="60" preserveAspectRatio="xMidYMid meet"/>
+    <text x="980" y="1296" text-anchor="end" font-size="34" font-weight="700" fill="#1F2933">CoreFragment</text>
+  </g>
+</svg>

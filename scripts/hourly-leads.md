@@ -127,10 +127,12 @@ For all approved companies together (at most 10 per run):
 ## Teams (one message per run, only if something changed)
 Use `teams_send_chat_message` to chat
 `19:a7e8ebf4-992c-431d-8daa-2ff7f01e0129_d31e5b95-dc3b-45f8-8ff7-0e63e143aaa4@unq.gbl.spaces`
-and no other. Plain text, no mentions, for example:
+and no other. Plain text, no mentions. Leads that became Ready to import are NOT in Saleshandy
+yet: the CEO must import the CSV (from the OneDrive folder "CF Saleshandy imports") into
+sequence "CF agent leads (6-week test)". Say so plainly, for example:
 ```
 Lead updates (<HH:MM>)
-Ready to import: HeyCharge (chris@…), Pollen → drafts/saleshandy/<date>.csv
+IMPORT NEEDED in Saleshandy: HeyCharge (chris@…), Pollen → OneDrive "CF Saleshandy imports" / <date>.csv
 No email found: SoundHealth (alternatives noted in HubSpot)
 Revised for review: Boldr
 Replied: Legato. See HubSpot

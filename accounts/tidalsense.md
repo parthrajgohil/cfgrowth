@@ -46,7 +46,7 @@ Also in Saleshandy: Molly Cox, Software Engineering Manager (526110484).
 ## Buyers
 | Name | Title | Profile | Notes |
 |---|---|---|---|
-| Alla Kitov | Head of Product | https://www.linkedin.com/in/allakitov (Saleshandy) | **Primary.** Saleshandy 880752309. **Email: alla.kitov@tidalsense.com** (valid; Saleshandy reveal 6ac4b266d4babb5074f308e1, 2026-10-06) |
+| Alla Kitov | Head of Product | https://www.linkedin.com/in/allakitov (Saleshandy) | **Primary.** Saleshandy 880752309. **Email: alla.kitov@tidalsense.com** (valid; Saleshandy reveal 6ac4b266d4babb5074f308e1, 2026-10-06). **Saleshandy sequence:** "CF · TidalSense · Alla Kitov (2026-10-07)", `k4PexEQXwn`, built inactive 2026-10-07 |
 | Jaynell Ng | Systems Engineering Manager | unverified | Alternative, closest to the device. Saleshandy 452048273 |
 
 ## Best angle

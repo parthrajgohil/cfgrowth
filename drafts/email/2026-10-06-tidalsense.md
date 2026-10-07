@@ -3,6 +3,7 @@ stage: ready_to_import   # mirrors HubSpot "CF lead stage"; the CEO changes it i
 type: cold-email
 account: tidalsense
 recipient: Alla Kitov, Head of Product <alla.kitov@tidalsense.com>
+saleshandy_sequence: k4PexEQXwn   # "CF · TidalSense · Alla Kitov (2026-10-07)", inactive until the CEO activates
 sources: [accounts/tidalsense.md, https://corefragment.com/case-study/smart-glucometer, https://corefragment.com/case-study/health-monitoring-hub, https://corefragment.com/blog/iomt-development-services-cost-breakdown]
 ---
 

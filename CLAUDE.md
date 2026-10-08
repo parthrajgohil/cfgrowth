@@ -177,9 +177,10 @@ of expertise in outreach and as seeds for LinkedIn posts. Strong outreach hooks:
   approved lead. Apollo's sending, sequences and purchases are blocked by the gate.
 - **Upwork: a separate channel (CEO decisions, 2026-10-08).** Only the CEO's personal
   freelancer profile (org `473867419264262145`), never the agency or client accounts.
-  **No Upwork data goes to any other tool** (HubSpot, Saleshandy, Apollo, `accounts/`,
-  `drafts/`): it stays in `upwork/` (git-ignored, never pushed); the only exception is a
-  short Teams alert to the CEO. **Never contact an Upwork client outside Upwork** (public
+  **Nothing from Upwork goes to any other tool** (HubSpot, Saleshandy, Apollo, `accounts/`,
+  `drafts/`); the only exception is a short Teams alert to the CEO. `upwork/` (in git) holds
+  only **our own work** (proposal drafts, grades, bids, outcomes by job ID, learnings);
+  Upwork's content (job text, client records, reviews, names, messages) is never saved. **Never contact an Upwork client outside Upwork** (public
   background research is fine). Quality leads only, no small one-off jobs. The Upwork scan
   (`scripts/upwork-scan.md`, weekdays 10:33/13:33/17:33/20:33/23:33 IST) follows the
   `upwork` skill: finds and grades jobs, checks clients, drafts proposals in
@@ -224,4 +225,4 @@ of expertise in outreach and as seeds for LinkedIn posts. Strong outreach hooks:
 - `.claude/agents/`: subagents · `.claude/skills/`: writing style
 - `scripts/`: session helpers, headless job prompts (`daily-prospecting.md`, `hourly-leads.md`) · `launchd/`: LaunchAgents
 - `drafts/saleshandy/<date>.csv`: import files · `drafts/leads/<date>.md`: daily + hourly run logs
-- `upwork/`: Upwork channel data (drafts, logs, notes, seen jobs); git-ignored, never shared
+- `upwork/`: Upwork channel, our own work only (proposal drafts, grades, outcomes, learnings)

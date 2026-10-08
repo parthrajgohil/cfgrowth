@@ -6,12 +6,21 @@ description: How CoreFragment works Upwork — the CEO's personal freelancer pro
 # Upwork playbook
 
 ## 0. Separation (CEO decision, 2026-10-08). Never break these.
-- **Upwork is its own channel.** No Upwork data (jobs, clients, names, messages, proposals)
-  goes to HubSpot, Saleshandy, Apollo, `accounts/`, `drafts/email/`, `drafts/leads/` or any
-  other tool. Upwork data lives only in `upwork/` (git-ignored, never pushed).
-- The only thing that leaves the Upwork job: a short Teams alert to the CEO's 1:1 chat
-  (job title, link, grade, budget, Connects, file path). No client names beyond what the
-  job post shows, no message content.
+- **Upwork is its own channel.** Nothing from Upwork goes to HubSpot, Saleshandy, Apollo,
+  `accounts/`, `drafts/email/`, `drafts/leads/` or any other tool.
+- **Save our own work, never Upwork's content** (CEO decision 2026-10-08; Upwork's API
+  terms limit storing its data to 24 hours and require deleting copies when no longer
+  needed). `upwork/` is in git and pushed to GitHub, so it holds ONLY our work product:
+  proposal drafts we wrote, our grades and reasons, suggested bids and reasoning, outcomes
+  by job ID, learnings, the CEO's guidance. **Never save** job descriptions, client
+  records, freelancers' reviews of clients, client or contact names, messages, or other
+  freelancers' bids, not even as quotes. Use them during the run, then describe the job
+  and client **in our own words, anonymously and briefly** (e.g. "US physician-led
+  medical device company, high spend, hires often: dual-camera ESP32 imaging prototype").
+  Refer to a job by its ID and URL.
+- The only other thing that leaves the Upwork job: a short Teams alert to the CEO's 1:1
+  chat (our short label for the job, link, grade, budget, suggested bid, Connects, file
+  path). No names, no message content.
 - **All communication with a client happens inside Upwork**, before and after a contract
   (Upwork's anti-circumvention policy). Never email, call, LinkedIn-message or cold-pitch an
   Upwork client, and never suggest moving off-platform in a proposal.
@@ -86,7 +95,9 @@ Use our own searches; Upwork's Best Match feed is noisy.
    approach (e.g. "FDA 510(k) planned", "nRF52832 already chosen").
 3. Red flags to note: many open jobs never hired, low hire rate, reviews mentioning
    unpaid work, a brief copied from a template, NDA-only with no detail and a tiny budget.
-Record the check in the draft file. Research only; never contact anyone.
+Record the check in the draft file as **our own summary** (3–6 lines: what kind of
+client, how they hire and pay, fit and risks), never copied text, numbers lists or names.
+Research only; never contact anyone.
 
 ## 4. Timing (US and EU clients)
 Early proposals get read: most hiring decisions start from the first 10–20 proposals, and

@@ -9,6 +9,9 @@ will be refused.
 - Upwork is a **separate channel**. Use only Upwork tools, public web research, the
   `upwork/` folder and ONE Teams chat. Never use or write to HubSpot, Saleshandy, Apollo,
   `accounts/`, `drafts/`, or any other tool or folder. Never contact a client outside Upwork.
+- **Save only our own work** (SKILL.md §0). `upwork/` is pushed to GitHub: never write job
+  descriptions, client records, reviews, names, messages or other freelancers' bids into
+  any file, not even as quotes. Describe jobs and clients in our own words, anonymously.
 - Account: org_uid `473867419264262145` only (the CEO's personal freelancer profile).
 - You never submit, message, accept, withdraw or boost. `manage_proposals create` (a
   preview) is the furthest you go.
@@ -24,7 +27,9 @@ If there are no new jobs, no new invitations/offers and no unread client message
 nothing and stop with "Nothing new."
 
 ## Step 1: grade every new job (SKILL.md §1)
-Record each one in `upwork/seen.tsv` (job_id, first_seen, posted, title, grade, reason).
+Record each one in `upwork/seen.tsv` (job_id, first_seen, posted, label, grade, reason),
+where label is OUR short anonymous description (e.g. "BLE wearable firmware, US, hourly"),
+not the job title.
 For promising ones, call `find_jobs get` before deciding A: hires/offers already made,
 proposal count, `applied`, `client_record`, `client_feedback`, `connects_cost`.
 
@@ -53,13 +58,13 @@ proposal count, `applied`, `client_record`, `client_feedback`, `connects_cost`.
    budget: <fixed $ / hourly range>   suggested_bid: <amount>  (floor <x>, stretch <y>)
    status: draft   # the CEO changes this after submitting
    ---
-   ## Why this job
-   ## Client background check
+   ## Why this job (our words, 2–4 lines)
+   ## Client background check (our anonymous summary, 3–6 lines, no names or quotes)
    ## Cover letter
-   ## Suggested bid (evidence: posted range, client's paid rate, rate insights, bid stats)
+   ## Suggested bid (our reasoning; cite figures as ranges, e.g. "client pays ~$40–60/hr")
    ## Screening answers
    ## Suggestions (portfolio ids, boost, attachments)
-   ## Preview (connects cost, balance, unmet qualifications, bid stats)
+   ## Preview (connects cost, balance, unmet qualifications; no other freelancers' bids)
    ```
 6. Add a row to `upwork/outcomes.tsv` (job_id, drafted date, submitted empty, status
    "draft").
@@ -77,11 +82,11 @@ and no other. Plain text, no mentions. Only Upwork-safe facts: job title, link, 
 budget, proposals, Connects, file path; never message contents or client personal details.
 ```
 Upwork (<HH:MM>)
-URGENT A: <job title> · <budget> · bid <suggested> · <n> proposals · <cost> Connects
+URGENT A: <our short label> · <budget> · bid <suggested> · <n> proposals · <cost> Connects
 <url>
 Draft: upwork/drafts/<file>.md
 
-A: <job title> · <budget> · bid <suggested> · <n> proposals · <cost> Connects
+A: <our short label> · <budget> · bid <suggested> · <n> proposals · <cost> Connects
 <url>
 Draft: upwork/drafts/<file>.md
 
@@ -92,7 +97,8 @@ Mark a job URGENT when it was posted < 3 hours ago with < 10 proposals.
 
 ## Log
 Append "Upwork <HH:MM>" to `upwork/log/<YYYY-MM-DD>.md` (only when Step 0 found something):
-searches run, jobs seen / new / A / B / C (one line each with the reason), drafts made,
+searches run, jobs seen / new / A / B / C (one line each: job ID, our label, the reason),
+drafts made,
 Connects balance, invitations/messages, and any tool call that failed or was refused.
 
 ## Never

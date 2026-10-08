@@ -112,7 +112,24 @@ the first few hours after posting matter most.
 - The CEO reads Teams alerts on his phone: keep them short and give the deadline reason.
 
 ## 5. Writing the proposal
-Load `cf-voice` (and its `examples.md`) first. Then:
+Clients now get dozens of AI-written proposals per job (CEO, 2026-10-08). Polish is no
+longer the edge; **Parthraj's real experience, opinions and presence are**. The draft
+leaves room for him instead of imitating him.
+
+Load `cf-voice` (and its `examples.md`) and **`upwork/voice-bank.md`** first. Then:
+- **`[YOUR LINE: …]` slot, always.** Put one marked slot in the first or second paragraph,
+  with a prompt tailored to the job (e.g. "[YOUR LINE: which past project does this remind
+  you of, and what went wrong there?]" or "[YOUR LINE: the first thing you'd check on
+  their board]"). Parthraj writes one honest sentence there before submitting. **A
+  proposal is never submitted with the slot still in it**: when asked to submit, check
+  first and ask him for the line if it's missing.
+- **Voice bank only.** Use Parthraj's stories, opinions and phrases from
+  `upwork/voice-bank.md` where they genuinely fit (at most one story per proposal, in his
+  words, lightly trimmed). Never invent a story, opinion, anecdote or detail about his past
+  work. If nothing fits, use the slot and keep the rest plain.
+- **One concrete technical observation about their project**: a risk they didn't mention,
+  a chip/architecture choice and why, or the first milestone you'd propose. Specific to
+  their post, something a practitioner would notice. This is the heart of the proposal.
 - **The first two lines are the preview** the client sees in their list. Open with their
   project and one specific, useful observation (a risk, a design choice, a question that
   shows we read it). Never open with "Dear Hiring Manager", "I'm interested", "I have 12
@@ -130,8 +147,25 @@ Load `cf-voice` (and its `examples.md`) first. Then:
   the rest").
 - **One or two sharp questions** the client must answer anyway (chip choice, current
   state, certification target). Questions start conversations.
-- **Close:** plain, available to talk on Upwork. No off-platform contact details.
+- **Close:** offer a short call through Upwork (its meeting tool) or a question to answer
+  in chat. No off-platform contact details.
 - **Length:** 120–220 words. Plain text, short paragraphs, no bullet walls, no emojis.
+- **Sound like a person, not an agent:**
+  - Never use: "I hope this finds you well", "I came across your job", "I'm excited/thrilled
+    to", "As a seasoned/passionate…", "I am confident that", "look no further", "delve",
+    "leverage", "seamless(ly)", "robust", "cutting-edge", "tailored solution", "I'd love the
+    opportunity", "Best regards" + full title block, em dashes, restating the job title,
+    "Dear Hiring Manager".
+  - No rule-of-three lists everywhere, no bolded headings, no perfectly parallel bullets.
+  - Vary the structure between proposals: sometimes open with the observation, sometimes
+    with a question, sometimes with the voice-bank story.
+  - Short sentences, contractions, the odd sentence fragment are fine. One honest
+    limitation where true ("I haven't used that exact sensor, but…") beats claiming
+    everything.
+- **Video for the best jobs:** for every URGENT A job, add a 60-second video script (4
+  talking points: hello and name, the one thing you noticed in their post, the closest
+  thing you've built, the question you'd ask) so Parthraj can record it on his phone and
+  attach it.
 - **Screening questions:** answer each one specifically, 1–4 sentences.
 - **Language:** if the client's language isn't English and the post asks for it, add the
   same letter in that language.
@@ -157,6 +191,14 @@ Load `cf-voice` (and its `examples.md`) first. Then:
   the draft only for an A job with strong fit and fewer than 15 proposals.
 - **Attachments/portfolio:** suggest relevant portfolio items from `get_profile
   list_highlights` by id; the CEO decides.
+- **Long relationships are proof:** several of his Upwork client relationships have run
+  for 8+ years (some since 2016). Say so when reliability matters, without naming anyone.
+
+## 5b. Voice bank
+`upwork/voice-bank.md` holds Parthraj's own stories, opinions, phrases and openings, from
+his interviews. Only he adds to it (agents may tidy wording, never add content). When a
+proposal he submitted contains a good `[YOUR LINE]`, suggest adding it to the bank in the
+next weekly learnings section.
 
 ## 6. Connects discipline
 - At most **6 drafts a day** and about **120 Connects a week** across all drafts (track in

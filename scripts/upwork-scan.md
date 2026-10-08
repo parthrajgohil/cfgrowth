@@ -39,7 +39,9 @@ proposal count, `applied`, `client_record`, `client_feedback`, `connects_cost`.
 2. Pull real proof: `get_profile get` and `list_highlights`, `list_freelancer_proposals`
    (Accepted/Hired items as tone and evidence), `list_contracts` for relevant past work.
    Use only what these return and CLAUDE.md's case studies.
-3. Read `.claude/skills/cf-voice/SKILL.md` and `examples.md`, then write the proposal
+3. Read `.claude/skills/cf-voice/SKILL.md`, `examples.md` and `upwork/voice-bank.md`,
+   then write the proposal (with the `[YOUR LINE: …]` slot and one concrete technical
+   observation; SKILL.md §5)
    (SKILL.md §5): cover letter, answers to screening questions, a **suggested bid from the
    background check** (one number, floor/stretch, reasoning: client's range, what the
    client has paid, `get_rate_insights`, bid stats from the preview),
@@ -60,7 +62,8 @@ proposal count, `applied`, `client_record`, `client_feedback`, `connects_cost`.
    ---
    ## Why this job (our words, 2–4 lines)
    ## Client background check (our anonymous summary, 3–6 lines, no names or quotes)
-   ## Cover letter
+   ## Cover letter (contains the [YOUR LINE: …] slot)
+   ## Video script (URGENT A only: 4 talking points, ~60 seconds)
    ## Suggested bid (our reasoning; cite figures as ranges, e.g. "client pays ~$40–60/hr")
    ## Screening answers
    ## Suggestions (portfolio ids, boost, attachments)
@@ -91,7 +94,8 @@ A: <our short label> · <budget> · bid <suggested> · <n> proposals · <cost> C
 Draft: upwork/drafts/<file>.md
 
 Also: <n> invitation(s), <n> unread client message(s) on Upwork
-To submit: open a Claude session and say "submit Upwork draft <file>", or paste it on Upwork.
+Add your line (the [YOUR LINE] slot), then open a Claude session and say "submit Upwork
+draft <file>", or paste it on Upwork.
 ```
 Mark a job URGENT when it was posted < 3 hours ago with < 10 proposals.
 

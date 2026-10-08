@@ -77,7 +77,7 @@ if [[ $job == upwork ]]; then
     mcp__claude_ai_Upwork__upwork__list_accounts mcp__claude_ai_Upwork__upwork__get_tool_help
     mcp__claude_ai_Upwork__upwork__find_jobs mcp__claude_ai_Upwork__upwork__get_profile
     mcp__claude_ai_Upwork__upwork__get_freelancer_dashboard mcp__claude_ai_Upwork__upwork__list_freelancer_proposals
-    mcp__claude_ai_Upwork__upwork__list_contracts mcp__claude_ai_Upwork__upwork__get_rate_insights
+    mcp__claude_ai_Upwork__upwork__list_contracts
     mcp__claude_ai_Upwork__upwork__get_messages mcp__claude_ai_Upwork__upwork__manage_proposals
     mcp__claude_ai_Upwork__upwork__get_preview)
   blocked=(Bash Agent Workflow mcp__claude_ai_HubSpot mcp__claude_ai_Saleshandy mcp__claude_ai_Apollo_io

@@ -44,7 +44,7 @@ proposal count, `applied`, `client_record`, `client_feedback`, `connects_cost`.
    observation; SKILL.md §5)
    (SKILL.md §5): cover letter, answers to screening questions, a **suggested bid from the
    background check** (one number, floor/stretch, reasoning: client's range, what the
-   client has paid, `get_rate_insights`, bid stats from the preview),
+   client has paid, bids so far from `find_jobs get`),
    suggested portfolio ids, suggested boost (or "no boost").
 4. `manage_proposals create` (org `473867419264262145`, no `boost_connects`) to get the
    preview: connects_cost, balance, screening questions, bid stats, unmet preferred

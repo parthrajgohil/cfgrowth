@@ -177,8 +177,9 @@ Load `cf-voice` (and its `examples.md`) and **`upwork/voice-bank.md`** first. Th
     range);
   - what this client actually pays: `client_record` total spend ÷ hours (hourly history),
     and the rates in `client_work_history` / `client_feedback` where shown;
-  - the market: `get_rate_insights` (expert, the job's title/description) and, from the
-    proposal preview, `bid_stats` (avg/min/max of other bids) when available;
+  - the field: `applicationsBidStats` in `find_jobs get` (avg/min/max bids so far; use
+    them for judgement, never save them). (`get_rate_insights` only works on a client
+    account, which we don't use.)
   - the client's profile: region, company stage/funding from the web check, how
     specialised the work is (medical/regulated, RF, low-power and production work justify
     the top of the range), how many proposals and how strong the competition looks;

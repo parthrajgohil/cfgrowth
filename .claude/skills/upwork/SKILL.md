@@ -107,8 +107,9 @@ Load `cf-voice` (and its `examples.md`) first. Then:
 - **Proof, briefly:** one or two *real* relevant projects: past Upwork jobs (from
   `list_freelancer_proposals` Accepted/Hired items, `list_contracts`, profile work
   history) or CoreFragment case studies from CLAUDE.md, told as "I built…" (anonymized,
-  no numbers; a corefragment.com case-study link is fine as a work sample, but it is not
-  contact information and never invites off-platform contact).
+  no numbers). **No external links** (not even corefragment.com) and no contact details in
+  proposals or the profile: Upwork reads them as off-platform contact. Describe the work in
+  words and suggest the matching Upwork portfolio item (`list_highlights` id) instead.
   Never invent a project, metric, client or review. If nothing is directly relevant, say
   what is closest, honestly.
 - **Approach:** 2–4 short lines on how you'd tackle it, ending with a concrete first step

@@ -18,4 +18,8 @@ the job appends a weekly "What worked / what didn't" section below it (Mondays).
   `upwork/profile-draft.md`. Still on upwork.com: rate review, portfolio items for the case
   studies, identity verification, 2 waiting client messages.
 
+- 2026-10-08: competition rule for ALL jobs: posted within 3 days and fewer than 50
+  proposals. Watch client activity (interviews/invites/offers); the CEO checks "Last viewed
+  by client" on the job page before submitting.
+
 ## Weekly learnings

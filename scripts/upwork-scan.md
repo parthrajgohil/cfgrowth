@@ -68,6 +68,8 @@ proposal count, `applied`, `client_record`, `client_feedback`, `connects_cost`.
    ## Screening answers
    ## Suggestions (portfolio ids, boost, attachments)
    ## Preview (connects cost, balance, unmet qualifications; no other freelancers' bids)
+   ## Before you submit: check "Last viewed by client" on the job page (the connector
+   ## can't see it); if the client hasn't looked in 2+ days, consider skipping.
    ```
 6. Add a row to `upwork/outcomes.tsv` (job_id, drafted date, submitted empty, status
    "draft").

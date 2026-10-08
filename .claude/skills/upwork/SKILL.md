@@ -57,12 +57,22 @@ jobs ($100–$500 fixes, quick tweaks, homework, "flash this board").
   (others only with an exceptional brief and spend history, grade B at best), and either
   a hiring record (spend ≥ $1K, hire rate ≥ 40%, rating ≥ 4.5) **or** a new client whose
   brief is detailed and professional (a real company, a real product).
-- Still open: `find_jobs get` shows no hire made, few interviews, and `applied` is false.
-- Competition we can win: fewer than ~20 proposals, or we are early (posted < 3 hours ago),
-  or the brief is specialised enough that most proposals won't qualify.
+- Fresh and not crowded (CEO, 2026-10-08, all jobs): posted **within the last 3 days**
+  and **fewer than 50 proposals**.
+- Still open and the client is active (`find_jobs get` → `activityStat.jobActivity`):
+  no hire (`totalHired` 0), `applied` false. The connector has no "last viewed by client"
+  field, so use these signals instead:
+  - **Active, good:** interviews started (`totalInvitedToInterview` > 0) or invites sent,
+    and no offer yet: the client is reading proposals now.
+  - **Weaker (B at best):** an offer already made (`totalOffered` > 0), or many interviews
+    (7+) on a small job.
+  - **Possibly idle (B):** posted more than 24 hours ago with 15+ proposals but no
+    interviews and no invites.
+  - Every draft tells the CEO to check **"Last viewed by client"** on the job page before
+    submitting (a client who hasn't looked in 2+ days is usually not worth the Connects).
 
 **B (list in the log, no draft):** good work but one weakness (budget borderline,
-40+ proposals, unclear scope, region outside the target). The CEO can ask for a draft.
+an offer already made, client looks idle, unclear scope, region outside the target). The CEO can ask for a draft.
 
 **C / skip:** small jobs, entry level, hourly ceilings below $25/hr, "overseas cheap" framing,
 unverified payment with a thin brief, defence/weapons/export-controlled, academic
@@ -110,7 +120,7 @@ the first few hours after posting matter most.
   morning), **17:33** (EU afternoon, US East early), **20:33** (US East morning) and
   **23:33** (US midday, US West morning) IST.
 - A job posted < 3 hours ago with < 10 proposals is the best moment: mark it **URGENT** in
-  the alert. A job older than 3 days with 30+ proposals is rarely worth Connects.
+  the alert. Jobs older than 3 days or with 50+ proposals are not drafted (§1).
 - The CEO reads Teams alerts on his phone: keep them short and give the deadline reason.
 
 ## 5. Writing the proposal

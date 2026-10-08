@@ -142,10 +142,20 @@ Load `cf-voice` (and its `examples.md`) and **`upwork/voice-bank.md`** first. Th
 - **One concrete technical observation about their project**: a risk they didn't mention,
   a chip/architecture choice and why, or the first milestone you'd propose. Specific to
   their post, something a practitioner would notice. This is the heart of the proposal.
-- **The first two lines are the preview** the client sees in their list. Open with their
-  project and one specific, useful observation (a risk, a design choice, a question that
-  shows we read it). Never open with "Dear Hiring Manager", "I'm interested", "I have 12
-  years…", or a restatement of the job title.
+- **It's a letter, with a beginning and an end** (CEO, 2026-10-08: a proposal that starts
+  mid-thought and stops without a close reads like a joke with no setup or punchline).
+  Shape:
+  1. **Greeting:** "Hi," or "Hi <first name>," only when a review or invitation names the
+     contact. Never "Dear Hiring Manager".
+  2. **Read-and-fit opener (1–2 sentences, also the preview line the client sees in their
+     list):** show you read *their* brief (name the product) and why it's your kind of work,
+     plus the most relevant credential. E.g. "I read your brief for the nRF5340 bracelet,
+     and it's very close to the work I do most: …". Not "I'm interested", not a job-title
+     restatement, not "I came across your job".
+  3. **The observation** (below), then proof, then approach.
+  4. **One question.**
+  5. **Close:** an invitation to talk on Upwork ("Happy to talk it through on a short call
+     here on Upwork."), then "Thanks," and "Parthraj" on separate lines.
 - **Proof, briefly:** one or two *real* relevant projects: past Upwork jobs (from
   `list_freelancer_proposals` Accepted/Hired items, `list_contracts`, profile work
   history) or CoreFragment case studies from CLAUDE.md, told as "I built…" (anonymized,
@@ -161,7 +171,7 @@ Load `cf-voice` (and its `examples.md`) and **`upwork/voice-bank.md`** first. Th
   state, certification target). Questions start conversations.
 - **Close:** offer a short call through Upwork (its meeting tool) or a question to answer
   in chat. No off-platform contact details.
-- **Length:** 120–220 words. Plain text, short paragraphs, no bullet walls, no emojis.
+- **Length:** 150–260 words including greeting and close. Plain text, short paragraphs, no bullet walls, no emojis.
 - **Sound like a person, not an agent:**
   - Never use: "I hope this finds you well", "I came across your job", "I'm excited/thrilled
     to", "As a seasoned/passionate…", "I am confident that", "look no further", "delve",

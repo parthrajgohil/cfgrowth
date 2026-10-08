@@ -5,6 +5,10 @@ Upwork job uses ONLY what is here for personal touches (SKILL.md §5 and §5b); 
 invents anything about his past or adds detail to these entries. Only Parthraj adds
 content. Anonymous: no client names. First interview: 2026-10-08.
 
+## Facts he has stated (usable as proof)
+- F1. Has worked with Nordic chipsets for the last 8 years (as of 2026-10-08).
+- F2. Built an audio streaming device on the nRF5340.
+
 ## War stories (bugs fixed, products rescued, hard lessons)
 
 **W1. Wireless bugs hide in the field.** In IoT, the hardest bugs I've found are in
@@ -56,8 +60,9 @@ suggest what's best for the product, not just follow what the client says.
   (at most one proposal in five) so it stays genuine.
 
 ## How he opens and closes a conversation (real phrases)
-_Not answered yet (interview question 9). Until he adds it: plain openings that start with
-the client's project; sign off with just "Parthraj"._
+- He wants a proper letter: a greeting ("Hi,"), an opener that shows he read the post and
+  why he fits, and a real close ("Happy to talk it through…", "Thanks,", "Parthraj").
+  (2026-10-08, reviewing the first proposal.)
 
 ## Things he's honest about (what he doesn't do, limits)
 
@@ -69,4 +74,3 @@ people. I also don't take projects that don't fit my skills or my proposed budge
 
 ## Open questions for the next interview
 - Q5: what do most people get wrong about BLE or battery life?
-- Q9: how he usually opens a first message and signs off.

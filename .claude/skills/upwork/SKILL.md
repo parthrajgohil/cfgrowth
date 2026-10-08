@@ -23,7 +23,9 @@ description: How CoreFragment works Upwork — the CEO's personal freelancer pro
   name, written as Parthraj ("I"). **CoreFragment's work is Parthraj's work** (CEO,
   2026-10-08: "I am CoreFragment"): its case studies, projects and proof points (CLAUDE.md)
   can be presented as his own experience, alongside his Upwork history. Still never state
-  team size, never name a client, never put numbers on results.
+  team size, never name a client, never put numbers on results. In proposals and the
+  profile, say "my engineering company" rather than the name CoreFragment (CEO's choice,
+  2026-10-08; the name appears only in the profile's employment section).
 - **The CEO submits.** Agents search, research, draft and make a proposal *preview*
   (`manage_proposals create`: nothing sent, no Connects spent). Submitting
   (`confirm_preview`), messaging, accepting invitations and profile edits are the CEO's,

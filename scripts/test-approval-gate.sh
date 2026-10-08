@@ -113,6 +113,30 @@ expect deny  "seq ACTIVATE own seq"   '{"tool_name":"'$sh'update_sequence_status
 expect ask   "seq add leads (sage)"   '{"tool_name":"'$sh'add_leads_to_sequence","tool_input":{"sequenceId":"NEWSEQ1234","stepId":"NEWSTEP123","leadIds":[1]}}'
 expect ask   "seq delete own"         '{"tool_name":"'$sh'delete_sequence","tool_input":{"sequenceId":"NEWSEQ1234"}}'
 
+# Upwork (CEO decision 2026-10-08): personal freelancer profile only; reads pass; proposal
+# previews allowed; submit/message/edit ask; contracts, money, accounts, hiring denied.
+up=mcp__claude_ai_Upwork__upwork__
+me=473867419264262145; agency=474112535869386752
+for t in list_accounts get_tool_help get_account get_profile get_freelancer_dashboard find_jobs find_saved_jobs get_job_posting get_messages get_rate_insights get_draft get_preview get_upload_status list_contracts list_freelancer_proposals list_milestones list_offers list_client_invitations list_client_proposals get_client_dashboard get_client_financials get_freelancer_financials get_agency get_agency_dashboard find_freelancers; do
+  expect pass "up $t" '{"tool_name":"'$up$t'","tool_input":{"org_uid":"'$me'","action":"get"}}'
+done
+for t in end_contract update_contract submit_milestones manage_milestones respond_to_offer manage_offers update_account update_agency boost_profile post_job invite_freelancer manage_client_proposals agency_rooms; do
+  expect deny "up $t" '{"tool_name":"'$up$t'","tool_input":{"org_uid":"'$me'","action":"x"}}'
+done
+for t in confirm_preview confirm_draft send_message save_job update_profile manage_meetings start_attachment_upload confirm_attachment_upload store_uploaded_files manage_talent_lists manage_uma_shortlist; do
+  expect ask "up $t" '{"tool_name":"'$up$t'","tool_input":{"org_uid":"'$me'","action":"x"}}'
+  expect deny "up $t (agency)" '{"tool_name":"'$up$t'","tool_input":{"org_uid":"'$agency'","action":"x"}}'
+done
+expect pass  "up tool_permission get"  '{"tool_name":"'$up'set_tool_permission","tool_input":{"org_uid":"'$me'","action":"get"}}'
+expect deny  "up tool_permission set"  '{"tool_name":"'$up'set_tool_permission","tool_input":{"org_uid":"'$me'","action":"set","params":{"tool_name":"manage_proposals","permission":"always_allow"}}}'
+expect deny  "up tool_mode set"        '{"tool_name":"'$up'set_tool_mode","tool_input":{"org_uid":"'$me'","action":"set"}}'
+expect allow "up proposal preview"     '{"tool_name":"'$up'manage_proposals","tool_input":{"org_uid":"'$me'","action":"create","params":{"job_reference":"1","cover_letter":"x","charged_amount":40}}}'
+expect ask   "up proposal preview+boost" '{"tool_name":"'$up'manage_proposals","tool_input":{"org_uid":"'$me'","action":"create","params":{"job_reference":"1","cover_letter":"x","charged_amount":40,"boost_connects":5}}}'
+expect deny  "up proposal agency"      '{"tool_name":"'$up'manage_proposals","tool_input":{"org_uid":"'$agency'","action":"create","params":{}}}'
+expect ask   "up proposal withdraw"    '{"tool_name":"'$up'manage_proposals","tool_input":{"org_uid":"'$me'","action":"withdraw"}}'
+expect ask   "up accept invitation"    '{"tool_name":"'$up'manage_proposals","tool_input":{"org_uid":"'$me'","action":"accept_invitation"}}'
+expect ask   "up unknown tool"         '{"tool_name":"'$up'frobnicate","tool_input":{"org_uid":"'$me'"}}'
+
 # Real HubSpot connector tools (listed 2026-09-25): reads pass, CRM writes ask,
 # marketing email and web publishing denied.
 hs=mcp__claude_ai_HubSpot__

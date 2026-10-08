@@ -175,6 +175,12 @@ of expertise in outreach and as seeds for LinkedIn posts. Strong outreach hooks:
 - **Apollo (second email source):** free people search for reachability; work-email
   reveal (`apollo_people_bulk_match`, ~1 credit) only when Saleshandy has no email for an
   approved lead. Apollo's sending, sequences and purchases are blocked by the gate.
+- **Upwork (connected 2026-10-08):** use ONLY the CEO's personal freelancer profile
+  (org `473867419264262145`, "IoT Expert | Embedded | Firmware | Product development"), never
+  the CoreFragment agency or client accounts. Agents may search jobs and prepare proposal
+  drafts/previews; the CEO approves every submission (it spends Connects). **Never contact
+  an Upwork client outside Upwork** (no cold email, LinkedIn or CRM outreach from a job post:
+  Upwork's anti-circumvention policy). Contracts, offers, milestones and money are blocked.
 - **Email & files:** Microsoft 365 (Outlook, OneDrive). Teams: lead alerts to the CEO.
 - **CRM:** HubSpot. Every A/B lead gets a Company + research Note + "DRAFT FOR REVIEW"
   Note; a Contact is created once its email is revealed. `pipeline/leads.csv` is

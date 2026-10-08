@@ -14,6 +14,8 @@
 #     sending, activating, other mailbox/domain changes and purchases are denied.
 #   - Apollo: search/reads pass; work-email reveal only, in the shared 10/day cap;
 #     send/sequence/purchase/tracking denied; credit lookups and other writes ask.
+#   - Upwork: reads pass; proposal previews only on the CEO's personal profile; submitting,
+#     messaging and profile edits ask; contracts, offers, money and accounts are denied.
 #   - HubSpot: reads pass; CRM writes ask; marketing email and web publishing
 #     are denied.
 #   - Other MCP tools: read-only verbs pass through to normal permissions; every
@@ -204,6 +206,37 @@ case "$tool" in
         ;;
     esac
     mcp_default
+    ;;
+  mcp__*[Uu]pwork__*)
+    # Upwork (CEO decision 2026-10-08): only the CEO's PERSONAL freelancer profile is used
+    # (never the CoreFragment agency or client accounts). Reads pass. Agents may prepare a
+    # proposal PREVIEW (manage_proposals create: nothing is submitted); submitting
+    # (confirm_preview / confirm_draft), messaging and profile edits ask, so unattended
+    # runs can't do them. Contracts, offers, milestones, money, account settings, job
+    # posting/hiring and Upwork's own permission settings are denied.
+    UPWORK_PERSONAL=473867419264262145
+    org=$(jq -r '.tool_input.org_uid // ""' <<<"$input")
+    act=$(jq -r '.tool_input.action // ""' <<<"$input")
+    case "$action" in
+      list_accounts|get_tool_help|get_*|find_jobs|find_saved_jobs|find_freelancers|list_*)
+        exit 0
+        ;;
+      set_tool_mode|set_tool_permission)
+        [[ "$act" == get ]] && exit 0
+        deny "CF approval gate: agents never change Upwork's own tool permissions or mode."
+        ;;
+      end_contract|update_contract|submit_milestones|manage_milestones|respond_to_offer|manage_offers|update_account|update_agency|boost_profile|post_job|invite_freelancer|manage_client_proposals|agency_rooms)
+        deny "CF approval gate: '$action' changes contracts, offers, money, accounts or hiring on Upwork; the CEO does this on upwork.com."
+        ;;
+    esac
+    if [[ -n "$org" && "$org" != "$UPWORK_PERSONAL" ]]; then
+      deny "CF approval gate: Upwork writes only on the CEO's personal freelancer profile ($UPWORK_PERSONAL), never the agency or client account."
+    fi
+    if [[ "$action" == manage_proposals && "$act" == create && "$org" == "$UPWORK_PERSONAL" ]] &&
+       [[ $(jq -r '.tool_input.params.boost_connects // ""' <<<"$input") == "" ]]; then
+      allow "CF approval gate: Upwork proposal PREVIEW only (nothing submitted, no Connects spent)."
+    fi
+    ask "CF approval gate: '$action' ($act) submits, messages or edits on Upwork (it can spend Connects). Approve only if you have reviewed exactly what it will do."
     ;;
   mcp__*[Hh]ub[Ss]pot__*)
     # HubSpot (CEO decision 2026-09-25): reads pass; CRM writes ask; anything that

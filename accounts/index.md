@@ -2,10 +2,15 @@
 
 Local copy of every lead. HubSpot's **CF lead stage** is the source of truth; the daily
 and hourly runs keep this table and each draft's `stage:` line in sync with it.
-Last synced: 2026-10-07 13:03 (hourly run; 8 re-approved leads got per-lead Saleshandy sequences, back to ready_to_import).
+Last synced: 2026-10-08 09:17 (daily run; 5 new leads, all 47 HubSpot stages re-read, no changes to earlier rows).
 
 | Researched | Company | Website | Fit | Stage | Buyer (title) | Email | HubSpot | Brief | Draft |
 |---|---|---|---|---|---|---|---|---|---|
+| 2026-10-08 | ZELP | https://www.zelp.co | A | new | Jordan Mcrae (VP of Engineering) | not revealed (Saleshandy 331529147; Apollo has email) | [351040022259](https://app.hubspot.com/contacts/247517534/record/0-2/351040022259) | `accounts/zelp.md` | `drafts/email/2026-10-08-zelp.md` |
+| 2026-10-08 | SmartAC.com | https://www.smartac.com | A | new | Brad Marshall (Head of Hardware) | not revealed (Saleshandy 177775082; Apollo has email) | [351020326608](https://app.hubspot.com/contacts/247517534/record/0-2/351020326608) | `accounts/smartac.md` | `drafts/email/2026-10-08-smartac.md` |
+| 2026-10-08 | Onalabs Inno-Hub | https://www.onalabs.com | A | new | Jaime Punter-Villagrasa (CTO) | not revealed (Saleshandy 425668707; Apollo has email) | [351020326609](https://app.hubspot.com/contacts/247517534/record/0-2/351020326609) | `accounts/onalabs.md` | `drafts/email/2026-10-08-onalabs.md` |
+| 2026-10-08 | Shipshave AS | https://www.shipshave.no | B | new | Eirik Ramstad (Head of Hardware) | not revealed (Saleshandy 227293900; Apollo has email) | [351317519050](https://app.hubspot.com/contacts/247517534/record/0-2/351317519050) | `accounts/shipshave.md` | `drafts/email/2026-10-08-shipshave.md` |
+| 2026-10-08 | Stiltz Lifts | https://www.stiltz.co.uk | B | new | Nigel Leaver (Head of Global Product Management) | not revealed (Saleshandy 257476162; Apollo has email) | [351322750663](https://app.hubspot.com/contacts/247517534/record/0-2/351322750663) | `accounts/stiltz-lifts.md` | `drafts/email/2026-10-08-stiltz-lifts.md` |
 | 2026-10-07 | Newronika S.p.A. | https://www.newronika.com | A | new | Lorenzo Rossi (Co-founder, CEO & CTO) | not revealed (not in Saleshandy; Apollo has email) | [351038728947](https://app.hubspot.com/contacts/247517534/record/0-2/351038728947) | `accounts/newronika.md` | `drafts/email/2026-10-07-newronika.md` |
 | 2026-10-07 | AVILOO Battery Diagnostics | https://aviloo.com | A | new | Moritz Cuscoleca (Head of Embedded EV Diagnostics) | not revealed (Saleshandy 427738987; Apollo has email) | [351282215610](https://app.hubspot.com/contacts/247517534/record/0-2/351282215610) | `accounts/aviloo.md` | `drafts/email/2026-10-07-aviloo.md` |
 | 2026-10-07 | Pressac Communications | https://www.pressac.com | B | new | Robert Smith (Technical Director) | not revealed (Saleshandy 358422819; Apollo has email) | [351305615048](https://app.hubspot.com/contacts/247517534/record/0-2/351305615048) | `accounts/pressac.md` | `drafts/email/2026-10-07-pressac.md` |

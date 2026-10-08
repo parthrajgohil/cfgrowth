@@ -85,6 +85,29 @@ mcp_default() {
   ask "CF approval gate: '$tool' can send, post, or modify data. Approve only if you have reviewed exactly what it will do."
 }
 
+# Upwork is a separate channel (CEO decision 2026-10-08). Unattended jobs say which job
+# they are (CF_JOB, set by scripts/cf-headless.sh): the Upwork job may not touch the CRM or
+# outreach tools, and no other job may touch Upwork or write into upwork/.
+if [[ -n "${CF_JOB:-}" ]]; then
+  if [[ "$CF_JOB" == upwork ]]; then
+    case "$tool" in
+      mcp__*[Hh]ub[Ss]pot__*|mcp__*[Ss]aleshandy__*|mcp__*[Aa]pollo*__*)
+        deny "CF approval gate: the Upwork job never uses HubSpot, Saleshandy or Apollo (Upwork data stays in Upwork)." ;;
+      Write|Edit|MultiEdit|NotebookEdit)
+        f=$(jq -r '.tool_input.file_path // .tool_input.notebook_path // ""' <<<"$input")
+        [[ "$f" == */upwork/* || "$f" == upwork/* ]] || deny "CF approval gate: the Upwork job writes only under upwork/." ;;
+    esac
+  else
+    case "$tool" in
+      mcp__*[Uu]pwork__*)
+        deny "CF approval gate: only the Upwork job uses Upwork (separate channel)." ;;
+      Write|Edit|MultiEdit|NotebookEdit)
+        f=$(jq -r '.tool_input.file_path // .tool_input.notebook_path // ""' <<<"$input")
+        [[ "$f" == */upwork/* || "$f" == upwork/* ]] && deny "CF approval gate: only the Upwork job writes under upwork/." ;;
+    esac
+  fi
+fi
+
 case "$tool" in
   mcp__*__teams_*)
     case "$action" in

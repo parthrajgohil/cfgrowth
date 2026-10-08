@@ -175,12 +175,16 @@ of expertise in outreach and as seeds for LinkedIn posts. Strong outreach hooks:
 - **Apollo (second email source):** free people search for reachability; work-email
   reveal (`apollo_people_bulk_match`, ~1 credit) only when Saleshandy has no email for an
   approved lead. Apollo's sending, sequences and purchases are blocked by the gate.
-- **Upwork (connected 2026-10-08):** use ONLY the CEO's personal freelancer profile
-  (org `473867419264262145`, "IoT Expert | Embedded | Firmware | Product development"), never
-  the CoreFragment agency or client accounts. Agents may search jobs and prepare proposal
-  drafts/previews; the CEO approves every submission (it spends Connects). **Never contact
-  an Upwork client outside Upwork** (no cold email, LinkedIn or CRM outreach from a job post:
-  Upwork's anti-circumvention policy). Contracts, offers, milestones and money are blocked.
+- **Upwork: a separate channel (CEO decisions, 2026-10-08).** Only the CEO's personal
+  freelancer profile (org `473867419264262145`), never the agency or client accounts.
+  **No Upwork data goes to any other tool** (HubSpot, Saleshandy, Apollo, `accounts/`,
+  `drafts/`): it stays in `upwork/` (git-ignored, never pushed); the only exception is a
+  short Teams alert to the CEO. **Never contact an Upwork client outside Upwork** (public
+  background research is fine). Quality leads only, no small one-off jobs. The Upwork scan
+  (`scripts/upwork-scan.md`, weekdays 10:33/13:33/17:33/20:33/23:33 IST) follows the
+  `upwork` skill: finds and grades jobs, checks clients, drafts proposals in
+  `upwork/drafts/`, makes a preview; **the CEO submits**. The runner and the gate keep the
+  Upwork job and the other jobs apart (`CF_JOB`).
 - **Email & files:** Microsoft 365 (Outlook, OneDrive). Teams: lead alerts to the CEO.
 - **CRM:** HubSpot. Every A/B lead gets a Company + research Note + "DRAFT FOR REVIEW"
   Note; a Contact is created once its email is revealed. `pipeline/leads.csv` is
@@ -220,3 +224,4 @@ of expertise in outreach and as seeds for LinkedIn posts. Strong outreach hooks:
 - `.claude/agents/`: subagents · `.claude/skills/`: writing style
 - `scripts/`: session helpers, headless job prompts (`daily-prospecting.md`, `hourly-leads.md`) · `launchd/`: LaunchAgents
 - `drafts/saleshandy/<date>.csv`: import files · `drafts/leads/<date>.md`: daily + hourly run logs
+- `upwork/`: Upwork channel data (drafts, logs, notes, seen jobs); git-ignored, never shared

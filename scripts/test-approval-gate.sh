@@ -242,5 +242,22 @@ expect pass "edit account"        '{"tool_name":"Edit","tool_input":{"file_path"
 # Other tools are not the gate's concern.
 expect pass "Read"                '{"tool_name":"Read","tool_input":{"file_path":"/x"}}'
 
+# Channel separation (CEO decision 2026-10-08), via CF_JOB from cf-headless.sh.
+expect_job() { local j=$1; shift; CF_JOB=$j expect "$@"; }
+expect_job upwork deny  "upwork job: hubspot read"     '{"tool_name":"mcp__claude_ai_HubSpot__search_crm_objects"}'
+expect_job upwork deny  "upwork job: hubspot create"   '{"tool_name":"mcp__claude_ai_HubSpot__manage_crm_objects","tool_input":{}}'
+expect_job upwork deny  "upwork job: saleshandy"       '{"tool_name":"mcp__claude_ai_Saleshandy__sage_search"}'
+expect_job upwork deny  "upwork job: apollo"           '{"tool_name":"mcp__claude_ai_Apollo_io__apollo_mixed_people_api_search"}'
+expect_job upwork deny  "upwork job: write accounts"   '{"tool_name":"Write","tool_input":{"file_path":"/Users/cfgrowth/cf-growth/accounts/x.md"}}'
+expect_job upwork deny  "upwork job: edit drafts"      '{"tool_name":"Edit","tool_input":{"file_path":"/Users/cfgrowth/cf-growth/drafts/email/x.md"}}'
+expect_job upwork pass  "upwork job: write upwork/"    '{"tool_name":"Write","tool_input":{"file_path":"/Users/cfgrowth/cf-growth/upwork/drafts/x.md"}}'
+expect_job upwork pass  "upwork job: find jobs"        '{"tool_name":"mcp__claude_ai_Upwork__upwork__find_jobs","tool_input":{"org_uid":"473867419264262145","action":"search"}}'
+expect_job upwork allow "upwork job: teams to CEO"     '{"tool_name":"mcp__claude_ai_Microsoft_365__teams_send_chat_message","tool_input":{"chatId":"'$ceo'"}}'
+expect_job hourly deny  "hourly job: upwork read"      '{"tool_name":"mcp__claude_ai_Upwork__upwork__find_jobs","tool_input":{"org_uid":"473867419264262145","action":"search"}}'
+expect_job daily  deny  "daily job: upwork profile"    '{"tool_name":"mcp__claude_ai_Upwork__upwork__get_profile","tool_input":{"org_uid":"473867419264262145","action":"get"}}'
+expect_job daily  deny  "daily job: write upwork/"     '{"tool_name":"Write","tool_input":{"file_path":"/Users/cfgrowth/cf-growth/upwork/x.md"}}'
+expect_job daily  pass  "daily job: write drafts"      '{"tool_name":"Write","tool_input":{"file_path":"/Users/cfgrowth/cf-growth/drafts/email/a.md"}}'
+expect_job daily  pass  "daily job: hubspot read"      '{"tool_name":"mcp__claude_ai_HubSpot__search_crm_objects"}'
+
 echo "approval-gate: $pass passed, $fail failed"
 [[ $fail -eq 0 ]]

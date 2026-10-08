@@ -44,7 +44,7 @@ if ! mkdir "$lock" 2>/dev/null; then
     echo "removing stale lock"; rmdir "$lock" && mkdir "$lock" || exit 3
   else
     echo "another job is running ($(cat "$lock/job" 2>/dev/null)); skipping"
-    [[ $job != hourly ]] && notify "$job run skipped: another job was running."
+    [[ $job != hourly && $job != upwork ]] && notify "$job run skipped: another job was running."
     exit 0
   fi
 fi
@@ -55,7 +55,7 @@ running=$("$claude" agents --json 2>/dev/null | /usr/bin/jq 'length' 2>/dev/null
 if [[ -z "$running" ]]; then echo "could not count sessions; skipping"; notify "$job skipped: could not count Claude sessions."; exit 2; fi
 if (( running >= max )); then
   echo "$running sessions active (cap $max); skipping"
-  [[ $job != hourly ]] && notify "$job run skipped: $running Claude sessions already running (cap $max)."
+  [[ $job != hourly && $job != upwork ]] && notify "$job run skipped: $running Claude sessions already running (cap $max)."
   exit 1
 fi
 
@@ -67,27 +67,46 @@ rm -f "$HOME/.claude/mcp-needs-auth-cache.json"
 before=$(wc -l <"$log")
 # The job has no shell, so it can't read the clock: give it the time up front.
 now="Current time on this Mac: $(date '+%Y-%m-%d %H:%M %Z') (use it for dates and log headings)."
+# Per-job tools. Upwork is a separate channel (CEO decision 2026-10-08): the Upwork job
+# gets only Upwork + the CEO's Teams chat + upwork/ files; every other job is locked out of
+# Upwork and upwork/. CF_JOB also lets the approval gate enforce the same split.
+export CF_JOB=$job
+if [[ $job == upwork ]]; then
+  tools=(Read Glob Grep WebSearch WebFetch ToolSearch "Edit(upwork/**)"
+    mcp__claude_ai_Microsoft_365__teams_send_chat_message
+    mcp__claude_ai_Upwork__upwork__list_accounts mcp__claude_ai_Upwork__upwork__get_tool_help
+    mcp__claude_ai_Upwork__upwork__find_jobs mcp__claude_ai_Upwork__upwork__get_profile
+    mcp__claude_ai_Upwork__upwork__get_freelancer_dashboard mcp__claude_ai_Upwork__upwork__list_freelancer_proposals
+    mcp__claude_ai_Upwork__upwork__list_contracts mcp__claude_ai_Upwork__upwork__get_rate_insights
+    mcp__claude_ai_Upwork__upwork__get_messages mcp__claude_ai_Upwork__upwork__manage_proposals
+    mcp__claude_ai_Upwork__upwork__get_preview)
+  blocked=(Bash Agent Workflow mcp__claude_ai_HubSpot mcp__claude_ai_Saleshandy mcp__claude_ai_Apollo_io
+    "Edit(accounts/**)" "Edit(drafts/**)" "Edit(pipeline/**)")
+else
+  tools=(Read Glob Grep WebSearch WebFetch ToolSearch
+    "Edit(accounts/**)" "Edit(drafts/**)"
+    mcp__claude_ai_Microsoft_365__teams_send_chat_message
+    mcp__claude_ai_Microsoft_365__chat_message_search mcp__claude_ai_Microsoft_365__read_resource
+    mcp__claude_ai_Saleshandy__sage_search mcp__claude_ai_Saleshandy__enrich_contacts
+    mcp__claude_ai_Saleshandy__get_enrichment_status mcp__claude_ai_Saleshandy__get_enrichment_result
+    mcp__claude_ai_Saleshandy__list_sequences mcp__claude_ai_Saleshandy__get_email_list
+    mcp__claude_ai_Saleshandy__get_email_thread mcp__claude_ai_Saleshandy__get_outcomes
+    mcp__claude_ai_Saleshandy__get_unread_email_threads_count
+    mcp__claude_ai_Saleshandy__create_sequence mcp__claude_ai_Saleshandy__add_sequence_step
+    mcp__claude_ai_Saleshandy__update_sequence_settings mcp__claude_ai_Saleshandy__add_email_accounts_to_sequence
+    mcp__claude_ai_Saleshandy__import_prospects_to_sequence_step mcp__claude_ai_Saleshandy__check_prospect_import_status
+    mcp__claude_ai_Saleshandy__list_sequence_steps
+    mcp__claude_ai_HubSpot__get_user_details mcp__claude_ai_HubSpot__tool_guidance
+    mcp__claude_ai_HubSpot__search_crm_objects mcp__claude_ai_HubSpot__get_crm_objects
+    mcp__claude_ai_HubSpot__search_properties mcp__claude_ai_HubSpot__manage_crm_objects
+    mcp__claude_ai_Apollo_io__apollo_mixed_people_api_search mcp__claude_ai_Apollo_io__apollo_people_bulk_match
+    mcp__claude_ai_Apollo_io__apollo_people_match mcp__claude_ai_Apollo_io__apollo_users_api_profile)
+  blocked=(Bash Agent Workflow mcp__claude_ai_Upwork "Read(upwork/**)" "Edit(upwork/**)")
+fi
 "$claude" -p "$now"$'\n\n'"$(cat "$prompt")" \
   --name "$job-$today-$(date +%H%M)" \
-  --disallowedTools Bash Agent Workflow \
-  --allowedTools Read Glob Grep WebSearch WebFetch ToolSearch \
-    "Edit(accounts/**)" "Edit(drafts/**)" \
-    mcp__claude_ai_Microsoft_365__teams_send_chat_message \
-    mcp__claude_ai_Microsoft_365__chat_message_search mcp__claude_ai_Microsoft_365__read_resource \
-    mcp__claude_ai_Saleshandy__sage_search mcp__claude_ai_Saleshandy__enrich_contacts \
-    mcp__claude_ai_Saleshandy__get_enrichment_status mcp__claude_ai_Saleshandy__get_enrichment_result \
-    mcp__claude_ai_Saleshandy__list_sequences mcp__claude_ai_Saleshandy__get_email_list \
-    mcp__claude_ai_Saleshandy__get_email_thread mcp__claude_ai_Saleshandy__get_outcomes \
-    mcp__claude_ai_Saleshandy__get_unread_email_threads_count \
-    mcp__claude_ai_Saleshandy__create_sequence mcp__claude_ai_Saleshandy__add_sequence_step \
-    mcp__claude_ai_Saleshandy__update_sequence_settings mcp__claude_ai_Saleshandy__add_email_accounts_to_sequence \
-    mcp__claude_ai_Saleshandy__import_prospects_to_sequence_step mcp__claude_ai_Saleshandy__check_prospect_import_status \
-    mcp__claude_ai_Saleshandy__list_sequence_steps \
-    mcp__claude_ai_HubSpot__get_user_details mcp__claude_ai_HubSpot__tool_guidance \
-    mcp__claude_ai_HubSpot__search_crm_objects mcp__claude_ai_HubSpot__get_crm_objects \
-    mcp__claude_ai_HubSpot__search_properties mcp__claude_ai_HubSpot__manage_crm_objects \
-    mcp__claude_ai_Apollo_io__apollo_mixed_people_api_search mcp__claude_ai_Apollo_io__apollo_people_bulk_match \
-    mcp__claude_ai_Apollo_io__apollo_people_match mcp__claude_ai_Apollo_io__apollo_users_api_profile
+  --disallowedTools "${blocked[@]}" \
+  --allowedTools "${tools[@]}"
 status=$?
 if (( status != 0 )); then
   notify "$job run failed (exit $status)."

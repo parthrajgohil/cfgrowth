@@ -37,8 +37,8 @@ jobs ($100–$500 fixes, quick tweaks, homework, "flash this board").
   BLE/Wi-Fi/LoRa/cellular devices, PCB/hardware design, IoT device-to-cloud, companion
   apps *as part of a device*, edge AI on devices. Healthcare/medical and industrial IoT
   first (CLAUDE.md Priorities).
-- Size: fixed price **≥ $1,500**, or hourly with max rate **≥ $35/hr** and duration
-  **≥ 1 month** (or "ongoing" / 30+ hrs/week). A product build or multi-phase project
+- Size: fixed price **≥ $1,500**, or hourly with max rate **≥ $25/hr** and duration
+  **≥ 1 month** (or "ongoing" / 30+ hrs/week) (CEO, 2026-10-08). A product build or multi-phase project
   with a smaller first milestone counts if the brief clearly describes the larger work.
 - Client: **payment verified**, located in **USA, Canada, UK or EU/EEA/Switzerland**
   (others only with an exceptional brief and spend history, grade B at best), and either
@@ -51,7 +51,7 @@ jobs ($100–$500 fixes, quick tweaks, homework, "flash this board").
 **B (list in the log, no draft):** good work but one weakness (budget borderline,
 40+ proposals, unclear scope, region outside the target). The CEO can ask for a draft.
 
-**C / skip:** small jobs, entry level, < $25/hr ceilings, "overseas cheap" framing,
+**C / skip:** small jobs, entry level, hourly ceilings below $25/hr, "overseas cheap" framing,
 unverified payment with a thin brief, defence/weapons/export-controlled, academic
 tutoring/homework, pure web/mobile with no device, jobs that already hired, client
 rating < 4.0 or feedback complaining about non-payment or scope creep, requests for
@@ -68,7 +68,7 @@ Use our own searches; Upwork's Best Match feed is noisy.
   "BLE companion app device", "edge AI device".
 - `find_jobs smart_search` `mode: most_recent`, `days_posted: 1` as a cross-check.
 - Filters to use: `experience_level` expert or intermediate; `budget_min` 1500 for fixed;
-  `rate_min` 35 with `job_type: hourly`; `location` (try "United States", "Europe",
+  `rate_min` 25 with `job_type: hourly`; `location` (try "United States", "Europe",
   "United Kingdom", "Canada"; if `filters_rejected` appears, use the spelling it gives).
 - Skip any job id already in `upwork/seen.tsv` (record every job you grade there).
 
@@ -117,10 +117,24 @@ Load `cf-voice` (and its `examples.md`) first. Then:
 - **Screening questions:** answer each one specifically, 1–4 sentences.
 - **Language:** if the client's language isn't English and the post asks for it, add the
   same letter in that language.
-- **Bid:** default to the profile rate ($40/hr) unless the CEO's latest guidance in
-  `upwork/notes.md` says otherwise. For fixed price, bid the client's budget when the scope
-  fits; propose a paid discovery milestone when it doesn't. Write the reasoning in the
-  draft so the CEO can change it. Never bid below the profile rate to win.
+- **Bid: suggest one for every lead, from the background check** (CEO, 2026-10-08). The
+  CEO decides; write the evidence so he can. Inputs:
+  - the client's posted range or budget (and whether it's a client-set or platform-default
+    range);
+  - what this client actually pays: `client_record` total spend ÷ hours (hourly history),
+    and the rates in `client_work_history` / `client_feedback` where shown;
+  - the market: `get_rate_insights` (expert, the job's title/description) and, from the
+    proposal preview, `bid_stats` (avg/min/max of other bids) when available;
+  - the client's profile: region, company stage/funding from the web check, how
+    specialised the work is (medical/regulated, RF, low-power and production work justify
+    the top of the range), how many proposals and how strong the competition looks;
+  - our profile rate ($40/hr) and any guidance in `upwork/notes.md`.
+  Suggest **one number** (hourly rate, or fixed amount with milestones), plus a range
+  (floor / stretch), and 2–4 lines of reasoning citing those figures. Position as a
+  senior specialist: aim at the upper half of what this client can evidently pay; don't
+  go below the posted range's midpoint to win. Flag clearly if the suggestion is below
+  $40/hr. For fixed price, bid the budget when the scope fits; propose a paid discovery
+  milestone when it doesn't.
 - **Boost:** never in an unattended run (the gate refuses it). Suggest a boost amount in
   the draft only for an A job with strong fit and fewer than 15 proposals.
 - **Attachments/portfolio:** suggest relevant portfolio items from `get_profile

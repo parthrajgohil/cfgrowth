@@ -35,7 +35,9 @@ proposal count, `applied`, `client_record`, `client_feedback`, `connects_cost`.
    (Accepted/Hired items as tone and evidence), `list_contracts` for relevant past work.
    Use only what these return and CLAUDE.md's case studies.
 3. Read `.claude/skills/cf-voice/SKILL.md` and `examples.md`, then write the proposal
-   (SKILL.md §5): cover letter, answers to screening questions, bid with reasoning,
+   (SKILL.md §5): cover letter, answers to screening questions, a **suggested bid from the
+   background check** (one number, floor/stretch, reasoning: client's range, what the
+   client has paid, `get_rate_insights`, bid stats from the preview),
    suggested portfolio ids, suggested boost (or "no boost").
 4. `manage_proposals create` (org `473867419264262145`, no `boost_connects`) to get the
    preview: connects_cost, balance, screening questions, bid stats, unmet preferred
@@ -48,12 +50,13 @@ proposal count, `applied`, `client_record`, `client_feedback`, `connects_cost`.
    url: <job url>
    grade: A
    posted: <time>   proposals: <n or tier>   connects: <cost>
-   budget: <fixed $ / hourly range>   bid: <amount> (<reason>)
+   budget: <fixed $ / hourly range>   suggested_bid: <amount>  (floor <x>, stretch <y>)
    status: draft   # the CEO changes this after submitting
    ---
    ## Why this job
    ## Client background check
    ## Cover letter
+   ## Suggested bid (evidence: posted range, client's paid rate, rate insights, bid stats)
    ## Screening answers
    ## Suggestions (portfolio ids, boost, attachments)
    ## Preview (connects cost, balance, unmet qualifications, bid stats)
@@ -74,11 +77,11 @@ and no other. Plain text, no mentions. Only Upwork-safe facts: job title, link, 
 budget, proposals, Connects, file path; never message contents or client personal details.
 ```
 Upwork (<HH:MM>)
-URGENT A: <job title> · <budget> · <n> proposals · <cost> Connects
+URGENT A: <job title> · <budget> · bid <suggested> · <n> proposals · <cost> Connects
 <url>
 Draft: upwork/drafts/<file>.md
 
-A: <job title> · <budget> · <n> proposals · <cost> Connects
+A: <job title> · <budget> · bid <suggested> · <n> proposals · <cost> Connects
 <url>
 Draft: upwork/drafts/<file>.md
 

@@ -67,7 +67,9 @@ jobs ($100–$500 fixes, quick tweaks, homework, "flash this board").
 **C / skip:** small jobs, entry level, hourly ceilings below $25/hr, "overseas cheap" framing,
 unverified payment with a thin brief, defence/weapons/export-controlled, academic
 tutoring/homework, pure web/mobile with no device, jobs that already hired, client
-rating < 4.0 or feedback complaining about non-payment or scope creep, requests for
+rating < 4.0 or feedback complaining about non-payment or scope creep, a hostile,
+bullying or disrespectful tone in the post or in freelancers' reviews of the client
+(Parthraj doesn't work with such clients), work outside his skills, requests for
 free/unpaid test work, anything asking to move off Upwork.
 
 ## 2. Finding jobs (read-only, free)

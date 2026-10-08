@@ -1,1 +1,55 @@
 job_id	first_seen	posted	label	grade	reason
+2108161879986836317	2026-10-08 17:33	2026-10-08 11:47Z	nRF5340 biosignal wearable PCB/FPC + firmware, Ukraine, hourly 3-6 mo FT	B	strong fit and early (<1h, 5-10 proposals), but outside target regions and thin hiring record (1 hire, low hire rate)
+2107610961725481618	2026-10-08 17:33	2026-10-06 23:17Z	ESP32 dual-camera sync + dermatoscope PoC for medical skin imaging, US, fixed $1.5-2K	B	great US medical client, but an offer is already out and 7 interviewed; needs shipped ESP32 camera + cross-polarised optics proof
+2107420979641407721	2026-10-08 17:33	2026-10-06 10:42Z	LoRaWAN low-power sensor node family + gateway HW/FW, India, fixed $3.6K	B	good scope and few proposals, but client outside target regions
+2107885647806047352	2026-10-08 17:33	2026-10-07 17:28Z	4-layer KiCad PCB production review (STM32H7, LTE-M, ESP32-C3), Austria, fixed $1.5K	B	in region and budget OK, but 30+ proposals, <1 week review, new client
+2107471170593743506	2026-10-08 17:33	2026-10-06 14:03Z	senior HW engineer LTE/5G + embedded Linux board, US, hourly $10-40 FT 1-3 mo	B	relevant, but low rate range, new client, ~28 proposals, ET hours
+2106071582395236800	2026-10-08 17:33	2026-10-02 17:28Z	build + bench-test existing geophysical instrument prototype, UK, fixed $1.5K	B	in region, but 6 days old, 20+ proposals, new client
+2107347736742065405	2026-10-08 17:33	2026-10-06 08:50Z	multi-mic audio DSP proof of concept on embedded HW, US, hourly $35-75	C	candidates restricted to US/UAE; deep audio DSP not our core; 36 proposals
+2108037876380143413	2026-10-08 17:33	2026-10-08 03:35Z	KiCad batch consultation wanting past project source files, US, fixed	C	wants existing source material from past projects; client IP is transferred, can't offer it
+2106933880194284539	2026-10-08 17:33	2026-10-05 02:30Z	low-power camera wearable BLE firmware, US, hourly $70-120	C	70+ proposals, 3 days old
+2105926455248492857	2026-10-08 17:33	2026-10-02 07:47Z	GNSS + BLE outdoor IoT device HW/FW, Switzerland, hourly	C	56 proposals, 6 days old, <1 month
+2107776136677771988	2026-10-08 17:33	2026-10-07 13:14Z	dual-phone BLE consumer gadget HW/FW + app, UK, hourly	C	30+ proposals, no rate, small client
+2107640971924549460	2026-10-08 17:33	2026-10-07 01:15Z	STM32 bootloader/OTA long-term, US, hourly $20-30	C	60+ proposals, low rate range
+2107498843998472481	2026-10-08 17:33	2026-10-06 15:52Z	MCU firmware for custom PCB, US, hourly $15-35	C	"overseas" low-rate framing, 50+ proposals
+2107994661396010024	2026-10-08 17:33	2026-10-08 00:43Z	BLE tracker + bracelet HW/FW, UK, hourly	C	<1 week, 37 proposals, platform default range
+2107429634627029281	2026-10-08 17:33	2026-10-06 11:17Z	3D printer host board embedded Linux, Singapore, hourly	C	outside region, low rate, 24 proposals
+2107367988553000992	2026-10-08 17:33	2026-10-06 07:11Z	PCB + embedded generalist pool, US, hourly	C	55 proposals, low spend per hire
+2107183471720605728	2026-10-08 17:33	2026-10-05 18:58Z	China-based electronics engineer, US, hourly	C	requires China location
+2107025490387399933	2026-10-08 17:33	2026-10-05 08:32Z	Redshift data migration, Australia	C	not our work
+2106955752771817293	2026-10-08 17:33	2026-10-05 06:54Z	onsite firmware contract, India, hourly $10-15	C	onsite, low rate
+2106761825385206995	2026-10-08 17:33	2026-10-04 15:03Z	wearable sensor design docs, Norway, fixed $100	C	tiny budget
+2106710423569691901	2026-10-08 17:33	2026-10-04 11:39Z	simple remote control device, Canada, hourly	C	small, 34 proposals
+2106626193573231611	2026-10-08 17:33	2026-10-04 06:03Z	React Native BLE app, US, fixed	C	app only, token budget
+2103904933267975544	2026-10-08 17:33	2026-09-26 18:54Z	nRF BLE audio wearable board adaptation, Egypt, hourly	C	outside region, 12 days old
+2103550937493277237	2026-10-08 17:33	2026-09-25 21:24Z	dual BLE wearable prototype, Italy, hourly $8-60	C	47 proposals, 2 weeks old
+2103145741985348376	2026-10-08 17:33	2026-09-24 15:34Z	smart cart lock gateway, Sweden, hourly	C	83 proposals, 2 weeks old
+2100164384892768391	2026-10-08 17:33	2026-09-16 10:07Z	BLE + IMU sensor module, India, hourly	C	outside region, old
+2099294167808715597	2026-10-08 17:33	2026-09-14 00:29Z	React Native BLE sensor integration, Canada	C	app only, old
+2098035535030434110	2026-10-08 17:33	2026-09-10 13:08Z	long-range compact BLE RF design, US, hourly	C	4 weeks old, 48 proposals
+2095220555693835334	2026-10-08 17:33	2026-09-02 21:42Z	BLE phone accessory HW/FW, US, hourly	C	5 weeks old, 38 proposals
+2108108538322947893	2026-10-08 17:33	2026-10-08 08:13Z	sheet-metal EMC shield mechanical design, Norway	C	mechanical, not our work
+2107915899947609625	2026-10-08 17:33	2026-10-07 19:28Z	EMC schematic/PCB review, South Africa, fixed $10	C	tiny budget
+2107834968399104289	2026-10-08 17:33	2026-10-07 14:07Z	compact ESP32-S3 PCB layout, Brazil	C	outside region, small, 39 proposals
+2107629688153692009	2026-10-08 17:33	2026-10-07 00:30Z	BLE locket app + firmware fixes, US, hourly $8-40	C	<1 month, 36 proposals, low range
+2107516021779587730	2026-10-08 17:33	2026-10-06 16:59Z	12V ESP32 controller KiCad PCB, US, fixed $500	C	below $1.5K
+2107489399487803220	2026-10-08 17:33	2026-10-06 15:15Z	simple STM32 button PCB, US, fixed $15	C	tiny
+2108144347758879694	2026-10-08 17:33	2026-10-08 10:36Z	HDMI host board for DLP engine, India, fixed $100	C	tiny, outside region
+2107894665194742904	2026-10-08 17:33	2026-10-07 21:04Z	wearable input device POC to prototype, Australia, fixed $700	C	below $1.5K, outside region
+2107726528636995873	2026-10-08 17:33	2026-10-07 06:57Z	compact counter gadget, Indonesia	C	outside region, thin brief
+2107501414123653844	2026-10-08 17:33	2026-10-06 16:01Z	e-scooter speed-limit firmware change, Germany	C	tampering with legal speed limits
+2108161497717777528	2026-10-08 17:33	2026-10-08 11:45Z	mechanical cleaning gadget, UAE	C	mechanical, thin brief
+2108155411154457640	2026-10-08 17:33	2026-10-08 11:20Z	agentic AI R&D system, US	C	not device work
+2108154729048993305	2026-10-08 17:33	2026-10-08 11:17Z	mechanical workshop equipment + sourcing, US, hourly $10-50	C	mechanical design and sourcing, not electronics
+2108152369394285082	2026-10-08 17:33	2026-10-08 11:07Z	furniture estimator web app, Australia	C	web only
+2108150341352412200	2026-10-08 17:33	2026-10-08 11:00Z	full-stack app prototype to production, US	C	software only, 50+
+2108147656191965722	2026-10-08 17:33	2026-10-08 10:49Z	AI outbound calling product, US	C	not our work
+2108144021161010126	2026-10-08 17:33	2026-10-08 10:34Z	React Native HR app, Indonesia	C	app only
+2108130525579625624	2026-10-08 17:33	2026-10-08 09:41Z	WhatsApp AI chatbot setup, NZ	C	not device work
+2107974796752835624	2026-10-08 17:33	2026-10-07 23:22Z	BLE module + firmware for PIC device, US, hourly	C	payment unverified, <1 month
+2107914848898622584	2026-10-08 17:33	2026-10-07 19:24Z	ESP32-S3 wearable prototype, US	C	payment unverified, <1 week
+2107770781465827177	2026-10-08 17:33	2026-10-07 09:54Z	6-layer STM32H7 vision device PCB, India	C	payment unverified, outside region
+2107836325086972628	2026-10-08 17:33	2026-10-07 14:50Z	embedded prototype, Canada	C	payment unverified, thin brief
+2108054839151098394	2026-10-08 17:33	2026-10-08 04:40Z	RGB car badge, Puerto Rico	C	small, <1 week
+2107697102192855329	2026-10-08 17:33	2026-10-07 05:00Z	software lead for app product, UK	C	app/management role, 50+
+2107899444211289909	2026-10-08 17:33	2026-10-07 18:23Z	vehicle-counting CV system, US	C	50+ proposals, <1 month

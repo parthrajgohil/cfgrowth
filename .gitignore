@@ -5,4 +5,4 @@ logs/
 .DS_Store
 
 # Upwork channel data (CEO decision 2026-10-08): stays on this Mac, never pushed.
-upwork/
+/upwork/

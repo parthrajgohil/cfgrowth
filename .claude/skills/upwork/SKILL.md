@@ -20,8 +20,10 @@ description: How CoreFragment works Upwork — the CEO's personal freelancer pro
 - **Account:** only the personal freelancer profile, org_uid `473867419264262145`
   ("IoT Expert | Embedded | Firmware | Product development"). Never the CoreFragment
   agency (`474112535869386752`) or client account. Proposals go out under Parthraj's own
-  name, so they're written as Parthraj ("I"), with CoreFragment as the team behind him
-  only where it helps (never state team size).
+  name, written as Parthraj ("I"). **CoreFragment's work is Parthraj's work** (CEO,
+  2026-10-08: "I am CoreFragment"): its case studies, projects and proof points (CLAUDE.md)
+  can be presented as his own experience, alongside his Upwork history. Still never state
+  team size, never name a client, never put numbers on results.
 - **The CEO submits.** Agents search, research, draft and make a proposal *preview*
   (`manage_proposals create`: nothing sent, no Connects spent). Submitting
   (`confirm_preview`), messaging, accepting invitations and profile edits are the CEO's,
@@ -102,9 +104,11 @@ Load `cf-voice` (and its `examples.md`) first. Then:
   project and one specific, useful observation (a risk, a design choice, a question that
   shows we read it). Never open with "Dear Hiring Manager", "I'm interested", "I have 12
   years…", or a restatement of the job title.
-- **Proof, briefly:** one or two *real* relevant past Upwork jobs (from
+- **Proof, briefly:** one or two *real* relevant projects: past Upwork jobs (from
   `list_freelancer_proposals` Accepted/Hired items, `list_contracts`, profile work
-  history) or CoreFragment case studies from CLAUDE.md (linked, anonymized, no numbers).
+  history) or CoreFragment case studies from CLAUDE.md, told as "I built…" (anonymized,
+  no numbers; a corefragment.com case-study link is fine as a work sample, but it is not
+  contact information and never invites off-platform contact).
   Never invent a project, metric, client or review. If nothing is directly relevant, say
   what is closest, honestly.
 - **Approach:** 2–4 short lines on how you'd tackle it, ending with a concrete first step

@@ -71,6 +71,19 @@ jobs ($100–$500 fixes, quick tweaks, homework, "flash this board").
   - Every draft tells the CEO to check **"Last viewed by client"** on the job page before
     submitting (a client who hasn't looked in 2+ days is usually not worth the Connects).
 
+**Door-opener exception (A, CEO 2026-10-09):** a short job (under a month, or a small
+fixed price) still counts as A when ALL of these hold:
+1. it needs a **niche skill we're strong in**: secure boot / flash encryption, OTA,
+   bootloaders, BLE, low-power, RF, Nordic/nRF, Zephyr, embedded Linux drivers;
+2. the client is **clearly building a real device** (product described, other hardware
+   work under way or planned), so follow-on work is likely;
+3. the posted hourly range reaches **$40/hr or more** (or a fixed price that fits the
+   scope);
+4. applying costs **20 Connects or fewer**;
+5. it passes the 3-day / 50-proposal rule and the client is active.
+Mark it "A (door-opener)" and say in the draft which follow-on work is likely. Short-job
+proposals stay short (150–200 words) and offer a clear first step.
+
 **B (list in the log, no draft):** good work but one weakness (budget borderline,
 an offer already made, client looks idle, unclear scope, region outside the target). The CEO can ask for a draft.
 

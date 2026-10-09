@@ -44,7 +44,7 @@ See `scripts/daily-prospecting.md` ("Find new leads").
 | 2026-09-30 | SmartBarrel | https://smartbarrel.io | Apollo (construction tech) | US construction biometric time-clock device; ~$4M raised 2026-09 | Is hardware in-house? Head of Hardware title odd |
 | 2026-09-30 | Airzone Control | unverified | Apollo (HVAC) | Spanish HVAC zoning controls with IoT lead | Size, trigger |
 | 2026-09-30 | OptConnect | unverified | Apollo (industrial iot, US) | US managed cellular connectivity devices; Director HW Eng | Size, trigger |
-| 2026-09-30 | StemWave | unverified | Web job boards (Ashby) | US shockwave therapy devices (700+ clinics); hired for Class II firmware in 2025-10 | No firmware roles open now; re-check |
+| 2026-09-30 | StemWave | unverified | Web job boards (Ashby) | US shockwave therapy devices (700+ clinics); hired for Class II firmware in 2025-10 | Re-checked 2026-10-09 via Ashby API: 7 open roles, none firmware (Medical Device Assembler posted 2026-10-06). Re-check later |
 | 2026-10-01 | Willow Innovations | https://onewillow.com | Web job boards (Greenhouse) | US wearable breast pump; had a Lead Firmware Engineer (Medical Device & Connectivity) post; Sr Director of Engineering open now; acquired Elvie (UK) | Headcount after Elvie (may exceed 500); firmware post no longer listed |
 | 2026-10-01 | Pison Technology | https://pison.com | Web job boards (Lever) | Boston neural-sensor wristband; Timex NeuroFit partnership; ST chip miniaturisation; Sr. Firmware Engineer post | Defence customers? (check before pursuing); size |
 | 2026-10-01 | Beacon Biosignals | https://beacon.bio | Web job boards (Greenhouse) | US Dreem 3S / Waveband EEG headband, FDA 510(k) + PCCP; Firmware Engineer post | Mostly AI/software? post still open? |
@@ -128,6 +128,23 @@ See `scripts/daily-prospecting.md` ("Find new leads").
 | 2026-10-08 | Advalight | unverified | Apollo (medical, DK) | Danish medical lasers; Lead Electronics Engineer | Size, trigger |
 | 2026-10-08 | Scope / VectaCore / ANavS | unverified | Apollo (marine/navigation) | Head of Hardware / Head of Electronics & Software / Head of Embedded Systems Group | What they make; defence ties for ANavS? |
 | 2026-10-08 | Fellow | unverified | Web job boards | US connected coffee appliances; Principal Firmware Engineer post (builtin) | Consumer (secondary); size, post date |
+| 2026-10-09 | Echandia | https://www.echandia.com | Apollo (energy storage) | Swedish LTO marine batteries/BMS; Echandia Ultra launched 2026-03-17; Marysville WA plant; Head of Electronics & Architecture Henrik Persson (Saleshandy 385547767) | **Researched 2026-10-09, held:** naval orders for a NATO navy (2022-06, 2023-09). CEO to decide whether naval work counts as defence; otherwise a strong A (BMS) |
+| 2026-10-09 | Levo Medical | unverified | FDA list (2026-08) | Levo Gen 2 tinnitus therapy cleared 2026-08-13 (K260413); adds AI + telemedicine | Hardware is off-the-shelf earbuds + Apple devices? No engineering lead found in Apollo |
+| 2026-10-09 | Bio Compression Systems | unverified | FDA list (2026-09) | NJ pneumatic compression pumps; Sequential Circulator cleared 2026-09-11 (K261807); no engineering lead visible | Connected product plans? Who designs electronics? |
+| 2026-10-09 | Amptron Medical | unverified | FDA list (2026-09) | Carlsbad CA respiratory monitor ElintMAX cleared 2026-09-16 (K260226); CEO Nirav Patel | Pre-seed (~USD 0.5M), India funding link: likely under 10 people |
+| 2026-10-09 | Wanco Inc. | https://www.wanco.com (unverified) | Apollo (segment 2) | Arvada CO traffic-safety trailers (message signs, arrow boards, surveillance) with connected features; Director ITS & IoT (Frank Zu***o) | Only connected news is HAAS Alert integration 2022-04; look for a 2026 product |
+| 2026-10-09 | 4Front Engineered Solutions | unverified | Apollo (segment 2) | Loading-dock equipment with 4SIGHT Connect platform; Director of IoT (Daryl Day) | Ownership (group?), no 2026 news |
+| 2026-10-09 | GWF AG | unverified | Apollo (smart metering) | Lucerne family-owned water/gas meters, LoRaWAN GWFcoder, ~300 people; Head of Embedded Hardware, Head of Embedded Firmware | Enlit Europe 2026 exhibitor; no product trigger found |
+| 2026-10-09 | Ampere Energy | unverified | Apollo (energy storage, ES) | Spanish home batteries; two Firmware Managers | Size, trigger |
+| 2026-10-09 | neoom | unverified | Apollo (energy storage, AT) | Austrian energy-storage/community-energy company; Head of Hardware Development | Size, trigger, own hardware? |
+| 2026-10-09 | Celerway Communication | unverified | Apollo (fleet) | Norwegian mobile routers for vehicles; Director HW Eng (Erik Ei***d) | Defence/public-safety customers? size |
+| 2026-10-09 | FuelCloud | unverified | Apollo (fleet, US) | US fuel-tank management IoT; Head of Firmware & Mobile | No 2026 news found; size |
+| 2026-10-09 | TruMed Systems | unverified | Apollo (medical, US) | San Diego AccuVax automated vaccine storage; Sr. Director HW Eng | No 2026 news found (integrations 2019-20) |
+| 2026-10-09 | PreciPoint | unverified | Apollo (medical, DE) | Freising digital microscopes/slide scanners (sold via Nikon); Head of HW Eng; US entity 2024-07 | No 2026 launch found |
+| 2026-10-09 | Oculox Technology | unverified | Apollo (medical, CH) | Swiss implantable ophthalmic biosensor startup; Head of Firmware Development | Stage, funding, trigger |
+| 2026-10-09 | Dr. Mach GmbH | unverified | Web job boards (StepStone) | Family-owned surgical-light maker (Grafing, DE), all lights developed/made in Germany; hiring embedded SW engineer (IEC 60601) | Post date; size |
+| 2026-10-09 | Intoxalock | unverified | Apollo (medical, US) | Ignition-interlock breathalyzers; Firmware Manager | Ownership, size (may exceed 500) |
+| 2026-10-09 | Smart Meter LLC | unverified | Web (product news) | Cellular RPM devices; iAmbientHealth radar sensor launched 2025-09-24 | Older trigger; own hardware or OEM? |
 
 Excluded 2026-09-28: Promwad Engineering, Hatch Product Development, Austin Circuit Design
 (engineering-services competitors), Philips Capsule (part of Philips).
@@ -196,3 +213,13 @@ nebulizer cleared 2020, nothing new); MediPines (2018 clearance, no new trigger)
 funded); Sperry Marine, Shift5, HavocAI, Charles River Analytics (defence ties); Lacuna Space (space); Sportable and
 Natural Cycles (no 2026 hardware news found); Big Dutchman, SKOV, Televic Rail, Icomera, Hitachi Rail (group-owned or large);
 Bradford White, Cleaver-Brooks, Atlas Copco (too large); Hahn-Schickard, IKERLAN (institutes).
+Excluded 2026-10-09: Wellvii (7 employees per its own releases, PE-owned; BP Go cleared 2026-08-13; C), Oivi (electronics team in
+Bengaluru, ViVE 2026 US push only; C); Heidelberg Engineering, Varjo, Savant, SPAN, Polarium, Lunar Energy, Easee, Samsung SDI,
+Panasonic, Typhoon HIL, Unigen, Scale Computing, Core Scientific, Spireon, Seegrid (too large or not device makers for us);
+Neptune Medical, Aescape, CoMind, Bigfoot Biomedical, Neko Health, Neuralink, Biolinq, Beta Bionics, Modular Medical, Ceribell,
+Butterfly, RxSight, Senseonics, Outset (heavily funded or public); Infraredx (Nipro), Natus, Oticon Medical, Aptar Digital Health,
+CenTrak, Magazino (Jungheinrich), ubitricity, Gridspertise, BMZ, Andreas Hettich (group-owned or large); Blur, Simplexity,
+Vantage MedTech, Zigron, Softdel, Kickmaker, Remedy Product Studio, USA Firmware, Truelogic, ALTEN, Re:Build, intent, Germbedded,
+Mesh Systems, BlueThink (services/competitors); BRINC, Shift5, Sepura, Censys, Sentient Industries (defence/public safety);
+Wellysis, Aevice, Alimetry, Trexo, Dozee and Chinese 510(k) applicants (outside region); StemWave (no firmware roles open);
+AiSight, Eleo, QAVION (join.com posts gone); Valais Wallis Racing Team, LORIOT, Silver Spring Networks (not buyers).

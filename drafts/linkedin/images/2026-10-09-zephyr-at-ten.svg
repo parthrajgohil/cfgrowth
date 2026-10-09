@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1500" viewBox="0 0 1200 1500" font-family="Helvetica Neue, Helvetica, Arial">
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+
+  <!-- Headline -->
+  <text x="100" y="210" font-size="80" font-weight="700" fill="#1F2933">FreeRTOS to Zephyr:</text>
+  <text x="100" y="300" font-size="80" font-weight="700" fill="#1F5FAE">what really changes</text>
+  <text x="100" y="375" font-size="34" fill="#52606D">Where migration time actually goes</text>
+
+  <!-- Column headers -->
+  <text x="100" y="470" font-size="28" font-weight="700" fill="#52606D">FreeRTOS + vendor SDK</text>
+  <text x="630" y="470" font-size="28" font-weight="700" fill="#1F5FAE">Zephyr</text>
+  <line x1="100" y1="495" x2="1100" y2="495" stroke="#E4E7EB" stroke-width="2"/>
+
+  <!-- Row 1: Configuration -->
+  <g>
+    <text x="100" y="540" font-size="26" font-weight="700" fill="#1F5FAE">Configuration</text>
+    <rect x="100" y="555" width="470" height="80" rx="10" fill="#FFFFFF" stroke="#E4E7EB" stroke-width="2"/>
+    <text x="124" y="608" font-size="34" fill="#1F2933">Vendor tool + headers</text>
+    <line x1="580" y1="595" x2="610" y2="595" stroke="#1F5FAE" stroke-width="4"/>
+    <polygon points="608,585 624,595 608,605" fill="#1F5FAE"/>
+    <rect x="630" y="555" width="470" height="80" rx="10" fill="#FFFFFF" stroke="#1F5FAE" stroke-width="2"/>
+    <text x="654" y="608" font-size="34" fill="#1F2933">Devicetree + Kconfig</text>
+  </g>
+
+  <!-- Row 2: Build -->
+  <g>
+    <text x="100" y="675" font-size="26" font-weight="700" fill="#1F5FAE">Build</text>
+    <rect x="100" y="690" width="470" height="80" rx="10" fill="#FFFFFF" stroke="#E4E7EB" stroke-width="2"/>
+    <text x="124" y="743" font-size="34" fill="#1F2933">IDE project</text>
+    <line x1="580" y1="730" x2="610" y2="730" stroke="#1F5FAE" stroke-width="4"/>
+    <polygon points="608,720 624,730 608,740" fill="#1F5FAE"/>
+    <rect x="630" y="690" width="470" height="80" rx="10" fill="#FFFFFF" stroke="#1F5FAE" stroke-width="2"/>
+    <text x="654" y="743" font-size="34" fill="#1F2933">west + CMake</text>
+  </g>
+
+  <!-- Row 3: Thread priority -->
+  <g>
+    <text x="100" y="810" font-size="26" font-weight="700" fill="#1F5FAE">Thread priority</text>
+    <rect x="100" y="825" width="470" height="80" rx="10" fill="#FFFFFF" stroke="#E4E7EB" stroke-width="2"/>
+    <text x="124" y="878" font-size="34" fill="#1F2933">Higher number wins</text>
+    <line x1="580" y1="865" x2="610" y2="865" stroke="#1F5FAE" stroke-width="4"/>
+    <polygon points="608,855 624,865 608,875" fill="#1F5FAE"/>
+    <rect x="630" y="825" width="470" height="80" rx="10" fill="#FFFFFF" stroke="#1F5FAE" stroke-width="2"/>
+    <text x="654" y="878" font-size="34" fill="#1F2933">Lower number wins</text>
+  </g>
+
+  <!-- Row 4: Bluetooth (highlight) -->
+  <g>
+    <text x="100" y="945" font-size="26" font-weight="700" fill="#1F5FAE">Bluetooth</text>
+    <text x="1100" y="945" text-anchor="end" font-size="24" font-weight="700" fill="#F26522">Most underestimated</text>
+    <rect x="100" y="960" width="470" height="80" rx="10" fill="#FFFFFF" stroke="#E4E7EB" stroke-width="2"/>
+    <text x="124" y="1013" font-size="34" fill="#1F2933">Vendor BLE stack</text>
+    <line x1="580" y1="1000" x2="610" y2="1000" stroke="#1F5FAE" stroke-width="4"/>
+    <polygon points="608,990 624,1000 608,1010" fill="#1F5FAE"/>
+    <rect x="630" y="960" width="470" height="80" rx="10" fill="#FDEBD7" stroke="#F26522" stroke-width="3"/>
+    <text x="654" y="1013" font-size="34" fill="#1F2933">New stack: test early</text>
+  </g>
+
+  <!-- Row 5: Memory -->
+  <g>
+    <text x="100" y="1080" font-size="26" font-weight="700" fill="#1F5FAE">Flash and RAM</text>
+    <rect x="100" y="1095" width="470" height="80" rx="10" fill="#FFFFFF" stroke="#E4E7EB" stroke-width="2"/>
+    <text x="124" y="1148" font-size="34" fill="#1F2933">Lean by default</text>
+    <line x1="580" y1="1135" x2="610" y2="1135" stroke="#1F5FAE" stroke-width="4"/>
+    <polygon points="608,1125 624,1135 608,1145" fill="#1F5FAE"/>
+    <rect x="630" y="1095" width="470" height="80" rx="10" fill="#FFFFFF" stroke="#1F5FAE" stroke-width="2"/>
+    <text x="654" y="1148" font-size="34" fill="#1F2933">Trim the defaults</text>
+  </g>
+
+  <!-- Takeaway -->
+  <rect x="100" y="1228" width="8" height="96" fill="#1F5FAE"/>
+  <text x="132" y="1266" font-size="36" font-weight="700" fill="#1F2933">Plan the move at your next hardware</text>
+  <text x="132" y="1314" font-size="36" font-weight="700" fill="#1F2933">revision, not in the middle of one.</text>
+
+  <!-- Footer -->
+  <line x1="100" y1="1380" x2="1100" y2="1380" stroke="#E4E7EB" stroke-width="2"/>
+  <text x="100" y="1446" font-size="26" fill="#52606D">corefragment.com</text>
+  <image href="{{LOGO}}" x="784" y="1402" width="100" height="60"/>
+  <text x="1100" y="1446" text-anchor="end" font-size="34" font-weight="700" fill="#1F2933">CoreFragment</text>
+</svg>

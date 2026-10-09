@@ -2,10 +2,17 @@
 
 Local copy of every lead. HubSpot's **CF lead stage** is the source of truth; the daily
 and hourly runs keep this table and each draft's `stage:` line in sync with it.
-Last synced: 2026-10-08 09:17 (daily run; 5 new leads, all 47 HubSpot stages re-read, no changes to earlier rows).
+Last synced: 2026-10-09 17:03 (hourly run; Ember LifeSciences approved → ready_to_import, USA batch built).
 
 | Researched | Company | Website | Fit | Stage | Buyer (title) | Email | HubSpot | Brief | Draft |
 |---|---|---|---|---|---|---|---|---|---|
+| 2026-10-09 | Ember LifeSciences | https://www.emberlifesciences.com | A | ready_to_import | James Braithwaite (Chief Product Officer) | james.braithwaite@emberlifesciences.com (2026-10-09) | [351485823691](https://app.hubspot.com/contacts/247517534/record/0-2/351485823691) | `accounts/ember-lifesciences.md` | `drafts/email/2026-10-09-ember-lifesciences.md` |
+| 2026-10-09 | Sentante | https://sentante.com | A | new | Vilius Dambrauskas (CTO) | not revealed (not in Saleshandy; Apollo has email) | [351554608829](https://app.hubspot.com/contacts/247517534/record/0-2/351554608829) | `accounts/sentante.md` | `drafts/email/2026-10-09-sentante.md` |
+| 2026-10-09 | Peerbridge Health | https://www.peerbridgehealth.com | A | new | Chris Darland (President & CEO) | not revealed (Saleshandy 68937134; Apollo has email) | [351516816120](https://app.hubspot.com/contacts/247517534/record/0-2/351516816120) | `accounts/peerbridge-health.md` | `drafts/email/2026-10-09-peerbridge-health.md` |
+| 2026-10-09 | enz technik AG | https://www.enz.com | B | new | Simon Lutz (Head of Business Unit IoT) | not revealed (Saleshandy 235371711; Apollo has email) | [351555092204](https://app.hubspot.com/contacts/247517534/record/0-2/351555092204) | `accounts/enz-technik.md` | `drafts/email/2026-10-09-enz-technik.md` |
+| 2026-10-09 | Infinium Medical | https://www.infiniummedical.com | B | new | Oz Ozkaya (President) | not revealed (Saleshandy 105775188; Apollo has email) | [351516817116](https://app.hubspot.com/contacts/247517534/record/0-2/351516817116) | `accounts/infinium-medical.md` | `drafts/email/2026-10-09-infinium-medical.md` |
+| 2026-10-09 | Wellvii | https://www.wellvii.com | C | not pursued | Mark Khachaturian (CEO) | | — | — (too small: 7 employees per its own releases; see `drafts/leads/2026-10-09.md`) | — |
+| 2026-10-09 | Oivi | https://www.oivi.co | C | not pursued | — | | — | — (electronics team based in Bengaluru; see `drafts/leads/2026-10-09.md`) | — |
 | 2026-10-08 | ZELP | https://www.zelp.co | A | new | Jordan Mcrae (VP of Engineering) | not revealed (Saleshandy 331529147; Apollo has email) | [351040022259](https://app.hubspot.com/contacts/247517534/record/0-2/351040022259) | `accounts/zelp.md` | `drafts/email/2026-10-08-zelp.md` |
 | 2026-10-08 | SmartAC.com | https://www.smartac.com | A | new | Brad Marshall (Head of Hardware) | not revealed (Saleshandy 177775082; Apollo has email) | [351020326608](https://app.hubspot.com/contacts/247517534/record/0-2/351020326608) | `accounts/smartac.md` | `drafts/email/2026-10-08-smartac.md` |
 | 2026-10-08 | Onalabs Inno-Hub | https://www.onalabs.com | A | new | Jaime Punter-Villagrasa (CTO) | not revealed (Saleshandy 425668707; Apollo has email) | [351020326609](https://app.hubspot.com/contacts/247517534/record/0-2/351020326609) | `accounts/onalabs.md` | `drafts/email/2026-10-08-onalabs.md` |

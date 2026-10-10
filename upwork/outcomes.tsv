@@ -1,4 +1,5 @@
 job_id	drafted	submitted	status	last_checked	notes
-2108161879986836317	2026-10-08	2026-10-08 18:26 IST	submitted (proposal 2108179837689802753)	2026-10-09 17:33	B drafted on CEO request; nRF5340 wearable; $48/hr; no boost; 18 Connects; final letter rewritten as a full letter after CEO review
-2108310350166756732	2026-10-09		draft	2026-10-09 10:33	A; smart home device, Canada, fixed $2K; suggested bid $2,000 with ~$500 first milestone; 27 Connects; draft file save refused by permissions, letter is in the 10:33 run transcript
-2108217069164685977	2026-10-09	2026-10-09	submitted (proposal 2108550407355449345)	2026-10-09	A door-opener (CEO request); ESP32-C3 secure boot + flash encryption; $35/hr; no boost; 16 Connects
+2108161879986836317	2026-10-08	2026-10-08 18:26 IST	submitted (proposal 2108179837689802753)	2026-10-09 23:33	B drafted on CEO request; nRF5340 wearable; $48/hr; no boost; 18 Connects; final letter rewritten as a full letter after CEO review
+2108310350166756732	2026-10-09		draft	2026-10-09 23:33	A; smart home device, Canada, fixed $2K; suggested bid $2,000 with ~$500 first milestone; 27 Connects; draft file save refused by permissions, letter is in the 10:33 run transcript; now 34 proposals
+2108217069164685977	2026-10-09	2026-10-09	submitted (proposal 2108550407355449345)	2026-10-09 23:33	A door-opener (CEO request); ESP32-C3 secure boot + flash encryption; $35/hr; no boost; 16 Connects
+2108638061179216405	2026-10-10	2026-10-10	submitted (accepted invitation 2108642638897616373)	2026-10-10	Invitation; food-prep machine ESP32 boards + firmware; $45/hr; 0 Connects

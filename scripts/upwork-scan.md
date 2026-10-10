@@ -1,4 +1,4 @@
-Upwork scan (weekdays 10:33, 13:33, 17:33, 20:33 and 23:33 IST). You are running
+Upwork scan (every day, including weekends: 10:33, 13:33, 17:33, 20:33 and 23:33 IST). You are running
 unattended; nobody can answer questions or approve prompts. Anything that needs approval
 will be refused.
 

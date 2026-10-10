@@ -129,9 +129,11 @@ Early proposals get read: most hiring decisions start from the first 10–20 pro
 the first few hours after posting matter most.
 - EU business hours: 09:00–17:00 CET/CEST = about **12:30–21:30 IST**.
 - US East 09:00–17:00 ET = about **18:30–03:30 IST**; US West starts ~21:30 IST.
-- So scans run on weekdays at **10:33** (US evening/overnight posts), **13:33** (EU
-  morning), **17:33** (EU afternoon, US East early), **20:33** (US East morning) and
-  **23:33** (US midday, US West morning) IST.
+- So scans run **every day, weekends included** (CEO, 2026-10-10: clients with urgent
+  hires post on weekends, and fewer freelancers are bidding then) at **10:33** (US
+  evening/overnight posts), **13:33** (EU morning), **17:33** (EU afternoon, US East
+  early), **20:33** (US East morning) and **23:33** (US midday, US West morning) IST.
+  A weekend job from an active client is worth marking URGENT.
 - A job posted < 3 hours ago with < 10 proposals is the best moment: mark it **URGENT** in
   the alert. Jobs older than 3 days or with 50+ proposals are not drafted (§1).
 - The CEO reads Teams alerts on his phone: keep them short and give the deadline reason.

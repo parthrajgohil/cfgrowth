@@ -19,9 +19,11 @@ with status `awaiting` and `alerted_at` less than 24 hours ago are open. Set any
 with "Nothing waiting."
 
 ## Step 1: read the CEO's replies
-`chat_message_search` with query `*`, sender `parthraj@corefragment.com`, `afterDateTime`
-= the oldest open row's `alerted_at` as `YYYY-MM-DDTHH:MM:00+05:30`. Page with `offset`
-if `nextOffset` is returned. A message counts only if ALL hold:
+`chat_message_search` with query `*` and `afterDateTime` = the oldest open row's
+`alerted_at` as `YYYY-MM-DDTHH:MM:00+05:30`, `limit` 25. **Don't use the `sender` filter**:
+it returns nothing for the CEO (tested 2026-10-13); check the sender yourself as below.
+Page with `offset` if `nextOffset` is returned. Most results are our own alerts; a
+message counts only if ALL hold:
 - `from.email` is exactly `parthraj@corefragment.com` (not parthraj.gohil@, which is this
   account and sends the alerts);
 - `chatId` is exactly

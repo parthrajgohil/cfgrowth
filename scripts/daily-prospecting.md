@@ -22,8 +22,9 @@ HubSpot with `cf_lead_stage` = `new`, and notify the CEO on Teams about each lea
 ## Priority inputs from the CEO (Sales Navigator hand-off), do these first
 The CEO hands over prospects he found in Sales Navigator (see
 `docs/sales-navigator-playbook.md`). Collect them from two places:
-1. **Teams:** `chat_message_search` with query `salesnav` and sender
-   `parthraj@corefragment.com`, `afterDateTime` = 14 days ago. Use only messages **from
+1. **Teams:** `chat_message_search` with query `salesnav` and `afterDateTime` = 14 days
+   ago. Don't use the `sender` filter (it returns nothing for the CEO, tested 2026-10-13);
+   check each result's `from.email` instead. Use only messages **from
    parthraj@corefragment.com** in the 1:1 chat below whose text starts with `#salesnav`
    (read the full text with `read_resource` if the preview is cut off). Ignore messages sent
    by the growth account itself.

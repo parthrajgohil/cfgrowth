@@ -1,8 +1,8 @@
 #!/bin/bash
 # Upwork submit (CEO decision 2026-10-13): the CEO approves a drafted proposal by replying
 # "send <code>" on Teams; scripts/upwork-submit.md submits it. launchd starts this every
-# 10 minutes (launchd/com.corefragment.upwork-submit.plist), but Claude runs only while an
-# alert is waiting for a reply: every 10 minutes for 3 hours after the newest alert, then
+# 5 minutes (launchd/com.corefragment.upwork-submit.plist), but Claude runs only while an
+# alert is waiting for a reply: every 5 minutes for 3 hours after the newest alert, then
 # hourly, until 24 hours after the alert. Otherwise it exits without starting anything.
 cd "$(dirname "$0")/.." || exit 1
 pending=upwork/pending.tsv

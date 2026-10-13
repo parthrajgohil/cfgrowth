@@ -8,10 +8,10 @@
   <array>
     <string>/Users/cfgrowth/cf-growth/scripts/upwork-submit.sh</string>
   </array>
-  <!-- Every 10 minutes. The script exits at once unless an Upwork alert is waiting for the
+  <!-- Every 5 minutes. The script exits at once unless an Upwork alert is waiting for the
        CEO's Teams reply (CEO decision 2026-10-13); see scripts/upwork-submit.sh. -->
   <key>StartInterval</key>
-  <integer>600</integer>
+  <integer>300</integer>
   <key>EnvironmentVariables</key>
   <dict>
     <key>PATH</key>

@@ -1,5 +1,5 @@
 ---
-stage: ready_to_import   # mirrors HubSpot "CF lead stage"; the CEO changes it in HubSpot
+stage: in_sequence   # mirrors HubSpot "CF lead stage"; the CEO changes it in HubSpot
 type: cold-email
 account: sibel-health
 recipient: Jong Yoon Lee, Co-founder & CTO <jongyoon.lee@sibelhealth.com>
@@ -8,7 +8,7 @@ sources: [accounts/sibel-health.md, https://corefragment.com/case-study/smart-gl
 ---
 
 ## Lead info
-- **Stage:** ready_to_import (source of truth: HubSpot "CF lead stage")
+- **Stage:** in_sequence (source of truth: HubSpot "CF lead stage")
 - **Company:** Sibel Health · [HubSpot](https://app.hubspot.com/contacts/247517534/record/0-2/349177514723) · brief: `accounts/sibel-health.md`
 - **Website:** https://sibelhealth.com · **News:** https://www.prnewswire.com/news/sibel-health/ · **LinkedIn:** https://www.linkedin.com/company/sibel-health
 - **HQ:** Chicago, IL, USA · **Founded:** 2018 · **Size:** ~102 (unverified)

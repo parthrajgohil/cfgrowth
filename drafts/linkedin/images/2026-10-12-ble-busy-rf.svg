@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="1500" viewBox="0 0 1200 1500" font-family="Helvetica Neue, Helvetica, Arial">
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+
+  <!-- Headline -->
+  <text x="100" y="190" font-size="80" font-weight="700" fill="#1F2933">BLE in busy RF:</text>
+  <text x="100" y="280" font-size="80" font-weight="700" fill="#1F5FAE">firmware or board?</text>
+  <text x="100" y="345" font-size="36" fill="#52606D">What you can fix later, and what you can't</text>
+
+  <!-- 2.4 GHz band diagram: x = 100 + (MHz - 2400) * 11.905 -->
+  <g>
+    <!-- Wi-Fi channels 1, 6, 11 (22 MHz wide) -->
+    <rect x="112" y="450" width="262" height="110" fill="#E4E7EB"/>
+    <rect x="410" y="450" width="262" height="110" fill="#E4E7EB"/>
+    <rect x="707" y="450" width="262" height="110" fill="#E4E7EB"/>
+    <text x="243" y="515" text-anchor="middle" font-size="26" fill="#52606D">Wi-Fi ch 1</text>
+    <text x="541" y="515" text-anchor="middle" font-size="26" fill="#52606D">Wi-Fi ch 6</text>
+    <text x="838" y="515" text-anchor="middle" font-size="26" fill="#52606D">Wi-Fi ch 11</text>
+
+    <!-- BLE data channels (37) -->
+    <g stroke="#52606D" stroke-width="3">
+      <line x1="148" y1="572" x2="148" y2="600"/>
+      <line x1="171" y1="572" x2="171" y2="600"/>
+      <line x1="195" y1="572" x2="195" y2="600"/>
+      <line x1="219" y1="572" x2="219" y2="600"/>
+      <line x1="243" y1="572" x2="243" y2="600"/>
+      <line x1="267" y1="572" x2="267" y2="600"/>
+      <line x1="291" y1="572" x2="291" y2="600"/>
+      <line x1="314" y1="572" x2="314" y2="600"/>
+      <line x1="338" y1="572" x2="338" y2="600"/>
+      <line x1="362" y1="572" x2="362" y2="600"/>
+      <line x1="386" y1="572" x2="386" y2="600"/>
+      <line x1="433" y1="572" x2="433" y2="600"/>
+      <line x1="457" y1="572" x2="457" y2="600"/>
+      <line x1="481" y1="572" x2="481" y2="600"/>
+      <line x1="505" y1="572" x2="505" y2="600"/>
+      <line x1="529" y1="572" x2="529" y2="600"/>
+      <line x1="552" y1="572" x2="552" y2="600"/>
+      <line x1="576" y1="572" x2="576" y2="600"/>
+      <line x1="600" y1="572" x2="600" y2="600"/>
+      <line x1="624" y1="572" x2="624" y2="600"/>
+      <line x1="648" y1="572" x2="648" y2="600"/>
+      <line x1="671" y1="572" x2="671" y2="600"/>
+      <line x1="695" y1="572" x2="695" y2="600"/>
+      <line x1="719" y1="572" x2="719" y2="600"/>
+      <line x1="743" y1="572" x2="743" y2="600"/>
+      <line x1="767" y1="572" x2="767" y2="600"/>
+      <line x1="791" y1="572" x2="791" y2="600"/>
+      <line x1="814" y1="572" x2="814" y2="600"/>
+      <line x1="838" y1="572" x2="838" y2="600"/>
+      <line x1="862" y1="572" x2="862" y2="600"/>
+      <line x1="886" y1="572" x2="886" y2="600"/>
+      <line x1="910" y1="572" x2="910" y2="600"/>
+      <line x1="933" y1="572" x2="933" y2="600"/>
+      <line x1="957" y1="572" x2="957" y2="600"/>
+      <line x1="981" y1="572" x2="981" y2="600"/>
+      <line x1="1005" y1="572" x2="1005" y2="600"/>
+      <line x1="1029" y1="572" x2="1029" y2="600"/>
+    </g>
+
+    <!-- BLE advertising channels 37 (2402), 38 (2426), 39 (2480) -->
+    <rect x="119" y="425" width="10" height="175" fill="#1F5FAE"/>
+    <rect x="405" y="425" width="10" height="175" fill="#1F5FAE"/>
+    <rect x="1047" y="425" width="10" height="175" fill="#1F5FAE"/>
+
+    <!-- Axis -->
+    <line x1="100" y1="600" x2="1100" y2="600" stroke="#52606D" stroke-width="2"/>
+    <text x="124" y="638" text-anchor="middle" font-size="26" font-weight="700" fill="#1F5FAE">37</text>
+    <text x="410" y="638" text-anchor="middle" font-size="26" font-weight="700" fill="#1F5FAE">38</text>
+    <text x="1052" y="638" text-anchor="middle" font-size="26" font-weight="700" fill="#1F5FAE">39</text>
+    <text x="100" y="690" font-size="28" fill="#52606D">2.4 GHz: BLE advertises on 3 channels, among busy Wi-Fi.</text>
+  </g>
+
+  <!-- Section 1: firmware, fixable later -->
+  <g>
+    <rect x="100" y="730" width="1000" height="270" fill="#FFFFFF" stroke="#E4E7EB" stroke-width="2"/>
+    <rect x="100" y="730" width="10" height="270" fill="#1F5FAE"/>
+    <text x="148" y="782" font-size="26" font-weight="700" fill="#1F5FAE" letter-spacing="2">FIX LATER: FIRMWARE, OVER THE AIR</text>
+    <rect x="148" y="818" width="14" height="14" fill="#1F5FAE"/>
+    <text x="180" y="842" font-size="34" fill="#1F2933">Channel map updated from real packet loss</text>
+    <rect x="148" y="873" width="14" height="14" fill="#1F5FAE"/>
+    <text x="180" y="897" font-size="34" fill="#1F2933">More frequent or extended advertising</text>
+    <rect x="148" y="928" width="14" height="14" fill="#1F5FAE"/>
+    <text x="180" y="952" font-size="34" fill="#1F2933">Shorter interval, lower slave latency</text>
+  </g>
+
+  <!-- Section 2: hardware, decide now (highlight) -->
+  <g>
+    <rect x="100" y="1025" width="1000" height="280" fill="#FDEBD7" stroke="#F26522" stroke-width="3"/>
+    <text x="148" y="1077" font-size="26" font-weight="700" fill="#F26522" letter-spacing="2">DECIDE BEFORE LAYOUT FREEZE</text>
+    <rect x="148" y="1113" width="14" height="14" fill="#F26522"/>
+    <text x="180" y="1137" font-size="34" fill="#1F2933">Wi-Fi/BLE coexistence lines (often 3-wire)</text>
+    <rect x="148" y="1168" width="14" height="14" fill="#F26522"/>
+    <text x="180" y="1192" font-size="34" fill="#1F2933">Antenna away from Wi-Fi and metal</text>
+    <rect x="148" y="1223" width="14" height="14" fill="#F26522"/>
+    <text x="180" y="1247" font-size="34" fill="#1F2933">A chip with Coded PHY, if range matters</text>
+  </g>
+
+  <!-- Footer -->
+  <line x1="100" y1="1380" x2="1100" y2="1380" stroke="#E4E7EB" stroke-width="2"/>
+  <text x="100" y="1446" font-size="26" fill="#52606D">corefragment.com</text>
+  <image href="{{LOGO}}" x="784" y="1402" width="100" height="60"/>
+  <text x="1100" y="1446" text-anchor="end" font-size="34" font-weight="700" fill="#1F2933">CoreFragment</text>
+</svg>

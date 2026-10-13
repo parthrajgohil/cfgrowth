@@ -29,7 +29,7 @@ See `scripts/daily-prospecting.md` ("Find new leads").
 | 2026-09-29 | Nordisk Clean Solutions | unverified | Apollo (segment 2) | Danish cleaning systems; Product Manager Services & IoT | Size, IoT product? |
 | 2026-09-29 | Lake Cable | unverified | Apollo (segment 2) | US cable maker with an IoT Manager | What IoT product? size |
 | 2026-09-29 | identifeye HEALTH | https://www.identifeye.health | Apollo + carry-over | US AI retinal camera; Head of Embedded Software | Launch was 2025-08 and $80M raised: likely B/C; re-check for new product |
-| 2026-09-30 | Avive Solutions | https://www.avive.life | Web job boards (Lever) | US connected AED (LTE/WiFi/GPS), ~129 people; Staff/Principal Firmware Engineer - Medical still listed on Lever (search, 2026-10-01) | Re-checked 2026-10-05: Lever board now lists no firmware roles (only Electrical Systems Engineer in R&D); still no engineering head found. Low priority |
+| 2026-09-30 | Avive Solutions | https://www.avive.life | Web job boards (Lever) | US connected AED (LTE/WiFi/GPS), ~129 people; Staff/Principal Firmware Engineer - Medical still listed on Lever (search, 2026-10-01) | Re-checked 2026-10-05 and 2026-10-13: Lever board lists no firmware roles (only Electrical Systems Engineer in R&D; search engines still index old firmware posts); still no engineering head found. Low priority |
 | 2026-09-30 | Samphire Neuroscience | https://www.samphireneuro.com | Apollo (medical devices, EU) | UK Class IIa tDCS headband (Nettle); US launch planned; CTO + Head of Hardware (Oscar Ma***i) | Re-checked 2026-10-02: CE-marked, FDA clearance "underway", US version sold as wellness (Lutea). Headcount still the question; use when FDA clears |
 | 2026-09-30 | Detectronic | https://detectronic.org | Apollo (sensors, EU) | UK wastewater sensors (PAL LoRaWAN, LIDoTT); Yorkshire Water rollout of 90k+ monitors; Head of Firmware | Part of Adler and Allan Group: independent budget? size |
 | 2026-09-30 | NEO Monitors | unverified | Apollo (sensors, EU) | Norwegian laser gas analysers; Head of Electronics Development | Size, trigger |
@@ -88,7 +88,7 @@ See `scripts/daily-prospecting.md` ("Find new leads").
 | 2026-10-05 | 3DISC | unverified | Apollo (medical devices, US) | Dental intraoral scanners; Director HW & Systems Eng (Arnaud Mi***n) | HQ (US or BE?), size, trigger |
 | 2026-10-05 | Gridware | unverified | Apollo (industrial automation, US) | Power-line monitoring sensors; Firmware Manager (Andrew Pa***s) | Funding size (may be heavily funded) |
 | 2026-10-06 | Smart Component Technologies | unverified | Apollo (condition monitoring, UK) | Sheffield; SWiX and Smart Washer bolt-clamp-force sensors for rail, oil & gas, wind; Head of Embedded Systems (Robin Co***y, not in Saleshandy), Head of Software, Sr Firmware Eng | No 2026 trigger found; rail is close to Tended (2026-10-05) |
-| 2026-10-06 | Trolex | https://trolex.com | Apollo (condition monitoring, UK) | Stockport, ~68 people, family-run; mining/tunnelling gas and dust monitors (Sentro, AIR XS silica); Technical Director Kyle Hudson (Saleshandy 246271984); Lead Firmware Engineer & Team Manager | No dated 2026 news (silica testing was 2024-06); several India-based staff in Apollo |
+| 2026-10-06 | Trolex | https://trolex.com | Apollo (condition monitoring, UK) | Stockport, ~68 people, family-run; mining/tunnelling gas and dust monitors (Sentro, AIR XS silica); Technical Director Kyle Hudson (Saleshandy 246271984); Lead Firmware Engineer & Team Manager | No dated 2026 news (silica testing was 2024-06); several India-based staff in Apollo. Re-checked 2026-10-12: news page undated, no open roles listed |
 | 2026-10-06 | Sensorfact | unverified | Apollo (condition monitoring, NL) | Dutch energy/machine sensors for factories; Head of IoT, Head of Hardware Operations | Size (may be near 200+), own hardware?, trigger |
 | 2026-10-06 | Tive | unverified | Apollo (condition monitoring, US) | Shipment trackers; Head of Hardware Product (Yoav Ra***o) | Funding size, trigger |
 | 2026-10-06 | Hero Health | https://herohealth.com | Apollo (patient monitoring, US) | Connected pill dispenser; Senior Director of Firmware (Raj Pa***l) | No 2026 news found; size |
@@ -98,11 +98,9 @@ See `scripts/daily-prospecting.md` ("Find new leads").
 | 2026-10-06 | AC Hydraulic A/S | unverified | Apollo (segment 2) | Danish workshop jacks/lifts; Head of Innovation | No connected product found |
 | 2026-10-06 | "Powered orthotics" startup (innoWerft) | unknown | Web job boards (join.com) | Robotic hand orthosis startup, Germany; Firmware Engineer post 2026-08-17 (C/C++, BLE, CAN) | Name not disclosed in the post; find it |
 | 2026-10-06 | Haystack (client unknown) | unknown | Web job boards | South Manchester medtech building a 2nd-gen STM32 device (IEC 62304) | Haystack may be the recruiter; identify the company |
-| 2026-10-07 | Distran | https://www.distran.ch (unverified) | Apollo (industrial automation, EU) | Zurich ETH spin-off, ultrasonic acoustic cameras for gas/steam leak detection; Head of HW Eng (Lukas Ga***r); Embedded Linux Developer post (Builtin) | No 2026 news found; last round EUR 10M Series B 2023-06; check post date |
-| 2026-10-07 | Andium | https://www.andium.com (unverified) | Apollo (smart building / energy) | US IIoT methane monitoring for oil & gas; Head of Hardware, Firmware & Edge AI (Dan Go***o); engineering led by Rameen Aryanpur | Senior EE post (6+ layer PCB, Jetson) removed 2026-03-18; look for new posts or news |
+| 2026-10-07 | Distran | https://www.distran.ch | Apollo (industrial automation, EU) | Zurich ETH spin-off, ultrasonic acoustic cameras for gas/steam leak detection; Head of HW Eng (Lukas Ga***r) | **Researched 2026-10-12, C for now:** designs "almost all electronic boards" in-house (Personio); junior Embedded Linux post (Builtin, undated); enfinium UK deployment 2026-02; Head of HW not in Saleshandy. Re-check for a new product |
 | 2026-10-07 | termios | https://www.termios.de | Apollo (smart building, DE) | Munich JV of Oventrop (family heating maker), LEG Immobilien and mantro; battery-free LoRaWAN radiator thermostat (thermal harvesting); Head of Hardware (Bastian Br***t) | Series production announced ISH 2025 (old); size; independent budget? |
 | 2026-10-07 | SAVVY Telematic Systems | unverified | Apollo (industrial automation, CH) | Schaffhausen telematics for rail wagons/tank containers (ATEX, LTE-M); Head of HW Dev & Certifications (Andre Sc***r) | No 2026 news found (Transwaggon deals 2017-21); size |
-| 2026-10-07 | Biral AG | unverified | Apollo (segment 2, pumps) | Swiss pump maker with Biral ONE Bluetooth app; Digital Product Manager (Charly Ge***r) | No dated launch found; size, ownership |
 | 2026-10-07 | Scanel International | unverified | Apollo (segment 2, pumps) | Danish pump controls/alarms; Head of Electronics (Johnny Jo***n, no email) | Product, size, trigger |
 | 2026-10-07 | Sammic SL | unverified | Apollo (segment 2, kitchen equipment) | Spanish commercial kitchen equipment maker with an electronics lead (Gorka Ar***i) | Any connected product? size |
 | 2026-10-07 | JFC Group | unverified | Apollo (segment 2, agri) | Irish farm/plastics manufacturer; Head of Electronics and Software Development; robotic calf feeder line in new Tuam factory (2024) | Connected products? 2026 trigger, size |
@@ -142,9 +140,36 @@ See `scripts/daily-prospecting.md` ("Find new leads").
 | 2026-10-09 | TruMed Systems | unverified | Apollo (medical, US) | San Diego AccuVax automated vaccine storage; Sr. Director HW Eng | No 2026 news found (integrations 2019-20) |
 | 2026-10-09 | PreciPoint | unverified | Apollo (medical, DE) | Freising digital microscopes/slide scanners (sold via Nikon); Head of HW Eng; US entity 2024-07 | No 2026 launch found |
 | 2026-10-09 | Oculox Technology | unverified | Apollo (medical, CH) | Swiss implantable ophthalmic biosensor startup; Head of Firmware Development | Stage, funding, trigger |
-| 2026-10-09 | Dr. Mach GmbH | unverified | Web job boards (StepStone) | Family-owned surgical-light maker (Grafing, DE), all lights developed/made in Germany; hiring embedded SW engineer (IEC 60601) | Post date; size |
 | 2026-10-09 | Intoxalock | unverified | Apollo (medical, US) | Ignition-interlock breathalyzers; Firmware Manager | Ownership, size (may exceed 500) |
 | 2026-10-09 | Smart Meter LLC | unverified | Web (product news) | Cellular RPM devices; iAmbientHealth radar sensor launched 2025-09-24 | Older trigger; own hardware or OEM? |
+| 2026-10-12 | GOGOA Mobility Robots | unverified | Apollo (rehabilitation, ES) | Spanish rehab/industrial exoskeletons; CTO Juantxu Ma***n (Apollo has email) | Size, 2026 trigger |
+| 2026-10-12 | Marsi Bionics | unverified | Apollo (rehabilitation, ES) | Madrid CSIC spin-off, ATLAS 2030 paediatric exoskeleton (OTWorld 2026-05); CTO Alberto Fl***s | No dated 2026 launch/clearance found today |
+| 2026-10-12 | DyCare | unverified | Apollo (rehabilitation, ES) | Barcelona digital rehab (ReHub) with motion sensors; CTO & co-founder Ricardo Te***a | Own sensor hardware? trigger |
+| 2026-10-12 | Restorative Therapies | https://www.restorative-therapies.com | Apollo (rehabilitation, US) | Nottingham MD FES cycling (RT300, Xcite2); CTO Scott Si***x | Researched 2026-10-12: no news since ~2010 on the site or web. Only with a new product |
+| 2026-10-12 | ScoutDI | unverified | Apollo (gas detection, NO) | Norwegian confined-space inspection drones; two Heads of Hardware | Defence customers? size, trigger |
+| 2026-10-12 | Guideline Geo | unverified | Apollo (environmental monitoring, SE) | Swedish geophysics instruments (MALÅ GPR); Head of Hardware Development (Henrik Su***t) | Size, 2026 product |
+| 2026-10-12 | Hohonu | unverified | Apollo (environmental monitoring, US) | US low-cost water-level sensors; Head of Hardware (Noah Pe***h) | Size (likely small), trigger |
+| 2026-10-12 | Firstech (Compustar) | unverified | Apollo (IoT titles, US) | US remote-start / vehicle security electronics; Director of IoT Solutions (Carmine Ma***o, no email) | Size (~200?), connected product news |
+| 2026-10-12 | Envira | unverified | Apollo (IoT titles, ES) | Spanish environmental/air-quality IoT sensors; Head of IoT (Angel Ar***s) | Size, own hardware, trigger |
+| 2026-10-12 | 10LINES | unverified | Apollo (environmental monitoring, EE) | Tallinn autonomous line-marking robots; Head of HW Eng (Tanel-Martin Gr***n, no email); €1.5M 2024-04 for US expansion | No 2026 news found |
+| 2026-10-12 | Kesla Oyj | unverified | Apollo (machinery, segment 2) | Finnish forestry cranes/chippers; Director Product Management and Digitalization | Listed company? connected product news |
+| 2026-10-12 | McHale | unverified | Apollo (machinery, segment 2) | Irish family-owned baler maker; Head of Technology Product Development; V6-II/V8-II with ISOBUS (2026 season) | No app/telematics found; plans? |
+| 2026-10-13 | Kelsius | https://kelsius.com | Apollo (cold chain, IE) | Donegal temperature-monitoring sensors for healthcare, food, life sciences; own manufacturing; CPO Paul Ga***r, Product Test Manager; INAB 17025 accreditation 2026-09-07; FoodTrak365/CoolTrak365 launched ~2025-11 | Researched 2026-10-13: no dated hardware trigger. Saleshandy not checked. Re-check for a new sensor or R&D hire |
+| 2026-10-13 | AKO (AKO Electromecánica) | unverified | Apollo (cold chain, ES) | Spanish refrigeration controllers (AKOCORE with app module); Firmware Manager (Oscar Mu***r) | No 2026 launch found; size (may be >300) |
+| 2026-10-13 | System Loco | unverified | Apollo (cold chain, UK) | Lancaster shipment trackers (LocoTrack) for pharma/perishables; CTO Ian Ma***n | No 2026 news found; 21–50 people (Prospeo, unverified) |
+| 2026-10-13 | Koovea | unverified | Apollo (cold chain, FR) | French cold-chain sensors (K-Tag, K-Hub) for pharmacies/labs; CTO Alain Do***l | No 2026 news found; size |
+| 2026-10-13 | OnAsset Intelligence | unverified | Apollo (cold chain, US) | Irving TX air-cargo trackers and smart labels; CTO Tom Ma***l | No dated 2026 news; biodegradable tracker (date unknown) |
+| 2026-10-13 | CargoSense / Evigence / CubeWorks | unverified | Apollo (cold chain, US) | Logistics condition sensors / freshness sensors / micro sensors; CTOs listed | What hardware they own; triggers |
+| 2026-10-13 | Pharma Test Apparatebau | unverified | Apollo (lab equipment, DE) | Dissolution/tablet testing instruments; Head of Electronics Department (Gerhard Bi***k) | Size, connected product?, trigger |
+| 2026-10-13 | BANDELIN electronic | unverified | Apollo (lab equipment, DE) | Berlin ultrasonic baths/homogenisers; Leiter Elektronik (Peter Ce***n) | Size, trigger |
+| 2026-10-13 | Trilobio | unverified | Apollo (lab automation, US) | Trilobot One lab robot (SLAS 2025); Head of Hardware (Dylan Ja***n) | Funding size; robotics vs our fit |
+| 2026-10-13 | MDHearing / Audien Hearing | unverified | Apollo (hearing aids, US) | US OTC hearing-aid brands; CTO / VP Eng & Manufacturing | Own electronics or ODM? trigger |
+| 2026-10-13 | LIZN ApS | unverified | Apollo (hearing, DK) | Danish hearables startup; CTO (no email) | Stage, trigger |
+| 2026-10-13 | IngMar Medical / Ivy Biomedical | unverified | Apollo (respiratory, US) | Lung simulators / ECG-trigger monitors; Director of Eng / VP Eng | No triggers checked |
+| 2026-10-13 | Circadiance | unverified | Web job boards | Export, PA respiratory/sleep products; Embedded Firmware Engineer post (2026-04-03) now closed | New posts? size |
+| 2026-10-13 | CergenX | unverified | Web (medtech, IE) | Cork neonatal EEG device (Wave); FDA Breakthrough 2025-01; CE mark claimed (undated) | CE date, US submission timing, engineering lead |
+| 2026-10-13 | Sencrop / VivoAquatics / HBE | unverified | Apollo (irrigation / water, segment 2) | French farm weather stations; US pool-chemistry IoT; UK legionella services with IoT (HBE24) | Own hardware? triggers |
+| 2026-10-13 | CUBEX | unverified | Apollo (veterinary, US) | Vet inventory cabinets (connected); VP Software Eng | Hardware in-house? trigger |
 
 Excluded 2026-09-28: Promwad Engineering, Hatch Product Development, Austin Circuit Design
 (engineering-services competitors), Philips Capsule (part of Philips).
@@ -223,3 +248,21 @@ Vantage MedTech, Zigron, Softdel, Kickmaker, Remedy Product Studio, USA Firmware
 Mesh Systems, BlueThink (services/competitors); BRINC, Shift5, Sepura, Censys, Sentient Industries (defence/public safety);
 Wellysis, Aevice, Alimetry, Trexo, Dozee and Chinese 510(k) applicants (outside region); StemWave (no firmware roles open);
 AiSight, Eleo, QAVION (join.com posts gone); Valais Wallis Racing Team, LORIOT, Silver Spring Networks (not buyers).
+Excluded 2026-10-12: AOX (Accenture), Mission Embedded, inovex, Team Consulting, IMT AG, Sii, UK Electronics, Brimit, Wapice,
+ConnectM, Kalypso, Rocken (services/recruiters/competitors); Hahn-Schickard, ICFO, IRT Saint Exupéry, ECE (institutes); Enclustra,
+Swissbit, Acconeer, Axetris (component makers / large parent); HEIDENHAIN, WAGO, Beckhoff, SMC, Samsung HVAC, DEVELON, Spirax
+Sarco, Emerson Flexim, Laser Quantum (Novanta), Toyota Material Handling, Volvo, A1 Digital, Tele2 IoT, Greenworks (group-owned
+or too large); Picarro, Lantronix, Saildrone, Muon Space, Wandercraft, Heimdall Power, Wiliot, Core Scientific, Seegrid, LI-COR
+(large or heavily funded); Ghost Robotics, Shift5, AURA Technologies, UAVOS, Space Inventor, SSTL, Lacuna Space (defence or
+space); Optics11 (naval sonar ties, unverified, skipped); Fesia (acquired per Dealroom); Hiden Analytical (lab instruments, no
+trigger); rehab clinics and retailers (RehabMart, Melittaklinik, PHYSIOLAB etc., not makers); Det-Tronics (Carrier); KSB,
+Atlas Copco, LEWA, Kirloskar, SANY, JLG (large); SILOKING (last launch Agritechnica 2025-11). Re-checked and kept in the
+pool with no 2026 trigger found: Wanco, Lake Cable, GWF.
+Excluded 2026-10-13: Perdigó Medical, JÜKE Systemtechnik, LRE Medical, Codialist, Andrews Cooper, RPM Tech, 10XBeta, MPR Associates,
+Poba Medical (services/contract developers); Wint, Sensos (Israel); Wiliot, SmartSense (Digi), Neptune Technology, Cornell Pump,
+ADS Environmental, Andreas Hettich, ANDRITZ Bitrode, Oticon Medical, Jabra Hearing, MagVenture, HemoCue, Sight Sciences, Butterfly
+Network, Samsung NeuroLogica, AMETEK Reichert, Medela, BIOTRONIK, Oura, Eargo (group-owned, public or large); Cryoport (public);
+Life Detection Technologies (1–10 people; C), Ironsides Medical (seed, AI software; C); Genalyte, Accelerate Diagnostics, Owlstone
+(heavily funded or defence ties); Flusso (excluded before); KONUX (heavily funded); vet/pet software and insurers (Otto, Vetspire,
+PetPlace, Barkibu, Hello Vet etc.); hospitals and rehab centres from the respiratory search; UAB Telemedicina (= Sentante, already a
+lead; its FDA clearance K260035 on 2026-09-04 is news for that lead).

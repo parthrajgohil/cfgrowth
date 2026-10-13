@@ -17,3 +17,5 @@ _2026-10-06: same. No `#salesnav` messages from parthraj@corefragment.com since 
 _2026-10-07: same. No `#salesnav` messages from parthraj@corefragment.com since 2026-09-23 and no `pipeline/sales-nav-*.md` files (template only). Queue empty._
 _2026-10-08: same. No `#salesnav` messages from parthraj@corefragment.com since 2026-09-24 and no `pipeline/sales-nav-*.md` files (template only). Queue empty._
 _2026-10-09: same. No `#salesnav` messages from parthraj@corefragment.com since 2026-09-25 and no `pipeline/sales-nav-*.md` files (template only). Queue empty._
+_2026-10-12: same. No `#salesnav` messages from parthraj@corefragment.com since 2026-09-28 and no `pipeline/sales-nav-*.md` files (template only). Queue empty._
+_2026-10-13: same. No `#salesnav` messages from parthraj@corefragment.com since 2026-09-29 and no `pipeline/sales-nav-*.md` files (template only). Queue empty._

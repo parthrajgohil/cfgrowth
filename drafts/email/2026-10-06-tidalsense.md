@@ -1,5 +1,5 @@
 ---
-stage: ready_to_import   # mirrors HubSpot "CF lead stage"; the CEO changes it in HubSpot
+stage: in_sequence   # mirrors HubSpot "CF lead stage"; the CEO changes it in HubSpot
 type: cold-email
 account: tidalsense
 recipient: Alla Kitov, Head of Product <alla.kitov@tidalsense.com>

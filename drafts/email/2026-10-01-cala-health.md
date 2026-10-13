@@ -1,5 +1,5 @@
 ---
-stage: new               # mirrors HubSpot "CF lead stage"; the CEO changes it in HubSpot
+stage: on_hold           # mirrors HubSpot "CF lead stage"; the CEO changes it in HubSpot
 type: cold-email
 account: cala-health
 recipient: Greg Schulte, VP Technology (email: TO BE FILLED BY HUMAN)

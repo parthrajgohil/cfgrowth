@@ -250,7 +250,7 @@ expect_job upwork deny  "upwork job: saleshandy"       '{"tool_name":"mcp__claud
 expect_job upwork deny  "upwork job: apollo"           '{"tool_name":"mcp__claude_ai_Apollo_io__apollo_mixed_people_api_search"}'
 expect_job upwork deny  "upwork job: write accounts"   '{"tool_name":"Write","tool_input":{"file_path":"/Users/cfgrowth/cf-growth/accounts/x.md"}}'
 expect_job upwork deny  "upwork job: edit drafts"      '{"tool_name":"Edit","tool_input":{"file_path":"/Users/cfgrowth/cf-growth/drafts/email/x.md"}}'
-expect_job upwork pass  "upwork job: write upwork/"    '{"tool_name":"Write","tool_input":{"file_path":"/Users/cfgrowth/cf-growth/upwork/drafts/x.md"}}'
+expect_job upwork pass  "upwork job: write upwork/"    '{"tool_name":"Write","tool_input":{"file_path":"/Users/cfgrowth/cf-growth/upwork/proposals/x.md"}}'
 expect_job upwork pass  "upwork job: find jobs"        '{"tool_name":"mcp__claude_ai_Upwork__upwork__find_jobs","tool_input":{"org_uid":"473867419264262145","action":"search"}}'
 expect_job upwork allow "upwork job: teams to CEO"     '{"tool_name":"mcp__claude_ai_Microsoft_365__teams_send_chat_message","tool_input":{"chatId":"'$ceo'"}}'
 expect_job hourly deny  "hourly job: upwork read"      '{"tool_name":"mcp__claude_ai_Upwork__upwork__find_jobs","tool_input":{"org_uid":"473867419264262145","action":"search"}}'

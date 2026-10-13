@@ -70,6 +70,8 @@ now="Current time on this Mac: $(date '+%Y-%m-%d %H:%M %Z') (use it for dates an
 # Per-job tools. Upwork is a separate channel (CEO decision 2026-10-08): the Upwork job
 # gets only Upwork + the CEO's Teams chat + upwork/ files; every other job is locked out of
 # Upwork and upwork/. CF_JOB also lets the approval gate enforce the same split.
+# Path rules match at any depth ("drafts/**" also blocks upwork/drafts/), so the Upwork
+# job keeps its proposals in upwork/proposals/ (2026-10-13).
 export CF_JOB=$job
 if [[ $job == upwork ]]; then
   tools=(Read Glob Grep WebSearch WebFetch ToolSearch "Edit(upwork/**)"

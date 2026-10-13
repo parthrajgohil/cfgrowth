@@ -184,7 +184,7 @@ of expertise in outreach and as seeds for LinkedIn posts. Strong outreach hooks:
   background research is fine). Quality leads only, no small one-off jobs. The Upwork scan
   (`scripts/upwork-scan.md`, daily incl. weekends 10:33/13:33/17:33/20:33/23:33 IST) follows the
   `upwork` skill: finds and grades jobs, checks clients, drafts proposals in
-  `upwork/drafts/`, makes a preview; **the CEO submits**. The runner and the gate keep the
+  `upwork/proposals/`, makes a preview; **the CEO submits**. The runner and the gate keep the
   Upwork job and the other jobs apart (`CF_JOB`).
 - **Email & files:** Microsoft 365 (Outlook, OneDrive). Teams: lead alerts to the CEO.
 - **CRM:** HubSpot. Every A/B lead gets a Company + research Note + "DRAFT FOR REVIEW"

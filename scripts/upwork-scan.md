@@ -50,7 +50,7 @@ proposal count, `applied`, `client_record`, `client_feedback`, `connects_cost`.
    preview: connects_cost, balance, screening questions, bid stats, unmet preferred
    qualifications. If it reports an existing invitation or proposal, don't draft; note it.
    If the preview lists screening questions you didn't answer, add the answers.
-5. Save `upwork/drafts/<YYYY-MM-DD>-<job_id>.md`:
+5. Save `upwork/proposals/<YYYY-MM-DD>-<job_id>.md`:
    ```
    ---
    job_id: <numeric id>
@@ -89,11 +89,11 @@ budget, proposals, Connects, file path; never message contents or client persona
 Upwork (<HH:MM>)
 URGENT A: <our short label> · <budget> · bid <suggested> · <n> proposals · <cost> Connects
 <url>
-Draft: upwork/drafts/<file>.md
+Draft: upwork/proposals/<file>.md
 
 A: <our short label> · <budget> · bid <suggested> · <n> proposals · <cost> Connects
 <url>
-Draft: upwork/drafts/<file>.md
+Draft: upwork/proposals/<file>.md
 
 Also: <n> invitation(s), <n> unread client message(s) on Upwork
 Add your line (the [YOUR LINE] slot), then open a Claude session and say "submit Upwork

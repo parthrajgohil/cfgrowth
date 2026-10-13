@@ -227,3 +227,224 @@ job_id	first_seen	posted	label	grade	reason
 2108185724202580506	2026-10-09 23:33	2026-10-08 13:22Z	German translator for IT hardware reseller, UK	C	translation
 2108106161997599784	2026-10-09 23:33	2026-10-08 11:05Z	field agent survey in Gabon, Italy	C	not our work
 2108142172099735065	2026-10-09 23:33	2026-10-08 10:27Z	3D CAD enclosure animation, India, fixed $110	C	mechanical, tiny
+2108643764386154448	2026-10-10 17:33	2026-10-09 19:41Z	early-stage embedded audio concepts PoC to production, US, hourly FT 6+ mo, no rate	B	long engagement and active client (10 interviews, no offer), but vague brief centred on audio DSP (not our core), generalist low-spend buyer, 25 proposals, 26 Connects
+2108765283589844824	2026-10-10 17:33	2026-10-10 03:44Z	40mm sub-GHz encrypted receiver puck schematic + 4-layer layout + PIFA, US, fixed $1.5K	C	"tactical" comms framing (possible defence use), new client with no hires, fixed budget far below RF + antenna tuning scope, spec already frozen
+2108884120127716438	2026-10-10 17:33	2026-10-10 11:35Z	electronics product DFM/DFA redesign, Australia, fixed $1.2K	C	outside target region, below $1.5K, <1 week (good client record)
+2108686908957441110	2026-10-10 17:33	2026-10-09 22:33Z	LoRaWAN milk-tank monitoring tech selection, Chile, hourly platform default	C	outside region, short tech-selection consult, 25 proposals
+2108889993865110037	2026-10-10 17:33	2026-10-10 11:58Z	guitar pedal switching MCU + PCB tweak, UK, hourly	C	<1 week, tiny client spend, small change
+2108844787085655126	2026-10-10 17:33	2026-10-10 08:59Z	ESP32 BLE calculator gadget + Android, India, fixed $700	C	payment unverified, small, outside region
+2108733998634630256	2026-10-10 17:33	2026-10-10 04:39Z	ESP32 OBD-to-TFT car display, US, fixed $200	C	tiny budget
+2108778274357771376	2026-10-10 17:33	2026-10-10 07:35Z	steering-wheel OLED display module, Puerto Rico, hourly	C	<1 week, no rate, new client
+2108710159564722238	2026-10-10 17:33	2026-10-10 00:04Z	medical device DHF / design controls rebuild, US, hourly	C	regulatory documentation, not engineering
+2105180644344398785	2026-10-10 17:33	2026-09-30 06:24Z	electronic warfare DSP algorithms, US	C	defence, low rate, old
+2099886316376391447	2026-10-10 17:33	2026-09-15 18:42Z	AI simulation + embedded lead, India, hourly $15-40	C	outside region, old, low rate
+2108867537901784372	2026-10-10 17:33	2026-10-10 10:29Z	MATLAB/Simulink simulation, Pakistan	C	payment unverified, entry level
+2108685125361616848	2026-10-10 17:33	2026-10-09 22:24Z	firewall VPN troubleshooting, US	C	IT networking, not our work
+2108626599216483636	2026-10-10 17:33	2026-10-09 18:35Z	WebRTC video systems engineer, US	C	video streaming software, not device work
+2108649994569170006	2026-10-10 17:33	2026-10-09 20:06Z	China manufacturing liaison for phone accessory, US	C	sourcing, non-powered product
+2108655998522096752	2026-10-10 17:33	2026-10-09 20:29Z	medical imaging teaching software, US	C	software only, low rate
+2108854243738707389	2026-10-10 17:33	2026-10-10 09:36Z	medical booking app backend, Saudi Arabia	C	payment unverified, app only
+2108657733606378804	2026-10-10 17:33	2026-10-09 20:36Z	road-defect CV object detection, US, hourly $15-35	C	server CV not device, low rate, <1 month
+2108868459782661565	2026-10-10 17:33	2026-10-10 10:33Z	agentic AI engineer, Italy, hourly $10-20	C	not device work, low rate
+2108632234208829973	2026-10-10 17:33	2026-10-09 18:55Z	industrial network scaling, US	C	IT networking, not our work
+2108880398858390836	2026-10-10 17:33	2026-10-10 11:20Z	voting mobile app, Germany	C	app only, 50+
+2108879673475493720	2026-10-10 17:33	2026-10-10 11:17Z	mobile AI training environments, Egypt	C	not device work
+2108871450657864790	2026-10-10 17:33	2026-10-10 10:45Z	car rental mobile app, Canada, fixed $105	C	app only, tiny
+2108869124115702293	2026-10-10 17:33	2026-10-10 10:37Z	B2B go-to-market consult, India	C	not our work
+2108852210281271358	2026-10-10 17:33	2026-10-10 09:29Z	image object-removal pipeline, UK, fixed $10	C	not device work, tiny
+2108849732985843544	2026-10-10 17:33	2026-10-10 09:18Z	OCR invoice system, India	C	software only
+2108842734552349808	2026-10-10 17:33	2026-10-10 08:51Z	Grafana dashboard theming, Oman	C	UI work, not device
+2108784449334066262	2026-10-10 20:33	2026-10-10 04:59Z	cordless brushless blower redesign (low-voltage cutoff, standby drain, thermal) + housing DFM, Canada, hourly no rate, paid diagnosis phase then redesign	B	detailed brief from a real product seller, active (5 interviews, no offer), 10 proposals, 14 Connects; but wants shipped brushless power-tool/motor-controller experience and injection-moulded housing + China factory work we can't claim, physical teardown units, low hire rate and modest non-hardware spend
+2108929168270763624	2026-10-10 20:33	2026-10-10 14:34Z	HMI+PLC screen programming, Saudi Arabia	C	payment unverified, PLC/HMI not our core
+2108663070402047832	2026-10-10 20:33	2026-10-09 20:57Z	C# Azure AI chat app, US	C	software only, 50+
+2108553176931309504	2026-10-10 20:33	2026-10-09 13:41Z	site reliability engineer, Canada	C	DevOps, not device work, 50+
+2108905861047717172	2026-10-10 20:33	2026-10-10 13:01Z	app-to-AI-chat data link, India	C	software only, low rate
+2108930115721018454	2026-10-10 20:33	2026-10-10 14:38Z	web + mobile platform architect, Qatar	C	software only, outside region
+2108892095494506448	2026-10-10 20:33	2026-10-10 12:07Z	GPS feature in shift app, UK	C	payment unverified, app only
+2108933001015251006	2026-10-10 20:33	2026-10-10 14:54Z	Python PDF extraction tool, India, fixed $100	C	payment unverified, tiny, software only
+2108929655160229950	2026-10-10 20:33	2026-10-10 14:38Z	Java incident-system design review, India	C	software only
+2108927762255101014	2026-10-10 20:33	2026-10-10 14:30Z	smart home control-panel app programming, Saudi Arabia, fixed $300	C	small, vendor UI tool, outside region
+2108926748643336725	2026-10-10 20:33	2026-10-10 14:28Z	GPS fleet tracking app, Morocco	C	payment unverified, app only
+2108925261652687984	2026-10-10 20:33	2026-10-10 14:21Z	Play Store submission, South Africa, fixed $55	C	not our work, tiny
+2108914623707942196	2026-10-10 20:33	2026-10-10 13:39Z	taxi company web + apps, Sweden, fixed $1K	C	payment unverified, software only
+2108912916899852120	2026-10-10 20:33	2026-10-10 13:30Z	test mobile app, Saudi Arabia, fixed $500	C	app only, small
+2108963743927149077	2026-10-10 23:33	2026-10-10 16:52Z	RF LED board USB + cost-down tweak, US, hourly no rate	C	under a week, one-line brief aimed at a freelancer already in talks, new client
+2108954302366369744	2026-10-10 23:33	2026-10-10 16:14Z	medical wearable PCB layout, India, $5–50/hr	C	outside region, thin brief, no hiring record, low floor
+2108969443280080958	2026-10-10 23:33	2026-10-10 17:14Z	HMI touchscreen tutoring sessions, US, $15–35/hr	C	tutoring, under a week, low ceiling
+2108973215722028118	2026-10-10 23:33	2026-10-10 17:30Z	handheld body-scrubber industrial design, Puerto Rico, $30–60/hr	C	mechanical/industrial design, no electronics
+2108939379268177982	2026-10-10 23:33	2026-10-10 15:15Z	mechanical CAD for a smart product, US, $15–40/hr	C	mechanical CAD only, thin brief
+2108976608997850198	2026-10-10 23:33	2026-10-10 17:43Z	n8n AI support agent, US, fixed $100	C	software only, tiny
+2108972865711242352	2026-10-10 23:33	2026-10-10 17:28Z	residential smart-home ELV design review, Uganda, fixed $500	C	outside region, small, building services not device work
+2108969168130587734	2026-10-10 23:33	2026-10-10 17:13Z	AI workflow automation, Australia	C	software only, 50+
+2108968608976414312	2026-10-10 23:33	2026-10-10 17:11Z	Go backend engineer, US, $15–20/hr	C	software only, rate below floor
+2108949964110221374	2026-10-10 23:33	2026-10-10 15:58Z	malware analysis mentoring, US	C	security tutoring, not our work
+2108942575678072424	2026-10-10 23:33	2026-10-10 15:27Z	network engineer (firewalls/cloud), US	C	IT networking, not device work
+2108704215979028312	2026-10-10 23:33	2026-10-09 23:41Z	decor figurine CAD package, US, fixed $250	C	mechanical, tiny
+2108687074551713854	2026-10-10 23:33	2026-10-09 22:33Z	3D-printed toy set, Turkey, fixed $200	C	personal gift, tiny, outside region
+2108678348119253525	2026-10-10 23:33	2026-10-09 22:01Z	mould enclosure CAD, US, fixed $60	C	mechanical, tiny
+2108674026925526324	2026-10-10 23:33	2026-10-09 21:42Z	AI video generation software, US, fixed $60	C	software only, tiny
+2108591577398513020	2026-10-10 23:33	2026-10-09 19:15Z	grill brush product design, US	C	mechanical design, no electronics
+2109052267208162390	2026-10-11 10:33	2026-10-11 01:43Z	STM32 LTE Cat.1 handheld group-comms device with BT audio, board + firmware, Turkey, hourly $30-45 1-3 mo	B	strong fit and fresh (~3h, 6 proposals), but client outside target regions, first job posted, no hiring or spend record
+2109056623172910192	2026-10-11 10:33	2026-10-10 23:02Z	ESP32 coil-driver review for a magnetically steered die, US, hourly $35-70	C	device built to make a die land on a chosen face (likely rigged gaming), <1 month, tiny client spend
+2109120752320843061	2026-10-11 10:33	2026-10-11 03:16Z	ESP32-C6 isolated M12 sensor tap, Canada, hourly no rate	C	client rating 3.0, one-line brief, <1 week
+2109007222052224112	2026-10-11 10:33	2026-10-10 19:45Z	POSIX threads scheduling assignment, Canada	C	academic homework
+2109034552167277077	2026-10-11 10:33	2026-10-10 21:33Z	restaurant POS rollout help, US	C	IT/POS setup, not device engineering
+2109103577680886870	2026-10-11 10:33	2026-10-11 02:08Z	pad-printing workholding fixture, US	C	mechanical, no electronics
+2109119271287943000	2026-10-11 10:33	2026-10-11 03:09Z	Android app bug fixes, US, $15-30/hr	C	app only, low rate
+2109046311982745552	2026-10-11 10:33	2026-10-10 22:20Z	Raspberry Pi touchscreen video prop, US	C	hobby prop, <1 week, no rate
+2108999344190203496	2026-10-11 10:33	2026-10-10 19:14Z	CNC controller schematic change, Austria	C	<1 week, aimed at a freelancer already in talks
+2109115523350677456	2026-10-11 10:33	2026-10-11 02:56Z	Linux server deployment recovery, US	C	server admin, not device work
+2109115575655768597	2026-10-11 10:33	2026-10-11 02:55Z	RC drone assembly guidance, US	C	hobby assembly, <1 week
+2109041967514832958	2026-10-11 10:33	2026-10-10 22:04Z	iOS safety app prototype, US, $15-30/hr	C	app only, low rate
+2109129398830288958	2026-10-11 10:33	2026-10-11 03:54Z	smart contract payload task, UK	C	payment unverified, blockchain, not our work
+2109108496155035600	2026-10-11 10:33	2026-10-11 02:27Z	dental lab case tracker, US	C	payment unverified, web only
+2094256667275305397	2026-10-11 10:33	2026-08-31 02:52Z	coin-cell BLE health charm firmware, US, fixed $350	C	6 weeks old, small budget
+2109082737250739816	2026-10-11 10:33	2026-10-11 03:44Z	custom AI software platform team, US	C	software only
+2109076132522167604	2026-10-11 10:33	2026-10-11 03:18Z	CAD/STL geometry automation for healthcare product, UK	C	CAD software, not electronics
+2109074652451568752	2026-10-11 10:33	2026-10-11 03:12Z	brush bristle placement mechanism PoC, UK	C	mechanical, no electronics
+2109067119303618392	2026-10-11 10:33	2026-10-11 02:42Z	trucking TMS web app, US	C	payment unverified, web only
+2109130852150349108	2026-10-11 10:33	2026-10-11 03:56Z	compliance audit web tool, Australia, fixed $500	C	software only, small
+2109124992084791358	2026-10-11 10:33	2026-10-11 03:34Z	ISO 13485 / IEC 62304 auditor, Australia, $6-13/hr	C	audit role, very low rate
+2109184488243006772	2026-10-11 13:33	2026-10-11 07:29Z	B2B referral partner for a software consultancy, India, fixed	C	sales/referral role, not engineering
+2109180101600256533	2026-10-11 13:33	2026-10-11 07:11Z	Windows code-signing warning fix, US, fixed $100	C	desktop software, tiny
+2109175663634993214	2026-10-11 13:33	2026-10-11 06:54Z	n8n e-commerce pipeline finish, US, fixed $200	C	software only, tiny
+2109175487064200526	2026-10-11 13:33	2026-10-11 06:53Z	CAD version conversion, Switzerland, fixed $30	C	payment unverified, mechanical CAD, tiny
+2109168574033034352	2026-10-11 13:33	2026-10-11 06:27Z	AI vehicle valuation web MVP, Sweden	C	payment unverified, software only
+2109205642289347696	2026-10-11 17:33	2026-10-11 08:54Z	48V-in compact DC/DC power board (ADI µModules + small STM32 fan control) for a robotic hand, Switzerland, hourly $35-85	B	strong client (high spend, 70%+ hire rate, ~5.0) and detailed real-product brief, but <1 month layout job, power PCB not on the door-opener niche list, 30+ proposals and no interviews yet; 18 Connects
+2109148368900740430	2026-10-11 17:33	2026-10-11 08:21Z	ESP32-P4 robotics board review + local build/test/ship to US, US, hourly $20-40	C	price-first framing, wants in-house fab and small-batch shipping, new client with no hires, already interviewing several
+2109244362317413462	2026-10-11 17:33	2026-10-11 11:27Z	2.4 GHz RF front-end schematic for a TI SoC, Ukraine, fixed $100	C	tiny, outside region
+2109161321987852240	2026-10-11 17:33	2026-10-11 08:57Z	AI swarm drone flight controller, India	C	payment unverified, thin brief, defence-adjacent
+2109251572515802420	2026-10-11 17:33	2026-10-11 11:55Z	EV motor-drive MATLAB/Simulink simulation, Pakistan	C	simulation/academic, outside region
+2109249877850736592	2026-10-11 17:33	2026-10-11 11:49Z	AI full-stack MCP/agents engineer, US	C	software only
+2109237030300702030	2026-10-11 17:33	2026-10-11 10:58Z	e-bike hub motor sourcing, US, $10-30/hr	C	sourcing, not engineering
+2109237000567824917	2026-10-11 17:33	2026-10-11 10:58Z	Python automation for a smart power clamp, Pakistan	C	entry level, small script, outside region
+2109234367378750576	2026-10-11 17:33	2026-10-11 10:47Z	e-bike controller kit sourcing, US, $10-30/hr	C	sourcing, not engineering
+2109226488576130134	2026-10-11 17:33	2026-10-11 10:16Z	radio streaming Android app, Spain, fixed $20	C	payment unverified, app only, tiny
+2109220775396899952	2026-10-11 17:33	2026-10-11 09:53Z	game multi-account clicker tool, Croatia, fixed $400	C	not our work, likely against game terms
+2109218615518351422	2026-10-11 17:33	2026-10-11 09:45Z	bill-payment mobile app, Australia	C	app only
+2109210684761308272	2026-10-11 17:33	2026-10-11 09:14Z	microwave-absorbing metamaterial design, Saudi Arabia	C	not our work, outside region
+2109263149775240278	2026-10-11 20:33	2026-10-11 13:53Z	e-bike wiring tester + data recorder prototype (design, build, ship), US, hourly $15-30	C	<1 month one-off build, platform-default low range, not a door-opener niche
+2109289797164222416	2026-10-11 20:33	2026-10-11 14:27Z	Java legal-software integration consulting, Canada	C	software only
+2109284617639743550	2026-10-11 20:33	2026-10-11 14:07Z	semiconductor/FPGA design, Vietnam, fixed	C	payment unverified, one-line brief, not our work
+2108992636077240152	2026-10-11 20:33	2026-10-10 18:46Z	industrial data historian admin, US, $10-20/hr	C	not device work, low rate
+2109296110992639952	2026-10-11 20:33	2026-10-11 14:53Z	sports betting app, US, fixed $400	C	app only, small
+2109295497932755006	2026-10-11 20:33	2026-10-11 14:50Z	AI travel platform engineer, Switzerland	C	software only
+2109284354166881392	2026-10-11 20:33	2026-10-11 14:06Z	no-code backend migration, US, fixed	C	software only
+2109283321767020496	2026-10-11 20:33	2026-10-11 14:02Z	motorcycle crash-detection Android app, Pakistan, fixed $15	C	tiny, app only, outside region
+2109261167580697934	2026-10-11 20:33	2026-10-11 12:33Z	voice AI agent fix, India	C	software only, outside region
+2109255881730079830	2026-10-11 20:33	2026-10-11 12:13Z	Linux TUI desktop polish, South Africa	C	software only, <1 week
+2108796021989745174	2026-10-11 20:33	2026-10-10 05:46Z	medical device regulatory representative, India	C	regulatory, not engineering
+2107902730911925400	2026-10-11 20:33	2026-10-07 18:37Z	LoRa USB-C dongle messaging app, US	C	app only, 4 days old, 80+ proposals
+2101726094287269084	2026-10-11 20:33	2026-09-20 20:33Z	cosmetic device BLE Android app, Singapore, fixed $3K	C	3 weeks old, app only, Vietnam-based hire
+2109342326579858740	2026-10-11 23:33	2026-10-11 17:56Z	industrial casting machine electrical drawing package (PLC panels, SolidWorks Electrical), US, fixed $6K	C	panel/CAD drafting, not our embedded/PCB work
+2109333613311757620	2026-10-11 23:33	2026-10-11 17:22Z	independent software platform audit, Australia, fixed	C	software only, outside region
+2109333126993696078	2026-10-11 23:33	2026-10-11 17:20Z	residential low-voltage/smart-home wiring design, US, fixed $400	C	not device engineering, small
+2109332102076747838	2026-10-11 23:33	2026-10-11 17:16Z	medical imaging ML research mentoring, US	C	tutoring, software only
+2109328372368145520	2026-10-11 23:33	2026-10-11 17:05Z	CRM lead dashboard automation, Cameroon, fixed $97	C	unverified, software only, tiny
+2109313812303467854	2026-10-11 23:33	2026-10-11 16:03Z	AI construction-estimating app, US, fixed $4K	C	software only, 50+ proposals
+2109311784766949328	2026-10-11 23:33	2026-10-11 15:55Z	e-commerce shopping mobile app, Germany	C	app only, no device, 50+ proposals
+2109306522142286357	2026-10-11 23:33	2026-10-11 15:34Z	AI bots for calendar and logistics data, US	C	software only
+2109303522799690261	2026-10-11 23:33	2026-10-11 15:22Z	3D-printed phone case model, Germany, fixed $20	C	mechanical, tiny
+2108607671248403542	2026-10-11 23:33	2026-10-09 17:17Z	fintech Android QA automation, UAE	C	software QA, not our work
+2108234318861207803	2026-10-11 23:33	2026-10-08 16:33Z	React Native journaling app finish, Angola	C	app only, old, crowded
+2107087575136997197	2026-10-11 23:33	2026-10-05 12:37Z	on-device audio classification for a consumer product, Netherlands, fixed $1K	C	6 days old, 46 proposals, under $1.5K
+2106836995208065419	2026-10-11 23:33	2026-10-04 20:01Z	STEM booking website, US	C	web only
+2105376149456771567	2026-10-11 23:33	2026-09-30 19:21Z	web/SaaS QA tester, Pakistan	C	not our work
+2105251808100199136	2026-10-11 23:33	2026-09-30 11:02Z	Amazon listing graphic design, US	C	not our work
+2109433280006192240	2026-10-12 10:33	2026-10-11 23:58Z	buried-stake LoRaWAN geophone sensor: precision ADC, GNSS, accel, PCB + low-power firmware + 10 units, Estonia, hourly 3-6 mo	A	full product build in our core (STM32/Nordic, low-power, PCB), EU client ~4.9 rating and ~45% hire rate, detailed brief, ~12 proposals, interviewing, no offer; 20 Connects
+2109408309765490640	2026-10-12 10:33	2026-10-11 22:19Z	smart meter firmware + comms security assessment, Greece, fixed $12K	B	good size and relevant, but payment unverified and the company is unnamed; security audit more than build work
+2109350601408422421	2026-10-12 10:33	2026-10-11 18:31Z	LinuxCNC/EtherCAT CNC mill integration for an intermediary, US, hourly $25-50	C	LinuxCNC HAL/EtherCAT/CAM not our core, new client with one-paragraph brief, prefers Japan/Korea
+2109394291167883096	2026-10-12 10:33	2026-10-11 21:24Z	ISP router firmware unlock, Palestinian Territories	C	removing ISP restrictions, <1 week, outside region
+2109463278096219248	2026-10-12 10:33	2026-10-12 01:59Z	follow-me cart tag tracking setup, US, hourly	C	<1 month, no rate, config job
+2109366188378976088	2026-10-12 10:33	2026-10-11 19:33Z	Altium library/schematic cleanup, US, $17-39/hr	C	<1 week cleanup, low range
+2109499556771439125	2026-10-12 10:33	2026-10-12 04:21Z	Android/WebRTC/EKS upgrade, US	C	software only
+2109493807191715672	2026-10-12 10:33	2026-10-12 03:58Z	Hyper-V slowdown diagnosis, US	C	IT, not device work
+2109508057538493552	2026-10-12 10:33	2026-10-12 04:54Z	app storage design review, US	C	payment unverified, software only
+2109488436433671502	2026-10-12 10:33	2026-10-12 03:36Z	industrial data historian admin (repost), US, $10-25/hr	C	not device work, low rate
+2109448380603979086	2026-10-12 10:33	2026-10-12 00:57Z	senior C/C++ engineer for existing platform, US	C	client rating 3.4, software support
+2109364375776948056	2026-10-12 10:33	2026-10-11 19:23Z	AI agent safety paper review, US	C	not our work
+2109460933661467157	2026-10-12 10:33	2026-10-12 01:49Z	C#/.NET tech lead, Australia, $20-25/hr	C	software only, low rate
+2109482217688549328	2026-10-12 10:33	2026-10-12 03:12Z	app store finalisation, US	C	payment unverified, app only
+2109455223303194576	2026-10-12 10:33	2026-10-12 01:24Z	React Native SDK integration, US	C	app only
+2109423175083509712	2026-10-12 10:33	2026-10-11 23:17Z	in-store touchscreen catalog web app, US	C	payment unverified, web only
+2109458142016610837	2026-10-12 10:33	2026-10-12 04:36Z	spectrometer calibration rig design, Australia	C	optomechanical, not our work
+2109509670939150288	2026-10-12 10:33	2026-10-12 05:03Z	Python developer, Haiti	C	payment unverified, software only
+2109507658937836053	2026-10-12 10:33	2026-10-12 04:53Z	Flutter app on an SDK, Japan, fixed $250	C	app only, tiny
+2109487040979324990	2026-10-12 10:33	2026-10-12 03:32Z	messaging app voice recovery, Australia	C	payment unverified, not our work
+2109465268043189556	2026-10-12 10:33	2026-10-12 02:07Z	retail software platform, US, fixed $1.2K	C	software only
+2109439822898134128	2026-10-12 10:33	2026-10-12 00:23Z	CRM form parameter fix, US, fixed $100	C	web, tiny
+2109529878309965108	2026-10-12 13:33	2026-10-12 06:22Z	Modbus to IEC104 protocol gateway, India, hourly	C	payment unverified, outside region, <1 month, no rate
+2109530840786300760	2026-10-12 13:33	2026-10-12 06:26Z	microcontroller data comms, India, entry level	C	payment unverified, one-line brief, entry level
+2109524838112839632	2026-10-12 13:33	2026-10-12 06:01Z	2-layer KiCad relay board review, India, $10-20/hr	C	<1 week, rate below $25, outside region
+2109538369279402517	2026-10-12 13:33	2026-10-12 06:55Z	LED product heat sink/thermal design, Australia	C	thermal/mechanical, not our work, outside region
+2109523377175418190	2026-10-12 13:33	2026-10-12 05:55Z	WebRTC teaching app, US	C	payment unverified, software only
+2109519849866443862	2026-10-12 13:33	2026-10-12 05:43Z	technical SEO + SSR web/app, Vietnam, $10-30/hr	C	web only, outside region
+2109514771547844440	2026-10-12 13:33	2026-10-12 05:22Z	portable monitor stand industrial design, US, fixed $1K	C	mechanical design, not our work
+2109512693571194164	2026-10-12 13:33	2026-10-12 05:15Z	rooftop PV system design, Australia, fixed $1K	C	solar electrical design, not our work
+2109510818376186992	2026-10-12 13:33	2026-10-12 05:06Z	iOS app account transfer, Canada	C	app admin, tiny
+2109569647175288784	2026-10-12 17:33	2026-10-12 09:48Z	compact high-efficiency solar MPPT converter, schematic + PCB + prototype bring-up, Belgium, hourly FT 3-6 mo, no rate	B	in region, sizeable and fresh (15-20 proposals, no interviews yet), but payment unverified, new client with no hires, specs behind an NDA, and it asks for proven MPPT designs we can't show (our power work is BMS/power design); 9 Connects
+2109584312200090958	2026-10-12 17:33	2026-10-12 10:01Z	payment terminal hookup for a massage chair prototype, France, hourly	C	payment unverified, <1 week, no rate
+2109608554656480342	2026-10-12 17:33	2026-10-12 11:35Z	mains (230V/30A) controller safety design review, South Africa, $15-50/hr	C	outside region, <1 month review, new client
+2109594558347607152	2026-10-12 17:33	2026-10-12 10:41Z	ESP32-S3 4G/GPS golf trolley PCB, Colombia, hourly	C	outside region, one-line brief, <1 week, new client
+2109608576614179349	2026-10-12 17:33	2026-10-12 11:34Z	voice AI SIP/self-hosting consultation, France, $22-29/hr	C	not device work, short consult
+2109611319454666036	2026-10-12 17:33	2026-10-12 11:46Z	document ingestion pipelines for an intermediary, Poland, $22-28/hr	C	software only, rate ceiling near floor
+2109557655384620144	2026-10-12 17:33	2026-10-12 08:12Z	software architecture + security audit, Austria, fixed $2K	C	software only, 50+ proposals
+2109589582183683406	2026-10-12 17:33	2026-10-12 10:19Z	injection-moulded part DFM review, Thailand, fixed $625	C	mechanical, small
+2109433168009886832	2026-10-12 17:33	2026-10-12 02:57Z	handheld razor mechanical prototype, US	C	mechanical, no electronics
+2109403871092436824	2026-10-12 17:33	2026-10-12 01:03Z	small electromagnet hands-on build, South Africa, fixed $350	C	small, physical build, outside region
+2109428768389220304	2026-10-12 17:33	2026-10-11 23:40Z	pet tent window attachment design, US	C	mechanical product design
+2109365336359084565	2026-10-12 17:33	2026-10-11 19:30Z	machined part DFM review, Germany, fixed $50	C	mechanical, tiny
+2109362664226208854	2026-10-12 17:33	2026-10-11 19:17Z	wooden display stand CAD, US, fixed $400	C	mechanical, small
+2109339416279664592	2026-10-12 17:33	2026-10-11 17:44Z	3D-printed scoop prototypes, Canada, fixed $15	C	mechanical, tiny
+2109199742401815061	2026-10-12 17:33	2026-10-11 08:31Z	pet accessory dispenser industrial design, US	C	industrial design, no electronics
+2109613737046228054	2026-10-12 17:33	2026-10-12 11:57Z	App Store rejection help, Pakistan	C	payment unverified, app only
+2109613099740589912	2026-10-12 17:33	2026-10-12 11:54Z	multi-service app template rebrand, Germany, fixed $210	C	payment unverified, app only, tiny
+2109610509936147542	2026-10-12 17:33	2026-10-12 11:42Z	React Native app rebuild, South Africa	C	app only, <1 week
+2109605374012976984	2026-10-12 17:33	2026-10-12 11:22Z	MCP server bug fix, UAE, fixed $25	C	software only, tiny
+2109602209853101390	2026-10-12 17:33	2026-10-12 11:09Z	NFC project scoping call, Australia, fixed $20	C	tiny, software-led, outside region
+2109597449882201944	2026-10-12 17:33	2026-10-12 10:50Z	AI workflow product UI design, UAE	C	UI design, 50+ proposals
+2109651296693012432	2026-10-12 20:33	2026-10-12 14:24Z	ESP32-S3 network controller board for architectural lighting (48V in, RS-485, Ethernet), schematic + 4-layer layout + bring-up, US, hourly $30-65 1-3 mo	A	core ESP32 + power PCB work, very professional brief from a real hardware company (EVT board, so follow-on likely), payment verified; new client, ~27 proposals in the first hour, 1 interview, no offer; 15 Connects
+2109647389607120958	2026-10-12 20:33	2026-10-12 14:09Z	low-power wireless nurse-call carrier PCB around a supplied RF module, US, fixed $3K	B	senior-care device, good budget, 10-15 proposals; but payment unverified, new client, <1 month, carrier-board scope
+2109624044179182926	2026-10-12 20:33	2026-10-12 12:36Z	ESP32 drone PCB review, Bangladesh, fixed $5	C	tiny, outside region
+2109628897479670870	2026-10-12 20:33	2026-10-12 12:55Z	iPhone IMU motion-counting app for a surgeon, US, $20-25/hr	C	app only, entry level, rate below floor, 50+
+2109651509488434262	2026-10-12 20:33	2026-10-12 14:24Z	wind turbine SCADA data analysis, Turkey	C	data science, not device work, outside region
+2109655945402191156	2026-10-12 20:33	2026-10-12 14:42Z	preschool parenting PWA, US	C	web only, 50+
+2109637020515881022	2026-10-12 20:33	2026-10-12 13:27Z	embeddable web product library change, US, $15-35/hr	C	web only
+2109658737528323158	2026-10-12 20:33	2026-10-12 14:57Z	software technical representative, Colombia	C	software only, outside region
+2109653349562842224	2026-10-12 20:33	2026-10-12 14:34Z	modular outdoor connector mechanical CAD, US, fixed $2.5K	C	mechanical, no electronics
+2109653300318347797	2026-10-12 20:33	2026-10-12 14:33Z	EV chassis mechanical design, Uganda, fixed $500	C	mechanical, outside region
+2109649845825830000	2026-10-12 20:33	2026-10-12 14:18Z	n8n LLM automation, UAE, $15-25/hr	C	software only, low rate, 50+
+2109648402817481840	2026-10-12 20:33	2026-10-12 14:13Z	self-hosted LLM PoC consultant, US, fixed $200	C	software only, tiny
+2109647563411707214	2026-10-12 20:33	2026-10-12 14:11Z	student helper mobile app, US	C	app only
+2109647548809758672	2026-10-12 20:33	2026-10-12 14:11Z	multi-tenant SaaS team lead, US	C	software only
+2094190143042043967	2026-10-12 20:33	2026-08-31 01:28Z	BLE bridge app for a smart pin, US, fixed $700	C	app only, 6 weeks old, small
+2109696715865787700	2026-10-12 23:33	2026-10-12 17:25Z	finish 4-layer KiCad layout for an ESP32-S3 voice-messaging device, JLCPCB files, US, fixed $1K	B	strong repeat client and a real device, but fixed $1K (under $1.5K), layout-only finishing job not in the door-opener niches, 20-50 proposals
+2109686683169215822	2026-10-12 23:33	2026-10-12 16:44Z	React Native BLE layer fixes for a fitness wearable app, Germany, $35-60/hr	C	payment unverified, app-side only, <1 month, 50+ proposals
+2109702111919657022	2026-10-12 23:33	2026-10-12 17:46Z	USB camera calibration and dewarping, US	C	<1 week, software CV, not device work
+2109685162130062422	2026-10-12 23:33	2026-10-12 16:41Z	general embedded guidance request, Turkey	C	payment unverified, not a real job, outside region
+2109694197047271957	2026-10-12 23:33	2026-10-12 17:14Z	industrial power-system study handover, US, $10-25/hr	C	power systems study, not our work, rate below floor
+2109695913134722356	2026-10-12 23:33	2026-10-12 17:22Z	adjustable optic mount for a smart dive mask, US	C	mechanical only
+2109693365184645072	2026-10-12 23:33	2026-10-12 17:15Z	consumer product 3D CAD iteration, US	C	mechanical only
+2109645687915073598	2026-10-12 23:33	2026-10-12 17:03Z	trading execution systems engineer, UAE	C	payment unverified, software/trading, not device work
+2109691177743154288	2026-10-12 23:33	2026-10-12 17:04Z	Windows DLL barcode validation fix, US	C	software only, <1 week, 50+
+2109701923963432792	2026-10-12 23:33	2026-10-12 17:47Z	laptop OS reinstall with disk encryption, US, fixed $150	C	IT task, tiny, payment unverified
+2109696173352985109	2026-10-12 23:33	2026-10-12 17:23Z	road-trip Android app MVP, Italy, fixed $800	C	app only, payment unverified
+2109695201316718544	2026-10-12 23:33	2026-10-12 17:19Z	offline transaction intranet platform, India	C	software only, outside region
+2109694857514373182	2026-10-12 23:33	2026-10-12 17:18Z	AI voice agent prototype for sales, US, fixed $1.5K	C	software only, <1 week, 50+
+2109693617461024078	2026-10-12 23:33	2026-10-12 17:12Z	LED pixel string sourcing from China, US, fixed $150	C	sourcing, tiny
+2109692788218307093	2026-10-12 23:33	2026-10-12 17:08Z	AI operating agent developer, US	C	software only, 50+
+2109752989198388532	2026-10-13 10:33	2026-10-12 21:08Z	battery tilt/vibration misuse sensor inside steel playground uprights, BLE or LTE-M, concept to production, UK, hourly $35-95	A	full low-power device build in our core, UK client with high hire rate and ~4.9 rating (first electronics job), 45 proposals, 11 interviews, no offer; 18 Connects
+2109855593921791952	2026-10-13 10:33	2026-10-13 03:55Z	vibration-limiter schematic review for shaker testing, US, hourly no rate	C	<1 week review, new client, no rate
+2109808082152628757	2026-10-13 10:33	2026-10-13 03:47Z	RFID/actuator electronics for a batch of display prototypes, US-only, hourly	C	US-located freelancers only, client rating 4.3, <1 month
+2109751687717059696	2026-10-13 10:33	2026-10-12 21:03Z	air-quality monitor PCB review and power optimisation, France, $5-15/hr	C	rate far below floor, <1 week
+2109869663686491248	2026-10-13 10:33	2026-10-13 04:53Z	water-sensor PCB reverse engineering, US, fixed $150	C	payment unverified, tiny
+2109804693036727408	2026-10-13 10:33	2026-10-13 00:34Z	coin kiosk software, US	C	software only, <1 week
+2109823967023624024	2026-10-13 10:33	2026-10-13 01:52Z	DevOps/cloud engineer, Canada	C	not device work, 50+
+2109772225188778046	2026-10-13 10:33	2026-10-12 22:25Z	AI app linked to a ring and watch, France	C	payment unverified, app-led
+2109850353588293694	2026-10-13 10:33	2026-10-13 03:35Z	car rental mobile app, US, $15-30/hr	C	app only, low rate, 50+
+2109848374677917758	2026-10-13 10:33	2026-10-13 03:28Z	subscription tracking app, Australia, fixed $4K	C	app only, 50+
+2109845123726854096	2026-10-13 10:33	2026-10-13 03:15Z	video anomaly detection research, Pakistan	C	payment unverified, academic ML
+2109844587459407704	2026-10-13 10:33	2026-10-13 03:12Z	solar permit plan revision, US, fixed $45	C	drafting, tiny
+2109834474719833944	2026-10-13 10:33	2026-10-13 02:32Z	AI scientist for pharma, Vietnam, $10-30/hr	C	not device work, low rate
+2109833034648571966	2026-10-13 10:33	2026-10-13 02:26Z	web app to iOS/Android packaging, Mexico	C	payment unverified, app only
+2109829306559255886	2026-10-13 10:33	2026-10-13 02:11Z	full-stack AI platforms takeover, US, $15-30/hr	C	software only, low rate, 50+

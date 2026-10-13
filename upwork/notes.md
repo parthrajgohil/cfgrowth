@@ -23,3 +23,22 @@ the job appends a weekly "What worked / what didn't" section below it (Mondays).
   by client" on the job page before submitting.
 
 ## Weekly learnings
+
+### 2026-10-12 (week of 2026-10-08 to 10-11): what worked / what didn't
+- Activity: 3 proposals out (nRF5340 wearable at $48/hr, ESP32-C3 secure boot at $35/hr,
+  both from our searches; one accepted invitation for a food-prep machine at $45/hr), 34
+  Connects spent. One A draft (Canada smart-home device) wasn't submitted.
+- Results: neither searched proposal has been **viewed** yet (4 and 3 days). The invitation
+  is the only live conversation, and the client hasn't replied yet. Too early to say which
+  openings work. The one signal so far is that invitations get further than cold proposals.
+- Supply: about 4 of 5 device jobs fail the region, size or 50-proposal rule. Good fresh
+  jobs show up mostly in the 10:33 and 17:33 scans. The weekend scans found nothing new
+  worth drafting.
+- Try next: submit A drafts within a few hours of the alert, since both unviewed proposals
+  went in once 5–15 proposals were already there. Consider a small boost (around 10
+  Connects) on strong-fit jobs with fewer than 15 proposals so the client actually sees the
+  proposal. Keep the portfolio up to date, because invitations come from the profile.
+- Process issue: saving drafts to `upwork/proposals/` was refused twice (10-09, 10-12), so
+  those letters exist only in run transcripts. Fixed 2026-10-13: the job's `Edit(drafts/**)`
+  block also matched `upwork/drafts/`; proposals now go in `upwork/proposals/`, and the
+  three lost letters were recovered from the transcripts.

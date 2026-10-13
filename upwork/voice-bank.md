@@ -17,6 +17,11 @@ well in a controlled lab environment.
 - Use when: BLE / Wi-Fi / LoRa / cellular products, reliability or "it drops in the field"
   complaints, a client about to pilot or ship.
 - Proposal angle: plan field testing early, not after the lab says it's done.
+- Detail (2026-10-13, his words tidied): a deployed wireless unit showed marginal errors
+  caused by its field environment, which couldn't be recreated in the lab. He collected
+  debug logs from the field unit, built a hypothesis on the cause, and deployed a fix that
+  brought the system within its acceptance criteria. (Used in the playground-sensor
+  proposal; vary the wording next time.)
 
 **W2. The project that was twice behind schedule.** I joined a project that was 2x behind
 its timeline and had doubled its budget. The problem: the execution wasn't aligned with

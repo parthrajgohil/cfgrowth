@@ -259,5 +259,21 @@ expect_job daily  deny  "daily job: write upwork/"     '{"tool_name":"Write","to
 expect_job daily  pass  "daily job: write drafts"      '{"tool_name":"Write","tool_input":{"file_path":"/Users/cfgrowth/cf-growth/drafts/email/a.md"}}'
 expect_job daily  pass  "daily job: hubspot read"      '{"tool_name":"mcp__claude_ai_HubSpot__search_crm_objects"}'
 
+# Upwork submit job (CEO decision 2026-10-13): submits proposals the CEO approved on Teams.
+cp_prop='{"tool_name":"mcp__claude_ai_Upwork__upwork__confirm_preview","tool_input":{"org_uid":"473867419264262145","action":"confirm","params":{"type":"proposal","preview_id":"p"}}}'
+expect_job upwork        ask   "scan job: confirm proposal asks"      "$cp_prop"
+expect_job upwork-submit allow "submit job: confirm proposal"         "$cp_prop"
+expect_job upwork-submit deny  "submit job: confirm invitation"       '{"tool_name":"mcp__claude_ai_Upwork__upwork__confirm_preview","tool_input":{"org_uid":"473867419264262145","action":"confirm","params":{"type":"proposal_accept_invitation","preview_id":"p"}}}'
+expect_job upwork-submit deny  "submit job: confirm profile edit"     '{"tool_name":"mcp__claude_ai_Upwork__upwork__confirm_preview","tool_input":{"org_uid":"473867419264262145","action":"confirm","params":{"type":"profile_update_title","preview_id":"p"}}}'
+expect_job upwork-submit deny  "submit job: confirm on agency"        '{"tool_name":"mcp__claude_ai_Upwork__upwork__confirm_preview","tool_input":{"org_uid":"474112535869386752","action":"confirm","params":{"type":"proposal","preview_id":"p"}}}'
+expect_job upwork-submit ask   "submit job: preview with boost"       '{"tool_name":"mcp__claude_ai_Upwork__upwork__manage_proposals","tool_input":{"org_uid":"473867419264262145","action":"create","params":{"job_reference":"1","charged_amount":40,"boost_connects":5}}}'
+expect_job upwork-submit ask   "submit job: message a client"         '{"tool_name":"mcp__claude_ai_Upwork__upwork__send_message","tool_input":{"org_uid":"473867419264262145","action":"send"}}'
+expect_job upwork-submit deny  "submit job: hubspot"                  '{"tool_name":"mcp__claude_ai_HubSpot__search_crm_objects"}'
+expect_job upwork-submit deny  "submit job: write drafts"             '{"tool_name":"Write","tool_input":{"file_path":"/Users/cfgrowth/cf-growth/drafts/email/x.md"}}'
+expect_job upwork-submit pass  "submit job: read CEO replies"         '{"tool_name":"mcp__claude_ai_Microsoft_365__chat_message_search","tool_input":{"query":"*"}}'
+expect_job hourly        deny  "hourly job: confirm proposal"         "$cp_prop"
+for i in 2 3 4 5 6; do expect_job upwork-submit allow "submit job: confirm #$i" "$cp_prop"; done
+expect_job upwork-submit deny  "submit job: 7th submission today"     "$cp_prop"
+
 echo "approval-gate: $pass passed, $fail failed"
 [[ $fail -eq 0 ]]

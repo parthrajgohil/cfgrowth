@@ -44,7 +44,7 @@ if ! mkdir "$lock" 2>/dev/null; then
     echo "removing stale lock"; rmdir "$lock" && mkdir "$lock" || exit 3
   else
     echo "another job is running ($(cat "$lock/job" 2>/dev/null)); skipping"
-    [[ $job != hourly && $job != upwork ]] && notify "$job run skipped: another job was running."
+    [[ $job != hourly && $job != upwork* ]] && notify "$job run skipped: another job was running."
     exit 0
   fi
 fi
@@ -55,7 +55,7 @@ running=$("$claude" agents --json 2>/dev/null | /usr/bin/jq 'length' 2>/dev/null
 if [[ -z "$running" ]]; then echo "could not count sessions; skipping"; notify "$job skipped: could not count Claude sessions."; exit 2; fi
 if (( running >= max )); then
   echo "$running sessions active (cap $max); skipping"
-  [[ $job != hourly && $job != upwork ]] && notify "$job run skipped: $running Claude sessions already running (cap $max)."
+  [[ $job != hourly && $job != upwork* ]] && notify "$job run skipped: $running Claude sessions already running (cap $max)."
   exit 1
 fi
 
@@ -73,7 +73,20 @@ now="Current time on this Mac: $(date '+%Y-%m-%d %H:%M %Z') (use it for dates an
 # Path rules match at any depth ("drafts/**" also blocks upwork/drafts/), so the Upwork
 # job keeps its proposals in upwork/proposals/ (2026-10-13).
 export CF_JOB=$job
-if [[ $job == upwork ]]; then
+model=()
+if [[ $job == upwork-submit ]]; then
+  # Submits only proposals the CEO approved by a Teams reply (CEO decision 2026-10-13).
+  # No job search or web: it reads the CEO's replies, the draft files and our own proposals.
+  model=(--model sonnet)
+  tools=(Read Glob Grep ToolSearch "Edit(upwork/**)"
+    mcp__claude_ai_Microsoft_365__teams_send_chat_message
+    mcp__claude_ai_Microsoft_365__chat_message_search mcp__claude_ai_Microsoft_365__read_resource
+    mcp__claude_ai_Upwork__upwork__list_accounts mcp__claude_ai_Upwork__upwork__get_tool_help
+    mcp__claude_ai_Upwork__upwork__list_freelancer_proposals
+    mcp__claude_ai_Upwork__upwork__manage_proposals mcp__claude_ai_Upwork__upwork__confirm_preview)
+  blocked=(Bash Agent Workflow WebSearch WebFetch mcp__claude_ai_HubSpot mcp__claude_ai_Saleshandy
+    mcp__claude_ai_Apollo_io "Edit(accounts/**)" "Edit(drafts/**)" "Edit(pipeline/**)")
+elif [[ $job == upwork ]]; then
   tools=(Read Glob Grep WebSearch WebFetch ToolSearch "Edit(upwork/**)"
     mcp__claude_ai_Microsoft_365__teams_send_chat_message
     mcp__claude_ai_Upwork__upwork__list_accounts mcp__claude_ai_Upwork__upwork__get_tool_help
@@ -106,7 +119,7 @@ else
   blocked=(Bash Agent Workflow mcp__claude_ai_Upwork "Read(upwork/**)" "Edit(upwork/**)")
 fi
 "$claude" -p "$now"$'\n\n'"$(cat "$prompt")" \
-  --name "$job-$today-$(date +%H%M)" \
+  --name "$job-$today-$(date +%H%M)" "${model[@]}" \
   --disallowedTools "${blocked[@]}" \
   --allowedTools "${tools[@]}"
 status=$?

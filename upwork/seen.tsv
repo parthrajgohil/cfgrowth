@@ -448,3 +448,30 @@ job_id	first_seen	posted	label	grade	reason
 2109834474719833944	2026-10-13 10:33	2026-10-13 02:32Z	AI scientist for pharma, Vietnam, $10-30/hr	C	not device work, low rate
 2109833034648571966	2026-10-13 10:33	2026-10-13 02:26Z	web app to iOS/Android packaging, Mexico	C	payment unverified, app only
 2109829306559255886	2026-10-13 10:33	2026-10-13 02:11Z	full-stack AI platforms takeover, US, $15-30/hr	C	software only, low rate, 50+
+2109915672535174452	2026-10-13 13:33	2026-10-13 07:54Z	small DC/DC supply board with hold-up capacitor, Belgium, hourly no rate	C	<1 week small power PCB, no rate, not a door-opener niche (decent client record)
+2109904807613191502	2026-10-13 13:33	2026-10-13 07:11Z	iOS medical app variant + GUI tweaks, Israel, $15-45/hr	C	app only, <1 week, 50+ proposals
+2109910202982403380	2026-10-13 13:33	2026-10-13 07:32Z	Linux distro migration for an edge application, India, fixed	C	payment unverified, outside region, server/OS migration
+2109907894936603956	2026-10-13 13:33	2026-10-13 07:25Z	sports betting platform integration, US	C	not device work (betting software)
+2109900381480044496	2026-10-13 13:33	2026-10-13 06:54Z	PhD paper help, US	C	academic writing
+2109889350509333812	2026-10-13 13:33	2026-10-13 06:11Z	health app wearable API integration + native app, UK	C	payment unverified, app only, 50+
+2109902391439330612	2026-10-13 13:33	2026-10-13 07:02Z	BGP networking consultation, Canada	C	IT networking, aimed at another freelancer
+2109847909164140496	2026-10-13 13:33	2026-10-13 06:25Z	adapt a vacuum device, Australia, $20-40/hr	C	entry level, thin brief, outside region
+2109908527789416981	2026-10-13 13:33	2026-10-13 07:27Z	wellness app MVP, Ukraine	C	payment unverified, app only
+2109908289171819828	2026-10-13 13:33	2026-10-13 07:25Z	EHR integration developer, India	C	payment unverified, software only, US-based hire
+2109907616010097998	2026-10-13 13:33	2026-10-13 07:22Z	handheld device enclosure design, US, fixed $300	C	mechanical, small
+2109905530882882672	2026-10-13 13:33	2026-10-13 07:14Z	FEA simulation for on-skin electronics research, Australia	C	mechanical simulation, academic
+2109745921036427797	2026-10-13 17:33	2026-10-12 20:40Z	200 W wide-input DC/DC board with STM32G4 + SMBus, turnkey Altium PCBA in 4 phases, US engineering shop, hourly no rate	A	power/PCB core work, 1-3 months, detailed professional brief, small but 5-star client, 20 proposals, 9 interviews, no offer; 20 Connects
+2109974818735012482	2026-10-13 17:33	2026-10-13 11:51Z	generative-AI animation pipeline on a Jetson box, UK, fixed $2K	C	creative AI software setup, not device engineering
+2109961012696857218	2026-10-13 17:33	2026-10-13 10:56Z	EV fleet-readiness pilot delivery lead, UK	C	consulting/delivery role, not engineering
+2109975625561320725	2026-10-13 17:33	2026-10-13 11:54Z	wellness marketplace mobile app, India	C	app only, outside region
+2109961985081586158	2026-10-13 17:33	2026-10-13 10:58Z	cloud environment + CI/CD setup, Saudi Arabia	C	DevOps, not device work, outside region
+2109961229070873070	2026-10-13 17:33	2026-10-13 10:57Z	AI video repurposing automation, US, fixed $2.5K	C	software only
+2109960641827907553	2026-10-13 17:33	2026-10-13 10:54Z	mobile app traffic decryption setup, Israel	C	IT/security task, not device work
+2109958880059217535	2026-10-13 17:33	2026-10-13 10:46Z	ERP and procurement automation, Lebanon	C	business software, outside region
+2109952979417507809	2026-10-13 17:33	2026-10-13 10:23Z	VPN protocol documentation, Germany	C	networking docs, not our work
+2109951858307782271	2026-10-13 17:33	2026-10-13 10:19Z	QR code and bio-link web app, UK, $15-25/hr	C	web only, low rate
+2109928674124681278	2026-10-13 17:33	2026-10-13 11:46Z	smartwatch game port, Germany, fixed $1.5K	C	app only, no device build
+2109917571377809360	2026-10-13 17:33	2026-10-13 08:03Z	slope monitoring early warning for a mine, Malaysia	C	payment unverified, outside region, thin brief
+2109927893894983512	2026-10-13 17:33	2026-10-13 08:43Z	semiconductor expert opinion letter, US	C	not engineering delivery work
+2109917996118757438	2026-10-13 17:33	2026-10-13 08:04Z	certified service-provider network engineer, US	C	networking certification role, not our work
+2109930105027708880	2026-10-13 17:33	2026-10-13 08:52Z	WebRTC classroom media fix, Israel, $10-30/hr	C	software only, outside region

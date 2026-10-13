@@ -18,9 +18,10 @@ description: How CoreFragment works Upwork — the CEO's personal freelancer pro
   and client **in our own words, anonymously and briefly** (e.g. "US physician-led
   medical device company, high spend, hires often: dual-camera ESP32 imaging prototype").
   Refer to a job by its ID and URL.
-- The only other thing that leaves the Upwork job: a short Teams alert to the CEO's 1:1
-  chat (our short label for the job, link, grade, budget, suggested bid, Connects, file
-  path). No names, no message content.
+- The only other thing that leaves the Upwork job: a Teams alert to the CEO's 1:1 chat
+  (our short label for the job, link, grade, budget, suggested bid, Connects, file path,
+  and our own proposal letter so he can approve it from his phone). No client names, no
+  job text, no client messages.
 - **All communication with a client happens inside Upwork**, before and after a contract
   (Upwork's anti-circumvention policy). Never email, call, LinkedIn-message or cold-pitch an
   Upwork client, and never suggest moving off-platform in a proposal.
@@ -35,11 +36,14 @@ description: How CoreFragment works Upwork — the CEO's personal freelancer pro
   team size, never name a client, never put numbers on results. In proposals and the
   profile, say "my engineering company" rather than the name CoreFragment (CEO's choice,
   2026-10-08; the name appears only in the profile's employment section).
-- **The CEO submits.** Agents search, research, draft and make a proposal *preview*
-  (`manage_proposals create`: nothing sent, no Connects spent). Submitting
-  (`confirm_preview`), messaging, accepting invitations and profile edits are the CEO's,
-  in an interactive session or on upwork.com. Contracts, offers, milestones and money are
-  blocked by the gate.
+- **The CEO approves every submission.** The scan searches, researches, drafts and makes a
+  proposal *preview* (`manage_proposals create`: nothing sent, no Connects spent), then
+  sends the letter to the CEO on Teams. He approves by replying `send <code>` (CEO
+  decision 2026-10-13); the `upwork-submit` job then submits exactly that draft, no boost
+  (`scripts/upwork-submit.md`; the gate allows only this, max 6 a day). He can also submit
+  in an interactive session or on upwork.com. Messaging, accepting invitations, boosts and
+  profile edits stay with him. Contracts, offers, milestones and money are blocked by the
+  gate.
 
 ## 1. What a quality lead is
 Invest Connects only where a real, sizeable engagement is likely. **Not** one-off small
@@ -136,24 +140,23 @@ the first few hours after posting matter most.
   A weekend job from an active client is worth marking URGENT.
 - A job posted < 3 hours ago with < 10 proposals is the best moment: mark it **URGENT** in
   the alert. Jobs older than 3 days or with 50+ proposals are not drafted (§1).
-- The CEO reads Teams alerts on his phone: keep them short and give the deadline reason.
+- The CEO reads Teams alerts on his phone and approves from there: say why it's time
+  critical, and send the alert in the same run as the draft.
 
 ## 5. Writing the proposal
 Clients now get dozens of AI-written proposals per job (CEO, 2026-10-08). Polish is no
-longer the edge; **Parthraj's real experience, opinions and presence are**. The draft
-leaves room for him instead of imitating him.
+longer the edge; **Parthraj's real experience, opinions and presence are**.
+
+**The draft is complete and ready to send** (CEO, 2026-10-13: jobs are time critical, so no
+waiting for him to fill a gap). No `[YOUR LINE]` slot or other placeholder: he approves it
+as written, or replies with an edit.
 
 Load `cf-voice` (and its `examples.md`) and **`upwork/voice-bank.md`** first. Then:
-- **`[YOUR LINE: …]` slot, always.** Put one marked slot in the first or second paragraph,
-  with a prompt tailored to the job (e.g. "[YOUR LINE: which past project does this remind
-  you of, and what went wrong there?]" or "[YOUR LINE: the first thing you'd check on
-  their board]"). Parthraj writes one honest sentence there before submitting. **A
-  proposal is never submitted with the slot still in it**: when asked to submit, check
-  first and ask him for the line if it's missing.
-- **Voice bank only.** Use Parthraj's stories, opinions and phrases from
-  `upwork/voice-bank.md` where they genuinely fit (at most one story per proposal, in his
-  words, lightly trimmed). Never invent a story, opinion, anecdote or detail about his past
-  work. If nothing fits, use the slot and keep the rest plain.
+- **The personal touch comes from the voice bank.** Use one of Parthraj's stories,
+  opinions or phrases from `upwork/voice-bank.md` where it genuinely fits the job (at most
+  one story per proposal, in his words, lightly trimmed, worded differently from the last
+  time it was used). Never invent a story, opinion, anecdote or detail about his past
+  work. If nothing fits, leave it out and keep the letter plain and specific.
 - **One concrete technical observation about their project**: a risk they didn't mention,
   a chip/architecture choice and why, or the first milestone you'd propose. Specific to
   their post, something a practitioner would notice. This is the heart of the proposal.
@@ -234,9 +237,9 @@ Load `cf-voice` (and its `examples.md`) and **`upwork/voice-bank.md`** first. Th
 
 ## 5b. Voice bank
 `upwork/voice-bank.md` holds Parthraj's own stories, opinions, phrases and openings, from
-his interviews. Only he adds to it (agents may tidy wording, never add content). When a
-proposal he submitted contains a good `[YOUR LINE]`, suggest adding it to the bank in the
-next weekly learnings section.
+his interviews. Only he adds to it (agents may tidy wording, never add content). When his
+`edit` replies add something about his own experience, suggest adding it to the bank in
+the next weekly learnings section.
 
 ## 6. Connects discipline
 - At most **6 drafts a day** and about **120 Connects a week** across all drafts (track in

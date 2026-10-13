@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.corefragment.upwork-submit</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/Users/cfgrowth/cf-growth/scripts/upwork-submit.sh</string>
+  </array>
+  <!-- Every 10 minutes. The script exits at once unless an Upwork alert is waiting for the
+       CEO's Teams reply (CEO decision 2026-10-13); see scripts/upwork-submit.sh. -->
+  <key>StartInterval</key>
+  <integer>600</integer>
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>PATH</key>
+    <string>/Users/cfgrowth/.local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+  </dict>
+  <key>StandardOutPath</key>
+  <string>/Users/cfgrowth/cf-growth/logs/launchd-upwork-submit.out.log</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/cfgrowth/cf-growth/logs/launchd-upwork-submit.err.log</string>
+</dict>
+</plist>

@@ -88,28 +88,26 @@ get far less reach than people, so his reshare matters). Add a row to
 ## Send to Teams (one message)
 Use `teams_send_chat_message` to chat
 `19:a7e8ebf4-992c-431d-8daa-2ff7f01e0129_d31e5b95-dc3b-45f8-8ff7-0e63e143aaa4@unq.gbl.spaces`
-and no other. Plain text, no mentions, laid out so each block can be copied:
+and no other. Send it with `bodyType: "html"` (plain text loses its line breaks in Teams),
+no mentions, laid out so each block can be copied. Use only `<p>`, `<br>`, `<b>`,
+`<ul><li>` and `<a href>`; escape `&`, `<`, `>` in inserted text. Keep the post's own line
+breaks: each post paragraph is its own `<p>`, single line breaks inside it are `<br>`.
 ```
-LinkedIn post for today (<slot>): company page
-Best time: <e.g. 12:30–14:00 IST for Europe, or 18:30–20:00 IST for the US>
-
---- POST (copy from here) ---
-<post, hook A>
---- END POST ---
-
-Alt hook B: <hook>
-
-First comment: <text with link>
-Hashtags: <already at the end of the post>
-Mention: <@Company or "none">
-
-Image: <"CF LinkedIn images" folder in OneDrive: <file name>.png (or -carousel.pdf)>, ready in ~2 minutes
-Alt text: <text>
-(For a people post or video: the photo brief or the script instead.)
-
-Reshare from your profile with: <1–2 lines>
-
-File: drafts/linkedin/<file>.md
+<p><b>LinkedIn post for today (<slot>): company page</b><br>
+<b>Best time:</b> <e.g. 12:30–14:00 IST for Europe, or 18:30–20:00 IST for the US></p>
+<p><b>POST (copy from here)</b></p>
+<p><post paragraph 1, hook A></p>
+<p><post paragraph 2></p>
+<p>…</p>
+<p><b>END POST</b></p>
+<p><b>Alt hook B:</b> <hook></p>
+<p><b>First comment:</b> <text with link><br>
+<b>Mention:</b> <@Company or "none"></p>
+<p><b>Image:</b> "CF LinkedIn images" folder in OneDrive: <file name>.png (or -carousel.pdf), ready in ~2 minutes<br>
+<b>Alt text:</b> <text><br>
+(For a people post or video: the photo brief or the script instead.)</p>
+<p><b>Reshare from your profile with:</b> <1–2 lines></p>
+<p><b>File:</b> drafts/linkedin/<file>.md</p>
 ```
 If the message would be very long (a carousel or video script), send the post in one
 message and the visual brief in a second.

@@ -31,6 +31,11 @@ of any setup or infrastructure work, and update it when a step or decision chang
    fields. The gate allows this only on sequences the agent created in the last 3 hours. **Only the
    CEO activates a sequence**; agents never activate, start or resume one, and never touch
    other sequences or prospects.
+   **Fourth exception (CEO decision, 2026-10-13):** the Upwork scan sends each drafted
+   proposal to the CEO on Teams; when he replies `send <code>` (or `send <code> $<rate>`)
+   in that 1:1 chat, the `upwork-submit` job submits exactly that letter on his personal
+   profile, no boost, max 6 a day (the gate enforces it). `edit` and `skip` replies revise
+   or drop the draft. Nothing is submitted without his reply.
 2. Drafts go in `drafts/`; account research goes in `accounts/`. Tell the human where
    the file is and what decision you need.
 3. Never invent facts: no made-up clients, metrics, certifications, or case studies.
@@ -178,15 +183,18 @@ of expertise in outreach and as seeds for LinkedIn posts. Strong outreach hooks:
 - **Upwork: a separate channel (CEO decisions, 2026-10-08).** Only the CEO's personal
   freelancer profile (org `473867419264262145`), never the agency or client accounts.
   **Nothing from Upwork goes to any other tool** (HubSpot, Saleshandy, Apollo, `accounts/`,
-  `drafts/`); the only exception is a short Teams alert to the CEO. `upwork/` (in git) holds
+  `drafts/`); the only exception is a Teams alert to the CEO (with our own proposal letter). `upwork/` (in git) holds
   only **our own work** (proposal drafts, grades, bids, outcomes by job ID, learnings);
   Upwork's content (job text, client records, reviews, names, messages) is never saved. **Never contact an Upwork client outside Upwork** (public
   background research is fine). Quality leads only, no small one-off jobs. The Upwork scan
   (`scripts/upwork-scan.md`, daily incl. weekends 10:33/13:33/17:33/20:33/23:33 IST) follows the
   `upwork` skill: finds and grades jobs, checks clients, drafts proposals in
-  `upwork/proposals/`, makes a preview; **the CEO submits**. The runner and the gate keep the
+  `upwork/proposals/`, makes a preview and sends the full letter to the CEO on Teams;
+  **the CEO approves each one by replying** (`send` / `edit` / `skip` + code), and
+  `scripts/upwork-submit.md` (every 10 min while an alert is waiting) submits it. The runner and the gate keep the
   Upwork job and the other jobs apart (`CF_JOB`).
-- **Email & files:** Microsoft 365 (Outlook, OneDrive). Teams: lead alerts to the CEO.
+- **Email & files:** Microsoft 365 (Outlook, OneDrive). Teams: lead alerts to the CEO,
+  sent as HTML (`bodyType: "html"`: `<p>`, `<br>`, `<b>`, lists, links) so they stay readable.
 - **CRM:** HubSpot. Every A/B lead gets a Company + research Note + "DRAFT FOR REVIEW"
   Note; a Contact is created once its email is revealed. `pipeline/leads.csv` is
   legacy (human-only).

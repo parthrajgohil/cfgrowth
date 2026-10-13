@@ -178,17 +178,21 @@ approved companies together (at most 10 per run):
 ## Teams (one message per run, only if something changed)
 Use `teams_send_chat_message` to chat
 `19:a7e8ebf4-992c-431d-8daa-2ff7f01e0129_d31e5b95-dc3b-45f8-8ff7-0e63e143aaa4@unq.gbl.spaces`
-and no other. Plain text, no mentions. A sequence you built is NOT sending until the CEO
-activates it: say so plainly and give each sequence title, for example:
+and no other. Send it with `bodyType: "html"` (plain text loses its line breaks in Teams),
+no mentions. Use only `<p>`, `<br>`, `<b>`, `<ul><li>` and `<a href>`; escape `&`, `<`, `>`
+in inserted text. A sequence you built is NOT sending until the CEO activates it: say so
+plainly and give each sequence title. One `<p>` block per kind of update, for example:
 ```
-Lead updates (<HH:MM>)
-READY TO ACTIVATE in Saleshandy → Sequences (review, then activate):
-- CF · batch 2026-10-08 17:03 · Europe · 2 leads: HeyCharge (Chris Cardé), Pollen (Miguel Morgado)
-- CF · batch 2026-10-08 17:03 · USA · 1 lead: Legato (Mehul Trivedi)
-To drop a lead, remove that prospect from the batch before activating.
-No email found: SoundHealth (alternatives noted in HubSpot)
-Revised for review: Boldr
-Replied: Legato. See HubSpot
+<p><b>Lead updates (<HH:MM>)</b></p>
+<p><b>Ready to activate</b> in Saleshandy → Sequences (review, then activate):</p>
+<ul>
+<li>CF · batch 2026-10-08 17:03 · Europe · 2 leads: HeyCharge (Chris Cardé), Pollen (Miguel Morgado)</li>
+<li>CF · batch 2026-10-08 17:03 · USA · 1 lead: Legato (Mehul Trivedi)</li>
+</ul>
+<p>To drop a lead, remove that prospect from the batch before activating.</p>
+<p><b>No email found:</b> SoundHealth (alternatives noted in HubSpot)<br>
+<b>Revised for review:</b> Boldr<br>
+<b>Replied:</b> Legato. See HubSpot</p>
 ```
 
 ## Keep the local copy in sync

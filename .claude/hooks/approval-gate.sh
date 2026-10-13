@@ -16,6 +16,9 @@
 #     send/sequence/purchase/tracking denied; credit lookups and other writes ask.
 #   - Upwork: reads pass; proposal previews only on the CEO's personal profile; submitting,
 #     messaging and profile edits ask; contracts, offers, money and accounts are denied.
+#     The upwork-submit job (CF_JOB=upwork-submit) may submit a proposal the CEO approved by
+#     replying on Teams (CEO decision 2026-10-13): confirm_preview type "proposal" only,
+#     max 6 a day.
 #   - HubSpot: reads pass; CRM writes ask; marketing email and web publishing
 #     are denied.
 #   - Other MCP tools: read-only verbs pass through to normal permissions; every
@@ -89,7 +92,7 @@ mcp_default() {
 # they are (CF_JOB, set by scripts/cf-headless.sh): the Upwork job may not touch the CRM or
 # outreach tools, and no other job may touch Upwork or write into upwork/.
 if [[ -n "${CF_JOB:-}" ]]; then
-  if [[ "$CF_JOB" == upwork ]]; then
+  if [[ "$CF_JOB" == upwork || "$CF_JOB" == upwork-submit ]]; then
     case "$tool" in
       mcp__*[Hh]ub[Ss]pot__*|mcp__*[Ss]aleshandy__*|mcp__*[Aa]pollo*__*)
         deny "CF approval gate: the Upwork job never uses HubSpot, Saleshandy or Apollo (Upwork data stays in Upwork)." ;;
@@ -254,6 +257,19 @@ case "$tool" in
     esac
     if [[ -n "$org" && "$org" != "$UPWORK_PERSONAL" ]]; then
       deny "CF approval gate: Upwork writes only on the CEO's personal freelancer profile ($UPWORK_PERSONAL), never the agency or client account."
+    fi
+    # CEO decision 2026-10-13: the CEO approves a drafted proposal by replying on Teams;
+    # the upwork-submit job then submits it. Only a plain proposal (no boost: the preview
+    # rule below refuses boosted previews), at most 6 a day.
+    if [[ "$CF_JOB" == upwork-submit && "$action" == confirm_preview && "$org" == "$UPWORK_PERSONAL" ]]; then
+      ctype=$(jq -r '.tool_input.params.type // ""' <<<"$input")
+      [[ "$ctype" == proposal ]] || deny "CF approval gate: the upwork-submit job may only submit proposals (not '$ctype')."
+      cdir=${CF_CREDIT_DIR:-"$(cd "$(dirname "$0")/../.." && pwd)/logs"}
+      cf="$cdir/upwork-submits-$(date +%F).count"
+      used=$(cat "$cf" 2>/dev/null || echo 0)
+      (( used >= 6 )) && deny "CF approval gate: daily cap of 6 Upwork submissions reached."
+      mkdir -p "$cdir" && echo $((used + 1)) >"$cf"
+      allow "CF approval gate: submitting a proposal the CEO approved on Teams ($((used + 1)) of 6 today)."
     fi
     if [[ "$action" == manage_proposals && "$act" == create && "$org" == "$UPWORK_PERSONAL" ]] &&
        [[ $(jq -r '.tool_input.params.boost_connects // ""' <<<"$input") == "" ]]; then

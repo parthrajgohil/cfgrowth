@@ -164,15 +164,18 @@ For each candidate:
    d. Send ONE Teams message with the `teams_send_chat_message` tool to this chat and
       no other:
       `19:a7e8ebf4-992c-431d-8daa-2ff7f01e0129_d31e5b95-dc3b-45f8-8ff7-0e63e143aaa4@unq.gbl.spaces`
-      (the 1:1 chat with parthraj@corefragment.com). Use plain text, no mentions, in this format:
+      (the 1:1 chat with parthraj@corefragment.com). Send it with `bodyType: "html"`, no
+      mentions (plain text loses its line breaks in Teams). Use only `<p>`, `<br>`, `<b>`,
+      `<ul><li>` and `<a href>`; escape `&`, `<`, `>` in inserted text:
 
       ```
-      New lead: <Company> (Fit <A/B>)  ·  <website>
-      What: <one line on what they make>
-      Why now: <trigger, with date>
-      Buyer: <Name>, <Title>  ·  Email: <in Saleshandy | in Apollo | alternative: Name | not found>
-      Angle: <service line> / <case study>
-      Review in HubSpot, then set "CF lead stage" (Approved / Needs edit / On hold / Archived)
+      <p><b>New lead: <Company></b> (Fit <A/B>) · <a href="<website>"><domain></a></p>
+      <p><b>What:</b> <one line on what they make><br>
+      <b>Why now:</b> <trigger, with date><br>
+      <b>Buyer:</b> <Name>, <Title><br>
+      <b>Email:</b> <in Saleshandy | in Apollo | alternative: Name | not found><br>
+      <b>Angle:</b> <service line> / <case study></p>
+      <p>Review in HubSpot, then set <b>CF lead stage</b> (Approved / Needs edit / On hold / Archived).</p>
       ```
 
 Stop when you have 5 A/B leads today (Sales Nav leads included; if this is a second run

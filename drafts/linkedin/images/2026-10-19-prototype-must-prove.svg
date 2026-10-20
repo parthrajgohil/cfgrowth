@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1500" viewBox="0 0 1200 1500" font-family="Helvetica Neue, Helvetica, Arial">
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+
+  <!-- Headline -->
+  <text x="100" y="190" font-size="80" font-weight="700" fill="#1F2933">What must your</text>
+  <text x="100" y="280" font-size="80" font-weight="700" fill="#1F5FAE">prototype prove?</text>
+  <text x="100" y="360" font-size="36" fill="#52606D">ESP32 or nRF52? Decide the job first.</text>
+
+  <!-- Job 1 column -->
+  <rect x="100" y="430" width="480" height="580" rx="16" fill="#FFFFFF" stroke="#1F5FAE" stroke-width="4"/>
+  <text x="130" y="500" font-size="26" font-weight="700" fill="#1F5FAE">JOB 1</text>
+  <text x="130" y="552" font-size="40" font-weight="700" fill="#1F2933">Show the idea</text>
+  <line x1="130" y1="585" x2="550" y2="585" stroke="#E4E7EB" stroke-width="3"/>
+  <text x="130" y="650" font-size="34" fill="#1F2933">Investor or UX demo</text>
+  <text x="130" y="720" font-size="34" fill="#1F2933">Runs on USB power</text>
+  <text x="130" y="790" font-size="34" fill="#1F2933">Speed matters most</text>
+  <text x="130" y="860" font-size="34" fill="#1F2933">Wi-Fi + BLE in one</text>
+  <line x1="130" y1="895" x2="550" y2="895" stroke="#E4E7EB" stroke-width="3"/>
+  <text x="130" y="945" font-size="36" font-weight="700" fill="#1F5FAE">Pick for speed:</text>
+  <text x="130" y="990" font-size="36" font-weight="700" fill="#1F2933">ESP32</text>
+
+  <!-- Job 2 column (highlight) -->
+  <rect x="620" y="430" width="480" height="580" rx="16" fill="#FDEBD7" stroke="#F26522" stroke-width="4"/>
+  <text x="650" y="500" font-size="26" font-weight="700" fill="#F26522">JOB 2</text>
+  <text x="650" y="552" font-size="40" font-weight="700" fill="#1F2933">Produce evidence</text>
+  <line x1="650" y1="585" x2="1070" y2="585" stroke="#E4E7EB" stroke-width="3"/>
+  <text x="650" y="650" font-size="34" fill="#1F2933">Battery life numbers</text>
+  <text x="650" y="720" font-size="34" fill="#1F2933">BLE range on site</text>
+  <text x="650" y="790" font-size="34" fill="#1F2933">Figures for the spec</text>
+  <text x="650" y="860" font-size="34" fill="#1F2933">BLE-only device</text>
+  <line x1="650" y1="895" x2="1070" y2="895" stroke="#E4E7EB" stroke-width="3"/>
+  <text x="650" y="945" font-size="36" font-weight="700" fill="#1F5FAE">Pick what ships:</text>
+  <text x="650" y="990" font-size="36" font-weight="700" fill="#1F2933">nRF52-class</text>
+
+  <!-- Risk -->
+  <rect x="100" y="1060" width="8" height="100" fill="#1F5FAE"/>
+  <text x="135" y="1100" font-size="34" font-weight="700" fill="#1F2933">The risk:</text>
+  <text x="135" y="1146" font-size="34" fill="#1F2933">Job 1 numbers end up in the Job 2 spec.</text>
+
+  <!-- Takeaway -->
+  <text x="100" y="1240" font-size="34" fill="#52606D">Before you order dev kits, write one line:</text>
+  <text x="100" y="1300" font-size="40" font-weight="700" fill="#1F5FAE">"This prototype must prove ___."</text>
+
+  <!-- Footer -->
+  <line x1="100" y1="1380" x2="1100" y2="1380" stroke="#E4E7EB" stroke-width="2"/>
+  <text x="100" y="1446" font-size="26" fill="#52606D">corefragment.com</text>
+  <image href="{{LOGO}}" x="784" y="1402" width="100" height="60"/>
+  <text x="1100" y="1446" text-anchor="end" font-size="34" font-weight="700" fill="#1F2933">CoreFragment</text>
+</svg>

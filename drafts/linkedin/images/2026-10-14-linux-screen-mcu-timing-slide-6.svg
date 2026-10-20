@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+  <g font-family="Helvetica Neue, Helvetica, Arial">
+    <circle cx="150" cy="190" r="50" fill="#1F5FAE"/>
+    <text x="150" y="208" text-anchor="middle" font-size="52" font-weight="700" fill="#FFFFFF">3</text>
+    <text x="230" y="200" font-size="28" font-weight="700" fill="#1F5FAE">THE LINK BETWEEN THEM</text>
+    <text x="100" y="360" font-size="72" font-weight="700" fill="#1F2933">Keep the link</text>
+    <text x="100" y="450" font-size="72" font-weight="700" fill="#1F5FAE">boring.</text>
+    <text x="100" y="560" font-size="36" fill="#1F2933">A simple serial protocol, with three</text>
+    <text x="100" y="614" font-size="36" fill="#1F2933">rules:</text>
+    <g fill="#1F5FAE">
+      <circle cx="116" cy="692" r="10"/>
+      <circle cx="116" cy="792" r="10"/>
+    </g>
+    <text x="150" y="704" font-size="34" fill="#1F2933">Every command gets an acknowledgement.</text>
+    <text x="150" y="804" font-size="34" fill="#1F2933">The MCU owns the machine state.</text>
+    <text x="150" y="848" font-size="34" fill="#1F2933">The Pi only displays it.</text>
+    <rect x="100" y="920" width="880" height="250" rx="20" fill="#FDEBD7" stroke="#F26522" stroke-width="4"/>
+    <text x="140" y="978" font-size="26" font-weight="700" fill="#F26522">HEARTBEAT</text>
+    <text x="140" y="1034" font-size="34" fill="#1F2933">If the Pi goes silent, the MCU stops</text>
+    <text x="140" y="1082" font-size="34" fill="#1F2933">the axes safely. A frozen screen</text>
+    <text x="140" y="1130" font-size="34" fill="#1F2933">must never mean a drill that keeps going.</text>
+    <!-- footer -->
+    <line x1="100" y1="1230" x2="980" y2="1230" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="1290" font-size="26" fill="#52606D">corefragment.com</text>
+    <image href="{{LOGO}}" x="664" y="1252" width="100" height="60" preserveAspectRatio="xMidYMid meet"/>
+    <text x="980" y="1296" text-anchor="end" font-size="34" font-weight="700" fill="#1F2933">CoreFragment</text>
+  </g>
+</svg>

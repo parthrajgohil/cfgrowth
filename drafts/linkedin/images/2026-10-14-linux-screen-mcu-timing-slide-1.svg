@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+  <g font-family="Helvetica Neue, Helvetica, Arial">
+    <text x="100" y="200" font-size="28" font-weight="700" fill="#1F5FAE">LESSON FROM A CNC MACHINE HMI</text>
+    <text x="100" y="330" font-size="76" font-weight="700" fill="#1F2933">Screen on Linux.</text>
+    <text x="100" y="424" font-size="76" font-weight="700" fill="#1F5FAE">Timing on an MCU.</text>
+    <text x="100" y="524" font-size="36" fill="#1F2933">How we split the work on an</text>
+    <text x="100" y="578" font-size="36" fill="#1F2933">industrial machine controller.</text>
+    <!-- Linux box -->
+    <rect x="100" y="690" width="340" height="250" rx="18" fill="#FFFFFF" stroke="#1F5FAE" stroke-width="4"/>
+    <text x="270" y="760" text-anchor="middle" font-size="34" font-weight="700" fill="#1F2933">Raspberry Pi</text>
+    <text x="270" y="800" text-anchor="middle" font-size="26" fill="#52606D">Linux</text>
+    <line x1="140" y1="828" x2="400" y2="828" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="270" y="872" text-anchor="middle" font-size="28" fill="#1F2933">screen, files</text>
+    <text x="270" y="912" text-anchor="middle" font-size="28" fill="#1F2933">Wi-Fi, logs</text>
+    <!-- MCU box -->
+    <rect x="640" y="690" width="340" height="250" rx="18" fill="#1F5FAE"/>
+    <text x="810" y="760" text-anchor="middle" font-size="34" font-weight="700" fill="#FFFFFF">Microcontroller</text>
+    <text x="810" y="800" text-anchor="middle" font-size="26" fill="#FFFFFF">firmware</text>
+    <line x1="680" y1="828" x2="940" y2="828" stroke="#FFFFFF" stroke-width="2"/>
+    <text x="810" y="872" text-anchor="middle" font-size="28" fill="#FFFFFF">step pulses</text>
+    <text x="810" y="912" text-anchor="middle" font-size="28" fill="#FFFFFF">limits, homing</text>
+    <!-- link -->
+    <line x1="440" y1="815" x2="640" y2="815" stroke="#F26522" stroke-width="5"/>
+    <polygon points="616,801 640,815 616,829" fill="#F26522"/>
+    <polygon points="464,801 440,815 464,829" fill="#F26522"/>
+    <rect x="460" y="850" width="160" height="50" rx="25" fill="#FDEBD7"/>
+    <text x="540" y="884" text-anchor="middle" font-size="24" font-weight="700" fill="#F26522">serial + ack</text>
+    <text x="100" y="1110" font-size="28" fill="#52606D">Swipe for the split -&gt;</text>
+    <!-- footer -->
+    <line x1="100" y1="1230" x2="980" y2="1230" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="1290" font-size="26" fill="#52606D">corefragment.com</text>
+    <image href="{{LOGO}}" x="664" y="1252" width="100" height="60" preserveAspectRatio="xMidYMid meet"/>
+    <text x="980" y="1296" text-anchor="end" font-size="34" font-weight="700" fill="#1F2933">CoreFragment</text>
+  </g>
+</svg>

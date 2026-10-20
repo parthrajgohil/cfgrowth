@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+  <g font-family="Helvetica Neue, Helvetica, Arial">
+    <text x="100" y="200" font-size="28" font-weight="700" fill="#1F5FAE">THE TEMPTATION</text>
+    <text x="100" y="330" font-size="72" font-weight="700" fill="#1F2933">GPIO pins aren't</text>
+    <text x="100" y="420" font-size="72" font-weight="700" fill="#1F5FAE">real-time.</text>
+    <text x="100" y="530" font-size="36" fill="#1F2933">The Pi has GPIO, so why not drive the</text>
+    <text x="100" y="584" font-size="36" fill="#1F2933">motors from it too? Because standard</text>
+    <text x="100" y="638" font-size="36" fill="#1F2933">Linux gives no timing guarantee, and</text>
+    <text x="100" y="692" font-size="36" fill="#1F2933">Python adds pauses of its own.</text>
+    <!-- expected pulses -->
+    <text x="100" y="790" font-size="26" fill="#52606D">Step pulses you planned</text>
+    <path d="M100 880 H150 V820 H180 V880 H260 V820 H290 V880 H370 V820 H400 V880 H480 V820 H510 V880 H590 V820 H620 V880 H700 V820 H730 V880 H810 V820 H840 V880 H920 V820 H950 V880 H980" fill="none" stroke="#1F5FAE" stroke-width="4"/>
+    <!-- actual pulses with a gap -->
+    <text x="100" y="960" font-size="26" fill="#52606D">Step pulses you get under load</text>
+    <rect x="390" y="980" width="340" height="80" fill="#FDEBD7"/>
+    <path d="M100 1050 H150 V990 H180 V1050 H260 V990 H290 V1050 H730 V990 H760 V1050 H810 V990 H840 V1050 H920 V990 H950 V1050 H980" fill="none" stroke="#1F5FAE" stroke-width="4"/>
+    <text x="560" y="1030" text-anchor="middle" font-size="24" font-weight="700" fill="#F26522">late: logs, Wi-Fi, GC</text>
+    <text x="100" y="1130" font-size="26" fill="#52606D">A late pulse can mean a lost step. A lost step</text>
+    <text x="100" y="1166" font-size="26" fill="#52606D">is a hole in the wrong place.</text>
+    <!-- footer -->
+    <line x1="100" y1="1230" x2="980" y2="1230" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="1290" font-size="26" fill="#52606D">corefragment.com</text>
+    <image href="{{LOGO}}" x="664" y="1252" width="100" height="60" preserveAspectRatio="xMidYMid meet"/>
+    <text x="980" y="1296" text-anchor="end" font-size="34" font-weight="700" fill="#1F2933">CoreFragment</text>
+  </g>
+</svg>

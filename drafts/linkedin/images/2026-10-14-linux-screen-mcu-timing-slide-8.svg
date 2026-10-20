@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+  <g font-family="Helvetica Neue, Helvetica, Arial">
+    <text x="100" y="200" font-size="28" font-weight="700" fill="#1F5FAE">THE TAKEAWAY</text>
+    <text x="100" y="330" font-size="76" font-weight="700" fill="#1F2933">One job for each</text>
+    <text x="100" y="424" font-size="76" font-weight="700" fill="#1F5FAE">processor.</text>
+    <g font-size="34" fill="#1F2933">
+      <text x="100" y="540"><tspan font-weight="700" fill="#1F5FAE">Linux:</tspan> screen, files, network, logs</text>
+      <line x1="100" y1="580" x2="980" y2="580" stroke="#E4E7EB" stroke-width="3"/>
+      <text x="100" y="640"><tspan font-weight="700" fill="#1F5FAE">MCU:</tspan> pulses, limits, homing, watchdog</text>
+      <line x1="100" y1="680" x2="980" y2="680" stroke="#E4E7EB" stroke-width="3"/>
+      <text x="100" y="740"><tspan font-weight="700" fill="#1F5FAE">Link:</tspan> acks and a heartbeat</text>
+      <line x1="100" y1="780" x2="980" y2="780" stroke="#E4E7EB" stroke-width="3"/>
+      <text x="100" y="840"><tspan font-weight="700" fill="#1F5FAE">E-stop:</tspan> hardware, always</text>
+    </g>
+    <text x="100" y="950" font-size="36" fill="#1F2933">If the screen freezes, the machine</text>
+    <text x="100" y="1004" font-size="36" fill="#1F2933">should stop safely, not keep drilling.</text>
+    <rect x="100" y="1070" width="620" height="84" rx="42" fill="#F26522"/>
+    <text x="410" y="1124" text-anchor="middle" font-size="32" font-weight="700" fill="#FFFFFF">Follow CoreFragment for more</text>
+    <!-- footer -->
+    <line x1="100" y1="1230" x2="980" y2="1230" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="1290" font-size="26" fill="#52606D">corefragment.com</text>
+    <image href="{{LOGO}}" x="664" y="1252" width="100" height="60" preserveAspectRatio="xMidYMid meet"/>
+    <text x="980" y="1296" text-anchor="end" font-size="34" font-weight="700" fill="#1F2933">CoreFragment</text>
+  </g>
+</svg>

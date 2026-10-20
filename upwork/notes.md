@@ -42,3 +42,25 @@ the job appends a weekly "What worked / what didn't" section below it (Mondays).
   those letters exist only in run transcripts. Fixed 2026-10-13: the job's `Edit(drafts/**)`
   block also matched `upwork/drafts/`; proposals now go in `upwork/proposals/`, and the
   three lost letters were recovered from the transcripts.
+
+### 2026-10-19 (week of 2026-10-12 to 10-18): what worked / what didn't
+- Activity: 10 A drafts. 3 submitted from drafts (playground sensor $35/hr, ESP32-S3 motion
+  controller $45/hr, nRF52840 basketball wearable $55/hr) plus one the CEO sent himself
+  (nRF5340 smartwatch, fixed). 71 Connects spent; balance 678 after the 10-16 top-up. The CEO
+  skipped 3 drafts (power converter board, BLE sticker feasibility, RFQ package review). 2 went
+  stale unsent (LoRaWAN geophone, 48V controller board), 1 closed with a hire, 1 is waiting
+  (wellness gadget, 0085).
+- Results: **none of the 6 submitted proposals has been viewed**, 3 to 11 days on, and that
+  includes ones sent with only 10–15 proposals ahead. The only live conversation is still last
+  week's invitation, and the client hasn't replied yet. Unboosted proposals don't seem to reach
+  the client at all.
+- The URGENT RF-takeover job (5 proposals at drafting, 10-14) hired within a day, before we sent.
+  When fresh jobs fit well, the first few hours really are the window.
+- Supply: A jobs came mostly from the 10:33 scan (US overnight posts: 5 of 10), then 13:33,
+  17:33 and 20:33 with one or two each. 23:33 found none all week. The weekend runs found 2 A jobs
+  (10-17, 10-18), so they're worth keeping.
+- Try next: on strong-fit jobs with under 15 proposals, use a small boost (current top-4 bids
+  are often only 4–10 Connects) and test whether views follow. The unattended submit job can't
+  boost, so the CEO would need to submit those himself or allow boosts. Reply to alerts within a
+  few hours. Ask the CEO whether the three skipped drafts share a reason (job type, budget,
+  client) that the grading should learn from.

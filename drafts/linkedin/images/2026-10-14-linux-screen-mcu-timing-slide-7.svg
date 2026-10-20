@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+  <g font-family="Helvetica Neue, Helvetica, Arial">
+    <circle cx="150" cy="190" r="50" fill="#1F5FAE"/>
+    <text x="150" y="208" text-anchor="middle" font-size="52" font-weight="700" fill="#FFFFFF">4</text>
+    <text x="230" y="200" font-size="28" font-weight="700" fill="#1F5FAE">EMERGENCY STOP</text>
+    <text x="100" y="360" font-size="72" font-weight="700" fill="#1F2933">E-stop is wired,</text>
+    <text x="100" y="450" font-size="72" font-weight="700" fill="#1F5FAE">not coded.</text>
+    <text x="100" y="560" font-size="36" fill="#1F2933">The emergency stop cuts motor power</text>
+    <text x="100" y="614" font-size="36" fill="#1F2933">in hardware. Firmware sees it and the</text>
+    <text x="100" y="668" font-size="36" fill="#1F2933">screen shows it, but neither one is</text>
+    <text x="100" y="722" font-size="36" fill="#1F2933">in the path that stops the machine.</text>
+    <!-- hardware path -->
+    <rect x="100" y="800" width="220" height="110" rx="16" fill="#FDEBD7" stroke="#F26522" stroke-width="4"/>
+    <text x="210" y="868" text-anchor="middle" font-size="30" font-weight="700" fill="#F26522">E-stop</text>
+    <line x1="320" y1="855" x2="420" y2="855" stroke="#1F5FAE" stroke-width="5"/>
+    <polygon points="404,843 428,855 404,867" fill="#1F5FAE"/>
+    <rect x="430" y="800" width="240" height="110" rx="16" fill="#FFFFFF" stroke="#1F5FAE" stroke-width="4"/>
+    <text x="550" y="868" text-anchor="middle" font-size="30" font-weight="700" fill="#1F2933">Contactor</text>
+    <line x1="670" y1="855" x2="750" y2="855" stroke="#1F5FAE" stroke-width="5"/>
+    <polygon points="734,843 758,855 734,867" fill="#1F5FAE"/>
+    <rect x="760" y="800" width="220" height="110" rx="16" fill="#1F5FAE"/>
+    <text x="870" y="868" text-anchor="middle" font-size="30" font-weight="700" fill="#FFFFFF">Motors</text>
+    <!-- report path (dashed) -->
+    <line x1="210" y1="910" x2="210" y2="1010" stroke="#52606D" stroke-width="3" stroke-dasharray="10 8"/>
+    <line x1="210" y1="1010" x2="420" y2="1010" stroke="#52606D" stroke-width="3" stroke-dasharray="10 8"/>
+    <text x="440" y="1020" font-size="28" fill="#52606D">MCU and screen: report only</text>
+    <text x="100" y="1130" font-size="26" fill="#52606D">Design to your machine's safety standards,</text>
+    <text x="100" y="1166" font-size="26" fill="#52606D">e.g. ISO 13850 for the emergency stop function.</text>
+    <!-- footer -->
+    <line x1="100" y1="1230" x2="980" y2="1230" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="1290" font-size="26" fill="#52606D">corefragment.com</text>
+    <image href="{{LOGO}}" x="664" y="1252" width="100" height="60" preserveAspectRatio="xMidYMid meet"/>
+    <text x="980" y="1296" text-anchor="end" font-size="34" font-weight="700" fill="#1F2933">CoreFragment</text>
+  </g>
+</svg>

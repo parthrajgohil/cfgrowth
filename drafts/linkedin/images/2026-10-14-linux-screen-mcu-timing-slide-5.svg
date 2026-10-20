@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+  <g font-family="Helvetica Neue, Helvetica, Arial">
+    <circle cx="150" cy="190" r="50" fill="#1F5FAE"/>
+    <text x="150" y="208" text-anchor="middle" font-size="52" font-weight="700" fill="#FFFFFF">2</text>
+    <text x="230" y="200" font-size="28" font-weight="700" fill="#1F5FAE">ON LINUX</text>
+    <text x="100" y="360" font-size="72" font-weight="700" fill="#1F2933">The Pi does what</text>
+    <text x="100" y="450" font-size="72" font-weight="700" fill="#1F5FAE">people touch.</text>
+    <text x="100" y="560" font-size="36" fill="#1F2933">Linux is great at screens, files and</text>
+    <text x="100" y="614" font-size="36" fill="#1F2933">networks. Let it do exactly that:</text>
+    <g fill="#1F5FAE">
+      <circle cx="116" cy="692" r="10"/>
+      <circle cx="116" cy="758" r="10"/>
+      <circle cx="116" cy="824" r="10"/>
+      <circle cx="116" cy="890" r="10"/>
+    </g>
+    <text x="150" y="704" font-size="34" fill="#1F2933">The operator screen</text>
+    <text x="150" y="770" font-size="34" fill="#1F2933">Part numbers, coordinates, job files</text>
+    <text x="150" y="836" font-size="34" fill="#1F2933">Wi-Fi uploads and logs</text>
+    <text x="150" y="902" font-size="34" fill="#1F2933">Activity monitoring</text>
+    <rect x="100" y="970" width="880" height="200" rx="20" fill="#FDEBD7" stroke="#F26522" stroke-width="4"/>
+    <text x="140" y="1028" font-size="26" font-weight="700" fill="#F26522">WHY IT WORKS</text>
+    <text x="140" y="1082" font-size="34" fill="#1F2933">A short pause here goes unnoticed.</text>
+    <text x="140" y="1130" font-size="34" fill="#1F2933">On a motor axis, it doesn't.</text>
+    <!-- footer -->
+    <line x1="100" y1="1230" x2="980" y2="1230" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="1290" font-size="26" fill="#52606D">corefragment.com</text>
+    <image href="{{LOGO}}" x="664" y="1252" width="100" height="60" preserveAspectRatio="xMidYMid meet"/>
+    <text x="980" y="1296" text-anchor="end" font-size="34" font-weight="700" fill="#1F2933">CoreFragment</text>
+  </g>
+</svg>

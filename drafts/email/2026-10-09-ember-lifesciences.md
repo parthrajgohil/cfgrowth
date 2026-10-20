@@ -1,5 +1,5 @@
 ---
-stage: ready_to_import          # mirrors HubSpot "CF lead stage"; the CEO changes it in HubSpot
+stage: in_sequence              # mirrors HubSpot "CF lead stage"; the CEO changes it in HubSpot
 type: cold-email
 account: ember-lifesciences
 recipient: James Braithwaite, Chief Product Officer <james.braithwaite@emberlifesciences.com>

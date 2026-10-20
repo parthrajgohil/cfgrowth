@@ -3,7 +3,7 @@ approve prompts. Anything that would need approval will be refused, so do not
 attempt it.
 
 ## Goal
-Find up to 5 NEW qualified leads, research each one, draft outreach, record it in
+Find up to 3 NEW qualified leads (CEO, 2026-10-20: fewer, stronger leads), research each one, draft outreach, record it in
 HubSpot with `cf_lead_stage` = `new`, and notify the CEO on Teams about each lead.
 (Approved leads, email reveals, edits and replies are handled by the hourly run,
 `scripts/hourly-leads.md`. Do not do those here.)
@@ -38,14 +38,14 @@ Keep the queue in `drafts/leads/sales-nav-queue.md` (create it if missing):
 `duplicate` any company that already has a brief in `accounts/` or a row in
 `accounts/index.md` (match on domain or name).
 
-Then research up to **5 queued entries** (oldest first) before any other prospecting, using
+Then research up to **3 queued entries** (oldest first) before any other prospecting, using
 the same process as below. Differences:
 - Use the CEO's person as the primary buyer if he named one (still run the reachability
   check). His note is a hint, not a verified trigger: find a public source for the trigger,
   or grade B if there's no clear trigger but the fit is good.
 - Mark them **[Sales Nav]** in the brief title, the HubSpot research note and the Teams alert
   (`New lead [Sales Nav]: …`), and record the queue source.
-- Leads from the CEO count toward the day's 5 A/B leads. If his queue fills all 5, do no
+- Leads from the CEO count toward the day's 3 A/B leads. If his queue fills all 3, do no
   other prospecting today; the rest stay queued for tomorrow.
 - Not a fit? Still write a short brief with the reason, set its queue Status, and list it in
   the day's summary so the CEO learns which of his searches work.
@@ -94,7 +94,7 @@ Grading:
 - **B:** good ICP fit and a weaker or older trigger: open embedded/firmware/hardware roles
   (any date, if the post is still open), a product launch or clearance 6–12 months ago, a
   new engineering leader in the last 12 months, or clear product-roadmap signals on their
-  site. B leads are real leads: draft them and count them toward the 5. The email then
+  site. B leads are real leads: draft them and count them toward the 3. The email then
   opens on the product, not a news event.
 - **C:** fit is weak (too small, wrong region, no device). Don't research deeply.
 
@@ -179,10 +179,10 @@ For each candidate:
       <p>Review in HubSpot, then set <b>CF lead stage</b> (Approved / Needs edit / On hold / Archived).</p>
       ```
 
-Stop when you have 5 A/B leads today (Sales Nav leads included; if this is a second run
-today, A/B leads already in `accounts/index.md` with today's date count toward the 5). Don't stop early because
+Stop when you have 3 A/B leads today (Sales Nav leads included; if this is a second run
+today, A/B leads already in `accounts/index.md` with today's date count toward the 3). Don't stop early because
 the first candidates were weak: go back to the long list (and add to it) until you have
-screened at least 30 names and researched at least 8 in depth. Fewer good leads beat more
+screened at least 20 names and researched at least 5 in depth. Fewer good leads beat more
 weak ones, but a thin day should come from a thin market, not from stopping early.
 
 ## Finish

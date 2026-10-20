@@ -209,7 +209,7 @@ of expertise in outreach and as seeds for LinkedIn posts. Strong outreach hooks:
   sequence → the hourly run sees it active and sets In sequence.
 - **Sales Navigator hand-off:** the CEO sends prospects from Sales Navigator as a Teams
   message starting `#salesnav` or a `pipeline/sales-nav-<date>.md` file (one line each:
-  `Company | website | person, title | note`). The daily run researches them first (max 5
+  `Company | website | person, title | note`). The daily run researches them first (max 3
   a day, queue in `drafts/leads/sales-nav-queue.md`). Playbook: `docs/sales-navigator-playbook.md`.
   Agents never touch LinkedIn or Sales Navigator.
 - **LinkedIn touch:** leads with no email get a drafted connection note, InMail and

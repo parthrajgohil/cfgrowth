@@ -65,7 +65,7 @@ LinkedIn profile URL (`linkedin.com/in/…`) is fine to include after the person
 
 ## What the agents do with it
 
-- They are researched **before** the agents' own prospecting, up to 5 per day; any extra stay
+- They are researched **before** the agents' own prospecting, up to 3 per day; any extra stay
   queued for the next run (`drafts/leads/sales-nav-queue.md` shows the queue).
 - Same process as other leads: ICP and fit check, a real trigger with a source, a brief,
   a draft in your voice, a HubSpot company + contacts + notes at **CF lead stage = New**,

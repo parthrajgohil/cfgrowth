@@ -84,7 +84,14 @@ approved companies together (at most 10 per run):
         11 = "0", 12 = "0", 13 = "1", and 2 = "Reply 'Stop' if you'd prefer not to receive
         messages at this time." Never set BCC/CC (codes 7, 8).
      4. `add_email_accounts_to_sequence` (`sequenceId`, `emailAccountIds` = `["Y8aL7kk3PN"]`,
-        the CEO's mailbox parthraj.gohil@corefragment.com).
+        the CEO's mailbox parthraj.gohil@corefragment.com). Then **check the mailboxes**
+        (CEO, 2026-10-23: Saleshandy attaches the account's default mailbox to new
+        sequences, and with two mailboxes it alternates senders): `list_sequence_email_accounts`
+        must show exactly one account, `Y8aL7kk3PN`. For any other account, call
+        `remove_email_accounts_from_sequence` (`sequenceId`, that account's id) and list again.
+        If the CEO's mailbox is missing or another one is still attached, don't import the
+        prospects into that sequence: say in the Teams alert "<b>Don't activate yet</b>: wrong
+        mailbox on <title>" and log it.
      5. `import_prospects_to_sequence_step` (step 1's `stepId`, `conflictAction` =
         `upsert`, `verifyProspects` = false) with all of the batch's prospects (max 10), one
         object per lead using the **exact Saleshandy field labels**: `First Name`,

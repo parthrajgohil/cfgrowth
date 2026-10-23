@@ -166,7 +166,25 @@ case "$tool" in
            [[ $(jq -c '.tool_input.emailAccountIds // []' <<<"$input") == "[\"$CF_MAILBOX\"]" ]]; then
           allow "CF approval gate: attach the CEO's mailbox to a sequence the agent just created."
         fi
+        # Interactive session (no CF_JOB): the CEO may approve attaching his mailbox to an
+        # older CF sequence (fix for sequences that picked up another mailbox, 2026-10-23).
+        if [[ -z "${CF_JOB:-}" && $(jq -c '.tool_input.emailAccountIds // []' <<<"$input") == "[\"$CF_MAILBOX\"]" ]]; then
+          ask "CF approval gate: attach the CEO's mailbox to an existing sequence. Approve only for a CF sequence."
+        fi
         deny "CF approval gate: agents may only attach the CEO's mailbox ($CF_MAILBOX) to a sequence they just created."
+        ;;
+      remove_email_accounts_from_sequence)
+        # CEO decision 2026-10-23: Saleshandy attaches the account's default mailbox to new
+        # sequences, so a batch could also send from another mailbox. Agents may detach any
+        # mailbox EXCEPT the CEO's from a sequence they created in the last 3 hours; in an
+        # interactive session the CEO approves it for older sequences.
+        if jq -e --arg m "$CF_MAILBOX" '(.tool_input.emailAccountIds // []) | length > 0 and (index($m) == null)' <<<"$input" >/dev/null 2>&1; then
+          agent_seq "$(jq -r '.tool_input.sequenceId // ""' <<<"$input")" &&
+            allow "CF approval gate: detach a non-CEO mailbox from a sequence the agent just created."
+          [[ -z "${CF_JOB:-}" ]] &&
+            ask "CF approval gate: detach a non-CEO mailbox from an existing sequence. Approve only for a CF sequence."
+        fi
+        deny "CF approval gate: agents may only detach mailboxes other than the CEO's, from a sequence they just created."
         ;;
       import_prospects_to_sequence_step)
         if agent_step1 "$(jq -r '.tool_input.stepId // ""' <<<"$input")" &&

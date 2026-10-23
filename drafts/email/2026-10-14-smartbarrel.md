@@ -1,5 +1,5 @@
 ---
-stage: new               # mirrors HubSpot "CF lead stage"; the CEO changes it in HubSpot
+stage: approved          # mirrors HubSpot "CF lead stage"; the CEO changes it in HubSpot
 type: cold-email
 account: smartbarrel
 recipient: Michael Newman, Software Engineer – Head of Hardware (email: TO BE FILLED BY HUMAN)

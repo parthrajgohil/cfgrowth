@@ -50,7 +50,7 @@ No CTO, R&D or hardware lead is visible in Apollo; the founder is the buyer.
 ## Buyers
 | Name | Title | Profile | Notes |
 |---|---|---|---|
-| Kostas Seferis | Founder | unverified | **Primary.** Saleshandy 276163746; Apollo has email |
+| Kostas Seferis | Founder | unverified | **Primary.** Saleshandy 276163746; Apollo has email. **Email: kostas.seferis@aqua-manager.com** (Saleshandy `valid`, reveal request 6ad9f4aa60c94a870b7b3b9c, 2026-10-22; LinkedIn per reveal: https://www.linkedin.com/in/kostas-seferis). **Saleshandy:** batch `CF · batch 2026-10-22 17:03 · Europe · 5 leads`, sequence ID mDPQN7mnaR (inactive; the CEO activates) |
 
 ## Best angle
 **Service line:** IoT hardware + firmware (Industrial IoT read broadly: aquaculture) · **Case study:** CNC drilling

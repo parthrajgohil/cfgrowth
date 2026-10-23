@@ -24,3 +24,5 @@ _2026-10-15: same. Search `salesnav` after 2026-10-01 returned nothing; no `pipe
 _2026-10-16: same. Search `salesnav` after 2026-10-02 returned nothing; no `pipeline/sales-nav-*.md` files (template only). Queue empty._
 _2026-10-19: same. Search `salesnav` after 2026-10-05 returned nothing; no `pipeline/sales-nav-*.md` files (template only). Queue empty._
 _2026-10-20: same. Search `salesnav` after 2026-10-06 returned nothing; no `pipeline/sales-nav-*.md` files (template only). Queue empty._
+_2026-10-21: same. Search `salesnav` after 2026-10-07 returned nothing; no `pipeline/sales-nav-*.md` files (template only). Queue empty._
+_2026-10-22: same. Search `salesnav` after 2026-10-08 returned nothing (the first call failed with a POST error; the retry succeeded); no `pipeline/sales-nav-*.md` files (template only). Queue empty._

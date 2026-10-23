@@ -1,5 +1,5 @@
 ---
-stage: new               # mirrors HubSpot "CF lead stage"; the CEO changes it in HubSpot
+stage: approved          # mirrors HubSpot "CF lead stage"; the CEO changes it in HubSpot
 type: cold-email
 account: liberate-medical
 recipient: Guillermo Cohen, Vice President of Engineering (email: TO BE FILLED BY HUMAN)

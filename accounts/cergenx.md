@@ -45,7 +45,7 @@
 ## Buyers
 | Name | Title | Profile | Notes |
 |---|---|---|---|
-| Jason Mowles | CEO & Co-Founder | unverified | **Primary.** Saleshandy 148256072; Apollo has email |
+| Jason Mowles | CEO & Co-Founder | https://www.linkedin.com/in/jason-mowles-72801398 | **Primary.** Saleshandy 148256072 · **jmowles@cergenx.com** (valid; reveal 6ada10b1152f1419f7e3e080, 2026-10-22) · batch `CF · batch 2026-10-22 19:03 · Europe · 1 lead` (gOwE32qOab), ready to activate |
 | Finola B. | Head of Product | unverified | Alternative. Saleshandy 399754140; surname masked |
 | Stefan Mo***k | Head of Systems | unverified | Apollo only; surname masked |
 

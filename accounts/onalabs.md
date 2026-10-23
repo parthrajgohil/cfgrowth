@@ -45,7 +45,7 @@ Others in Apollo: Elisabet del Valle (Co-founder & CEO), David Pa*** (Production
 ## Buyers
 | Name | Title | Profile | Notes |
 |---|---|---|---|
-| Jaime Punter-Villagrasa | CTO | unverified | **Primary.** Saleshandy 425668707 |
+| Jaime Punter-Villagrasa | CTO | unverified | **Primary.** Saleshandy 425668707. **Email: j.punter@onalabs.com** (Saleshandy `valid`, reveal request 6ad9f4aa60c94a870b7b3b9c, 2026-10-22; LinkedIn per reveal: https://www.linkedin.com/in/jaime-punter-villagrasa). **Saleshandy:** batch `CF · batch 2026-10-22 17:03 · Europe · 5 leads`, sequence ID mDPQN7mnaR (inactive; the CEO activates) |
 | Albert Ca*** | VP of Engineering | unverified | Alternative; Apollo only, surname masked, no HubSpot contact |
 
 ## Best angle

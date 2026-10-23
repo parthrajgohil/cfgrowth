@@ -51,7 +51,7 @@
 ## Buyers
 | Name | Title | Profile | Notes |
 |---|---|---|---|
-| Kristian Kellner | CTO | unverified | **Primary.** Saleshandy 312803892; Apollo has email |
+| Kristian Kellner | CTO | unverified | **Primary.** Saleshandy 312803892; Apollo has email. **Email: k.kellner@dr-mach.de** (Saleshandy `valid`, reveal request 6ad9f4aa60c94a870b7b3b9c, 2026-10-22; LinkedIn per reveal: https://www.linkedin.com/in/kristian-kellner-537919a3). **Saleshandy:** batch `CF · batch 2026-10-22 17:03 · Europe · 5 leads`, sequence ID mDPQN7mnaR (inactive; the CEO activates) |
 
 ## Best angle
 **Service line:** Hardware/PCB + embedded firmware for a medical device (primary row) · **Case study:** BLE smart

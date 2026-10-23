@@ -1,5 +1,5 @@
 ---
-stage: new               # mirrors HubSpot "CF lead stage"; the CEO changes it in HubSpot
+stage: approved          # mirrors HubSpot "CF lead stage"; the CEO changes it in HubSpot
 type: cold-email
 account: neurovalens
 recipient: Iain Hendrick, Chief Project Officer (email: TO BE FILLED BY HUMAN)

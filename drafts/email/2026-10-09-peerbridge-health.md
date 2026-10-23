@@ -1,8 +1,9 @@
 ---
-stage: new               # mirrors HubSpot "CF lead stage"; the CEO changes it in HubSpot
+stage: ready_to_import          # mirrors HubSpot "CF lead stage"; the CEO changes it in HubSpot
 type: cold-email
 account: peerbridge-health
-recipient: Chris Darland, President & CEO (email: TO BE FILLED BY HUMAN)
+recipient: Chris Darland, President & CEO <c.darland@peerbridgehealth.com>
+saleshandy_sequence: 9KwO5oyYa6
 sources: [accounts/peerbridge-health.md, https://corefragment.com/case-study/smart-glucometer, https://corefragment.com/blog/design-ble-devices-for-crowded-rf-environments]
 ---
 

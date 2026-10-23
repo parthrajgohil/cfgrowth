@@ -50,7 +50,7 @@
 ## Buyers
 | Name | Title | Profile | Notes |
 |---|---|---|---|
-| Markus Eibl | Head of Electrical Engineering & Smart Products | see above | **Primary.** Saleshandy 471890371; Apollo has email. Title differs on LinkedIn |
+| Markus Eibl | Head of Electrical Engineering & Smart Products | see above | **Primary.** Saleshandy 471890371; Apollo has email. Title differs on LinkedIn. **Email: markus.eibl@untha.com** (Saleshandy `valid`, reveal request 6ad8a330b20f2418edd3c927, 2026-10-21). **Saleshandy:** batch `CF · batch 2026-10-21 17:03 · Europe · 5 leads`, sequence ID XdPd5Q7xaV (inactive; the CEO activates) |
 | Hannes Kratzwald | Head of Product Management & Performance Engineering | unverified | Alternative. Saleshandy 140043344 |
 | Stefan Scheiflinger-Ehrenwerth | Chief Innovation Officer | unverified | Best fit on paper; no email source. LinkedIn route for the CEO |
 

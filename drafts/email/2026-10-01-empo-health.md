@@ -1,8 +1,9 @@
 ---
-stage: new               # mirrors HubSpot "CF lead stage"; the CEO changes it in HubSpot
+stage: in_sequence              # mirrors HubSpot "CF lead stage"; the CEO changes it in HubSpot
 type: cold-email
 account: empo-health
-recipient: Art Sandoval, Head of Hardware (email: TO BE FILLED BY HUMAN)
+recipient: Art Sandoval, Head of Hardware <art@empohealth.com>
+saleshandy_sequence: dlPyoQ9qzL
 sources: [accounts/empo-health.md, https://corefragment.com/case-study/health-monitoring-hub, https://corefragment.com/blog/outsourcing-decision-for-device-driver-development]
 ---
 

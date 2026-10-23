@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+  <g font-family="Helvetica Neue, Helvetica, Arial">
+    <circle cx="150" cy="190" r="50" fill="#1F5FAE"/>
+    <text x="150" y="208" text-anchor="middle" font-size="52" font-weight="700" fill="#FFFFFF">1</text>
+    <text x="230" y="200" font-size="28" font-weight="700" fill="#1F5FAE">CONNECTIVITY</text>
+    <text x="100" y="360" font-size="72" font-weight="700" fill="#1F2933">Wi-Fi first.</text>
+    <text x="100" y="450" font-size="72" font-weight="700" fill="#1F5FAE">Cellular as backup.</text>
+    <text x="100" y="560" font-size="36" fill="#1F2933">At home, nobody owns the network.</text>
+    <text x="100" y="614" font-size="36" fill="#1F2933">The router gets swapped, the password</text>
+    <text x="100" y="668" font-size="36" fill="#1F2933">changes, the power goes off at night.</text>
+    <!-- state rows -->
+    <line x1="100" y1="730" x2="980" y2="730" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="796" font-size="32" fill="#1F2933">Wi-Fi works</text>
+    <line x1="400" y1="785" x2="470" y2="785" stroke="#1F5FAE" stroke-width="4"/>
+    <polygon points="466,775 482,785 466,795" fill="#1F5FAE"/>
+    <text x="510" y="796" font-size="32" font-weight="700" fill="#1F5FAE">send over Wi-Fi</text>
+    <line x1="100" y1="840" x2="980" y2="840" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="906" font-size="32" fill="#1F2933">Wi-Fi drops</text>
+    <line x1="400" y1="895" x2="470" y2="895" stroke="#F26522" stroke-width="4"/>
+    <polygon points="466,885 482,895 466,905" fill="#F26522"/>
+    <text x="510" y="906" font-size="32" font-weight="700" fill="#F26522">switch to cellular</text>
+    <line x1="100" y1="950" x2="980" y2="950" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="1016" font-size="32" fill="#1F2933">Wi-Fi returns</text>
+    <line x1="400" y1="1005" x2="470" y2="1005" stroke="#1F5FAE" stroke-width="4"/>
+    <polygon points="466,995 482,1005 466,1015" fill="#1F5FAE"/>
+    <text x="510" y="1016" font-size="32" font-weight="700" fill="#1F5FAE">move back to Wi-Fi</text>
+    <line x1="100" y1="1060" x2="980" y2="1060" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="1130" font-size="32" fill="#52606D">For a medical hub, a dropped link</text>
+    <text x="100" y="1176" font-size="32" fill="#52606D">is a patient-safety issue.</text>
+    <!-- footer -->
+    <line x1="100" y1="1230" x2="980" y2="1230" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="1290" font-size="26" fill="#52606D">corefragment.com</text>
+    <image href="{{LOGO}}" x="664" y="1252" width="100" height="60" preserveAspectRatio="xMidYMid meet"/>
+    <text x="980" y="1296" text-anchor="end" font-size="34" font-weight="700" fill="#1F2933">CoreFragment</text>
+  </g>
+</svg>

@@ -58,7 +58,7 @@
 ## Buyers
 | Name | Title | Profile | Notes |
 |---|---|---|---|
-| Matt Parrott | VP of R&D and Manufacturing | https://www.linkedin.com/in/matthew-parrott-b752745/ | Owns R&D and manufacturing, so both the product and the cost-down angle. **Primary.** Saleshandy 152219163 |
+| Matt Parrott | VP of R&D and Manufacturing | https://www.linkedin.com/in/matthew-parrott-b752745/ | Owns R&D and manufacturing, so both the product and the cost-down angle. **Primary.** Saleshandy 152219163. **Email: m.parrott@epitel.com** (Saleshandy `valid`, reveal request 6ad8a330b20f2418edd3c927, 2026-10-21; LinkedIn per reveal: https://www.linkedin.com/in/matthew-parrott-b752745). **Saleshandy:** batch `CF · batch 2026-10-21 17:03 · USA · 3 leads`, sequence ID dlPyoQ9qzL (inactive; the CEO activates) |
 | Mark Lehmkuhle, PhD | CTO & Founder | https://www.linkedin.com/in/mark-lehmkuhle-0b617a19/ | Founder and the technical authority on the sensor. Saleshandy record is stale (lists MedTech Innovator); Apollo has email |
 
 ## Best angle

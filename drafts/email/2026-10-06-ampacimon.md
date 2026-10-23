@@ -1,8 +1,9 @@
 ---
-stage: new               # mirrors HubSpot "CF lead stage"; the CEO changes it in HubSpot
+stage: in_sequence          # mirrors HubSpot "CF lead stage"; the CEO changes it in HubSpot
 type: cold-email
 account: ampacimon
-recipient: Thibaut Libert, Head of Electronics Department (email: TO BE FILLED BY HUMAN)
+recipient: Thibaut Libert, Head of Electronics Department <thibaut.libert@ampacimon.com>
+saleshandy_sequence: glwGrXyyz6
 sources: [accounts/ampacimon.md, https://corefragment.com/case-study/access-control-system, https://corefragment.com/blog/handle-mqtt-connection-loss]
 ---
 

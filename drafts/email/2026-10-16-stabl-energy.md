@@ -1,5 +1,5 @@
 ---
-stage: new               # mirrors HubSpot "CF lead stage"; the CEO changes it in HubSpot
+stage: approved          # mirrors HubSpot "CF lead stage"; the CEO changes it in HubSpot
 type: cold-email
 account: stabl-energy
 recipient: Julian Schneider, Director of Engineering (email: TO BE FILLED BY HUMAN)

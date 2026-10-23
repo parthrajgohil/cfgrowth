@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+  <g font-family="Helvetica Neue, Helvetica, Arial">
+    <text x="100" y="200" font-size="28" font-weight="700" fill="#1F5FAE">TAKEAWAY</text>
+    <text x="100" y="330" font-size="72" font-weight="700" fill="#1F2933">Design for the</text>
+    <text x="100" y="420" font-size="72" font-weight="700" fill="#1F5FAE">home, not the lab.</text>
+    <g fill="#1F5FAE">
+      <circle cx="130" cy="530" r="26"/>
+      <circle cx="130" cy="610" r="26"/>
+      <circle cx="130" cy="690" r="26"/>
+      <circle cx="130" cy="770" r="26"/>
+      <circle cx="130" cy="850" r="26"/>
+    </g>
+    <g font-size="28" font-weight="700" fill="#FFFFFF" text-anchor="middle">
+      <text x="130" y="540">1</text>
+      <text x="130" y="620">2</text>
+      <text x="130" y="700">3</text>
+      <text x="130" y="780">4</text>
+      <text x="130" y="860">5</text>
+    </g>
+    <g font-size="34" fill="#1F2933">
+      <text x="180" y="542">Wi-Fi first, cellular as backup</text>
+      <text x="180" y="622">Store first, send second</text>
+      <text x="180" y="702">One record for every device</text>
+      <text x="180" y="782">Recover without a home visit</text>
+      <text x="180" y="862">Cellular for what matters now</text>
+    </g>
+    <line x1="100" y1="920" x2="980" y2="920" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="990" font-size="34" fill="#52606D">A clinician should never have to ask,</text>
+    <text x="100" y="1040" font-size="34" fill="#52606D">"Did the hub miss something?"</text>
+    <rect x="100" y="1090" width="620" height="80" rx="40" fill="#F26522"/>
+    <text x="410" y="1142" text-anchor="middle" font-size="32" font-weight="700" fill="#FFFFFF">Follow CoreFragment for more</text>
+    <!-- footer -->
+    <line x1="100" y1="1230" x2="980" y2="1230" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="1290" font-size="26" fill="#52606D">corefragment.com</text>
+    <image href="{{LOGO}}" x="664" y="1252" width="100" height="60" preserveAspectRatio="xMidYMid meet"/>
+    <text x="980" y="1296" text-anchor="end" font-size="34" font-weight="700" fill="#1F2933">CoreFragment</text>
+  </g>
+</svg>

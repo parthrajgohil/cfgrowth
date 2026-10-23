@@ -48,7 +48,7 @@
 ## Buyers
 | Name | Title | Profile | Notes |
 |---|---|---|---|
-| Giuliano Talacci | Head of Product Engineering | unverified | **Primary.** Saleshandy 231855194 |
+| Giuliano Talacci | Head of Product Engineering | https://www.linkedin.com/in/giuliano-talacci-7b05a035 | **Primary.** Saleshandy 231855194 · **Email:** g.talacci@cardioline.com (valid; Saleshandy reveal 6ad8bf37198ccb449ea49d25, 2026-10-21) · **Batch:** CF · batch 2026-10-21 19:03 · Europe · 2 leads (`glwGrXyyz6`, inactive until the CEO activates it) |
 | Luis Meireles | CEO | unverified | Not in Saleshandy; Apollo has email; ex-CTO, good LinkedIn route |
 
 ## Best angle

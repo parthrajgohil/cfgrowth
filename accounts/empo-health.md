@@ -46,7 +46,7 @@
 ## Buyers
 | Name | Title | Profile | Notes |
 |---|---|---|---|
-| Art Sandoval | Head of Hardware | unverified | **Primary.** Saleshandy 98783537 |
+| Art Sandoval | Head of Hardware | unverified | **Primary.** Saleshandy 98783537. **Email: art@empohealth.com** (Saleshandy `valid`, reveal request 6ad8a330b20f2418edd3c927, 2026-10-21; LinkedIn per reveal: https://www.linkedin.com/in/artgsandoval). **Saleshandy:** batch `CF · batch 2026-10-21 17:03 · USA · 3 leads`, sequence ID dlPyoQ9qzL (inactive; the CEO activates) |
 | Eric Dahlseng | Co-founder & CPO | unverified | Alternative. Saleshandy 312657424 |
 
 ## Best angle

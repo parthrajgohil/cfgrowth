@@ -8,6 +8,8 @@ content. Anonymous: no client names. First interview: 2026-10-08.
 ## Facts he has stated (usable as proof)
 - F1. Has worked with Nordic chipsets for the last 8 years (as of 2026-10-08).
 - F2. Built an audio streaming device on the nRF5340.
+- F3. Built a wearable for a client that fits around the knee and tracks movement, bending and
+  steps, for patients doing physical therapy and monitoring after knee surgery (CEO, 2026-10-21).
 
 ## War stories (bugs fixed, products rescued, hard lessons)
 

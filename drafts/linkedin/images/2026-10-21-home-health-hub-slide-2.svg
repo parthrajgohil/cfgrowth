@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+  <g font-family="Helvetica Neue, Helvetica, Arial">
+    <text x="100" y="200" font-size="28" font-weight="700" fill="#1F5FAE">THE PROJECT</text>
+    <text x="100" y="330" font-size="72" font-weight="700" fill="#1F2933">A home hub for</text>
+    <text x="100" y="420" font-size="72" font-weight="700" fill="#1F5FAE">chronic care.</text>
+    <text x="100" y="530" font-size="36" fill="#1F2933">A healthcare client in Australia wanted</text>
+    <text x="100" y="584" font-size="36" fill="#1F2933">one device that gathers a patient's</text>
+    <text x="100" y="638" font-size="36" fill="#1F2933">readings at home and shares them.</text>
+    <!-- collects -->
+    <rect x="100" y="710" width="420" height="300" rx="20" fill="#FFFFFF" stroke="#1F5FAE" stroke-width="4"/>
+    <text x="140" y="770" font-size="26" font-weight="700" fill="#1F5FAE">IT COLLECTS</text>
+    <text x="140" y="830" font-size="30" fill="#1F2933">Oxygen level</text>
+    <text x="140" y="878" font-size="30" fill="#1F2933">Weight</text>
+    <text x="140" y="926" font-size="30" fill="#1F2933">Blood sugar</text>
+    <!-- we built -->
+    <rect x="560" y="710" width="420" height="300" rx="20" fill="#FDEBD7" stroke="#F26522" stroke-width="4"/>
+    <text x="600" y="770" font-size="26" font-weight="700" fill="#F26522">WE BUILT</text>
+    <text x="600" y="830" font-size="30" fill="#1F2933">Product architecture</text>
+    <text x="600" y="878" font-size="30" fill="#1F2933">Hardware, firmware</text>
+    <text x="600" y="926" font-size="30" fill="#1F2933">Linux drivers</text>
+    <text x="600" y="974" font-size="30" fill="#1F2933">Mobile app</text>
+    <text x="100" y="1100" font-size="34" fill="#52606D">The app is designed for elderly patients.</text>
+    <!-- footer -->
+    <line x1="100" y1="1230" x2="980" y2="1230" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="1290" font-size="26" fill="#52606D">corefragment.com</text>
+    <image href="{{LOGO}}" x="664" y="1252" width="100" height="60" preserveAspectRatio="xMidYMid meet"/>
+    <text x="980" y="1296" text-anchor="end" font-size="34" font-weight="700" fill="#1F2933">CoreFragment</text>
+  </g>
+</svg>

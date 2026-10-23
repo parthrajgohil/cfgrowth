@@ -1,8 +1,9 @@
 ---
-stage: new               # mirrors HubSpot "CF lead stage"; the CEO changes it in HubSpot
+stage: ready_to_import          # mirrors HubSpot "CF lead stage"; the CEO changes it in HubSpot
 type: cold-email
 account: aquamanager
-recipient: Kostas Seferis, Founder (email: TO BE FILLED BY HUMAN)
+recipient: Kostas Seferis, Founder <kostas.seferis@aqua-manager.com>
+saleshandy_sequence: mDPQN7mnaR
 sources: [accounts/aquamanager.md, https://corefragment.com/case-study/industrial-cnc-drilling-machine-automation, https://corefragment.com/blog/handle-mqtt-connection-loss]
 ---
 

@@ -60,7 +60,7 @@
 ## Buyers
 | Name | Title | Profile | Notes |
 |---|---|---|---|
-| Adrian Kundert | Head of Firmware | unverified | **Primary.** Saleshandy 138169260 |
+| Adrian Kundert | Head of Firmware | unverified | **Primary.** Saleshandy 138169260. **Email: adrian.kundert@nexxiot.com** (Saleshandy `valid`, reveal request 6ad8a330b20f2418edd3c927, 2026-10-21; LinkedIn per reveal: https://www.linkedin.com/in/adriankundert). **Saleshandy:** batch `CF · batch 2026-10-21 17:03 · Europe · 5 leads`, sequence ID XdPd5Q7xaV (inactive; the CEO activates) |
 | Kuno Bärtschi | VP Hardware | unverified | Alternative for a hardware/power angle. Saleshandy 440015335 |
 | Dominik Dumancic | Head of Hardware Eng. & Programs | unverified | Saleshandy 127346446 |
 

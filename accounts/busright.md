@@ -50,7 +50,7 @@
 ## Buyers
 | Name | Title | Profile | Notes |
 |---|---|---|---|
-| Keith Corso | Co-Founder & CEO | unverified | **Primary.** Saleshandy 398322179 |
+| Keith Corso | Co-Founder & CEO | https://www.linkedin.com/in/keith-corso | **Primary.** Saleshandy 398322179 · **keith@busright.com** (valid; reveal 6ada10b1152f1419f7e3e080, 2026-10-22) · batch `CF · batch 2026-10-22 19:03 · USA · 1 lead` (EeaNRjo9ag), ready to activate |
 | Phil D. | Co-Founder & CPO | unverified | Alternative; product owner for the NFC device; surname masked |
 | Rafał Gawlik | VP of Engineering | unverified | Alternative; software side |
 

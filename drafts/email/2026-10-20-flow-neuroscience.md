@@ -1,5 +1,5 @@
 ---
-stage: new               # mirrors HubSpot "CF lead stage"; the CEO changes it in HubSpot
+stage: approved          # mirrors HubSpot "CF lead stage"; the CEO changes it in HubSpot
 type: cold-email
 account: flow-neuroscience
 recipient: Erik Rehn, CTO & Co-founder (email: TO BE FILLED BY HUMAN)

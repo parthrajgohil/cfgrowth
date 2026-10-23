@@ -46,7 +46,7 @@
 ## Buyers
 | Name | Title | Profile | Notes |
 |---|---|---|---|
-| Damien Daly | CTO | unverified | **Primary.** Saleshandy 235890913 |
+| Damien Daly | CTO | unverified | **Primary.** Saleshandy 235890913. **Email: damien@vertigenius.com** (Saleshandy `valid`, reveal request 6ad9f4aa60c94a870b7b3b9c, 2026-10-22; LinkedIn per reveal: https://www.linkedin.com/in/damien-daly-14a16bb). **Saleshandy:** batch `CF · batch 2026-10-22 17:03 · Europe · 5 leads`, sequence ID mDPQN7mnaR (inactive; the CEO activates) |
 
 ## Best angle
 **Service line:** Embedded firmware + BLE companion app for a medical wearable (primary row) · **Case study:** BLE

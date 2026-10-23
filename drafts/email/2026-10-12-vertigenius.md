@@ -1,8 +1,9 @@
 ---
-stage: new               # mirrors HubSpot "CF lead stage"; the CEO changes it in HubSpot
+stage: ready_to_import          # mirrors HubSpot "CF lead stage"; the CEO changes it in HubSpot
 type: cold-email
 account: vertigenius
-recipient: Damien Daly, Chief Technology Officer (email: TO BE FILLED BY HUMAN)
+recipient: Damien Daly, Chief Technology Officer <damien@vertigenius.com>
+saleshandy_sequence: mDPQN7mnaR
 sources: [accounts/vertigenius.md, https://corefragment.com/case-study/smart-glucometer, https://corefragment.com/blog/design-ble-devices-for-crowded-rf-environments]
 ---
 

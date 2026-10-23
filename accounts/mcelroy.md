@@ -45,7 +45,7 @@ Also in Apollo: Andrew Me***r (Digital Product Manager), Chris Ze***r (Director 
 ## Buyers
 | Name | Title | Profile | Notes |
 |---|---|---|---|
-| Geoff Koch | VP Product Development | unverified | **Primary.** Saleshandy 151660207 |
+| Geoff Koch | VP Product Development | unverified | **Primary.** Saleshandy 151660207. **Email: gkoch@mcelroy.com** (Saleshandy `valid`, reveal request 6ad9f4aa60c94a870b7b3b9c, 2026-10-22; LinkedIn per reveal: https://www.linkedin.com/in/geoff-koch-39153861). **Saleshandy:** batch `CF · batch 2026-10-22 17:03 · USA · 3 leads`, sequence ID 9KwO5oyYa6 (inactive; the CEO activates) |
 | Michael Pacheco | Innovation Product Manager | unverified | Alternative; owns the launch. Saleshandy 180171723 |
 
 ## Best angle

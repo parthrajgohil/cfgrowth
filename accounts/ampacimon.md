@@ -48,7 +48,7 @@ Others in Apollo: Bertrand Go***d (Head of Innovation), Juan Co***a (R&D Hardwar
 ## Buyers
 | Name | Title | Profile | Notes |
 |---|---|---|---|
-| Thibaut Libert | Head of Electronics Department | unverified | **Primary.** Saleshandy 116074945 |
+| Thibaut Libert | Head of Electronics Department | https://www.linkedin.com/in/thibaut-libert-3b38354 | **Primary.** Saleshandy 116074945 · **Email:** thibaut.libert@ampacimon.com (valid; Saleshandy reveal 6ad8bf37198ccb449ea49d25, 2026-10-21) · **Batch:** CF · batch 2026-10-21 19:03 · Europe · 2 leads (`glwGrXyyz6`, inactive until the CEO activates it) |
 | Nabil Khouya | Chief Product Officer | unverified | Alternative. Saleshandy 322151581 |
 
 ## Best angle

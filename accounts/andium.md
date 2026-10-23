@@ -28,7 +28,7 @@
 
 | Buyer | Title | LinkedIn | Background | Saleshandy | Apollo |
 |---|---|---|---|---|---|
-| Jory Schwach (**primary**) | Founder and CEO | unverified | named in the Bapco release [2] | **Lead ID 410993373** (listed as "Jory S.") | 670f92e3548c0c00018da0ba (has email) |
+| Jory Schwach (**primary**) | Founder and CEO | unverified | named in the Bapco release [2] | **Lead ID 410993373** (listed as "Jory S.") · **Email: jschwach@andium.com** (Saleshandy `valid`, reveal request 6ad9f4aa60c94a870b7b3b9c, 2026-10-22; LinkedIn per reveal: https://www.linkedin.com/in/joryschwach) · **Saleshandy:** batch `CF · batch 2026-10-22 17:03 · USA · 3 leads`, sequence ID 9KwO5oyYa6 (inactive; the CEO activates) | 670f92e3548c0c00018da0ba (has email) |
 | Jatan Pathak | Chief Operating Officer | unverified | New York | **Lead ID 158629247** | 6102dad6370b590001bb14d0 (has email) |
 | Dan Go***o | Head of Hardware, Firmware & Edge AI | unverified | surname masked | not found | 625d6804a526a40001fbf8d5 (has email) |
 

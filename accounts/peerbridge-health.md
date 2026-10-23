@@ -42,7 +42,7 @@
 ## Buyers
 | Name | Title | Profile | Notes |
 |---|---|---|---|
-| Chris Darland | President & CEO | unverified | **Primary** (complete name, in Saleshandy) |
+| Chris Darland | President & CEO | unverified | **Primary** (complete name, in Saleshandy). **Email: c.darland@peerbridgehealth.com** (Saleshandy `valid`, reveal request 6ad9f4aa60c94a870b7b3b9c, 2026-10-22; LinkedIn per reveal: https://www.linkedin.com/in/chris-darland). **Saleshandy:** batch `CF · batch 2026-10-22 17:03 · USA · 3 leads`, sequence ID 9KwO5oyYa6 (inactive; the CEO activates) |
 | Sandeep Gu*** | CTO & VP R&D | unverified | Better technical fit, but surname masked in Apollo and not in Saleshandy; no HubSpot contact created |
 
 ## Best angle

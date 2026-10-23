@@ -1,8 +1,9 @@
 ---
-stage: new               # mirrors HubSpot "CF lead stage"; the CEO changes it in HubSpot
+stage: in_sequence          # mirrors HubSpot "CF lead stage"; the CEO changes it in HubSpot
 type: cold-email
 account: cardioline
-recipient: Giuliano Talacci, Head of Product Engineering and Senior Electronic Hardware Designer (email: TO BE FILLED BY HUMAN)
+recipient: Giuliano Talacci, Head of Product Engineering and Senior Electronic Hardware Designer <g.talacci@cardioline.com>
+saleshandy_sequence: glwGrXyyz6
 sources: [accounts/cardioline.md, https://corefragment.com/case-study/smart-glucometer, https://corefragment.com/blog/medical-wearable-device-development-challenges-and-fix, https://corefragment.com/case-study/health-monitoring-hub]
 ---
 

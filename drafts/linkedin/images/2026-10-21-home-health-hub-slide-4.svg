@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+  <g font-family="Helvetica Neue, Helvetica, Arial">
+    <circle cx="150" cy="190" r="50" fill="#1F5FAE"/>
+    <text x="150" y="208" text-anchor="middle" font-size="52" font-weight="700" fill="#FFFFFF">2</text>
+    <text x="230" y="200" font-size="28" font-weight="700" fill="#1F5FAE">DATA</text>
+    <text x="100" y="360" font-size="72" font-weight="700" fill="#1F2933">Store first.</text>
+    <text x="100" y="450" font-size="72" font-weight="700" fill="#1F5FAE">Send second.</text>
+    <text x="100" y="560" font-size="36" fill="#1F2933">Every reading is saved on the hub</text>
+    <text x="100" y="614" font-size="36" fill="#1F2933">before it goes anywhere. When the</text>
+    <text x="100" y="668" font-size="36" fill="#1F2933">connection returns, the hub syncs.</text>
+    <!-- timeline -->
+    <rect x="390" y="730" width="300" height="180" rx="16" fill="#FDEBD7"/>
+    <text x="540" y="768" text-anchor="middle" font-size="24" font-weight="700" fill="#F26522">no connection</text>
+    <line x1="100" y1="830" x2="980" y2="830" stroke="#E4E7EB" stroke-width="4"/>
+    <g fill="#1F5FAE">
+      <circle cx="160" cy="830" r="22"/>
+      <circle cx="300" cy="830" r="22"/>
+      <circle cx="780" cy="830" r="22"/>
+      <circle cx="920" cy="830" r="22"/>
+    </g>
+    <g fill="#FFFFFF" stroke="#F26522" stroke-width="5">
+      <circle cx="470" cy="830" r="22"/>
+      <circle cx="610" cy="830" r="22"/>
+    </g>
+    <text x="230" y="890" text-anchor="middle" font-size="24" fill="#52606D">sent</text>
+    <text x="540" y="890" text-anchor="middle" font-size="24" fill="#1F2933">stored on the hub</text>
+    <text x="850" y="890" text-anchor="middle" font-size="24" fill="#52606D">sent + synced</text>
+    <!-- id box -->
+    <rect x="100" y="970" width="880" height="200" rx="20" fill="#FFFFFF" stroke="#1F5FAE" stroke-width="4"/>
+    <text x="140" y="1028" font-size="26" font-weight="700" fill="#1F5FAE">GIVE EVERY READING AN ID</text>
+    <text x="140" y="1082" font-size="34" fill="#1F2933">A retry then updates one record.</text>
+    <text x="140" y="1130" font-size="34" fill="#1F2933">It never creates a duplicate.</text>
+    <!-- footer -->
+    <line x1="100" y1="1230" x2="980" y2="1230" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="1290" font-size="26" fill="#52606D">corefragment.com</text>
+    <image href="{{LOGO}}" x="664" y="1252" width="100" height="60" preserveAspectRatio="xMidYMid meet"/>
+    <text x="980" y="1296" text-anchor="end" font-size="34" font-weight="700" fill="#1F2933">CoreFragment</text>
+  </g>
+</svg>

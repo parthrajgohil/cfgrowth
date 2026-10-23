@@ -1,5 +1,5 @@
 ---
-stage: new               # mirrors HubSpot "CF lead stage"; the CEO changes it in HubSpot
+stage: approved          # mirrors HubSpot "CF lead stage"; the CEO changes it in HubSpot
 type: cold-email
 account: newronika
 recipient: Lorenzo Rossi, Co-founder, CEO & CTO (email: TO BE FILLED BY HUMAN)

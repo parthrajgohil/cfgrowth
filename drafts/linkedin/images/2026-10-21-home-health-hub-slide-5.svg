@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+  <g font-family="Helvetica Neue, Helvetica, Arial">
+    <circle cx="150" cy="190" r="50" fill="#1F5FAE"/>
+    <text x="150" y="208" text-anchor="middle" font-size="52" font-weight="700" fill="#FFFFFF">3</text>
+    <text x="230" y="200" font-size="28" font-weight="700" fill="#1F5FAE">DEVICES</text>
+    <text x="100" y="360" font-size="72" font-weight="700" fill="#1F2933">One record for</text>
+    <text x="100" y="450" font-size="72" font-weight="700" fill="#1F5FAE">every device.</text>
+    <text x="100" y="560" font-size="36" fill="#1F2933">Each monitor sends data its own way.</text>
+    <text x="100" y="614" font-size="36" fill="#1F2933">The hub turns all of it into one format.</text>
+    <!-- devices -->
+    <g fill="#FFFFFF" stroke="#1F5FAE" stroke-width="3">
+      <rect x="100" y="700" width="260" height="80" rx="14"/>
+      <rect x="100" y="820" width="260" height="80" rx="14"/>
+      <rect x="100" y="940" width="260" height="80" rx="14"/>
+    </g>
+    <text x="230" y="750" text-anchor="middle" font-size="28" fill="#1F2933">Oxygen monitor</text>
+    <text x="230" y="870" text-anchor="middle" font-size="28" fill="#1F2933">Weighing scale</text>
+    <text x="230" y="990" text-anchor="middle" font-size="28" fill="#1F2933">Glucose meter</text>
+    <g stroke="#1F5FAE" stroke-width="4" fill="none">
+      <path d="M360 740 L440 740 L440 860 L526 860"/>
+      <line x1="360" y1="860" x2="526" y2="860"/>
+      <path d="M360 980 L440 980 L440 860"/>
+    </g>
+    <polygon points="524,848 540,860 524,872" fill="#1F5FAE"/>
+    <text x="440" y="1060" text-anchor="middle" font-size="24" fill="#52606D">adapters</text>
+    <!-- record -->
+    <rect x="560" y="690" width="420" height="340" rx="20" fill="#FDEBD7" stroke="#F26522" stroke-width="4"/>
+    <text x="600" y="750" font-size="26" font-weight="700" fill="#F26522">ONE RECORD</text>
+    <line x1="600" y1="774" x2="940" y2="774" stroke="#F26522" stroke-width="2"/>
+    <text x="600" y="830" font-size="30" fill="#1F2933">device ID</text>
+    <text x="600" y="882" font-size="30" fill="#1F2933">value + unit</text>
+    <text x="600" y="934" font-size="30" fill="#1F2933">time of reading</text>
+    <text x="600" y="986" font-size="30" fill="#1F2933">patient</text>
+    <text x="100" y="1150" font-size="34" fill="#1F2933">The cloud and the app only see one format.</text>
+    <!-- footer -->
+    <line x1="100" y1="1230" x2="980" y2="1230" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="1290" font-size="26" fill="#52606D">corefragment.com</text>
+    <image href="{{LOGO}}" x="664" y="1252" width="100" height="60" preserveAspectRatio="xMidYMid meet"/>
+    <text x="980" y="1296" text-anchor="end" font-size="34" font-weight="700" fill="#1F2933">CoreFragment</text>
+  </g>
+</svg>

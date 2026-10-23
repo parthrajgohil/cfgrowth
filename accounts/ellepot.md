@@ -48,7 +48,7 @@
 ## Buyers
 | Name | Title | Profile | Notes |
 |---|---|---|---|
-| Brian Flansmose Vinbech | Head of IoT Development and Digitalization | unverified | **Primary.** Saleshandy 238958610; Apollo has email |
+| Brian Flansmose Vinbech | Head of IoT Development and Digitalization | unverified | **Primary.** Saleshandy 238958610; Apollo has email. **Email: bfv@ellepot.dk** (Saleshandy `valid`, reveal request 6ad8a330b20f2418edd3c927, 2026-10-21; LinkedIn per reveal: https://www.linkedin.com/in/brian-flansmose-vinbech-a9ab1a48). **Saleshandy:** batch `CF · batch 2026-10-21 17:03 · Europe · 5 leads`, sequence ID XdPd5Q7xaV (inactive; the CEO activates) |
 | Thomas Tr*** | CTO | unverified | Alternative; Apollo only (surname masked, so no HubSpot contact) |
 
 ## Best angle

@@ -1,8 +1,9 @@
 ---
-stage: new               # mirrors HubSpot "CF lead stage"; the CEO changes it in HubSpot
+stage: in_sequence              # mirrors HubSpot "CF lead stage"; the CEO changes it in HubSpot
 type: cold-email
 account: caretaker-medical
-recipient: Justin McQuown, VP of Engineering (email: TO BE FILLED BY HUMAN)
+recipient: Justin McQuown, VP of Engineering <justin@caretakermedical.net>
+saleshandy_sequence: dlPyoQ9qzL
 sources: [accounts/caretaker-medical.md, https://corefragment.com/case-study/smart-glucometer, https://corefragment.com/blog/medical-wearable-device-development-challenges-and-fix]
 ---
 

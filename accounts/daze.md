@@ -46,7 +46,7 @@
 ## Buyers
 | Name | Title | Profile | Notes |
 |---|---|---|---|
-| Pietro Boni | Head of Hardware | see above | **Primary.** Saleshandy 428134304; Apollo has email |
+| Pietro Boni | Head of Hardware | see above | **Primary.** Saleshandy 428134304; Apollo has email. **Email: pietro.boni@dazetechnology.com** (Saleshandy `valid`, reveal request 6ad8a330b20f2418edd3c927, 2026-10-21; LinkedIn confirmed by reveal). **Saleshandy:** batch `CF · batch 2026-10-21 17:03 · Europe · 5 leads`, sequence ID XdPd5Q7xaV (inactive; the CEO activates) |
 | Federico Mazzoleni | R&D Director & President | unverified | Alternative. Not in Saleshandy; Apollo has email |
 
 ## Best angle

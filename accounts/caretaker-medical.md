@@ -50,7 +50,7 @@
 ## Buyers
 | Name | Title | Profile | Notes |
 |---|---|---|---|
-| Justin McQuown | VP of Engineering | LinkedIn above | **Primary.** Saleshandy 134728842; Apollo has email |
+| Justin McQuown | VP of Engineering | LinkedIn above | **Primary.** Saleshandy 134728842; Apollo has email. **Email: justin@caretakermedical.net** (Saleshandy `valid`, reveal request 6ad8a330b20f2418edd3c927, 2026-10-21). **Saleshandy:** batch `CF · batch 2026-10-21 17:03 · USA · 3 leads`, sequence ID dlPyoQ9qzL (inactive; the CEO activates) |
 | Martin Baruch | Founder & CTO | LinkedIn above | Alternative. Saleshandy 292981255; Apollo has email |
 
 ## Best angle

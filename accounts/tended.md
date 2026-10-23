@@ -52,7 +52,7 @@
 ## Buyers
 | Name | Title | Profile | Notes |
 |---|---|---|---|
-| Andrew Wood | Head of Hardware Engineering | unverified | **Primary.** Saleshandy 362236032; Apollo has email |
+| Andrew Wood | Head of Hardware Engineering | unverified | **Primary.** Saleshandy 362236032; Apollo has email. **Email: andrew.wood@tended.co.uk** (Saleshandy `valid`, reveal request 6ad8a330b20f2418edd3c927, 2026-10-21; LinkedIn per reveal: https://www.linkedin.com/in/a-wood). **Saleshandy:** batch `CF · batch 2026-10-21 17:03 · Europe · 5 leads`, sequence ID XdPd5Q7xaV (inactive; the CEO activates) |
 | Alex Ford | Head of Engineering | unverified | Alternative. Saleshandy 409545257; no Apollo email |
 | Leo Scott Smith | Founder & CEO | unverified | No usable Saleshandy record; LinkedIn route for the CEO |
 

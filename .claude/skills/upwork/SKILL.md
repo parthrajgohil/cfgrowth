@@ -49,11 +49,15 @@ description: How CoreFragment works Upwork — the CEO's personal freelancer pro
 Invest Connects only where a real, sizeable engagement is likely. **Not** one-off small
 jobs ($100–$500 fixes, quick tweaks, homework, "flash this board").
 
+**Firmware projects only (CEO, 2026-11-17).** The job must have firmware as a main
+deliverable: embedded firmware (MCU/RTOS/Linux/BSP/drivers/bootloader/OTA), BLE/Wi-Fi/
+LoRa/cellular device firmware, edge AI on devices. A job that also needs PCB/hardware,
+cloud or an app still counts when the firmware is a core part of it. Pure PCB/hardware
+design, layout, enclosure, app-only or cloud-only jobs are C.
+
 **A (draft a proposal):** all of
-- Work we're strong at: embedded firmware (MCU/RTOS/Linux/BSP/drivers/bootloader/OTA),
-  BLE/Wi-Fi/LoRa/cellular devices, PCB/hardware design, IoT device-to-cloud, companion
-  apps *as part of a device*, edge AI on devices. Healthcare/medical and industrial IoT
-  first (CLAUDE.md Priorities).
+- Firmware work we're strong at (above). Healthcare/medical and industrial IoT first
+  (CLAUDE.md Priorities).
 - Size: fixed price **≥ $1,500**, or hourly with max rate **≥ $25/hr** and duration
   **≥ 1 month** (or "ongoing" / 30+ hrs/week) (CEO, 2026-10-08). A product build or multi-phase project
   with a smaller first milestone counts if the brief clearly describes the larger work.
@@ -102,12 +106,12 @@ free/unpaid test work, anything asking to move off Upwork.
 ## 2. Finding jobs (read-only, free)
 Use our own searches; Upwork's Best Match feed is noisy.
 - `find_jobs search` with `title` (1–3 words, ANDed; can't be combined with `query`), sort
-  newest first, `verified_payment_only: true`, `limit: 10`. Rotate titles: `firmware`,
-  `embedded`, `BLE` / `bluetooth`, `PCB`, `nRF52` / `ESP32` / `STM32`, `IoT device`,
-  `hardware design`, `embedded linux`, `zephyr`, `medical device`.
+  newest first, `verified_payment_only: true`, `limit: 10`. Rotate titles (firmware only, CEO 2026-11-17): `firmware`,
+  `embedded`, `BLE` / `bluetooth`, `nRF52` / `ESP32` / `STM32`, `IoT device`,
+  `embedded linux`, `zephyr`, `RTOS`, `bootloader`, `medical device`.
 - `find_jobs search` with `query` for concepts: "medical device firmware", "wearable
-  hardware", "industrial IoT sensor", "connected product prototype to production",
-  "BLE companion app device", "edge AI device".
+  firmware", "industrial IoT sensor firmware", "Zephyr nRF Connect", "embedded Linux
+  driver", "OTA bootloader", "edge AI device".
 - `find_jobs smart_search` `mode: most_recent`, `days_posted: 1` as a cross-check.
 - Filters to use: `experience_level` expert or intermediate; `budget_min` 1500 for fixed;
   `rate_min` 25 with `job_type: hourly`; `location` (try "United States", "Europe",

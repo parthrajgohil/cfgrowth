@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+  <g font-family="Helvetica Neue, Helvetica, Arial">
+    <circle cx="150" cy="190" r="50" fill="#1F5FAE"/>
+    <text x="150" y="208" text-anchor="middle" font-size="52" font-weight="700" fill="#FFFFFF">2</text>
+    <text x="230" y="200" font-size="28" font-weight="700" fill="#1F5FAE">DATA</text>
+    <text x="100" y="360" font-size="72" font-weight="700" fill="#1F2933">Ask the car</text>
+    <text x="100" y="450" font-size="72" font-weight="700" fill="#1F5FAE">what it supports.</text>
+    <text x="100" y="550" font-size="36" fill="#1F2933">Not every car reports every PID.</text>
+    <text x="100" y="604" font-size="36" fill="#1F2933">Request PID 00 first: the car answers</text>
+    <text x="100" y="658" font-size="36" fill="#1F2933">with a map of the PIDs it supports.</text>
+    <!-- bitmap grid: 32 PIDs (illustrative) -->
+    <g>
+      <rect x="100" y="710" width="44" height="44" rx="6" fill="#1F5FAE"/>
+      <rect x="155" y="710" width="44" height="44" rx="6" fill="#1F5FAE"/>
+      <rect x="210" y="710" width="44" height="44" rx="6" fill="#1F5FAE"/>
+      <rect x="265" y="710" width="44" height="44" rx="6" fill="#1F5FAE"/>
+      <rect x="320" y="710" width="44" height="44" rx="6" fill="#E4E7EB"/>
+      <rect x="375" y="710" width="44" height="44" rx="6" fill="#1F5FAE"/>
+      <rect x="430" y="710" width="44" height="44" rx="6" fill="#1F5FAE"/>
+      <rect x="485" y="710" width="44" height="44" rx="6" fill="#1F5FAE"/>
+      <rect x="540" y="710" width="44" height="44" rx="6" fill="#1F5FAE"/>
+      <rect x="595" y="710" width="44" height="44" rx="6" fill="#E4E7EB"/>
+      <rect x="650" y="710" width="44" height="44" rx="6" fill="#1F5FAE"/>
+      <rect x="705" y="710" width="44" height="44" rx="6" fill="#1F5FAE"/>
+      <rect x="760" y="710" width="44" height="44" rx="6" fill="#1F5FAE"/>
+      <rect x="815" y="710" width="44" height="44" rx="6" fill="#1F5FAE"/>
+      <rect x="870" y="710" width="44" height="44" rx="6" fill="#1F5FAE"/>
+      <rect x="925" y="710" width="44" height="44" rx="6" fill="#E4E7EB"/>
+      <rect x="100" y="765" width="44" height="44" rx="6" fill="#1F5FAE"/>
+      <rect x="155" y="765" width="44" height="44" rx="6" fill="#E4E7EB"/>
+      <rect x="210" y="765" width="44" height="44" rx="6" fill="#E4E7EB"/>
+      <rect x="265" y="765" width="44" height="44" rx="6" fill="#1F5FAE"/>
+      <rect x="320" y="765" width="44" height="44" rx="6" fill="#1F5FAE"/>
+      <rect x="375" y="765" width="44" height="44" rx="6" fill="#1F5FAE"/>
+      <rect x="430" y="765" width="44" height="44" rx="6" fill="#E4E7EB"/>
+      <rect x="485" y="765" width="44" height="44" rx="6" fill="#E4E7EB"/>
+      <rect x="540" y="765" width="44" height="44" rx="6" fill="#1F5FAE"/>
+      <rect x="595" y="765" width="44" height="44" rx="6" fill="#1F5FAE"/>
+      <rect x="650" y="765" width="44" height="44" rx="6" fill="#E4E7EB"/>
+      <rect x="705" y="765" width="44" height="44" rx="6" fill="#1F5FAE"/>
+      <rect x="760" y="765" width="44" height="44" rx="6" fill="#E4E7EB"/>
+      <rect x="815" y="765" width="44" height="44" rx="6" fill="#E4E7EB"/>
+      <rect x="870" y="765" width="44" height="44" rx="6" fill="#E4E7EB"/>
+      <rect x="925" y="765" width="44" height="44" rx="6" fill="#1F5FAE"/>
+    </g>
+    <rect x="100" y="850" width="28" height="28" rx="4" fill="#1F5FAE"/>
+    <text x="142" y="874" font-size="26" fill="#1F2933">supported</text>
+    <rect x="360" y="850" width="28" height="28" rx="4" fill="#E4E7EB"/>
+    <text x="402" y="874" font-size="26" fill="#1F2933">not on this car</text>
+    <!-- highlight -->
+    <rect x="100" y="940" width="880" height="210" rx="14" fill="#FDEBD7" stroke="#F26522" stroke-width="4"/>
+    <text x="130" y="1002" font-size="32" font-weight="700" fill="#1F2933">Build the dashboard around the answer.</text>
+    <text x="130" y="1052" font-size="32" fill="#1F2933">Hide what the car can't give you.</text>
+    <text x="130" y="1102" font-size="32" fill="#1F2933">Manufacturer-specific data is extra work.</text>
+    <!-- footer -->
+    <line x1="100" y1="1230" x2="980" y2="1230" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="1290" font-size="26" fill="#52606D">corefragment.com</text>
+    <image href="{{LOGO}}" x="664" y="1252" width="100" height="60" preserveAspectRatio="xMidYMid meet"/>
+    <text x="980" y="1296" text-anchor="end" font-size="34" font-weight="700" fill="#1F2933">CoreFragment</text>
+  </g>
+</svg>

@@ -48,7 +48,7 @@
 ## Buyers
 | Name | Title | Profile | Notes |
 |---|---|---|---|
-| Vilius Dambrauskas | CTO | unverified | **Primary.** Not in Saleshandy; Apollo has email |
+| Vilius Dambrauskas | CTO | unverified | **Primary.** Not in Saleshandy; Apollo has email. **Email: vilius@sentante.com** (Apollo `verified`, catch-all domain, bulk match request 5963606843928446644, 2026-10-26; LinkedIn per Apollo: http://www.linkedin.com/in/vilius-dambrauskas-86814b154). **Saleshandy:** batch `CF · batch 2026-10-26 17:03 · Europe · 7 leads`, sequence ID rVz1GkOnPG (inactive; the CEO activates) |
 | Vaidas Labunskas | Chief Mechanical Engineer | unverified | Alternative in Saleshandy (229935838); the firmware angle fits him less well |
 
 ## Best angle

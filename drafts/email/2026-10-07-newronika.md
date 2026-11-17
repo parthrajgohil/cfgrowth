@@ -1,8 +1,9 @@
 ---
-stage: approved          # mirrors HubSpot "CF lead stage"; the CEO changes it in HubSpot
+stage: in_sequence          # mirrors HubSpot "CF lead stage"; the CEO changes it in HubSpot
 type: cold-email
 account: newronika
-recipient: Lorenzo Rossi, Co-founder, CEO & CTO (email: TO BE FILLED BY HUMAN)
+recipient: Lorenzo Rossi, Co-founder, CEO & CTO <lorenzo.rossi@newronika.com>
+saleshandy_sequence: MAwgWOdKwN
 sources: [accounts/newronika.md, https://corefragment.com/case-study/smart-glucometer, https://corefragment.com/blog/medical-wearable-device-development-challenges-and-fix, https://corefragment.com/blog/handle-mqtt-connection-loss]
 ---
 

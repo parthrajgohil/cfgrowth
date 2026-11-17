@@ -45,7 +45,7 @@
 ## Buyers
 | Name | Title | Profile | Notes |
 |---|---|---|---|
-| Scott Ewen | VP of Engineering and Operations | unverified | **Primary.** Saleshandy 213536631; Apollo has email |
+| Scott Ewen | VP of Engineering and Operations | unverified | **Primary.** Saleshandy 213536631; Apollo has email. **Email: sewen@predig.com** (Saleshandy `valid`, reveal request 6adb462069f1b23a04e43683, 2026-10-23; LinkedIn per reveal: https://www.linkedin.com/in/scott-ewen-14194545). **Saleshandy:** batch `CF · batch 2026-10-23 17:03 · USA · 2 leads`, sequence ID BVaD3kGrPo (inactive; the CEO activates) |
 | Jeffrey Pe*** | President | unverified | Alternative; surname masked |
 | Owen Pe*** | President | unverified | Alternative; surname masked |
 

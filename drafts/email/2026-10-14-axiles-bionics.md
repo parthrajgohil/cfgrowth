@@ -1,8 +1,9 @@
 ---
-stage: approved          # mirrors HubSpot "CF lead stage"; the CEO changes it in HubSpot
+stage: in_sequence              # mirrors HubSpot "CF lead stage"; the CEO changes it in HubSpot
+saleshandy_sequence: rVz1GkOnPG
 type: cold-email
 account: axiles-bionics
-recipient: Felipe Gomez, Chief Technology Officer (email: TO BE FILLED BY HUMAN)
+recipient: Felipe Gomez, Chief Technology Officer <felipe@axilesbionics.com>
 sources: [accounts/axiles-bionics.md, https://corefragment.com/case-study/smart-glucometer, https://corefragment.com/blog/medical-wearable-device-development-challenges-and-fix, https://corefragment.com/blog/how-to-choose-right-llm]
 ---
 

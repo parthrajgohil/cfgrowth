@@ -1,8 +1,9 @@
 ---
-stage: approved          # mirrors HubSpot "CF lead stage"; the CEO changes it in HubSpot
+stage: in_sequence              # mirrors HubSpot "CF lead stage"; the CEO changes it in HubSpot
+saleshandy_sequence: rVz1GkOnPG
 type: cold-email
 account: naox-technologies
-recipient: Emmanuel Lange, CTO (email: TO BE FILLED BY HUMAN)
+recipient: Emmanuel Lange, CTO <emmanuel.lange@naox.tech>
 sources: [accounts/naox-technologies.md, https://corefragment.com/case-study/smart-glucometer, https://corefragment.com/case-study/health-monitoring-hub, https://corefragment.com/blog/design-ble-devices-for-crowded-rf-environments]
 ---
 

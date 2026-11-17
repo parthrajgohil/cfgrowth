@@ -49,7 +49,7 @@
 ## Buyers
 | Name | Title | Profile | Notes |
 |---|---|---|---|
-| Christopher Garman | Director of Hardware Engineering | unverified | **Primary.** Saleshandy 70847590; Apollo has no email |
+| Christopher Garman | Director of Hardware Engineering | https://www.linkedin.com/in/christopher-garman-84b6a4a6 (Saleshandy) | **Primary.** Saleshandy 70847590; **email christopher@runwise.com** (Saleshandy `valid`, reveal 6ae08c1c0ae746557eadb0fd, 2026-10-27). Batch `CF · batch 2026-10-27 17:03 · USA · 2 leads` (sequenceId 8Jwo7rbkwO) |
 | Dmitri Nesterenko | VP of Software Engineering | unverified | Alternative. Saleshandy 338322139 |
 
 ## Best angle

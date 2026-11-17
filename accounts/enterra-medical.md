@@ -50,7 +50,7 @@
 ## Buyers
 | Name | Title | Profile | Notes |
 |---|---|---|---|
-| Barry Yo***v | Director, Systems Engineering | unverified | **Primary.** Apollo has email; not in Saleshandy |
+| Barry Yo***v | Director, Systems Engineering | unverified | **Primary.** Apollo has email; not in Saleshandy. Full name **Barry Yomtov**. **Email: byomtov@enterramedical.com** (Apollo `verified`, not catch-all, bulk match request 5963606843928446644, 2026-10-26; LinkedIn per Apollo: http://www.linkedin.com/in/barry-yomtov-meng). HubSpot contact 577184203509 created 2026-10-26. **Saleshandy:** batch `CF · batch 2026-10-26 17:03 · USA · 3 leads`, sequence ID 3RPnAD95wr (inactive; the CEO activates) |
 | Peter So***s | CEO | unverified | Alternative; Apollo has email |
 
 ## Best angle

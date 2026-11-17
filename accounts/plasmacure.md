@@ -43,7 +43,7 @@
 ## Buyers
 | Name | Title | Profile | Notes |
 |---|---|---|---|
-| Paul Theunissen | CTO | unverified | **Primary.** Saleshandy 174349110; Apollo has email |
+| Paul Theunissen | CTO | unverified | **Primary.** Saleshandy 174349110; Apollo has email. **Email: paul.theunissen@plasmacure.nl** (Saleshandy `valid`, reveal request 6adf3aa98090c7c4163874c5, 2026-10-26; LinkedIn per reveal: https://www.linkedin.com/in/paul-theunissen-8239594). **Saleshandy:** batch `CF · batch 2026-10-26 17:03 · Europe · 7 leads`, sequence ID rVz1GkOnPG (inactive; the CEO activates) |
 | Bjorn Sprengers | CEO | unverified | Alternative |
 | Bas Zeper | Founder | unverified | Alternative |
 

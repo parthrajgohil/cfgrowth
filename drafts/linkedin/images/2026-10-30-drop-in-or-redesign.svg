@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="1500" viewBox="0 0 1200 1500" font-family="Helvetica Neue, Helvetica, Arial">
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+
+  <!-- Headline -->
+  <text x="100" y="230" font-size="80" font-weight="700" fill="#1F2933">Drop-in part</text>
+  <text x="100" y="325" font-size="80" font-weight="700" fill="#1F5FAE">or full redesign?</text>
+  <text x="100" y="410" font-size="34" fill="#52606D">What changes when you refresh a mature board</text>
+
+  <!-- Column headers -->
+  <text x="450" y="495" font-size="30" font-weight="700" fill="#52606D">Full redesign</text>
+  <text x="790" y="495" font-size="30" font-weight="700" fill="#1F5FAE">Drop-in part</text>
+  <line x1="100" y1="530" x2="1100" y2="530" stroke="#1F5FAE" stroke-width="3"/>
+
+  <!-- Row 1: PCB layout -->
+  <text x="100" y="603" font-size="30" font-weight="700" fill="#1F2933">PCB layout</text>
+  <text x="450" y="603" font-size="28" fill="#1F2933">New layout</text>
+  <text x="790" y="603" font-size="28" fill="#1F2933">Same footprint</text>
+  <line x1="100" y1="655" x2="1100" y2="655" stroke="#E4E7EB" stroke-width="2"/>
+
+  <!-- Row 2: Firmware -->
+  <text x="100" y="728" font-size="30" font-weight="700" fill="#1F2933">Firmware</text>
+  <text x="450" y="728" font-size="28" fill="#1F2933">Port or rewrite</text>
+  <text x="790" y="710" font-size="28" fill="#1F2933">Check clocks,</text>
+  <text x="790" y="748" font-size="28" fill="#1F2933">peripherals, timing</text>
+  <line x1="100" y1="780" x2="1100" y2="780" stroke="#E4E7EB" stroke-width="2"/>
+
+  <!-- Row 3: Bill of materials -->
+  <text x="100" y="853" font-size="30" font-weight="700" fill="#1F2933">Bill of materials</text>
+  <text x="450" y="853" font-size="28" fill="#1F2933">Many parts change</text>
+  <text x="790" y="853" font-size="28" fill="#1F2933">One part changes</text>
+
+  <!-- Highlight band: testing doesn't shrink -->
+  <rect x="100" y="905" width="1000" height="250" fill="#FDEBD7"/>
+  <rect x="100" y="905" width="8" height="250" fill="#F26522"/>
+
+  <!-- Row 4: Safety self-tests -->
+  <text x="130" y="962" font-size="30" font-weight="700" fill="#1F2933">Safety self-tests</text>
+  <text x="130" y="998" font-size="26" fill="#52606D">(IEC 60730)</text>
+  <text x="450" y="978" font-size="28" font-weight="700" fill="#1F2933">Re-run</text>
+  <text x="790" y="978" font-size="28" font-weight="700" fill="#1F2933">Re-run</text>
+  <line x1="130" y1="1030" x2="1070" y2="1030" stroke="#FFFFFF" stroke-width="2"/>
+
+  <!-- Row 5: EMC -->
+  <text x="130" y="1103" font-size="30" font-weight="700" fill="#1F2933">EMC</text>
+  <text x="450" y="1103" font-size="28" font-weight="700" fill="#1F2933">Re-test</text>
+  <text x="790" y="1103" font-size="28" font-weight="700" fill="#1F2933">Re-test</text>
+
+  <!-- Takeaway -->
+  <text x="100" y="1240" font-size="38" font-weight="700" fill="#1F2933">A drop-in saves you a new layout.</text>
+  <text x="100" y="1292" font-size="38" font-weight="700" fill="#1F5FAE">It doesn't save you the testing.</text>
+
+  <!-- Footer -->
+  <line x1="100" y1="1380" x2="1100" y2="1380" stroke="#E4E7EB" stroke-width="2"/>
+  <text x="100" y="1446" font-size="26" fill="#52606D">corefragment.com</text>
+  <image href="{{LOGO}}" x="784" y="1402" width="100" height="60"/>
+  <text x="1100" y="1446" text-anchor="end" font-size="34" font-weight="700" fill="#1F2933">CoreFragment</text>
+</svg>

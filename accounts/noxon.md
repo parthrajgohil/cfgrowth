@@ -47,7 +47,7 @@
 ## Buyers
 | Name | Title | Profile | Notes |
 |---|---|---|---|
-| Marius Neugschwender | CTO | unverified | **Primary.** Saleshandy 480616484; Apollo has email |
+| Marius Neugschwender | CTO | unverified | **Primary.** Saleshandy 480616484; Apollo has email. **Email: marius.neugschwender@noxon.io** (Saleshandy `valid`, reveal request 6adf3aa98090c7c4163874c5, 2026-10-26; LinkedIn per reveal: https://www.linkedin.com/in/marius-neugschwender-bb34b4160). **Saleshandy:** batch `CF · batch 2026-10-26 17:03 · Europe · 7 leads`, sequence ID rVz1GkOnPG (inactive; the CEO activates) |
 | Jeremy Sn***n | Head of Hardware | unverified | Apollo only, surname masked |
 
 ## Best angle

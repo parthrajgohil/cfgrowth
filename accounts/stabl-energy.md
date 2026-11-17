@@ -49,7 +49,7 @@
 ## Buyers
 | Name | Title | Profile | Notes |
 |---|---|---|---|
-| Julian Schneider | Director of Engineering | unverified | **Primary.** In Saleshandy (292440408) and Apollo (has email) |
+| Julian Schneider | Director of Engineering | http://www.linkedin.com/in/julian-schneider-03b98743 (Apollo) | **Primary.** In Saleshandy (292440408) and Apollo. **No work email (2026-10-23):** Saleshandy reveal 6adb462069f1b23a04e43683 returned an address marked `bad`; Apollo bulk match (1 credit) returned only a verified address on another domain (m-bee.net), not used (work email only). Stage `no_email`; LinkedIn touch drafted in `drafts/email/2026-10-16-stabl-energy.md` |
 | Gregor Sc***t | Head of Engineering | unverified | Alternative; surname masked in Apollo |
 | Nam Truong | CEO & co-founder | unverified | Alternative |
 

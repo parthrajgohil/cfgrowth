@@ -45,7 +45,7 @@
 ## Buyers
 | Name | Title | Profile | Notes |
 |---|---|---|---|
-| Paul Sumpner | CTO | unverified | **Primary.** Saleshandy 338261563; Apollo has email |
+| Paul Sumpner | CTO | unverified | **Primary.** Saleshandy 338261563; Apollo has email. **Email: paul.sumpner@digitalyacht.co.uk** (Saleshandy `valid`, reveal request 6adb462069f1b23a04e43683, 2026-10-23; LinkedIn per reveal: https://www.linkedin.com/in/paul-sumpner-0a601111). **Saleshandy:** batch `CF · batch 2026-10-23 17:03 · Europe · 5 leads`, sequence ID 9KwO5oqYa6 (inactive; the CEO activates) |
 | Nick Heyes | CEO | unverified | Alternative. Apollo has email; Saleshandy not checked |
 
 ## Best angle

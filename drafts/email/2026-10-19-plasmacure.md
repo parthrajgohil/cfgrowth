@@ -1,8 +1,9 @@
 ---
-stage: approved          # mirrors HubSpot "CF lead stage"; the CEO changes it in HubSpot
+stage: in_sequence              # mirrors HubSpot "CF lead stage"; the CEO changes it in HubSpot
+saleshandy_sequence: rVz1GkOnPG
 type: cold-email
 account: plasmacure
-recipient: Paul Theunissen, CTO (email: TO BE FILLED BY HUMAN)
+recipient: Paul Theunissen, CTO <paul.theunissen@plasmacure.nl>
 sources: [accounts/plasmacure.md, https://corefragment.com/case-study/smart-glucometer, https://corefragment.com/blog/medical-wearable-device-development-challenges-and-fix]
 ---
 

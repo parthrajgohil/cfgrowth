@@ -50,7 +50,7 @@ Apollo also shows a Senior Firmware Developer and a Production Manager: a small 
 ## Buyers
 | Name | Title | Profile | Notes |
 |---|---|---|---|
-| Michael Newman | Software Engineer – Head of Hardware | unverified | **Primary.** Saleshandy 437090798; Apollo no email |
+| Michael Newman | Software Engineer – Head of Hardware | https://www.linkedin.com/in/michael-newman-a5465516b (Saleshandy) | **Primary.** Saleshandy 437090798; **email michael.n@smartbarrel.io** (Saleshandy `valid`, reveal 6ae08c1c0ae746557eadb0fd, 2026-10-27). Batch `CF · batch 2026-10-27 17:03 · USA · 2 leads` (sequenceId 8Jwo7rbkwO) |
 | Albert Bou Fadel | Founder & CEO | unverified | Alternative. Apollo has email; not in Saleshandy |
 | Denys Drofa | Engineering Team Lead | unverified | Alternative. Saleshandy 98420042; Apollo has email |
 

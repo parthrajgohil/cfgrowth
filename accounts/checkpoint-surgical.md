@@ -43,7 +43,7 @@
 ## Buyers
 | Name | Title | Profile | Notes |
 |---|---|---|---|
-| Ben Cottrill | VP of Engineering | unverified | **Primary.** Saleshandy 266824856; Apollo has email |
+| Ben Cottrill | VP of Engineering | unverified | **Primary.** Saleshandy 266824856; Apollo has email. **Email: bcottrill@checkpointsurgical.com** (Saleshandy `valid`, reveal request 6adb462069f1b23a04e43683, 2026-10-23; LinkedIn per reveal: https://www.linkedin.com/in/bencottrill). **Saleshandy:** batch `CF · batch 2026-10-23 17:03 · USA · 2 leads`, sequence ID BVaD3kGrPo (inactive; the CEO activates) |
 | Director of Product Management (masked) | Director of Product Management | unverified | Alternative |
 | Derek Lewis | President & CEO | unverified | Alternative |
 

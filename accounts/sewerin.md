@@ -23,7 +23,7 @@
   - New EUR 6M building at the Gütersloh HQ (warehouse + 22 offices), completion planned spring 2026 (article undated) [1]
   - 2026 trade fairs: GASTECH 2026, SIWW 2026, IFAT Saudi Arabia 2026 [3]
 - **HubSpot company ID:** 352454789830 (https://app.hubspot.com/contacts/247517534/record/0-2/352454789830)
-- **HubSpot contact IDs:** Benjamin Sewerin 569792805604 (no email; Head of Development not created, surname masked)
+- **HubSpot contact IDs:** Benjamin Sewerin 569792805604 (no email) · Thorsten Wagner 578197777083 (created 2026-10-27, with email)
 - **Buyers:**
 
 | Buyer | Title | LinkedIn | Background | Saleshandy | Apollo |
@@ -45,7 +45,7 @@
 ## Buyers
 | Name | Title | Profile | Notes |
 |---|---|---|---|
-| Thorsten Wa***r | Entwicklungsleiter | unverified | **Primary.** Not in Saleshandy; Apollo has email (masked: needs Apollo reveal) |
+| Thorsten Wagner | Entwicklungsleiter | http://www.linkedin.com/in/thorsten-wagner-58423b5a (Apollo) | **Primary.** Not in Saleshandy; **email thorsten.wagner@sewerin.com** (Apollo `verified`, **catch-all domain**; match request 6772280892628673570, 2026-10-27). HubSpot contact 578197777083. Batch `CF · batch 2026-10-27 17:03 · Europe · 2 leads` (sequenceId KZajqgk5P1) |
 | Benjamin Sewerin | Managing Partner | unverified | Alternative; not in Saleshandy |
 
 ## Best angle

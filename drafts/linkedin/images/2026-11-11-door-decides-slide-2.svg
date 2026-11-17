@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+  <g font-family="Helvetica Neue, Helvetica, Arial">
+    <text x="100" y="200" font-size="28" font-weight="700" fill="#1F5FAE">THE PROJECT</text>
+    <text x="100" y="320" font-size="72" font-weight="700" fill="#1F2933">A door reader on</text>
+    <text x="100" y="410" font-size="72" font-weight="700" fill="#1F5FAE">battery and MQTT.</text>
+    <text x="100" y="500" font-size="34" fill="#1F2933">A European client asked for access control</text>
+    <text x="100" y="546" font-size="34" fill="#1F2933">with remote monitoring, long battery life</text>
+    <text x="100" y="592" font-size="34" fill="#1F2933">and cloud-based device control.</text>
+    <!-- flow -->
+    <text x="695" y="680" text-anchor="middle" font-size="24" font-weight="700" fill="#1F5FAE">MQTT</text>
+    <rect x="100" y="700" width="260" height="150" rx="14" fill="#FFFFFF" stroke="#1F5FAE" stroke-width="4"/>
+    <text x="230" y="768" text-anchor="middle" font-size="30" font-weight="700" fill="#1F2933">Smart card</text>
+    <text x="230" y="808" text-anchor="middle" font-size="24" fill="#52606D">one per user</text>
+    <line x1="360" y1="775" x2="396" y2="775" stroke="#1F5FAE" stroke-width="4"/>
+    <polygon points="396,765 410,775 396,785" fill="#1F5FAE"/>
+    <rect x="410" y="700" width="260" height="150" rx="14" fill="#FFFFFF" stroke="#1F5FAE" stroke-width="4"/>
+    <text x="540" y="768" text-anchor="middle" font-size="30" font-weight="700" fill="#1F2933">Reader</text>
+    <text x="540" y="808" text-anchor="middle" font-size="24" fill="#52606D">at the entrance</text>
+    <line x1="670" y1="775" x2="706" y2="775" stroke="#1F5FAE" stroke-width="4"/>
+    <polygon points="706,765 720,775 706,785" fill="#1F5FAE"/>
+    <rect x="720" y="700" width="260" height="150" rx="14" fill="#FFFFFF" stroke="#1F5FAE" stroke-width="4"/>
+    <text x="850" y="768" text-anchor="middle" font-size="30" font-weight="700" fill="#1F2933">AWS cloud</text>
+    <text x="850" y="808" text-anchor="middle" font-size="24" fill="#52606D">users + scan log</text>
+    <text x="100" y="930" font-size="34" fill="#1F2933">Our part: firmware development and testing.</text>
+    <rect x="100" y="980" width="880" height="170" rx="14" fill="#FDEBD7" stroke="#F26522" stroke-width="4"/>
+    <text x="130" y="1040" font-size="32" font-weight="700" fill="#1F2933">The tension: battery life wants the reader</text>
+    <text x="130" y="1084" font-size="32" font-weight="700" fill="#1F2933">asleep. Remote control wants it listening.</text>
+    <!-- footer -->
+    <line x1="100" y1="1230" x2="980" y2="1230" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="1290" font-size="26" fill="#52606D">corefragment.com</text>
+    <image href="{{LOGO}}" x="664" y="1252" width="100" height="60" preserveAspectRatio="xMidYMid meet"/>
+    <text x="980" y="1296" text-anchor="end" font-size="34" font-weight="700" fill="#1F2933">CoreFragment</text>
+  </g>
+</svg>

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+  <g font-family="Helvetica Neue, Helvetica, Arial">
+    <circle cx="150" cy="190" r="50" fill="#1F5FAE"/>
+    <text x="150" y="208" text-anchor="middle" font-size="52" font-weight="700" fill="#FFFFFF">1</text>
+    <text x="230" y="200" font-size="28" font-weight="700" fill="#1F5FAE">DECIDE LOCALLY</text>
+    <text x="100" y="360" font-size="72" font-weight="700" fill="#1F2933">Let the door</text>
+    <text x="100" y="450" font-size="72" font-weight="700" fill="#1F5FAE">decide offline.</text>
+    <text x="100" y="540" font-size="34" fill="#1F2933">The reader keeps its own copy of allowed</text>
+    <text x="100" y="586" font-size="34" fill="#1F2933">cards. The cloud keeps the record; it is</text>
+    <text x="100" y="632" font-size="34" fill="#1F2933">not in the path that opens the door.</text>
+    <!-- comparison table -->
+    <text x="460" y="710" font-size="26" font-weight="700" fill="#52606D">CLOUD CHECKS</text>
+    <text x="730" y="710" font-size="26" font-weight="700" fill="#1F5FAE">READER CHECKS</text>
+    <line x1="100" y1="730" x2="980" y2="730" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="785" font-size="28" font-weight="700" fill="#1F2933">Network down</text>
+    <text x="460" y="785" font-size="28" fill="#52606D">Door stays shut</text>
+    <text x="730" y="785" font-size="28" fill="#1F2933">Door works</text>
+    <line x1="100" y1="810" x2="980" y2="810" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="865" font-size="28" font-weight="700" fill="#1F2933">Each scan</text>
+    <text x="460" y="865" font-size="28" fill="#52606D">Waits for reply</text>
+    <text x="730" y="865" font-size="28" fill="#1F2933">Answers at once</text>
+    <line x1="100" y1="890" x2="980" y2="890" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="945" font-size="28" font-weight="700" fill="#1F2933">Cloud's job</text>
+    <text x="460" y="945" font-size="28" fill="#52606D">Every decision</text>
+    <text x="730" y="945" font-size="28" fill="#1F2933">Log + updates</text>
+    <line x1="100" y1="970" x2="980" y2="970" stroke="#E4E7EB" stroke-width="3"/>
+    <rect x="100" y="1010" width="880" height="180" rx="14" fill="#FDEBD7" stroke="#F26522" stroke-width="4"/>
+    <text x="130" y="1066" font-size="30" font-weight="700" fill="#1F2933">Also agree on power loss: does the lock</text>
+    <text x="130" y="1108" font-size="30" fill="#1F2933">fail safe (opens) or fail secure (stays</text>
+    <text x="130" y="1150" font-size="30" fill="#1F2933">locked)? Local fire rules often decide.</text>
+    <!-- footer -->
+    <line x1="100" y1="1230" x2="980" y2="1230" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="1290" font-size="26" fill="#52606D">corefragment.com</text>
+    <image href="{{LOGO}}" x="664" y="1252" width="100" height="60" preserveAspectRatio="xMidYMid meet"/>
+    <text x="980" y="1296" text-anchor="end" font-size="34" font-weight="700" fill="#1F2933">CoreFragment</text>
+  </g>
+</svg>

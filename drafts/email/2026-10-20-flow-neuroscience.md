@@ -1,8 +1,9 @@
 ---
-stage: approved          # mirrors HubSpot "CF lead stage"; the CEO changes it in HubSpot
+stage: in_sequence              # mirrors HubSpot "CF lead stage"; the CEO changes it in HubSpot
 type: cold-email
 account: flow-neuroscience
-recipient: Erik Rehn, CTO & Co-founder (email: TO BE FILLED BY HUMAN)
+recipient: Erik Rehn, CTO & Co-founder <erik@flowneuroscience.com>
+saleshandy_sequence: 9KwO5oqYa6
 sources: [accounts/flow-neuroscience.md, https://corefragment.com/case-study/smart-glucometer, https://corefragment.com/blog/medical-wearable-device-development-challenges-and-fix]
 ---
 

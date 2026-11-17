@@ -1,8 +1,9 @@
 ---
-stage: approved          # mirrors HubSpot "CF lead stage"; the CEO changes it in HubSpot
+stage: in_sequence          # mirrors HubSpot "CF lead stage"; the CEO changes it in HubSpot
 type: cold-email
 account: smartbarrel
-recipient: Michael Newman, Software Engineer – Head of Hardware (email: TO BE FILLED BY HUMAN)
+recipient: Michael Newman, Software Engineer – Head of Hardware <michael.n@smartbarrel.io>
+saleshandy_sequence: 8Jwo7rbkwO
 sources: [accounts/smartbarrel.md, https://corefragment.com/case-study/access-control-system, https://corefragment.com/case-study/smart-school-attendance-system, https://corefragment.com/blog/handle-mqtt-connection-loss]
 ---
 

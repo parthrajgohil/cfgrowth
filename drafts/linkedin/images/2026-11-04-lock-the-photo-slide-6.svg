@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+  <g font-family="Helvetica Neue, Helvetica, Arial">
+    <circle cx="150" cy="190" r="50" fill="#1F5FAE"/>
+    <text x="150" y="208" text-anchor="middle" font-size="52" font-weight="700" fill="#FFFFFF">4</text>
+    <text x="230" y="200" font-size="28" font-weight="700" fill="#1F5FAE">DATA</text>
+    <text x="100" y="360" font-size="72" font-weight="700" fill="#1F2933">Collect images on</text>
+    <text x="100" y="450" font-size="72" font-weight="700" fill="#1F5FAE">the station itself.</text>
+    <text x="100" y="540" font-size="34" fill="#1F2933">Bench photos look cleaner. They teach</text>
+    <text x="100" y="586" font-size="34" fill="#1F2933">the model the wrong picture.</text>
+    <!-- bench column -->
+    <rect x="100" y="640" width="420" height="320" rx="14" fill="#FFFFFF" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="130" y="705" font-size="32" font-weight="700" fill="#52606D">Bench photos</text>
+    <line x1="130" y1="730" x2="490" y2="730" stroke="#E4E7EB" stroke-width="2"/>
+    <text x="130" y="790" font-size="26" fill="#52606D">different light</text>
+    <text x="130" y="850" font-size="26" fill="#52606D">different angle</text>
+    <text x="130" y="910" font-size="26" fill="#52606D">clean, perfect boards</text>
+    <!-- station column -->
+    <rect x="560" y="640" width="420" height="320" rx="14" fill="#FFFFFF" stroke="#1F5FAE" stroke-width="4"/>
+    <text x="590" y="705" font-size="32" font-weight="700" fill="#1F5FAE">Station photos</text>
+    <line x1="590" y1="730" x2="950" y2="730" stroke="#E4E7EB" stroke-width="2"/>
+    <text x="590" y="790" font-size="26" fill="#1F2933">production light</text>
+    <text x="590" y="850" font-size="26" fill="#1F2933">the line's own camera</text>
+    <text x="590" y="910" font-size="26" fill="#1F2933">real scrap boards</text>
+    <!-- highlight -->
+    <rect x="100" y="1010" width="880" height="160" rx="14" fill="#FDEBD7" stroke="#F26522" stroke-width="4"/>
+    <text x="130" y="1072" font-size="30" font-weight="700" fill="#1F2933">Augment for drift, blur and rotation,</text>
+    <text x="130" y="1122" font-size="30" fill="#1F2933">as an extra, not a replacement.</text>
+    <!-- footer -->
+    <line x1="100" y1="1230" x2="980" y2="1230" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="1290" font-size="26" fill="#52606D">corefragment.com</text>
+    <image href="{{LOGO}}" x="664" y="1252" width="100" height="60" preserveAspectRatio="xMidYMid meet"/>
+    <text x="980" y="1296" text-anchor="end" font-size="34" font-weight="700" fill="#1F2933">CoreFragment</text>
+  </g>
+</svg>

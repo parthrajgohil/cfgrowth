@@ -1,8 +1,9 @@
 ---
-stage: approved          # mirrors HubSpot "CF lead stage"; the CEO changes it in HubSpot
+stage: in_sequence              # mirrors HubSpot "CF lead stage"; the CEO changes it in HubSpot
 type: cold-email
 account: neurovalens
-recipient: Iain Hendrick, Chief Project Officer (email: TO BE FILLED BY HUMAN)
+recipient: Iain Hendrick, Chief Project Officer <iain.hendrick@neurovalens.com>
+saleshandy_sequence: 9KwO5oqYa6
 sources: [accounts/neurovalens.md, https://corefragment.com/case-study/smart-glucometer, https://corefragment.com/blog/medical-wearable-device-development-challenges-and-fix]
 ---
 

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+  <g font-family="Helvetica Neue, Helvetica, Arial">
+    <text x="100" y="290" font-size="84" font-weight="700" fill="#1F2933">The OBD-II port</text>
+    <text x="100" y="390" font-size="84" font-weight="700" fill="#1F2933">is standard.</text>
+    <text x="100" y="490" font-size="52" font-weight="700" fill="#1F5FAE">The cars behind it aren't.</text>
+    <!-- connector -->
+    <polygon points="130,760 390,760 360,900 160,900" fill="#FDEBD7" stroke="#F26522" stroke-width="5"/>
+    <circle cx="165" cy="800" r="7" fill="#1F5FAE"/>
+    <circle cx="192" cy="800" r="7" fill="#1F5FAE"/>
+    <circle cx="219" cy="800" r="7" fill="#1F5FAE"/>
+    <circle cx="246" cy="800" r="7" fill="#1F5FAE"/>
+    <circle cx="273" cy="800" r="7" fill="#1F5FAE"/>
+    <circle cx="300" cy="800" r="7" fill="#1F5FAE"/>
+    <circle cx="327" cy="800" r="7" fill="#1F5FAE"/>
+    <circle cx="354" cy="800" r="7" fill="#1F5FAE"/>
+    <circle cx="180" cy="850" r="7" fill="#1F5FAE"/>
+    <circle cx="205" cy="850" r="7" fill="#1F5FAE"/>
+    <circle cx="230" cy="850" r="7" fill="#1F5FAE"/>
+    <circle cx="255" cy="850" r="7" fill="#1F5FAE"/>
+    <circle cx="280" cy="850" r="7" fill="#1F5FAE"/>
+    <circle cx="305" cy="850" r="7" fill="#1F5FAE"/>
+    <circle cx="330" cy="850" r="7" fill="#1F5FAE"/>
+    <circle cx="355" cy="850" r="7" fill="#1F5FAE"/>
+    <text x="260" y="950" text-anchor="middle" font-size="28" font-weight="700" fill="#1F2933">One 16-pin port</text>
+    <text x="260" y="990" text-anchor="middle" font-size="26" fill="#52606D">US cars since 1996</text>
+    <!-- fan-out lines -->
+    <line x1="395" y1="830" x2="540" y2="650" stroke="#1F5FAE" stroke-width="3"/>
+    <line x1="395" y1="830" x2="540" y2="750" stroke="#1F5FAE" stroke-width="3"/>
+    <line x1="395" y1="830" x2="540" y2="850" stroke="#1F5FAE" stroke-width="3"/>
+    <line x1="395" y1="830" x2="540" y2="950" stroke="#1F5FAE" stroke-width="3"/>
+    <line x1="395" y1="830" x2="540" y2="1050" stroke="#1F5FAE" stroke-width="3"/>
+    <!-- protocol boxes -->
+    <rect x="540" y="615" width="440" height="70" rx="10" fill="#FFFFFF" stroke="#1F5FAE" stroke-width="3"/>
+    <text x="570" y="662" font-size="32" font-weight="700" fill="#1F5FAE">CAN (ISO 15765-4)</text>
+    <rect x="540" y="715" width="440" height="70" rx="10" fill="#FFFFFF" stroke="#1F5FAE" stroke-width="3"/>
+    <text x="570" y="762" font-size="32" fill="#1F2933">KWP2000 (ISO 14230)</text>
+    <rect x="540" y="815" width="440" height="70" rx="10" fill="#FFFFFF" stroke="#1F5FAE" stroke-width="3"/>
+    <text x="570" y="862" font-size="32" fill="#1F2933">ISO 9141-2</text>
+    <rect x="540" y="915" width="440" height="70" rx="10" fill="#FFFFFF" stroke="#1F5FAE" stroke-width="3"/>
+    <text x="570" y="962" font-size="32" fill="#1F2933">SAE J1850 VPW</text>
+    <rect x="540" y="1015" width="440" height="70" rx="10" fill="#FFFFFF" stroke="#1F5FAE" stroke-width="3"/>
+    <text x="570" y="1062" font-size="32" fill="#1F2933">SAE J1850 PWM</text>
+    <text x="100" y="1165" font-size="32" fill="#52606D">Five protocols behind the same port.</text>
+    <!-- footer -->
+    <line x1="100" y1="1230" x2="980" y2="1230" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="1290" font-size="26" fill="#52606D">corefragment.com</text>
+    <image href="{{LOGO}}" x="664" y="1252" width="100" height="60" preserveAspectRatio="xMidYMid meet"/>
+    <text x="980" y="1296" text-anchor="end" font-size="34" font-weight="700" fill="#1F2933">CoreFragment</text>
+  </g>
+</svg>

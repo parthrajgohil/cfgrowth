@@ -47,7 +47,7 @@
 ## Buyers
 | Name | Title | Profile | Notes |
 |---|---|---|---|
-| Felipe Gomez | CTO | unverified | **Primary.** Saleshandy 405562802; Apollo has email |
+| Felipe Gomez | CTO | unverified | **Primary.** Saleshandy 405562802; Apollo has email. **Email: felipe@axilesbionics.com** (Saleshandy `valid`, reveal request 6adf3aa98090c7c4163874c5, 2026-10-26; LinkedIn per reveal: https://www.linkedin.com/in/felipe-gomez-7607b130). **Saleshandy:** batch `CF · batch 2026-10-26 17:03 · Europe · 7 leads`, sequence ID rVz1GkOnPG (inactive; the CEO activates) |
 | Pierre Cherelle | Founder CEO | unverified | Alternative. Saleshandy 23217920 |
 
 ## Best angle

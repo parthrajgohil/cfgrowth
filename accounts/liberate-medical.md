@@ -46,7 +46,7 @@
 ## Buyers
 | Name | Title | Profile | Notes |
 |---|---|---|---|
-| Guillermo Cohen | VP of Engineering | unverified | **Primary.** Saleshandy 245161887; Apollo has email |
+| Guillermo Cohen | VP of Engineering | unverified | **Primary.** Saleshandy 245161887; Apollo has email. **Email: guillermo@liberatemedical.com** (Saleshandy `valid`, reveal request 6adf3aa98090c7c4163874c5, 2026-10-26; LinkedIn per reveal: https://www.linkedin.com/in/guillermo-cohen-25212424). **Saleshandy:** batch `CF · batch 2026-10-26 17:03 · USA · 3 leads`, sequence ID 3RPnAD95wr (inactive; the CEO activates) |
 | Angus McLachlan | Co-Founder & CEO | unverified | Alternative; Saleshandy 271628059 |
 
 ## Best angle

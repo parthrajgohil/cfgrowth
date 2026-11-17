@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+  <g font-family="Helvetica Neue, Helvetica, Arial">
+    <circle cx="150" cy="190" r="50" fill="#1F5FAE"/>
+    <text x="150" y="208" text-anchor="middle" font-size="52" font-weight="700" fill="#FFFFFF">3</text>
+    <text x="230" y="200" font-size="28" font-weight="700" fill="#1F5FAE">REGIONS</text>
+    <text x="100" y="360" font-size="72" font-weight="700" fill="#1F2933">Look only where</text>
+    <text x="100" y="450" font-size="72" font-weight="700" fill="#1F5FAE">the defect can be.</text>
+    <text x="100" y="540" font-size="34" fill="#1F2933">Split the board into regions of interest.</text>
+    <text x="100" y="586" font-size="34" fill="#1F2933">Each one gets its own check.</text>
+    <!-- board -->
+    <rect x="100" y="630" width="880" height="360" rx="10" fill="#FFFFFF" stroke="#1F2933" stroke-width="3"/>
+    <!-- region 1 -->
+    <rect x="130" y="660" width="380" height="300" rx="6" fill="none" stroke="#1F5FAE" stroke-width="3" stroke-dasharray="14 10"/>
+    <text x="150" y="700" font-size="24" font-weight="700" fill="#1F5FAE">REGION 1</text>
+    <rect x="170" y="740" width="120" height="120" rx="4" fill="#E4E7EB" stroke="#52606D" stroke-width="2"/>
+    <rect x="330" y="770" width="140" height="80" rx="4" fill="#E4E7EB" stroke="#52606D" stroke-width="2"/>
+    <text x="150" y="935" font-size="24" fill="#52606D">coating even?</text>
+    <!-- region 2 -->
+    <rect x="540" y="660" width="220" height="300" rx="6" fill="none" stroke="#1F5FAE" stroke-width="3" stroke-dasharray="14 10"/>
+    <text x="560" y="700" font-size="24" font-weight="700" fill="#1F5FAE">REGION 2</text>
+    <rect x="580" y="740" width="140" height="140" rx="4" fill="#E4E7EB" stroke="#52606D" stroke-width="2"/>
+    <text x="560" y="935" font-size="24" fill="#52606D">bubbles?</text>
+    <!-- masked connector (highlight) -->
+    <rect x="790" y="690" width="160" height="240" rx="6" fill="#FDEBD7" stroke="#F26522" stroke-width="4"/>
+    <text x="870" y="740" text-anchor="middle" font-size="24" font-weight="700" fill="#1F2933">CONNECTOR</text>
+    <text x="870" y="775" text-anchor="middle" font-size="24" fill="#1F2933">must stay</text>
+    <text x="870" y="805" text-anchor="middle" font-size="24" fill="#1F2933">bare</text>
+    <rect x="812" y="840" width="12" height="60" fill="#52606D"/>
+    <rect x="836" y="840" width="12" height="60" fill="#52606D"/>
+    <rect x="860" y="840" width="12" height="60" fill="#52606D"/>
+    <rect x="884" y="840" width="12" height="60" fill="#52606D"/>
+    <rect x="908" y="840" width="12" height="60" fill="#52606D"/>
+    <!-- rules -->
+    <text x="100" y="1060" font-size="30" font-weight="700" fill="#1F2933">Coated areas</text>
+    <text x="400" y="1060" font-size="30" fill="#52606D">bubbles, bare spots, even cover</text>
+    <text x="100" y="1110" font-size="30" font-weight="700" fill="#1F2933">Masked areas</text>
+    <text x="400" y="1110" font-size="30" fill="#52606D">no coating at all</text>
+    <text x="100" y="1160" font-size="30" font-weight="700" fill="#1F2933">Everything else</text>
+    <text x="400" y="1160" font-size="30" fill="#52606D">not inspected</text>
+    <!-- footer -->
+    <line x1="100" y1="1230" x2="980" y2="1230" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="1290" font-size="26" fill="#52606D">corefragment.com</text>
+    <image href="{{LOGO}}" x="664" y="1252" width="100" height="60" preserveAspectRatio="xMidYMid meet"/>
+    <text x="980" y="1296" text-anchor="end" font-size="34" font-weight="700" fill="#1F2933">CoreFragment</text>
+  </g>
+</svg>

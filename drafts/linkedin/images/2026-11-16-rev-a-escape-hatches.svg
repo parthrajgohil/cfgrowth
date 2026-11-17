@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="1500" viewBox="0 0 1200 1500" font-family="Helvetica Neue, Helvetica, Arial">
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+
+  <!-- Headline -->
+  <text x="100" y="200" font-size="80" font-weight="700" fill="#1F2933">Design Rev A</text>
+  <text x="100" y="290" font-size="80" font-weight="700" fill="#1F5FAE">to be repaired</text>
+  <text x="100" y="365" font-size="36" fill="#52606D">Six escape hatches before you send the Gerbers</text>
+
+  <!-- Row 1 -->
+  <g>
+    <circle cx="130" cy="485" r="28" fill="#1F5FAE"/>
+    <text x="130" y="495" font-size="30" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+    <text x="190" y="480" font-size="36" font-weight="700" fill="#1F2933">Test point on every rail</text>
+    <text x="190" y="522" font-size="28" fill="#52606D">And on every key signal: a 1 mm pad to probe</text>
+    <line x1="190" y1="545" x2="1100" y2="545" stroke="#E4E7EB" stroke-width="2"/>
+  </g>
+  <!-- Row 2 -->
+  <g>
+    <circle cx="130" cy="600" r="28" fill="#1F5FAE"/>
+    <text x="130" y="610" font-size="30" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+    <text x="190" y="595" font-size="36" font-weight="700" fill="#1F2933">SWD header</text>
+    <text x="190" y="637" font-size="28" fill="#52606D">10-pin Cortex Debug or Tag-Connect TC2030</text>
+    <line x1="190" y1="660" x2="1100" y2="660" stroke="#E4E7EB" stroke-width="2"/>
+  </g>
+  <!-- Row 3 -->
+  <g>
+    <circle cx="130" cy="715" r="28" fill="#1F5FAE"/>
+    <text x="130" y="725" font-size="30" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+    <text x="190" y="710" font-size="36" font-weight="700" fill="#1F2933">0 Ω link in series with each rail</text>
+    <text x="190" y="752" font-size="28" fill="#52606D">Isolate a rail, or lift it to measure current</text>
+    <line x1="190" y1="775" x2="1100" y2="775" stroke="#E4E7EB" stroke-width="2"/>
+  </g>
+  <!-- Row 4 -->
+  <g>
+    <circle cx="130" cy="830" r="28" fill="#1F5FAE"/>
+    <text x="130" y="840" font-size="30" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+    <text x="190" y="825" font-size="36" font-weight="700" fill="#1F2933">Unpopulated pads</text>
+    <text x="190" y="867" font-size="28" fill="#52606D">For pull-ups, filter capacitors and alternate parts</text>
+    <line x1="190" y1="890" x2="1100" y2="890" stroke="#E4E7EB" stroke-width="2"/>
+  </g>
+  <!-- Row 5 -->
+  <g>
+    <circle cx="130" cy="945" r="28" fill="#1F5FAE"/>
+    <text x="130" y="955" font-size="30" font-weight="700" fill="#FFFFFF" text-anchor="middle">5</text>
+    <text x="190" y="940" font-size="36" font-weight="700" fill="#1F2933">Pi-network pads at the antenna feed</text>
+    <text x="190" y="982" font-size="28" fill="#52606D">Retune the match instead of re-routing it</text>
+    <line x1="190" y1="1005" x2="1100" y2="1005" stroke="#E4E7EB" stroke-width="2"/>
+  </g>
+  <!-- Row 6 -->
+  <g>
+    <circle cx="130" cy="1060" r="28" fill="#1F5FAE"/>
+    <text x="130" y="1070" font-size="30" font-weight="700" fill="#FFFFFF" text-anchor="middle">6</text>
+    <text x="190" y="1055" font-size="36" font-weight="700" fill="#1F2933">Spare GPIOs broken out to pads</text>
+    <text x="190" y="1097" font-size="28" fill="#52606D">Room for the signal nobody planned for</text>
+  </g>
+
+  <!-- Takeaway -->
+  <rect x="100" y="1160" width="1000" height="170" fill="#FDEBD7"/>
+  <rect x="100" y="1160" width="12" height="170" fill="#F26522"/>
+  <text x="145" y="1230" font-size="38" font-weight="700" fill="#1F2933">Log every bring-up finding.</text>
+  <text x="145" y="1285" font-size="34" fill="#1F2933">Then batch the fixes into one Rev B.</text>
+
+  <!-- Footer -->
+  <line x1="100" y1="1380" x2="1100" y2="1380" stroke="#E4E7EB" stroke-width="2"/>
+  <text x="100" y="1446" font-size="26" fill="#52606D">corefragment.com</text>
+  <image href="{{LOGO}}" x="784" y="1402" width="100" height="60"/>
+  <text x="1100" y="1446" text-anchor="end" font-size="34" font-weight="700" fill="#1F2933">CoreFragment</text>
+</svg>

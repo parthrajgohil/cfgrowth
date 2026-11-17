@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+  <g font-family="Helvetica Neue, Helvetica, Arial">
+    <circle cx="150" cy="190" r="50" fill="#1F5FAE"/>
+    <text x="150" y="208" text-anchor="middle" font-size="52" font-weight="700" fill="#FFFFFF">1</text>
+    <text x="230" y="200" font-size="28" font-weight="700" fill="#1F5FAE">SPEC</text>
+    <text x="100" y="360" font-size="72" font-weight="700" fill="#1F2933">Write down what</text>
+    <text x="100" y="450" font-size="72" font-weight="700" fill="#1F5FAE">a defect is.</text>
+    <text x="100" y="540" font-size="34" fill="#1F2933">"Find coating defects" is a direction,</text>
+    <text x="100" y="586" font-size="34" fill="#1F2933">not a specification. Write down:</text>
+    <!-- rows -->
+    <line x1="100" y1="630" x2="980" y2="630" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="678" font-size="30" font-weight="700" fill="#1F2933">Each defect class</text>
+    <text x="100" y="716" font-size="26" fill="#52606D">bubbles, bare spots, coating where it must not be</text>
+    <line x1="100" y1="740" x2="980" y2="740" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="788" font-size="30" font-weight="700" fill="#1F2933">The smallest size that matters</text>
+    <text x="100" y="826" font-size="26" fill="#52606D">it sets the camera resolution</text>
+    <line x1="100" y1="850" x2="980" y2="850" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="898" font-size="30" font-weight="700" fill="#1F2933">Where on the board</text>
+    <text x="100" y="936" font-size="26" fill="#52606D">coated areas vs masked connectors and test points</text>
+    <line x1="100" y1="960" x2="980" y2="960" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="1008" font-size="30" font-weight="700" fill="#1F2933">Real reference boards</text>
+    <text x="100" y="1046" font-size="26" fill="#52606D">confirmed good and bad samples for every class</text>
+    <line x1="100" y1="1070" x2="980" y2="1070" stroke="#E4E7EB" stroke-width="3"/>
+    <!-- highlight -->
+    <rect x="100" y="1092" width="880" height="110" rx="14" fill="#FDEBD7" stroke="#F26522" stroke-width="4"/>
+    <text x="130" y="1137" font-size="30" font-weight="700" fill="#1F2933">Agree a false-reject target, in numbers.</text>
+    <text x="130" y="1179" font-size="28" fill="#1F2933">It sets the threshold later (step 5).</text>
+    <!-- footer -->
+    <line x1="100" y1="1230" x2="980" y2="1230" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="1290" font-size="26" fill="#52606D">corefragment.com</text>
+    <image href="{{LOGO}}" x="664" y="1252" width="100" height="60" preserveAspectRatio="xMidYMid meet"/>
+    <text x="980" y="1296" text-anchor="end" font-size="34" font-weight="700" fill="#1F2933">CoreFragment</text>
+  </g>
+</svg>

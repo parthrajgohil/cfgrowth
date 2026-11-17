@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="1500" viewBox="0 0 1200 1500" font-family="Helvetica Neue, Helvetica, Arial">
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+
+  <!-- Headline -->
+  <text x="100" y="190" font-size="80" font-weight="700" fill="#1F2933">Read the counters</text>
+  <text x="100" y="275" font-size="80" font-weight="700" fill="#1F5FAE">before the scope</text>
+  <text x="100" y="340" font-size="36" fill="#52606D">Where an intermittent CAN fault lives</text>
+
+  <!-- Section 1 -->
+  <text x="100" y="420" font-size="26" font-weight="700" fill="#1F5FAE">1  WHICH NODES ARE COUNTING ERRORS?</text>
+  <rect x="100" y="445" width="1000" height="90" rx="12" fill="#FFFFFF" stroke="#1F5FAE" stroke-width="3"/>
+  <text x="600" y="503" text-anchor="middle" font-size="36" font-weight="700" fill="#1F2933">Error counters rising (TEC / REC)</text>
+
+  <g stroke="#1F5FAE" stroke-width="3" fill="none">
+    <line x1="600" y1="535" x2="600" y2="558"/>
+    <line x1="340" y1="558" x2="860" y2="558"/>
+    <line x1="340" y1="558" x2="340" y2="572"/>
+    <line x1="860" y1="558" x2="860" y2="572"/>
+  </g>
+  <polygon points="330,570 350,570 340,580" fill="#1F5FAE"/>
+  <polygon points="850,570 870,570 860,580" fill="#1F5FAE"/>
+
+  <rect x="100" y="580" width="480" height="220" rx="12" fill="#FFFFFF" stroke="#E4E7EB" stroke-width="3"/>
+  <text x="130" y="635" font-size="36" font-weight="700" fill="#1F2933">On one node</text>
+  <text x="130" y="685" font-size="34" fill="#52606D">Look at that node:</text>
+  <text x="130" y="730" font-size="34" fill="#52606D">transceiver, bit</text>
+  <text x="130" y="775" font-size="34" fill="#52606D">timing, sample point</text>
+
+  <rect x="620" y="580" width="480" height="220" rx="12" fill="#FFFFFF" stroke="#E4E7EB" stroke-width="3"/>
+  <text x="650" y="635" font-size="36" font-weight="700" fill="#1F2933">On every node</text>
+  <text x="650" y="685" font-size="34" fill="#52606D">Look at what's shared:</text>
+  <text x="650" y="730" font-size="34" fill="#52606D">wiring, termination,</text>
+  <text x="650" y="775" font-size="34" fill="#52606D">outside noise</text>
+
+  <!-- Section 2 -->
+  <text x="100" y="870" font-size="26" font-weight="700" fill="#1F5FAE">2  WHEN DO THE ERRORS CLUSTER?</text>
+
+  <text x="100" y="937" font-size="34" fill="#1F2933">Motor or relay switches</text>
+  <line x1="565" y1="925" x2="640" y2="925" stroke="#1F5FAE" stroke-width="3"/>
+  <polygon points="640,915 656,925 640,935" fill="#1F5FAE"/>
+  <text x="680" y="937" font-size="34" font-weight="700" fill="#1F2933">Noise, ground shift</text>
+  <line x1="100" y1="970" x2="1100" y2="970" stroke="#E4E7EB" stroke-width="2"/>
+
+  <text x="100" y="1027" font-size="34" fill="#1F2933">Temperature changes</text>
+  <line x1="565" y1="1015" x2="640" y2="1015" stroke="#1F5FAE" stroke-width="3"/>
+  <polygon points="640,1005 656,1015 640,1025" fill="#1F5FAE"/>
+  <text x="680" y="1027" font-size="34" font-weight="700" fill="#1F2933">Clock, sample point</text>
+  <line x1="100" y1="1060" x2="1100" y2="1060" stroke="#E4E7EB" stroke-width="2"/>
+
+  <text x="100" y="1117" font-size="34" fill="#1F2933">Vibration</text>
+  <line x1="565" y1="1105" x2="640" y2="1105" stroke="#1F5FAE" stroke-width="3"/>
+  <polygon points="640,1095 656,1105 640,1115" fill="#1F5FAE"/>
+  <text x="680" y="1117" font-size="34" font-weight="700" fill="#1F2933">Connector, harness</text>
+
+  <!-- Takeaway (the one orange highlight) -->
+  <rect x="100" y="1170" width="1000" height="170" rx="12" fill="#FDEBD7"/>
+  <rect x="100" y="1170" width="12" height="170" fill="#F26522"/>
+  <text x="140" y="1222" font-size="36" font-weight="700" fill="#1F2933">Log time, TEC, REC, error code</text>
+  <text x="140" y="1267" font-size="36" font-weight="700" fill="#1F2933">and bus state before the first</text>
+  <text x="140" y="1312" font-size="36" font-weight="700" fill="#1F2933">field trial.</text>
+
+  <!-- Footer -->
+  <line x1="100" y1="1380" x2="1100" y2="1380" stroke="#E4E7EB" stroke-width="2"/>
+  <text x="100" y="1446" font-size="26" fill="#52606D">corefragment.com</text>
+  <image href="{{LOGO}}" x="784" y="1402" width="100" height="60"/>
+  <text x="1100" y="1446" text-anchor="end" font-size="34" font-weight="700" fill="#1F2933">CoreFragment</text>
+</svg>

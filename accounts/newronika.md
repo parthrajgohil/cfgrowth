@@ -50,7 +50,7 @@ remote, an app and a cloud link.
 ## Buyers
 | Name | Title | Profile | Notes |
 |---|---|---|---|
-| Lorenzo Rossi | Co-founder, CEO & CTO | unverified | **Primary.** Not in Saleshandy; Apollo has email |
+| Lorenzo Rossi | Co-founder, CEO & CTO | http://www.linkedin.com/in/lorenzo-rossi-09518868 (Apollo) | **Primary.** Not in Saleshandy. **Email: lorenzo.rossi@newronika.com** (Apollo `verified`, not catch-all; match request 3979740608506801809; 2026-10-23). Apollo now lists him as CEO and Co-Founder (CTO until 2025). **Batch:** CF · batch 2026-10-23 19:03 · Europe · 1 lead (`MAwgWOdKwN`), ready to activate |
 | Martino Sykora | Firmware Manager | unverified | Alternative. Saleshandy 232827896. Same angle fits him |
 
 ## Best angle

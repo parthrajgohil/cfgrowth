@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+  <g font-family="Helvetica Neue, Helvetica, Arial">
+    <circle cx="150" cy="190" r="50" fill="#1F5FAE"/>
+    <text x="150" y="208" text-anchor="middle" font-size="52" font-weight="700" fill="#FFFFFF">3</text>
+    <text x="230" y="200" font-size="28" font-weight="700" fill="#1F5FAE">POWER VS REACH</text>
+    <text x="100" y="360" font-size="72" font-weight="700" fill="#1F2933">Choose the unlock</text>
+    <text x="100" y="450" font-size="72" font-weight="700" fill="#1F5FAE">delay first.</text>
+    <text x="100" y="540" font-size="34" fill="#1F2933">A sleeping reader can't hear a command.</text>
+    <text x="100" y="586" font-size="34" fill="#1F2933">A remote unlock waits until it next wakes.</text>
+    <!-- table -->
+    <text x="100" y="670" font-size="24" font-weight="700" fill="#52606D">READER MODE</text>
+    <text x="440" y="670" font-size="24" font-weight="700" fill="#52606D">REMOTE UNLOCK</text>
+    <text x="740" y="670" font-size="24" font-weight="700" fill="#52606D">BATTERY</text>
+    <line x1="100" y1="690" x2="980" y2="690" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="748" font-size="28" font-weight="700" fill="#1F2933">Always connected</text>
+    <text x="440" y="748" font-size="28" fill="#1F2933">Almost at once</text>
+    <text x="740" y="748" font-size="28" fill="#1F2933">Highest drain</text>
+    <rect x="100" y="782" width="880" height="80" rx="10" fill="#FDEBD7" stroke="#F26522" stroke-width="4"/>
+    <text x="120" y="834" font-size="28" font-weight="700" fill="#1F2933">Check in every N s</text>
+    <text x="440" y="834" font-size="28" fill="#1F2933">Within N seconds</text>
+    <text x="740" y="834" font-size="28" font-weight="700" fill="#F26522">Set by N</text>
+    <text x="100" y="920" font-size="28" font-weight="700" fill="#1F2933">Wake on card only</text>
+    <text x="440" y="920" font-size="28" fill="#1F2933">At the next scan</text>
+    <text x="740" y="920" font-size="28" fill="#1F2933">Lowest drain</text>
+    <line x1="100" y1="950" x2="980" y2="950" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="1020" font-size="34" fill="#1F2933">The card field costs power too. Use the</text>
+    <text x="100" y="1066" font-size="34" fill="#1F2933">low-power card detection many NFC reader</text>
+    <text x="100" y="1112" font-size="34" fill="#1F2933">chips offer, not a field that's always on.</text>
+    <!-- footer -->
+    <line x1="100" y1="1230" x2="980" y2="1230" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="1290" font-size="26" fill="#52606D">corefragment.com</text>
+    <image href="{{LOGO}}" x="664" y="1252" width="100" height="60" preserveAspectRatio="xMidYMid meet"/>
+    <text x="980" y="1296" text-anchor="end" font-size="34" font-weight="700" fill="#1F2933">CoreFragment</text>
+  </g>
+</svg>

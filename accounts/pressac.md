@@ -44,7 +44,7 @@
 ## Buyers
 | Name | Title | Profile | Notes |
 |---|---|---|---|
-| Robert Smith | Technical Director | unverified | **Primary.** Saleshandy 358422819 |
+| Robert Smith | Technical Director | unverified | **Primary.** Saleshandy 358422819. **Email: robertsmith@pressac.com** (Saleshandy `valid`, reveal request 6adf3aa98090c7c4163874c5, 2026-10-26; LinkedIn per reveal: https://www.linkedin.com/in/robert-smith-7158a892). **Saleshandy:** batch `CF · batch 2026-10-26 17:03 · Europe · 7 leads`, sequence ID rVz1GkOnPG (inactive; the CEO activates) |
 | Stephen Keetley | Engineering Manager | unverified | Alternative. Saleshandy 98810950 |
 
 ## Best angle

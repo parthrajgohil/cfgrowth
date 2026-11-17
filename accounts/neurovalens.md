@@ -47,7 +47,7 @@
 ## Buyers
 | Name | Title | Profile | Notes |
 |---|---|---|---|
-| Iain Hendrick | Chief Project Officer | unverified | **Primary.** Owns device engineering and manufacturing. Saleshandy 91513278; Apollo has email |
+| Iain Hendrick | Chief Project Officer | unverified | **Primary.** Owns device engineering and manufacturing. Saleshandy 91513278; Apollo has email. **Email: iain.hendrick@neurovalens.com** (Saleshandy `valid`, reveal request 6adb462069f1b23a04e43683, 2026-10-23; LinkedIn per reveal: https://www.linkedin.com/in/iain-hendrick). **Saleshandy:** batch `CF · batch 2026-10-23 17:03 · Europe · 5 leads`, sequence ID 9KwO5oqYa6 (inactive; the CEO activates) |
 | Chris McCabe | CTO | unverified | Alternative (software side). Saleshandy 359285786; Apollo has email |
 | Jason McKeown | CEO | unverified | Alternative |
 

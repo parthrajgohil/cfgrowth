@@ -1,5 +1,5 @@
 ---
-stage: approved          # mirrors HubSpot "CF lead stage"; the CEO changes it in HubSpot
+stage: no_email          # mirrors HubSpot "CF lead stage"; the CEO changes it in HubSpot
 type: cold-email
 account: stabl-energy
 recipient: Julian Schneider, Director of Engineering (email: TO BE FILLED BY HUMAN)
@@ -86,3 +86,35 @@ Parthraj
 - [x] Claims trace to accounts/stabl-energy.md or CLAUDE.md (BMS/power design services, CNC automation case study, NDA + IP).
 - [x] ~100 words; one CTA; no banned words. EU recipient: opt-out line included.
 - [ ] Human: "release and test work is under pressure" is inferred from the job post (CI, test pipelines, release processes). A German version may land better (your call).
+
+---
+
+## LinkedIn touch
+
+Prepared 2026-10-23 (hourly run 17:03). No work email for Julian Schneider: Saleshandy's address came back `bad`
+(reveal 6adb462069f1b23a04e43683), and Apollo only had a verified address on another domain (m-bee.net), not STABL's,
+so it was not used.
+**Profile:** http://www.linkedin.com/in/julian-schneider-03b98743 (from Apollo, STABL history matches; Saleshandy's
+linkedin.com/in/julian-schneider may be a different person)
+
+**Connection note:**
+Hi Julian, controlling every battery module individually so mixed and second-life packs can share one system is a clever answer to the weakest-cell problem. Congratulations on 50 MWh. We build BMS and power electronics firmware, so I'd be glad to connect.
+
+**InMail subject:** module-level firmware capacity
+
+**InMail:**
+Hi Julian,
+
+Controlling every battery module individually, so mixed chemistries and ageing packs can share one system, is a clever way around the weakest-cell problem. With 50 MWh running and a firmware seat open, I imagine release and test work is under pressure.
+
+I'm the CEO of CoreFragment; we write firmware and design electronics for industrial devices, including battery management and power design, under NDA with full IP transfer.
+
+If extra hands on firmware or HIL/CI setup would help while you hire, I'd be happy to talk. Or if you'd just enjoy a casual chat about module-level battery control, I'm up for that too.
+
+Have a nice day!
+Parthraj
+
+**After they accept:**
+Thanks for connecting, Julian. One thing we check first in any custom BMS design: how the firmware proves the pack is safe when a cell or module misbehaves. We wrote up our checklist here: corefragment.com/blog/design-custom-battery-management-system
+
+If firmware or HIL capacity would help while the role is open, I'd be happy to talk. Or if you'd prefer a casual technical chat, I'm up for that too.

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+  <g font-family="Helvetica Neue, Helvetica, Arial">
+    <text x="100" y="180" font-size="28" font-weight="700" fill="#1F5FAE">THE PROJECT</text>
+    <text x="100" y="300" font-size="72" font-weight="700" fill="#1F2933">Finding bubbles in</text>
+    <text x="100" y="390" font-size="72" font-weight="700" fill="#1F5FAE">a PCB's coating.</text>
+    <text x="100" y="475" font-size="34" fill="#1F2933">For a European client, we trained an object</text>
+    <text x="100" y="521" font-size="34" fill="#1F2933">detection model and integrated it with the</text>
+    <text x="100" y="567" font-size="34" fill="#1F2933">inspection cameras.</text>
+    <!-- step 1 (highlight) -->
+    <rect x="100" y="620" width="880" height="120" rx="14" fill="#FDEBD7" stroke="#F26522" stroke-width="4"/>
+    <circle cx="160" cy="680" r="32" fill="#1F5FAE"/>
+    <text x="160" y="693" text-anchor="middle" font-size="34" font-weight="700" fill="#FFFFFF">1</text>
+    <text x="220" y="672" font-size="32" font-weight="700" fill="#1F2933">Calibrate the cameras</text>
+    <text x="220" y="712" font-size="26" fill="#1F2933">frame size, colour, exposure; pattern board</text>
+    <!-- step 2 -->
+    <line x1="100" y1="760" x2="980" y2="760" stroke="#E4E7EB" stroke-width="3"/>
+    <circle cx="160" cy="820" r="32" fill="#1F5FAE"/>
+    <text x="160" y="833" text-anchor="middle" font-size="34" font-weight="700" fill="#FFFFFF">2</text>
+    <text x="220" y="812" font-size="32" font-weight="700" fill="#1F2933">Same profile on every camera</text>
+    <text x="220" y="852" font-size="26" fill="#52606D">so the images stitch into one board view</text>
+    <!-- step 3 -->
+    <line x1="100" y1="880" x2="980" y2="880" stroke="#E4E7EB" stroke-width="3"/>
+    <circle cx="160" cy="940" r="32" fill="#1F5FAE"/>
+    <text x="160" y="953" text-anchor="middle" font-size="34" font-weight="700" fill="#FFFFFF">3</text>
+    <text x="220" y="932" font-size="32" font-weight="700" fill="#1F2933">Inspect regions of interest</text>
+    <text x="220" y="972" font-size="26" fill="#52606D">step by step, not the whole board at once</text>
+    <!-- step 4 -->
+    <line x1="100" y1="1000" x2="980" y2="1000" stroke="#E4E7EB" stroke-width="3"/>
+    <circle cx="160" cy="1060" r="32" fill="#1F5FAE"/>
+    <text x="160" y="1073" text-anchor="middle" font-size="34" font-weight="700" fill="#FFFFFF">4</text>
+    <text x="220" y="1052" font-size="32" font-weight="700" fill="#1F2933">Label, train, test</text>
+    <text x="220" y="1092" font-size="26" fill="#52606D">on new images the model has never seen</text>
+    <line x1="100" y1="1120" x2="980" y2="1120" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="1180" font-size="26" fill="#52606D">The coating keeps out moisture, dust and corrosion.</text>
+    <!-- footer -->
+    <line x1="100" y1="1230" x2="980" y2="1230" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="1290" font-size="26" fill="#52606D">corefragment.com</text>
+    <image href="{{LOGO}}" x="664" y="1252" width="100" height="60" preserveAspectRatio="xMidYMid meet"/>
+    <text x="980" y="1296" text-anchor="end" font-size="34" font-weight="700" fill="#1F2933">CoreFragment</text>
+  </g>
+</svg>

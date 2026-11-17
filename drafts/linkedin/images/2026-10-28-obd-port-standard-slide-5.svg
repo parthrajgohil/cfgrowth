@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+  <g font-family="Helvetica Neue, Helvetica, Arial">
+    <circle cx="150" cy="190" r="50" fill="#1F5FAE"/>
+    <text x="150" y="208" text-anchor="middle" font-size="52" font-weight="700" fill="#FFFFFF">3</text>
+    <text x="230" y="200" font-size="28" font-weight="700" fill="#1F5FAE">POWER</text>
+    <text x="100" y="360" font-size="72" font-weight="700" fill="#1F2933">The car is your</text>
+    <text x="100" y="450" font-size="72" font-weight="700" fill="#1F5FAE">power supply.</text>
+    <text x="100" y="550" font-size="36" fill="#1F2933">The voltage dips when the engine cranks,</text>
+    <text x="100" y="604" font-size="36" fill="#1F2933">and on many cars the port stays live</text>
+    <text x="100" y="658" font-size="36" fill="#1F2933">while the car is parked.</text>
+    <!-- supply voltage sketch (illustrative, no scale) -->
+    <line x1="100" y1="1000" x2="980" y2="1000" stroke="#E4E7EB" stroke-width="3"/>
+    <path d="M100,840 L300,840" fill="none" stroke="#1F5FAE" stroke-width="5"/>
+    <path d="M300,840 L325,950 L355,920 L385,800 L410,790" fill="none" stroke="#F26522" stroke-width="6"/>
+    <path d="M410,790 L760,790 L790,840 L980,840" fill="none" stroke="#1F5FAE" stroke-width="5"/>
+    <text x="200" y="815" text-anchor="middle" font-size="26" fill="#52606D">parked</text>
+    <text x="340" y="985" text-anchor="middle" font-size="26" font-weight="700" fill="#F26522">crank dip</text>
+    <text x="585" y="765" text-anchor="middle" font-size="26" fill="#52606D">engine running</text>
+    <text x="885" y="815" text-anchor="middle" font-size="26" fill="#52606D">parked again</text>
+    <!-- box -->
+    <rect x="100" y="1040" width="880" height="150" rx="14" fill="#FDEBD7"/>
+    <text x="130" y="1102" font-size="32" fill="#1F2933">Protect the input against dips and spikes.</text>
+    <text x="130" y="1152" font-size="32" font-weight="700" fill="#1F2933">Sleep when the engine is off.</text>
+    <!-- footer -->
+    <line x1="100" y1="1230" x2="980" y2="1230" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="1290" font-size="26" fill="#52606D">corefragment.com</text>
+    <image href="{{LOGO}}" x="664" y="1252" width="100" height="60" preserveAspectRatio="xMidYMid meet"/>
+    <text x="980" y="1296" text-anchor="end" font-size="34" font-weight="700" fill="#1F2933">CoreFragment</text>
+  </g>
+</svg>

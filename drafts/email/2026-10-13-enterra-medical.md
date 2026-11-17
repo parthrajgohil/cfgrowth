@@ -1,8 +1,9 @@
 ---
-stage: approved          # mirrors HubSpot "CF lead stage"; the CEO changes it in HubSpot
+stage: in_sequence              # mirrors HubSpot "CF lead stage"; the CEO changes it in HubSpot
+saleshandy_sequence: 3RPnAD95wr
 type: cold-email
 account: enterra-medical
-recipient: Barry Yo***v (surname masked), Director, Systems Engineering (email: TO BE FILLED BY HUMAN)
+recipient: Barry Yomtov, Director, Systems Engineering <byomtov@enterramedical.com>
 sources: [accounts/enterra-medical.md, https://corefragment.com/case-study/smart-glucometer, https://corefragment.com/blog/medical-wearable-device-development-challenges-and-fix]
 ---
 

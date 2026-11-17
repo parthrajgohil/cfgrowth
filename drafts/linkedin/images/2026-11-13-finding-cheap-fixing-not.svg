@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1500" viewBox="0 0 1200 1500" font-family="Helvetica Neue, Helvetica, Arial">
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+
+  <!-- Headline -->
+  <text x="100" y="210" font-size="80" font-weight="700" fill="#1F2933">Finding got cheap.</text>
+  <text x="100" y="305" font-size="80" font-weight="700" fill="#1F5FAE">Fixing didn't.</text>
+  <text x="100" y="385" font-size="34" fill="#1F2933">AI-assisted review of 10 embedded TCP/IP stacks</text>
+  <text x="100" y="432" font-size="28" fill="#52606D">Source: Forescout research, reported 12 Nov 2026</text>
+
+  <line x1="100" y1="480" x2="1100" y2="480" stroke="#E4E7EB" stroke-width="3"/>
+
+  <!-- Finding -->
+  <text x="100" y="550" font-size="26" font-weight="700" fill="#1F5FAE" letter-spacing="2">FINDING THE BUGS</text>
+
+  <text x="100" y="615" font-size="34" fill="#1F2933">By hand: about nine months (estimate)</text>
+  <rect x="100" y="638" width="1000" height="56" fill="#1F5FAE"/>
+
+  <text x="100" y="755" font-size="34" fill="#1F2933">AI-assisted: 90 hours</text>
+  <rect x="100" y="778" width="16" height="56" fill="#1F5FAE"/>
+  <text x="140" y="818" font-size="34" font-weight="700" fill="#1F2933">99 bugs validated, 66 of them new</text>
+
+  <line x1="100" y1="880" x2="1100" y2="880" stroke="#E4E7EB" stroke-width="3"/>
+
+  <!-- Fixing -->
+  <text x="100" y="950" font-size="26" font-weight="700" fill="#1F5FAE" letter-spacing="2">FIXING THEM: STILL YOUR JOB</text>
+
+  <circle cx="135" cy="1022" r="26" fill="#1F5FAE"/>
+  <text x="135" y="1032" text-anchor="middle" font-size="28" font-weight="700" fill="#FFFFFF">1</text>
+  <text x="190" y="1034" font-size="36" font-weight="700" fill="#1F2933">Know the stack version in each build</text>
+  <text x="190" y="1076" font-size="30" fill="#52606D">lwIP inside the chip vendor's SDK counts too</text>
+
+  <circle cx="135" cy="1137" r="26" fill="#1F5FAE"/>
+  <text x="135" y="1147" text-anchor="middle" font-size="28" font-weight="700" fill="#FFFFFF">2</text>
+  <text x="190" y="1149" font-size="36" font-weight="700" fill="#1F2933">Compile out what you don't use</text>
+  <text x="190" y="1191" font-size="30" fill="#52606D">FTP, Telnet, IPv6, a web admin page</text>
+
+  <rect x="100" y="1212" width="1000" height="118" rx="10" fill="#FDEBD7"/>
+  <circle cx="135" cy="1259" r="26" fill="#F26522"/>
+  <text x="135" y="1269" text-anchor="middle" font-size="28" font-weight="700" fill="#FFFFFF">3</text>
+  <text x="190" y="1271" font-size="36" font-weight="700" fill="#1F2933">Patch an old release over the air</text>
+  <text x="190" y="1313" font-size="30" fill="#52606D">Rebuild, test, ship. No site visit.</text>
+
+  <!-- Footer -->
+  <line x1="100" y1="1380" x2="1100" y2="1380" stroke="#E4E7EB" stroke-width="2"/>
+  <text x="100" y="1446" font-size="26" fill="#52606D">corefragment.com</text>
+  <image href="{{LOGO}}" x="784" y="1402" width="100" height="60"/>
+  <text x="1100" y="1446" text-anchor="end" font-size="34" font-weight="700" fill="#1F2933">CoreFragment</text>
+</svg>

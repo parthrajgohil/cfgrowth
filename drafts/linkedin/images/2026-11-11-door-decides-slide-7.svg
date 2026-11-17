@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+  <g font-family="Helvetica Neue, Helvetica, Arial">
+    <circle cx="150" cy="190" r="50" fill="#1F5FAE"/>
+    <text x="150" y="208" text-anchor="middle" font-size="52" font-weight="700" fill="#FFFFFF">5</text>
+    <text x="230" y="200" font-size="28" font-weight="700" fill="#1F5FAE">TRUST</text>
+    <text x="100" y="360" font-size="72" font-weight="700" fill="#1F2933">Trust the card</text>
+    <text x="100" y="450" font-size="72" font-weight="700" fill="#1F5FAE">and the reader.</text>
+    <!-- cards block -->
+    <rect x="100" y="520" width="880" height="300" rx="14" fill="#FFFFFF" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="130" y="580" font-size="26" font-weight="700" fill="#1F5FAE">CARDS</text>
+    <rect x="130" y="602" width="820" height="100" rx="10" fill="#FDEBD7" stroke="#F26522" stroke-width="4"/>
+    <text x="155" y="645" font-size="30" font-weight="700" fill="#1F2933">125 kHz proximity cards send a fixed ID.</text>
+    <text x="155" y="685" font-size="30" fill="#1F2933">Cheap tools can copy them.</text>
+    <text x="130" y="758" font-size="32" fill="#1F2933">Use cards with mutual authentication,</text>
+    <text x="130" y="798" font-size="32" fill="#1F2933">e.g. MIFARE DESFire EV3 (AES).</text>
+    <!-- readers block -->
+    <rect x="100" y="850" width="880" height="300" rx="14" fill="#FFFFFF" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="130" y="910" font-size="26" font-weight="700" fill="#1F5FAE">READERS</text>
+    <text x="130" y="970" font-size="32" fill="#1F2933">Give each reader its own certificate</text>
+    <text x="130" y="1012" font-size="32" fill="#1F2933">(e.g. in AWS IoT Core) and its own</text>
+    <text x="130" y="1054" font-size="32" fill="#1F2933">policy, so one stolen reader can be</text>
+    <text x="130" y="1096" font-size="32" fill="#1F2933">cut off without touching the rest.</text>
+    <!-- footer -->
+    <line x1="100" y1="1230" x2="980" y2="1230" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="1290" font-size="26" fill="#52606D">corefragment.com</text>
+    <image href="{{LOGO}}" x="664" y="1252" width="100" height="60" preserveAspectRatio="xMidYMid meet"/>
+    <text x="980" y="1296" text-anchor="end" font-size="34" font-weight="700" fill="#1F2933">CoreFragment</text>
+  </g>
+</svg>

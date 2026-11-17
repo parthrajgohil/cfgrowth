@@ -1,8 +1,9 @@
 ---
-stage: approved          # mirrors HubSpot "CF lead stage"; the CEO changes it in HubSpot
+stage: in_sequence              # mirrors HubSpot "CF lead stage"; the CEO changes it in HubSpot
 type: cold-email
 account: neurobell
-recipient: Colm Murphy, Chief Technology Officer (email: TO BE FILLED BY HUMAN)
+recipient: Colm Murphy, Chief Technology Officer <colm@neurobell.com>
+saleshandy_sequence: 9KwO5oqYa6
 sources: [accounts/neurobell.md, https://corefragment.com/case-study/smart-glucometer, https://corefragment.com/blog/medical-wearable-device-development-challenges-and-fix]
 ---
 

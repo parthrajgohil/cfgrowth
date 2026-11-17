@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="1500" viewBox="0 0 1200 1500" font-family="Helvetica Neue, Helvetica, Arial">
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+
+  <!-- Headline -->
+  <text x="100" y="200" font-size="78" font-weight="700" fill="#1F2933">OCPP 2.0.1 starts</text>
+  <text x="100" y="290" font-size="78" font-weight="700" fill="#1F5FAE">on the PCB</text>
+  <text x="100" y="370" font-size="36" fill="#52606D">What changes from 1.6J, and where it lands</text>
+
+  <!-- Row 1: transactions -->
+  <g>
+    <rect x="100" y="430" width="1000" height="170" rx="16" fill="#FFFFFF" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="130" y="476" font-size="26" font-weight="700" fill="#1F5FAE">TRANSACTIONS</text>
+    <text x="130" y="526" font-size="34" fill="#1F2933">Start/StopTransaction become TransactionEvent</text>
+    <text x="130" y="576" font-size="34" fill="#52606D">Firmware: the charger creates the transaction ID</text>
+  </g>
+
+  <!-- Row 2: configuration -->
+  <g>
+    <rect x="100" y="620" width="1000" height="170" rx="16" fill="#FFFFFF" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="130" y="666" font-size="26" font-weight="700" fill="#1F5FAE">CONFIGURATION</text>
+    <text x="130" y="716" font-size="34" fill="#1F2933">Configuration keys become a device model</text>
+    <text x="130" y="766" font-size="34" fill="#52606D">Firmware: a new data model, stored and reported</text>
+  </g>
+
+  <!-- Row 3: security (highlight) -->
+  <g>
+    <rect x="100" y="810" width="1000" height="170" rx="16" fill="#FDEBD7" stroke="#F26522" stroke-width="3"/>
+    <text x="130" y="856" font-size="26" font-weight="700" fill="#F26522">SECURITY PROFILE 3</text>
+    <text x="130" y="906" font-size="34" fill="#1F2933">TLS with a client certificate per charger</text>
+    <text x="130" y="956" font-size="34" font-weight="700" fill="#1F2933">Board: a private key, kept safe for years</text>
+  </g>
+
+  <!-- Row 4: firmware update -->
+  <g>
+    <rect x="100" y="1000" width="1000" height="170" rx="16" fill="#FFFFFF" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="130" y="1046" font-size="26" font-weight="700" fill="#1F5FAE">FIRMWARE UPDATE</text>
+    <text x="130" y="1096" font-size="34" fill="#1F2933">Signed updates, checked before they run</text>
+    <text x="130" y="1146" font-size="34" font-weight="700" fill="#1F2933">Board: flash for two images and a fallback</text>
+  </g>
+
+  <!-- Takeaway -->
+  <line x1="100" y1="1210" x2="100" y2="1330" stroke="#1F5FAE" stroke-width="8"/>
+  <text x="130" y="1258" font-size="34" fill="#1F2933">Pick the chip, memory and key storage for 2.0.1</text>
+  <text x="130" y="1308" font-size="34" font-weight="700" fill="#1F5FAE">now, even if you ship 1.6J first.</text>
+
+  <!-- Footer -->
+  <line x1="100" y1="1380" x2="1100" y2="1380" stroke="#E4E7EB" stroke-width="2"/>
+  <text x="100" y="1446" font-size="26" fill="#52606D">corefragment.com</text>
+  <image href="{{LOGO}}" x="784" y="1402" width="100" height="60"/>
+  <text x="1100" y="1446" text-anchor="end" font-size="34" font-weight="700" fill="#1F2933">CoreFragment</text>
+</svg>

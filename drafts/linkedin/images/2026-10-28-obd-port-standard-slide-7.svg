@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+  <g font-family="Helvetica Neue, Helvetica, Arial">
+    <circle cx="150" cy="190" r="50" fill="#1F5FAE"/>
+    <text x="150" y="208" text-anchor="middle" font-size="52" font-weight="700" fill="#FFFFFF">5</text>
+    <text x="230" y="200" font-size="28" font-weight="700" fill="#1F5FAE">PHONE</text>
+    <text x="100" y="360" font-size="72" font-weight="700" fill="#1F2933">The app works</text>
+    <text x="100" y="450" font-size="72" font-weight="700" fill="#1F5FAE">with screen off.</text>
+    <text x="100" y="550" font-size="36" fill="#1F2933">Drivers won't open the app on every trip.</text>
+    <text x="100" y="604" font-size="36" fill="#1F2933">So the app has to look after itself:</text>
+    <!-- checklist -->
+    <line x1="100" y1="650" x2="980" y2="650" stroke="#E4E7EB" stroke-width="3"/>
+    <circle cx="124" cy="700" r="14" fill="#F26522"/>
+    <text x="170" y="712" font-size="34" font-weight="700" fill="#1F2933">Reconnect on its own after pairing</text>
+    <line x1="100" y1="755" x2="980" y2="755" stroke="#E4E7EB" stroke-width="3"/>
+    <circle cx="124" cy="805" r="14" fill="#1F5FAE"/>
+    <text x="170" y="817" font-size="34" fill="#1F2933">Log data in a background service</text>
+    <line x1="100" y1="860" x2="980" y2="860" stroke="#E4E7EB" stroke-width="3"/>
+    <circle cx="124" cy="910" r="14" fill="#1F5FAE"/>
+    <text x="170" y="922" font-size="34" fill="#1F2933">Ask for the right Bluetooth permissions</text>
+    <text x="170" y="962" font-size="26" fill="#52606D">They changed in Android 12.</text>
+    <line x1="100" y1="1000" x2="980" y2="1000" stroke="#E4E7EB" stroke-width="3"/>
+    <circle cx="124" cy="1050" r="14" fill="#1F5FAE"/>
+    <text x="170" y="1062" font-size="34" fill="#1F2933">Test on several phone brands</text>
+    <line x1="100" y1="1105" x2="980" y2="1105" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="1170" font-size="30" fill="#52606D">A gap in the log is a gap in the trip.</text>
+    <!-- footer -->
+    <line x1="100" y1="1230" x2="980" y2="1230" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="1290" font-size="26" fill="#52606D">corefragment.com</text>
+    <image href="{{LOGO}}" x="664" y="1252" width="100" height="60" preserveAspectRatio="xMidYMid meet"/>
+    <text x="980" y="1296" text-anchor="end" font-size="34" font-weight="700" fill="#1F2933">CoreFragment</text>
+  </g>
+</svg>

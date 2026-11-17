@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+  <g font-family="Helvetica Neue, Helvetica, Arial">
+    <text x="100" y="200" font-size="28" font-weight="700" fill="#1F5FAE">THE PROJECT</text>
+    <text x="100" y="320" font-size="72" font-weight="700" fill="#1F2933">A plug-in OBD device</text>
+    <text x="100" y="410" font-size="72" font-weight="700" fill="#1F5FAE">for a US client.</text>
+    <text x="100" y="520" font-size="36" fill="#1F2933">It reads engine data and location</text>
+    <text x="100" y="574" font-size="36" fill="#1F2933">and sends them over BLE to the</text>
+    <text x="100" y="628" font-size="36" fill="#1F2933">driver's Android phone, in real time.</text>
+    <!-- flow -->
+    <rect x="100" y="700" width="220" height="120" rx="12" fill="#FFFFFF" stroke="#1F5FAE" stroke-width="3"/>
+    <text x="210" y="754" text-anchor="middle" font-size="32" font-weight="700" fill="#1F2933">Car</text>
+    <text x="210" y="792" text-anchor="middle" font-size="24" fill="#52606D">OBD-II port</text>
+    <line x1="320" y1="760" x2="418" y2="760" stroke="#1F5FAE" stroke-width="4"/>
+    <polygon points="414,750 430,760 414,770" fill="#1F5FAE"/>
+    <rect x="430" y="700" width="220" height="120" rx="12" fill="#FDEBD7" stroke="#F26522" stroke-width="4"/>
+    <text x="540" y="754" text-anchor="middle" font-size="32" font-weight="700" fill="#1F2933">OBD device</text>
+    <text x="540" y="792" text-anchor="middle" font-size="24" fill="#52606D">BLE + location</text>
+    <line x1="650" y1="760" x2="748" y2="760" stroke="#1F5FAE" stroke-width="4"/>
+    <polygon points="744,750 760,760 744,770" fill="#1F5FAE"/>
+    <text x="705" y="738" text-anchor="middle" font-size="24" font-weight="700" fill="#1F5FAE">BLE</text>
+    <rect x="760" y="700" width="220" height="120" rx="12" fill="#FFFFFF" stroke="#1F5FAE" stroke-width="3"/>
+    <text x="870" y="754" text-anchor="middle" font-size="32" font-weight="700" fill="#1F2933">Android app</text>
+    <text x="870" y="792" text-anchor="middle" font-size="24" fill="#52606D">live + logged</text>
+    <line x1="100" y1="890" x2="980" y2="890" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="960" font-size="28" font-weight="700" fill="#52606D">WHAT WE BUILT</text>
+    <text x="100" y="1020" font-size="36" fill="#1F2933">Hardware, firmware and the Android app.</text>
+    <text x="100" y="1110" font-size="28" font-weight="700" fill="#52606D">WHAT IT READS</text>
+    <text x="100" y="1160" font-size="30" fill="#1F2933">Engine temperature, speed, torque, oxygen</text>
+    <text x="100" y="1200" font-size="30" fill="#1F2933">sensor, fuel and pressure, plus location.</text>
+    <!-- footer -->
+    <line x1="100" y1="1230" x2="980" y2="1230" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="1290" font-size="26" fill="#52606D">corefragment.com</text>
+    <image href="{{LOGO}}" x="664" y="1252" width="100" height="60" preserveAspectRatio="xMidYMid meet"/>
+    <text x="980" y="1296" text-anchor="end" font-size="34" font-weight="700" fill="#1F2933">CoreFragment</text>
+  </g>
+</svg>

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1500" viewBox="0 0 1200 1500" font-family="Helvetica Neue, Helvetica, Arial">
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+
+  <!-- Headline -->
+  <text x="100" y="190" font-size="72" font-weight="700" fill="#1F2933">A working driver is</text>
+  <text x="100" y="272" font-size="72" font-weight="700" fill="#1F5FAE">not a shipping driver</text>
+  <text x="100" y="338" font-size="34" fill="#52606D">Four things the bench never tests</text>
+
+  <!-- Row 1: wiring (highlight) -->
+  <g>
+    <rect x="100" y="380" width="1000" height="200" rx="16" fill="#FDEBD7" stroke="#F26522" stroke-width="3"/>
+    <text x="140" y="432" font-size="26" font-weight="700" fill="#F26522" letter-spacing="2">WIRING</text>
+    <text x="140" y="490" font-size="34" fill="#52606D">Bench: a short cable to the dev kit</text>
+    <text x="140" y="542" font-size="34" fill="#1F2933">Field: long wiring, slow I2C edges, lost reads</text>
+  </g>
+
+  <!-- Row 2: power -->
+  <g>
+    <rect x="100" y="596" width="1000" height="200" rx="16" fill="#FFFFFF" stroke="#E4E7EB" stroke-width="2"/>
+    <text x="140" y="648" font-size="26" font-weight="700" fill="#1F5FAE" letter-spacing="2">POWER</text>
+    <text x="140" y="706" font-size="34" fill="#52606D">Bench: powered up once, left running</text>
+    <text x="140" y="758" font-size="34" fill="#1F2933">Field: power cycles the datasheet never covers</text>
+  </g>
+
+  <!-- Row 3: timing -->
+  <g>
+    <rect x="100" y="812" width="1000" height="200" rx="16" fill="#FFFFFF" stroke="#E4E7EB" stroke-width="2"/>
+    <text x="140" y="864" font-size="26" font-weight="700" fill="#1F5FAE" letter-spacing="2">TIMING</text>
+    <text x="140" y="922" font-size="34" fill="#52606D">Bench: one process, one read at a time</text>
+    <text x="140" y="974" font-size="34" fill="#1F2933">Field: an IRQ race that hits once in thousands</text>
+  </g>
+
+  <!-- Row 4: kernel -->
+  <g>
+    <rect x="100" y="1028" width="1000" height="200" rx="16" fill="#FFFFFF" stroke="#E4E7EB" stroke-width="2"/>
+    <text x="140" y="1080" font-size="26" font-weight="700" fill="#1F5FAE" letter-spacing="2">KERNEL</text>
+    <text x="140" y="1138" font-size="34" fill="#52606D">Bench: the kernel you built today</text>
+    <text x="140" y="1190" font-size="34" fill="#1F2933">Field: a BSP update, kernel 5.4 becomes 6.1</text>
+  </g>
+
+  <!-- Takeaway -->
+  <text x="100" y="1292" font-size="34" font-weight="700" fill="#1F2933">Test it in the enclosure, across power cycles,</text>
+  <text x="100" y="1338" font-size="34" font-weight="700" fill="#1F5FAE">and on the kernel you'll ship next year.</text>
+
+  <!-- Footer -->
+  <line x1="100" y1="1380" x2="1100" y2="1380" stroke="#E4E7EB" stroke-width="2"/>
+  <text x="100" y="1446" font-size="26" fill="#52606D">corefragment.com</text>
+  <image href="{{LOGO}}" x="784" y="1402" width="100" height="60"/>
+  <text x="1100" y="1446" text-anchor="end" font-size="34" font-weight="700" fill="#1F2933">CoreFragment</text>
+</svg>

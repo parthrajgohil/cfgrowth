@@ -1,8 +1,9 @@
 ---
-stage: approved          # mirrors HubSpot "CF lead stage"; the CEO changes it in HubSpot
+stage: in_sequence              # mirrors HubSpot "CF lead stage"; the CEO changes it in HubSpot
+saleshandy_sequence: rVz1GkOnPG
 type: cold-email
 account: inductosense
-recipient: Chenghuan Zhong, CTO and Director (email: TO BE FILLED BY HUMAN)
+recipient: Chenghuan (Bamboo) Zhong, CTO and Director <bamboo@inductosense.com>
 sources: [accounts/inductosense.md, https://corefragment.com/case-study/industrial-cnc-drilling-machine-automation, https://corefragment.com/blog/handle-mqtt-connection-loss]
 ---
 

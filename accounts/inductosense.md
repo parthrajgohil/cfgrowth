@@ -46,7 +46,7 @@
 ## Buyers
 | Name | Title | Profile | Notes |
 |---|---|---|---|
-| Chenghuan Zhong | CTO and Director | unverified | **Primary.** Saleshandy 756884763; Apollo has no email (Saleshandy reveal needed) |
+| Chenghuan Zhong | CTO and Director | unverified | **Primary.** Saleshandy 756884763; Apollo has no email. Saleshandy lists him as "Cheng-Huan (Bamboo) Zhong". **Email: bamboo@inductosense.com** (Saleshandy `valid`, reveal request 6adf3aa98090c7c4163874c5, 2026-10-26; LinkedIn per reveal: https://www.linkedin.com/in/cheng-huan-bamboo-zhong-06b2736b). First Name in the batch = "Bamboo". **Saleshandy:** batch `CF · batch 2026-10-26 17:03 · Europe · 7 leads`, sequence ID rVz1GkOnPG (inactive; the CEO activates) |
 | Erik Fabre | Head of R&D Projects | unverified | Alternative. Saleshandy 76054633; Apollo has email. Angle fits him too |
 | Matt Butcher | CEO | unverified | Alternative |
 

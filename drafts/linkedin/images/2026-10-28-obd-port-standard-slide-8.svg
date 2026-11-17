@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+  <g font-family="Helvetica Neue, Helvetica, Arial">
+    <text x="100" y="200" font-size="28" font-weight="700" fill="#1F5FAE">TAKEAWAY</text>
+    <text x="100" y="330" font-size="84" font-weight="700" fill="#1F2933">Your test car</text>
+    <text x="100" y="430" font-size="84" font-weight="700" fill="#1F5FAE">is one car.</text>
+    <text x="100" y="530" font-size="36" fill="#1F2933">Plan for the cars your customers drive:</text>
+    <!-- recap -->
+    <circle cx="126" cy="630" r="26" fill="#1F5FAE"/>
+    <text x="126" y="640" text-anchor="middle" font-size="28" font-weight="700" fill="#FFFFFF">1</text>
+    <text x="180" y="642" font-size="34" fill="#1F2933">Detect the protocol</text>
+    <circle cx="126" cy="710" r="26" fill="#1F5FAE"/>
+    <text x="126" y="720" text-anchor="middle" font-size="28" font-weight="700" fill="#FFFFFF">2</text>
+    <text x="180" y="722" font-size="34" fill="#1F2933">Ask which PIDs exist</text>
+    <circle cx="126" cy="790" r="26" fill="#1F5FAE"/>
+    <text x="126" y="800" text-anchor="middle" font-size="28" font-weight="700" fill="#FFFFFF">3</text>
+    <text x="180" y="802" font-size="34" fill="#1F2933">Protect the power, sleep when parked</text>
+    <circle cx="126" cy="870" r="26" fill="#1F5FAE"/>
+    <text x="126" y="880" text-anchor="middle" font-size="28" font-weight="700" fill="#FFFFFF">4</text>
+    <text x="180" y="882" font-size="34" fill="#1F2933">Choose the radio for the phone</text>
+    <circle cx="126" cy="950" r="26" fill="#1F5FAE"/>
+    <text x="126" y="960" text-anchor="middle" font-size="28" font-weight="700" fill="#FFFFFF">5</text>
+    <text x="180" y="962" font-size="34" fill="#1F2933">Keep the app working, screen off</text>
+    <!-- CTA -->
+    <rect x="100" y="1060" width="680" height="90" rx="45" fill="#F26522"/>
+    <text x="440" y="1118" text-anchor="middle" font-size="36" font-weight="700" fill="#FFFFFF">Follow CoreFragment for more</text>
+    <!-- footer -->
+    <line x1="100" y1="1230" x2="980" y2="1230" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="1290" font-size="26" fill="#52606D">corefragment.com</text>
+    <image href="{{LOGO}}" x="664" y="1252" width="100" height="60" preserveAspectRatio="xMidYMid meet"/>
+    <text x="980" y="1296" text-anchor="end" font-size="34" font-weight="700" fill="#1F2933">CoreFragment</text>
+  </g>
+</svg>

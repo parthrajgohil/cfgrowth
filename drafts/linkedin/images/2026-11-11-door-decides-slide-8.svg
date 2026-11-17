@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+  <g font-family="Helvetica Neue, Helvetica, Arial">
+    <text x="100" y="200" font-size="28" font-weight="700" fill="#1F5FAE">TAKEAWAY</text>
+    <text x="100" y="320" font-size="72" font-weight="700" fill="#1F2933">The door decides.</text>
+    <text x="100" y="410" font-size="72" font-weight="700" fill="#1F5FAE">The cloud remembers.</text>
+    <line x1="100" y1="470" x2="980" y2="470" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="550" font-size="34" font-weight="700" fill="#1F5FAE">1</text>
+    <text x="150" y="550" font-size="34" fill="#1F2933">Decide at the door, offline too</text>
+    <text x="100" y="630" font-size="34" font-weight="700" fill="#1F5FAE">2</text>
+    <text x="150" y="630" font-size="34" fill="#1F2933">Agree how fast a removed card stops</text>
+    <text x="100" y="710" font-size="34" font-weight="700" fill="#1F5FAE">3</text>
+    <text x="150" y="710" font-size="34" fill="#1F2933">Choose the remote-unlock delay first</text>
+    <text x="100" y="790" font-size="34" font-weight="700" fill="#1F5FAE">4</text>
+    <text x="150" y="790" font-size="34" fill="#1F2933">Measure the battery under load</text>
+    <text x="100" y="870" font-size="34" font-weight="700" fill="#1F5FAE">5</text>
+    <text x="150" y="870" font-size="34" fill="#1F2933">Trust each card and each reader</text>
+    <line x1="100" y1="930" x2="980" y2="930" stroke="#E4E7EB" stroke-width="3"/>
+    <rect x="100" y="1000" width="600" height="96" rx="48" fill="#F26522"/>
+    <text x="400" y="1059" text-anchor="middle" font-size="30" font-weight="700" fill="#FFFFFF">Follow CoreFragment for more</text>
+    <!-- footer -->
+    <line x1="100" y1="1230" x2="980" y2="1230" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="1290" font-size="26" fill="#52606D">corefragment.com</text>
+    <image href="{{LOGO}}" x="664" y="1252" width="100" height="60" preserveAspectRatio="xMidYMid meet"/>
+    <text x="980" y="1296" text-anchor="end" font-size="34" font-weight="700" fill="#1F2933">CoreFragment</text>
+  </g>
+</svg>

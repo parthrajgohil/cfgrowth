@@ -26,3 +26,19 @@ _2026-10-19: same. Search `salesnav` after 2026-10-05 returned nothing; no `pipe
 _2026-10-20: same. Search `salesnav` after 2026-10-06 returned nothing; no `pipeline/sales-nav-*.md` files (template only). Queue empty._
 _2026-10-21: same. Search `salesnav` after 2026-10-07 returned nothing; no `pipeline/sales-nav-*.md` files (template only). Queue empty._
 _2026-10-22: same. Search `salesnav` after 2026-10-08 returned nothing (the first call failed with a POST error; the retry succeeded); no `pipeline/sales-nav-*.md` files (template only). Queue empty._
+_2026-10-26: same. Search `salesnav` after 2026-10-12 returned nothing; no `pipeline/sales-nav-*.md` files (template only). Queue empty._
+_2026-10-27: same. Search `salesnav` after 2026-10-13 returned nothing; no `pipeline/sales-nav-*.md` files (template only). Queue empty._
+_2026-10-28: same. Search `salesnav` after 2026-10-14 returned nothing; no `pipeline/sales-nav-*.md` files (template only). Queue empty._
+_2026-10-29: same. Search `salesnav` after 2026-10-15 returned nothing; no `pipeline/sales-nav-*.md` files (template only). Queue empty._
+_2026-10-30: same. Search `salesnav` after 2026-10-16 returned nothing; no `pipeline/sales-nav-*.md` files (template only). Queue empty._
+_2026-11-03: same. Search `salesnav` after 2026-10-20 returned nothing; no `pipeline/sales-nav-*.md` files (template only). Queue empty._
+_2026-11-04: same. Search `salesnav` after 2026-10-21 returned nothing; no `pipeline/sales-nav-*.md` files (template only). Queue empty._
+_2026-11-05: same. Search `salesnav` after 2026-10-22 returned nothing; no `pipeline/sales-nav-*.md` files (template only). Queue empty._
+_2026-11-06: same. Search `salesnav` after 2026-10-23 returned nothing; no `pipeline/sales-nav-*.md` files (template only). Queue empty._
+_2026-11-09: same. Search `salesnav` after 2026-10-26 returned nothing; no `pipeline/sales-nav-*.md` files (template only). Queue empty._
+_2026-11-10: same. Search `salesnav` after 2026-10-27 returned nothing; no `pipeline/sales-nav-*.md` files (template only). Queue empty._
+_2026-11-11: same. Search `salesnav` after 2026-10-28 returned nothing; no `pipeline/sales-nav-*.md` files (template only). Queue empty._
+_2026-11-12: same. Search `salesnav` after 2026-10-29 returned nothing; no `pipeline/sales-nav-*.md` files (template only). Queue empty._
+_2026-11-13: **Teams search failed** (3 attempts: Graph 502 twice, "no response content type" once), so `#salesnav` messages since 2026-10-30 could not be checked; no `pipeline/sales-nav-*.md` files (template only). Queue unchanged (empty). Tomorrow's run should search from 2026-10-30._
+_2026-11-16: Search `salesnav` after 2026-10-30 (covers the 2026-11-13 gap) returned nothing; no `pipeline/sales-nav-*.md` files (template only). Queue empty._
+_2026-11-17: same. Search `salesnav` after 2026-11-03 returned nothing; no `pipeline/sales-nav-*.md` files (template only). Queue empty._

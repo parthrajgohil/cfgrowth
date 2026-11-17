@@ -48,7 +48,7 @@
 ## Buyers
 | Name | Title | Profile | Notes |
 |---|---|---|---|
-| Erwin Althof | CTO | unverified | **Primary.** Saleshandy 172684767; Apollo has email |
+| Erwin Althof | CTO | unverified | **Primary.** Saleshandy 172684767; Apollo has email. **Email: e.althof@ridder.com** (Saleshandy `valid`, reveal request 6adb462069f1b23a04e43683, 2026-10-23; LinkedIn per reveal: https://www.linkedin.com/in/erwinalthof). **Saleshandy:** batch `CF · batch 2026-10-23 17:03 · Europe · 5 leads`, sequence ID 9KwO5oqYa6 (inactive; the CEO activates) |
 | Rob Eling | Product Development Manager | unverified | Alternative. Saleshandy 212368960; Apollo has email. Angle fits him (hands-on product development) |
 
 ## Best angle

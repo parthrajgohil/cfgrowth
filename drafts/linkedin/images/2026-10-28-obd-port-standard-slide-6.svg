@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+  <g font-family="Helvetica Neue, Helvetica, Arial">
+    <circle cx="150" cy="190" r="50" fill="#1F5FAE"/>
+    <text x="150" y="208" text-anchor="middle" font-size="52" font-weight="700" fill="#FFFFFF">4</text>
+    <text x="230" y="200" font-size="28" font-weight="700" fill="#1F5FAE">RADIO</text>
+    <text x="100" y="360" font-size="72" font-weight="700" fill="#1F2933">Pick the radio</text>
+    <text x="100" y="450" font-size="72" font-weight="700" fill="#1F5FAE">for the phone.</text>
+    <text x="100" y="550" font-size="36" fill="#1F2933">The phone is the gateway. So the radio</text>
+    <text x="100" y="604" font-size="36" fill="#1F2933">has to suit the phone, not the spec sheet.</text>
+    <!-- BLE (chosen) -->
+    <rect x="100" y="670" width="880" height="150" rx="14" fill="#FDEBD7" stroke="#F26522" stroke-width="4"/>
+    <text x="130" y="732" font-size="36" font-weight="700" fill="#1F2933">BLE</text>
+    <text x="950" y="732" text-anchor="end" font-size="26" font-weight="700" fill="#F26522">CHOSEN</text>
+    <text x="130" y="782" font-size="30" fill="#1F2933">Low power, enough bandwidth for live data.</text>
+    <!-- Classic Bluetooth -->
+    <text x="130" y="895" font-size="36" font-weight="700" fill="#1F2933">Classic Bluetooth</text>
+    <text x="130" y="945" font-size="30" fill="#52606D">Higher power, harder to pair on modern Android.</text>
+    <line x1="100" y1="990" x2="980" y2="990" stroke="#E4E7EB" stroke-width="3"/>
+    <!-- Wi-Fi -->
+    <text x="130" y="1055" font-size="36" font-weight="700" fill="#1F2933">Wi-Fi</text>
+    <text x="130" y="1105" font-size="30" fill="#52606D">Needs a hotspot or mobile data.</text>
+    <text x="130" y="1150" font-size="30" fill="#52606D">More cost, more setup for the driver.</text>
+    <!-- footer -->
+    <line x1="100" y1="1230" x2="980" y2="1230" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="1290" font-size="26" fill="#52606D">corefragment.com</text>
+    <image href="{{LOGO}}" x="664" y="1252" width="100" height="60" preserveAspectRatio="xMidYMid meet"/>
+    <text x="980" y="1296" text-anchor="end" font-size="34" font-weight="700" fill="#1F2933">CoreFragment</text>
+  </g>
+</svg>

@@ -1,8 +1,9 @@
 ---
-stage: approved          # mirrors HubSpot "CF lead stage"; the CEO changes it in HubSpot
+stage: in_sequence              # mirrors HubSpot "CF lead stage"; the CEO changes it in HubSpot
 type: cold-email
 account: checkpoint-surgical
-recipient: Ben Cottrill, Vice President of Engineering (email: TO BE FILLED BY HUMAN)
+recipient: Ben Cottrill, Vice President of Engineering <bcottrill@checkpointsurgical.com>
+saleshandy_sequence: BVaD3kGrPo
 sources: [accounts/checkpoint-surgical.md, https://corefragment.com/case-study/smart-glucometer, https://corefragment.com/blog/medical-wearable-device-development-challenges-and-fix]
 ---
 

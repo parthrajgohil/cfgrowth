@@ -41,7 +41,7 @@
 ## Buyers
 | Name | Title | Profile | Notes |
 |---|---|---|---|
-| Michael Morena | Head of Hardware Engineering | unverified | **Primary.** Saleshandy 210926246; Apollo has email |
+| Michael Morena | Head of Hardware Engineering | unverified | **Primary.** Saleshandy 210926246; Apollo has email. **Email: michael@hexmodal.com** (Saleshandy `valid`, reveal request 6adf3aa98090c7c4163874c5, 2026-10-26; LinkedIn per reveal: https://www.linkedin.com/in/michaelcmorena). **Saleshandy:** batch `CF · batch 2026-10-26 17:03 · USA · 3 leads`, sequence ID 3RPnAD95wr (inactive; the CEO activates) |
 | Christopher Hariz | Founder | unverified | Alternative. Saleshandy 447320911 |
 
 ## Best angle

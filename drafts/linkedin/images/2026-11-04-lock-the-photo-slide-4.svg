@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+  <g font-family="Helvetica Neue, Helvetica, Arial">
+    <circle cx="150" cy="190" r="50" fill="#1F5FAE"/>
+    <text x="150" y="208" text-anchor="middle" font-size="52" font-weight="700" fill="#FFFFFF">2</text>
+    <text x="230" y="200" font-size="28" font-weight="700" fill="#1F5FAE">IMAGING</text>
+    <text x="100" y="360" font-size="72" font-weight="700" fill="#1F2933">Calibrate, then</text>
+    <text x="100" y="450" font-size="72" font-weight="700" fill="#1F5FAE">freeze the setup.</text>
+    <text x="100" y="540" font-size="34" fill="#1F2933">A model learns whatever is in the picture,</text>
+    <text x="100" y="586" font-size="34" fill="#1F2933">including your camera settings.</text>
+    <!-- table header -->
+    <text x="100" y="660" font-size="24" font-weight="700" fill="#52606D">WHAT CAN DRIFT</text>
+    <text x="980" y="660" text-anchor="end" font-size="24" font-weight="700" fill="#52606D">HOW TO LOCK IT</text>
+    <line x1="100" y1="680" x2="980" y2="680" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="727" font-size="30" font-weight="700" fill="#1F2933">Exposure, colour</text>
+    <text x="980" y="727" text-anchor="end" font-size="26" fill="#52606D">fixed values, no auto mode</text>
+    <line x1="100" y1="750" x2="980" y2="750" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="797" font-size="30" font-weight="700" fill="#1F2933">Camera position</text>
+    <text x="980" y="797" text-anchor="end" font-size="26" fill="#52606D">align with a pattern board</text>
+    <line x1="100" y1="820" x2="980" y2="820" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="867" font-size="30" font-weight="700" fill="#1F2933">Several cameras</text>
+    <text x="980" y="867" text-anchor="end" font-size="26" fill="#52606D">one vision profile for all</text>
+    <line x1="100" y1="890" x2="980" y2="890" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="937" font-size="30" font-weight="700" fill="#1F2933">Lighting</text>
+    <text x="980" y="937" text-anchor="end" font-size="26" fill="#52606D">try it on real defects first</text>
+    <line x1="100" y1="960" x2="980" y2="960" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="1007" font-size="30" font-weight="700" fill="#1F2933">Moving boards</text>
+    <text x="980" y="1007" text-anchor="end" font-size="26" fill="#52606D">global shutter, not rolling</text>
+    <line x1="100" y1="1030" x2="980" y2="1030" stroke="#E4E7EB" stroke-width="3"/>
+    <!-- highlight -->
+    <rect x="100" y="1062" width="880" height="140" rx="14" fill="#FDEBD7" stroke="#F26522" stroke-width="4"/>
+    <text x="130" y="1118" font-size="30" font-weight="700" fill="#1F2933">Change the setup after training,</text>
+    <text x="130" y="1164" font-size="30" fill="#1F2933">and the model sees a different picture.</text>
+    <!-- footer -->
+    <line x1="100" y1="1230" x2="980" y2="1230" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="1290" font-size="26" fill="#52606D">corefragment.com</text>
+    <image href="{{LOGO}}" x="664" y="1252" width="100" height="60" preserveAspectRatio="xMidYMid meet"/>
+    <text x="980" y="1296" text-anchor="end" font-size="34" font-weight="700" fill="#1F2933">CoreFragment</text>
+  </g>
+</svg>

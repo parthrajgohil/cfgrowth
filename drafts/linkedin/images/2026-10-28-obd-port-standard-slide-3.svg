@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+  <g font-family="Helvetica Neue, Helvetica, Arial">
+    <circle cx="150" cy="190" r="50" fill="#1F5FAE"/>
+    <text x="150" y="208" text-anchor="middle" font-size="52" font-weight="700" fill="#FFFFFF">1</text>
+    <text x="230" y="200" font-size="28" font-weight="700" fill="#1F5FAE">PROTOCOL</text>
+    <text x="100" y="360" font-size="72" font-weight="700" fill="#1F2933">Five protocols.</text>
+    <text x="100" y="450" font-size="72" font-weight="700" fill="#1F5FAE">One connector.</text>
+    <text x="100" y="550" font-size="36" fill="#1F2933">OBD-II allows all five. Your firmware</text>
+    <text x="100" y="604" font-size="36" fill="#1F2933">has to find out which one this car uses.</text>
+    <!-- rows -->
+    <line x1="100" y1="650" x2="980" y2="650" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="697" font-size="30" font-weight="700" fill="#1F5FAE">ISO 15765-4 (CAN)</text>
+    <text x="980" y="697" text-anchor="end" font-size="28" fill="#52606D">US model years 2008+</text>
+    <line x1="100" y1="720" x2="980" y2="720" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="767" font-size="30" font-weight="700" fill="#1F2933">ISO 14230 (KWP2000)</text>
+    <text x="980" y="767" text-anchor="end" font-size="28" fill="#52606D">older vehicles</text>
+    <line x1="100" y1="790" x2="980" y2="790" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="837" font-size="30" font-weight="700" fill="#1F2933">ISO 9141-2</text>
+    <text x="980" y="837" text-anchor="end" font-size="28" fill="#52606D">older vehicles</text>
+    <line x1="100" y1="860" x2="980" y2="860" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="907" font-size="30" font-weight="700" fill="#1F2933">SAE J1850 VPW</text>
+    <text x="980" y="907" text-anchor="end" font-size="28" fill="#52606D">older vehicles</text>
+    <line x1="100" y1="930" x2="980" y2="930" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="977" font-size="30" font-weight="700" fill="#1F2933">SAE J1850 PWM</text>
+    <text x="980" y="977" text-anchor="end" font-size="28" fill="#52606D">older vehicles</text>
+    <line x1="100" y1="1000" x2="980" y2="1000" stroke="#E4E7EB" stroke-width="3"/>
+    <!-- highlight -->
+    <rect x="100" y="1040" width="880" height="150" rx="14" fill="#FDEBD7" stroke="#F26522" stroke-width="4"/>
+    <text x="130" y="1102" font-size="32" font-weight="700" fill="#1F2933">Detect the protocol at start-up.</text>
+    <text x="130" y="1152" font-size="32" fill="#1F2933">Never hard-code the one in your test car.</text>
+    <!-- footer -->
+    <line x1="100" y1="1230" x2="980" y2="1230" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="1290" font-size="26" fill="#52606D">corefragment.com</text>
+    <image href="{{LOGO}}" x="664" y="1252" width="100" height="60" preserveAspectRatio="xMidYMid meet"/>
+    <text x="980" y="1296" text-anchor="end" font-size="34" font-weight="700" fill="#1F2933">CoreFragment</text>
+  </g>
+</svg>

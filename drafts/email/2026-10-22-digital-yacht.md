@@ -1,8 +1,9 @@
 ---
-stage: approved          # mirrors HubSpot "CF lead stage"; the CEO changes it in HubSpot
+stage: in_sequence              # mirrors HubSpot "CF lead stage"; the CEO changes it in HubSpot
 type: cold-email
 account: digital-yacht
-recipient: Paul Sumpner, CTO (email: TO BE FILLED BY HUMAN)
+recipient: Paul Sumpner, CTO <paul.sumpner@digitalyacht.co.uk>
+saleshandy_sequence: 9KwO5oqYa6
 sources: [accounts/digital-yacht.md, https://corefragment.com/case-study/smart-obd-device, https://corefragment.com/blog/handle-mqtt-connection-loss]
 ---
 

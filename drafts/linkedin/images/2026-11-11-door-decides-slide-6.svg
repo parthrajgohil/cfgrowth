@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+  <g font-family="Helvetica Neue, Helvetica, Arial">
+    <circle cx="150" cy="190" r="50" fill="#1F5FAE"/>
+    <text x="150" y="208" text-anchor="middle" font-size="52" font-weight="700" fill="#FFFFFF">4</text>
+    <text x="230" y="200" font-size="28" font-weight="700" fill="#1F5FAE">BATTERY WARNING</text>
+    <text x="100" y="360" font-size="72" font-weight="700" fill="#1F2933">Measure the battery</text>
+    <text x="100" y="450" font-size="72" font-weight="700" fill="#1F5FAE">under load.</text>
+    <text x="100" y="540" font-size="34" fill="#1F2933">At rest, a tired cell still looks fine. When</text>
+    <text x="100" y="586" font-size="34" fill="#1F2933">the lock motor pulls current, the voltage</text>
+    <text x="100" y="632" font-size="34" fill="#1F2933">dips, and more so in the cold.</text>
+    <!-- schematic voltage trace -->
+    <text x="100" y="700" font-size="24" font-weight="700" fill="#52606D">BATTERY VOLTAGE (SCHEMATIC)</text>
+    <line x1="100" y1="720" x2="100" y2="960" stroke="#E4E7EB" stroke-width="3"/>
+    <line x1="100" y1="960" x2="980" y2="960" stroke="#E4E7EB" stroke-width="3"/>
+    <line x1="100" y1="880" x2="980" y2="880" stroke="#52606D" stroke-width="3" stroke-dasharray="12 10"/>
+    <text x="980" y="868" text-anchor="end" font-size="24" fill="#52606D">reset level</text>
+    <path d="M 110 770 L 440 770 L 460 920 L 600 920 L 620 785 L 980 785" fill="none" stroke="#1F5FAE" stroke-width="6"/>
+    <path d="M 440 770 L 460 920 L 600 920 L 620 785" fill="none" stroke="#F26522" stroke-width="8"/>
+    <text x="120" y="752" font-size="26" fill="#1F2933">at rest: looks fine</text>
+    <text x="530" y="950" text-anchor="middle" font-size="26" font-weight="700" fill="#F26522">lock moves</text>
+    <!-- rules -->
+    <circle cx="112" cy="1018" r="8" fill="#1F5FAE"/>
+    <text x="140" y="1030" font-size="32" fill="#1F2933">Read the voltage during the motor pulse.</text>
+    <circle cx="112" cy="1076" r="8" fill="#1F5FAE"/>
+    <text x="140" y="1088" font-size="32" fill="#1F2933">Warn weeks early, not at the last scan.</text>
+    <circle cx="112" cy="1134" r="8" fill="#1F5FAE"/>
+    <text x="140" y="1146" font-size="32" fill="#1F2933">Decide what the door does on a flat battery.</text>
+    <!-- footer -->
+    <line x1="100" y1="1230" x2="980" y2="1230" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="1290" font-size="26" fill="#52606D">corefragment.com</text>
+    <image href="{{LOGO}}" x="664" y="1252" width="100" height="60" preserveAspectRatio="xMidYMid meet"/>
+    <text x="980" y="1296" text-anchor="end" font-size="34" font-weight="700" fill="#1F2933">CoreFragment</text>
+  </g>
+</svg>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+  <g font-family="Helvetica Neue, Helvetica, Arial">
+    <circle cx="150" cy="190" r="50" fill="#1F5FAE"/>
+    <text x="150" y="208" text-anchor="middle" font-size="52" font-weight="700" fill="#FFFFFF">5</text>
+    <text x="230" y="200" font-size="28" font-weight="700" fill="#1F5FAE">THRESHOLD</text>
+    <text x="100" y="360" font-size="72" font-weight="700" fill="#1F2933">Count the good</text>
+    <text x="100" y="450" font-size="72" font-weight="700" fill="#1F5FAE">boards you reject.</text>
+    <text x="100" y="540" font-size="34" fill="#1F2933">Catching defects is half the job. The other</text>
+    <text x="100" y="586" font-size="34" fill="#1F2933">half is not pulling good boards.</text>
+    <!-- worked example -->
+    <text x="100" y="670" font-size="24" font-weight="700" fill="#52606D">WORKED EXAMPLE: 10,000 BOARDS A SHIFT</text>
+    <line x1="100" y1="690" x2="980" y2="690" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="750" font-size="30" font-weight="700" fill="#1F2933">1% false rejects</text>
+    <text x="980" y="750" text-anchor="end" font-size="30" font-weight="700" fill="#F26522">100 good boards pulled</text>
+    <rect x="100" y="772" width="880" height="56" rx="8" fill="#FDEBD7" stroke="#F26522" stroke-width="4"/>
+    <text x="100" y="900" font-size="30" font-weight="700" fill="#1F2933">0.1% false rejects</text>
+    <text x="980" y="900" text-anchor="end" font-size="30" font-weight="700" fill="#1F5FAE">10 good boards pulled</text>
+    <rect x="100" y="922" width="88" height="56" rx="8" fill="#1F5FAE"/>
+    <line x1="100" y1="1010" x2="980" y2="1010" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="1070" font-size="30" fill="#1F2933">Choose the threshold on a held-out set,</text>
+    <text x="100" y="1116" font-size="30" fill="#1F2933">against both targets. Then check each</text>
+    <text x="100" y="1162" font-size="30" fill="#1F2933">defect class on real boards.</text>
+    <!-- footer -->
+    <line x1="100" y1="1230" x2="980" y2="1230" stroke="#E4E7EB" stroke-width="3"/>
+    <text x="100" y="1290" font-size="26" fill="#52606D">corefragment.com</text>
+    <image href="{{LOGO}}" x="664" y="1252" width="100" height="60" preserveAspectRatio="xMidYMid meet"/>
+    <text x="980" y="1296" text-anchor="end" font-size="34" font-weight="700" fill="#1F2933">CoreFragment</text>
+  </g>
+</svg>

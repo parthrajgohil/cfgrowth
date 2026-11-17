@@ -43,7 +43,7 @@
 ## Buyers
 | Name | Title | Profile | Notes |
 |---|---|---|---|
-| Erik Rehn | CTO & Co-founder | unverified | **Primary.** Saleshandy 76058221; Apollo has email |
+| Erik Rehn | CTO & Co-founder | unverified | **Primary.** Saleshandy 76058221; Apollo has email. **Email: erik@flowneuroscience.com** (Saleshandy `valid`, reveal request 6adb462069f1b23a04e43683, 2026-10-23; LinkedIn per reveal: https://www.linkedin.com/in/erikmrehn). **Saleshandy:** batch `CF · batch 2026-10-23 17:03 · Europe · 5 leads`, sequence ID 9KwO5oqYa6 (inactive; the CEO activates) |
 | Stephen Day | Head of Supply Chain | unverified | Alternative (production/cost-down) |
 | Head of Software (masked) | Head of Software | unverified | Alternative |
 

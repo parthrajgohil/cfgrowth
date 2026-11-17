@@ -43,7 +43,7 @@
 ## Buyers
 | Name | Title | Profile | Notes |
 |---|---|---|---|
-| Emmanuel Lange | CTO | unverified | **Primary.** Saleshandy 52516140; Apollo has email |
+| Emmanuel Lange | CTO | unverified | **Primary.** Saleshandy 52516140; Apollo has email. **Email: emmanuel.lange@naox.tech** (Saleshandy `valid`, reveal request 6adf3aa98090c7c4163874c5, 2026-10-26; LinkedIn per reveal: https://www.linkedin.com/in/emmanuellange). **Saleshandy:** batch `CF · batch 2026-10-26 17:03 · Europe · 7 leads`, sequence ID rVz1GkOnPG (inactive; the CEO activates) |
 | Hugo Cuong Dinh | Co-founder & CEO | unverified | Alternative. Saleshandy 451232611 |
 
 ## Best angle
